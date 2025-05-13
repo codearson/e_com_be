@@ -20,6 +20,7 @@ public class UserDto {
 	private String address;
 	private String emailAddress;
 	private String mobileNumber;
+	private String whatsappNumber;
 	private LocalDateTime createdDate;
 	private LocalDateTime modifiedDate;
 	private Boolean isActive;

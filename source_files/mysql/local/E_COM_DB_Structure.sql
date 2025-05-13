@@ -53,6 +53,7 @@ CREATE TABLE `user` (
   `modified_date` datetime DEFAULT NULL,
   `password` varchar(255) NOT NULL,
   `user_role_id` int NOT NULL,
+  `whatsapp_number` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FKh2wc2dtfdo8maylne7mgubowq` (`user_role_id`),
   CONSTRAINT `FKh2wc2dtfdo8maylne7mgubowq` FOREIGN KEY (`user_role_id`) REFERENCES `user_role` (`id`)
@@ -103,4 +104,4 @@ CREATE TABLE `user_role` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-09 18:10:39
+-- Dump completed on 2025-05-13 13:27:17

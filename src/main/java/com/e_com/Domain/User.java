@@ -45,6 +45,8 @@ public class User implements Serializable{
 	private String emailAddress;
 	@Column(name = "mobileNumber")
 	private String mobileNumber;
+	@Column(name = "whatsappNumber")
+	private String whatsappNumber;
 	@Column(name =  "createdDate")
 	private LocalDateTime createdDate;
 	@Column(name = "modifiedDate")
