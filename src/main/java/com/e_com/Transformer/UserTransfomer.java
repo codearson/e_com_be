@@ -30,6 +30,7 @@ public class UserTransfomer implements BaseTransformer<User, UserDto> {
 			userDto.setAddress(user.getAddress());
 			userDto.setEmailAddress(user.getEmailAddress());
 			userDto.setMobileNumber(user.getMobileNumber());
+			userDto.setWhatsappNumber(user.getWhatsappNumber());
 			userDto.setCreatedDate(user.getCreatedDate());
 			userDto.setModifiedDate(user.getModifiedDate());
 			userDto.setIsActive(user.getIsActive());
@@ -52,6 +53,7 @@ public class UserTransfomer implements BaseTransformer<User, UserDto> {
 			user.setAddress(userDto.getAddress());
 			user.setEmailAddress(userDto.getEmailAddress());
 			user.setMobileNumber(userDto.getMobileNumber());
+			user.setWhatsappNumber(userDto.getWhatsappNumber());
 			user.setCreatedDate(userDto.getCreatedDate());
 			user.setModifiedDate(userDto.getModifiedDate());
 			user.setIsActive(userDto.getIsActive());

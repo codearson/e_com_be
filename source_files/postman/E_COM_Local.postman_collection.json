@@ -14,20 +14,13 @@
 					"name": "Register",
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQwMDQ5NTcwLCJleHAiOjE3NDAwNTMxNzB9.bMPnYNgtEnw9Qcc3dD2ehiW1lA9ypNBUYBbnsof3R9jbKnEuHgHoxX8pWtd45tOC",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"firstName\":\"Bavithragithan\",\r\n    \"lastName\":\"Kuganesan\",\r\n    \"password\":\"Bavi123\",\r\n    \"address\":\"Jaffna\",\r\n    \"emailAddress\":\"skbavi61@gmail.com\",\r\n    \"mobileNumber\":\"076261862\",\r\n    \"isActive\":1,\r\n    \"userRoleDto\":{\r\n        \"id\":2\r\n    }\r\n}",
+							"raw": "{\r\n    \"firstName\":\"Lathusan\",\r\n    \"lastName\":\"Thurairajah\",\r\n    \"password\":\"Lathu123\",\r\n    \"address\":\"Jaffna\",\r\n    \"emailAddress\":\"lathusanthurairajah@codearson.com\",\r\n    \"mobileNumber\":\"+447440641608\",\r\n    \"whatsappNumber\": \"+447440641608\",\r\n    \"isActive\":1,\r\n    \"userRoleDto\":{\r\n        \"id\":1\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -252,7 +245,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 1,\r\n    \"firstName\": \"Lathusan\",\r\n    \"lastName\": \"Thurairajah\",\r\n    \"password\": \"$2a$10$SqOLBggtIxXbBzWBzL8o2O9DmLlMMTA8SBANznAqGHEyfw9fybu7C\",\r\n    \"address\": \"Jaffna\",\r\n    \"emailAddress\": \"lathusanthurairajah@codearson.com\",\r\n    \"mobileNumber\": \"0761212608\",\r\n    \"isActive\": true,\r\n    \"branchDto\":{\r\n        \"id\": 1\r\n    },\r\n    \"userRoleDto\": {\r\n        \"id\": 1,\r\n        \"userRole\": \"ADMIN\",\r\n        \"isActive\": true\r\n    }            \r\n}",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"firstName\": \"Lathusan\",\r\n    \"lastName\": \"Thurairajah\",\r\n    \"password\": \"$2a$10$SqOLBggtIxXbBzWBzL8o2O9DmLlMMTA8SBANznAqGHEyfw9fybu7C\",\r\n    \"address\": \"Jaffna\",\r\n    \"emailAddress\": \"lathusanthurairajah@codearson.com\",\r\n    \"mobileNumber\": \"0761212608\",\r\n    \"whatsappNumber\": \"+447440641608\",\r\n    \"isActive\": true,\r\n    \"branchDto\":{\r\n        \"id\": 1\r\n    },\r\n    \"userRoleDto\": {\r\n        \"id\": 1,\r\n        \"userRole\": \"ADMIN\",\r\n        \"isActive\": true\r\n    }            \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -446,7 +439,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"userRole\" : \"ADMIN\",\r\n    \"isActive\" : \"1\"\r\n}",
+							"raw": "{\r\n    \"userRole\" : \"USER\",\r\n    \"isActive\" : 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -476,7 +469,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQxMTk4MDk0fQ.e1MapYFRgXfOjSAyOwf_QH88jkRJnc7GQRNNCW5VWn6yz7NmfhRB-ZEBw03Iv64W",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ2ODEwNDU2fQ.ulnntwin5i_pMlWTzwacJYB0ttLPQ2ru16BAFkSrXJH84KtXA8vCol6o8onE4Ilx",
 									"type": "string"
 								}
 							]
