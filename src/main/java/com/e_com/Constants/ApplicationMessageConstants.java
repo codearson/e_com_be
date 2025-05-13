@@ -21,8 +21,8 @@ public interface ApplicationMessageConstants {
 		String EX_SAVE_USER_LOGS_DETAILS = "ex.save.userlogs.details";
 		String ERR_RETRIEVE_USER_LOGS_DETAILS = "err.get.all.page.user.logs.details";
         String EX_RETRIEVE_USER_LOGS_DETAILS = "ex.get.all.page.user.logs.details";
-        String ERR_RETRIEVE_ALL_USERROLE_DETAILS = "err.get.all.userrole.details";
-		String EX_RETRIEVE_ALL_USERROLE_DETAILS = "ex.get.all.userrole.details";
+        String ERR_RETRIEVE_ALL_USERROLE_DETAILS = "err.get.all.user.details";
+		String EX_RETRIEVE_ALL_USERROLE_DETAILS = "ex.get.all.user.details";
 		String ERR_RETRIEVE_ALL_USER_DETAILS = "err.get.all.user.details";
 		String EX_RETRIEVE_ALL_USER_DETAILS = "ex.get.all.user.details";
 		String ERR_RETRIEVE_USER_BY_NAME = "err.get.all.user.details.by.name";
