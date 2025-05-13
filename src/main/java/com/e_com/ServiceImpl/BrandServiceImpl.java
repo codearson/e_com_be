@@ -1,5 +1,6 @@
 package com.e_com.ServiceImpl;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -117,6 +118,28 @@ public class BrandServiceImpl implements BrandService {
             }
         } catch (Exception e) {
             log.error("Exception occurs while retrieving paginated Brand details.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_BRAND_DETAILS);
+        }
+        return responseDto;
+    }
+    
+    @Override
+    public ResponseDto getAllBrand(String brandName) {
+        log.info("BrandServiceImpl.getAllBrand() invoked with brandName: {}", brandName);
+        ResponseDto responseDto = null;
+        try {
+            List<BrandDto> brandList = brandServiceBL.getAllBrand(brandName);
+            if (brandList != null && !brandList.isEmpty()) {
+                log.info("Retrieved all Brand details.");
+                responseDto = serviceUtil.getServiceResponse(brandList);
+            } else {
+                log.info("Unable to retrieve all Brand details.");
+                responseDto = serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_BRAND_DETAILS);
+            }
+        } catch (Exception e) {
+            log.error("Exception occurs while retrieving all Brand details.", e);
             responseDto = serviceUtil.getExceptionServiceResponseByProperties(
                     ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_BRAND_DETAILS);
         }

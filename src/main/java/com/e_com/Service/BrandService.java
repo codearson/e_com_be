@@ -23,4 +23,6 @@ public interface BrandService {
     ResponseDto updateBrandStatus(Integer brandId, Boolean status);
     
     ResponseDto getAllPageBrand(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters);
+    
+    ResponseDto getAllBrand(String brandName);
 }
