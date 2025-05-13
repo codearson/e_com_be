@@ -1,10 +1,9 @@
 {
 	"info": {
-		"_postman_id": "02338bbe-05b8-44aa-bc9c-71f756550c2b",
+		"_postman_id": "9cf4928d-f28e-4e43-baae-8a07f8f59c1f",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "9802460",
-		"_collection_link": "https://grey-spaceship-295309.postman.co/workspace/New-Team-Workspace~782a63dc-aca7-4d20-a281-4dd8d062cbff/collection/9802460-02338bbe-05b8-44aa-bc9c-71f756550c2b?action=share&source=collection_link&creator=9802460"
+		"_exporter_id": "40723460"
 	},
 	"item": [
 		{
@@ -659,7 +658,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVAZ21haWwuY29tIiwiaWF0IjoxNzM2NTE5NTg3LCJleHAiOjE3MzY1MjMxODd9.1xWusec1rLZ4JSYUaqIDRJAbyWkctI-LKTT-mpEoGS_9M2o_uV1MJgVia08lTGak",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTYyMDE3fQ.e19ZPSL8wvXWJg0TBEH6RC2Io-cGDj-stMPLcfX_HVcz66xm7AEwzDnECrFw970S",
 									"type": "string"
 								}
 							]
@@ -668,7 +667,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"branchName\": \"KFC\",\r\n  \"address\": \"Colombo\",\r\n  \"contactNumber\": \"0212223447\",\r\n  \"emailAddress\": \"kfc.colombo@gmail.com\",\r\n  \"branchCode\": \"Jaf004\"\r\n}\r\n",
+							"raw": "{\r\n  \"branchName\": \"Vavuniya\",\r\n  \"isActive\": 1\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -698,7 +697,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVAZ21haWwuY29tIiwiaWF0IjoxNzM3NDYwOTkyLCJleHAiOjE3Mzc0NjQ1OTJ9.e-M8vJACUl98th6YnWD9ej6B1xAEjjCLAWkSqcMdfkFFh2yeeQzFI0nbIcSLvPQ2",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTYyMDE3fQ.e19ZPSL8wvXWJg0TBEH6RC2Io-cGDj-stMPLcfX_HVcz66xm7AEwzDnECrFw970S",
 									"type": "string"
 								}
 							]
@@ -707,7 +706,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id\": 5,\r\n  \"branchName\": \"Kfc Batticaloa\",\r\n  \"address\": \"No. 30, Trinco Road\",\r\n  \"contactNumber\": \"0212223451\",\r\n  \"emailAddress\": \"kfc.batticaloa@gmail.com\",\r\n  \"branchCode\": \"Bat001\"\r\n}\r\n",
+							"raw": "{\r\n    \"id\":2,\r\n    \"branchName\": \"Colombo\",\r\n    \"isActive\": 1\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -737,7 +736,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9NQU5BR0VSIn1dLCJzdWIiOiJzdmlub3RoaW5pOTZzQGdtYWlsLmNvbSIsImlhdCI6MTc0MjgzODEwMH0.jzOY5kpI2xHAX9u8Mp1xVTx9XCBd0P4OIkf3cLhtovgrCf0_4PsIn-JEFEDcYjG1",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTYyMDE3fQ.e19ZPSL8wvXWJg0TBEH6RC2Io-cGDj-stMPLcfX_HVcz66xm7AEwzDnECrFw970S",
 									"type": "string"
 								}
 							]
@@ -752,7 +751,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/branch/getAllPage?pageNumber=1&pageSize=10",
+							"raw": "http://localhost:8080/branch/getAllPage?pageNumber=1&pageSize=10&status=0",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -770,6 +769,10 @@
 								{
 									"key": "pageSize",
 									"value": "10"
+								},
+								{
+									"key": "status",
+									"value": "0"
 								}
 							]
 						}
@@ -784,7 +787,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVAZ21haWwuY29tIiwiaWF0IjoxNzM3MDY4NjczLCJleHAiOjE3MzcwNzIyNzN9.csY-AeeEKpMlYY4rZ7q6Ph_z6pKp92zK7u-O4fZufA-xTXYc7RpymFrLoljN3Kfx",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTYyMDE3fQ.e19ZPSL8wvXWJg0TBEH6RC2Io-cGDj-stMPLcfX_HVcz66xm7AEwzDnECrFw970S",
 									"type": "string"
 								}
 							]
@@ -792,7 +795,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/branch/getByName?branchName=KFC",
+							"raw": "http://localhost:8080/branch/getByName?branchName=Jaffna",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -805,7 +808,7 @@
 							"query": [
 								{
 									"key": "branchName",
-									"value": "KFC"
+									"value": "Jaffna"
 								}
 							]
 						}
@@ -820,7 +823,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVAZ21haWwuY29tIiwiaWF0IjoxNzM3NzAyNzQ4LCJleHAiOjE3Mzc3MDYzNDh9.jBa9Q5fMETZRoAgnOkfLCpTYSTuS1wb6HujxgMpKxkTnOsu-Si9D5PKK2KXmh_Vu",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTYyMDE3fQ.e19ZPSL8wvXWJg0TBEH6RC2Io-cGDj-stMPLcfX_HVcz66xm7AEwzDnECrFw970S",
 									"type": "string"
 								}
 							]
@@ -828,7 +831,7 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/branch/updateStatus?branchId=5&status=0",
+							"raw": "http://localhost:8080/branch/updateStatus?branchId=2&status=0",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -841,62 +844,12 @@
 							"query": [
 								{
 									"key": "branchId",
-									"value": "5"
+									"value": "2"
 								},
 								{
 									"key": "status",
 									"value": "0"
 								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getAll",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ0MTE3MjY4fQ.grSRbBpw-PLqUQpKk0r5a6WLt7wFfqvSdLhZYs6hCCKDtVbWsmE5ptsoB9r9yttX",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/branch/getAll",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"branch",
-								"getAll"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getAllBySBUid",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/branch/getAllBySBUid",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"branch",
-								"getAllBySBUid"
 							]
 						}
 					},
@@ -910,7 +863,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ0MTE3MjY4fQ.grSRbBpw-PLqUQpKk0r5a6WLt7wFfqvSdLhZYs6hCCKDtVbWsmE5ptsoB9r9yttX",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTYyMDE3fQ.e19ZPSL8wvXWJg0TBEH6RC2Io-cGDj-stMPLcfX_HVcz66xm7AEwzDnECrFw970S",
 									"type": "string"
 								}
 							]
@@ -918,7 +871,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/branch/getById?id=KFC",
+							"raw": "http://localhost:8080/branch/getById?id=2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -931,7 +884,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "KFC"
+									"value": "2"
 								}
 							]
 						}
