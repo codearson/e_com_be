@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 8.0.40, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
 --
 -- Host: localhost    Database: ecom_db_local
 -- ------------------------------------------------------
@@ -23,6 +23,13 @@ LOCK TABLES `branch` WRITE;
 /*!40000 ALTER TABLE `branch` DISABLE KEYS */;
 INSERT INTO `branch` VALUES (1,'Jaffna',_binary ''),(2,'Colombo',_binary '\0');
 /*!40000 ALTER TABLE `branch` ENABLE KEYS */;
+-- Dumping data for table `brand`
+--
+
+LOCK TABLES `brand` WRITE;
+/*!40000 ALTER TABLE `brand` DISABLE KEYS */;
+INSERT INTO `brand` VALUES (1,'Nike',_binary '\0'),(2,'Adidas',_binary '\0'),(3,'Puma',_binary '\0'),(4,'Skechers',_binary ''),(5,'Reebok',_binary '');
+/*!40000 ALTER TABLE `brand` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -72,4 +79,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-14  0:27:35
+-- Dump completed on 2025-05-13 20:38:55
