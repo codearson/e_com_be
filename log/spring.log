@@ -4226,3 +4226,53 @@ Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL synta
 2025-05-13 23:55:55.906  INFO 6932 --- [RMI TCP Connection(16)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-05-13 23:55:55.915  INFO 6932 --- [RMI TCP Connection(16)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-05-13 23:55:55.917  INFO 6932 --- [RMI TCP Connection(16)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-14 00:48:36.160  INFO 11152 --- [restartedMain] com.e_com.EComApplication                : Starting EComApplication using Java 21.0.5 on DESKTOP-7MOLV2K with PID 11152 (D:\Codearson\E Com\e_com_be\target\classes started by ASUS in D:\Codearson\E Com\e_com_be)
+2025-05-14 00:48:36.161  INFO 11152 --- [restartedMain] com.e_com.EComApplication                : The following profiles are active: dev
+2025-05-14 00:48:36.191  INFO 11152 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-14 00:48:36.191  INFO 11152 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-14 00:48:36.974  INFO 11152 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-14 00:48:37.005  INFO 11152 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 0 JPA repository interfaces.
+2025-05-14 00:48:37.497  INFO 11152 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-05-14 00:48:37.509  INFO 11152 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-14 00:48:37.509  INFO 11152 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-05-14 00:48:37.582  INFO 11152 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-14 00:48:37.583  INFO 11152 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1392 ms
+2025-05-14 00:48:37.711  INFO 11152 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-14 00:48:37.753  INFO 11152 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2025-05-14 00:48:37.860  INFO 11152 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-05-14 00:48:37.935  INFO 11152 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-14 00:48:38.056  INFO 11152 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-14 00:48:38.066  INFO 11152 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2025-05-14 00:48:38.665  INFO 11152 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-05-14 00:48:38.671  INFO 11152 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-14 00:48:39.140  INFO 11152 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c0ae20d, org.springframework.security.web.context.SecurityContextPersistenceFilter@70df0e37, org.springframework.security.web.header.HeaderWriterFilter@150d6bfa, org.springframework.web.filter.CorsFilter@6fd078e5, org.springframework.security.web.authentication.logout.LogoutFilter@4344dfd6, com.e_com.Service.Utils.JwtCustomFilter@6199e3c3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2032e75e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55e8d800, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@23d8a3d6, org.springframework.security.web.session.SessionManagementFilter@ff8fdd3, org.springframework.security.web.access.ExceptionTranslationFilter@6d04580b, org.springframework.security.web.access.intercept.AuthorizationFilter@5e125acb]
+2025-05-14 00:48:39.337  INFO 11152 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-14 00:48:39.384  INFO 11152 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-14 00:48:39.392  INFO 11152 --- [restartedMain] com.e_com.EComApplication                : Started EComApplication in 3.534 seconds (JVM running for 4.084)
+2025-05-14 00:50:45.635  INFO 11152 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-14 00:50:45.635  INFO 11152 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-14 00:50:45.636  INFO 11152 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-05-14 00:50:45.653  INFO 11152 --- [http-nio-8080-exec-2] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-14 00:50:45.757  INFO 11152 --- [http-nio-8080-exec-2] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-14 00:50:45.758  INFO 11152 --- [http-nio-8080-exec-2] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-14 00:50:45.764  WARN 11152 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-14 00:50:45.844  INFO 11152 --- [http-nio-8080-exec-2] com.e_com.Controller.BranchController    : BranchController.getAllBranch() invoked with branchName: jaffna
+2025-05-14 00:50:45.848  INFO 11152 --- [http-nio-8080-exec-2] com.e_com.ServiceImpl.BranchServiceImpl  : BranchServiceImpl.getAllBranch() invoked with branchName: jaffna
+2025-05-14 00:50:45.848  INFO 11152 --- [http-nio-8080-exec-2] com.e_com.Service.BL.BranchServiceBL     : BranchServiceBL.getAllBranch() invoked with branchName: jaffna
+2025-05-14 00:50:45.851  INFO 11152 --- [http-nio-8080-exec-2] com.e_com.DaoImpl.BranchDaoImpl          : BranchDaoImpl.getAllBranch() invoked with branchName: jaffna
+2025-05-14 00:50:45.851  WARN 11152 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-14 00:50:45.856  INFO 11152 --- [http-nio-8080-exec-2] com.e_com.ServiceImpl.BranchServiceImpl  : Retrieved all Branch details.
+2025-05-14 00:50:49.710  INFO 11152 --- [http-nio-8080-exec-3] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-14 00:50:49.771  INFO 11152 --- [http-nio-8080-exec-3] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-14 00:50:49.771  INFO 11152 --- [http-nio-8080-exec-3] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-14 00:50:49.771  WARN 11152 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-14 00:50:49.789  INFO 11152 --- [http-nio-8080-exec-3] com.e_com.Controller.BranchController    : BranchController.getAllBranch() invoked with branchName: null
+2025-05-14 00:50:49.789  INFO 11152 --- [http-nio-8080-exec-3] com.e_com.ServiceImpl.BranchServiceImpl  : BranchServiceImpl.getAllBranch() invoked with branchName: null
+2025-05-14 00:50:49.799  INFO 11152 --- [http-nio-8080-exec-3] com.e_com.Service.BL.BranchServiceBL     : BranchServiceBL.getAllBranch() invoked with branchName: null
+2025-05-14 00:50:49.800  INFO 11152 --- [http-nio-8080-exec-3] com.e_com.DaoImpl.BranchDaoImpl          : BranchDaoImpl.getAllBranch() invoked with branchName: null
+2025-05-14 00:50:49.800  WARN 11152 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-14 00:50:49.804  INFO 11152 --- [http-nio-8080-exec-3] com.e_com.ServiceImpl.BranchServiceImpl  : Retrieved all Branch details.
+2025-05-14 00:51:08.076  INFO 11152 --- [RMI TCP Connection(9)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-05-14 00:51:08.085  INFO 11152 --- [RMI TCP Connection(9)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-14 00:51:08.087  INFO 11152 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-14 00:51:08.089  INFO 11152 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

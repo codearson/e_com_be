@@ -27,4 +27,6 @@ PaginatedResponseDto getAll(int pageNumber, int pageSize, Map<String, String> se
 	BranchDto checkBranchAvailability(Integer branchId);
 	
 	List<BranchDto> getBranchById(Integer id);
+	
+	List<BranchDto> getAllBranch(String branchName);
 }
