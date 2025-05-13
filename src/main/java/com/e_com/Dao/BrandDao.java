@@ -1,5 +1,6 @@
 package com.e_com.Dao;
 
+import java.util.List;
 import java.util.Map;
 
 import com.e_com.Domain.Brand;
@@ -24,4 +25,6 @@ public interface BrandDao extends BaseDao<Brand> {
     BrandDto checkBrandAvailability(Integer brandId);
     
     PaginatedResponseDto getAllPageBrand(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters);
+    
+    List<BrandDto> getAllBrand(String brandName);
 }

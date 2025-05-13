@@ -109,4 +109,21 @@ public class BrandDaoImpl extends BaseDaoImpl<Brand> implements BrandDao {
 
         return paginatedResponseDto;
     }
+    
+    @Override
+    @Transactional
+    public List<BrandDto> getAllBrand(String brandName) {
+        log.info("BrandDaoImpl.getAllBrand() invoked with brandName: {}", brandName);
+        Criteria criteria = getCurrentSession().createCriteria(Brand.class, "brand");
+
+        // Add brandName filter if provided
+        if (brandName != null && !brandName.isEmpty()) {
+            criteria.add(Restrictions.ilike("brandName", "%" + brandName + "%"));
+        }
+
+        List<Brand> brandList = criteria.list();
+        return brandList.stream()
+                       .map(brand -> brandTransformer.transform(brand))
+                       .collect(Collectors.toList());
+    }
 }

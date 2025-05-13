@@ -1,5 +1,6 @@
 package com.e_com.Service.BL;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,5 +53,10 @@ public class BrandServiceBL {
         log.info("BrandServiceBL.getAllPageBrand() invoked with pageNumber: {}, pageSize: {}, status: {}", 
                  pageNumber, pageSize, status);
         return brandDao.getAllPageBrand(pageNumber, pageSize, status, searchParameters);
+    }
+    
+    public List<BrandDto> getAllBrand(String brandName) {
+        log.info("BrandServiceBL.getAllBrand() invoked with brandName: {}", brandName);
+        return brandDao.getAllBrand(brandName);
     }
 }

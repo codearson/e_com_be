@@ -1147,6 +1147,43 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "getAllSearch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTQ1ODYyfQ.u9kUTSrzGkdvoD5CXS6eOTcx59ZVAB2lly0IsanP2VXgNF-jYkeciXFH6bAdtDlI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/brand/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"brand",
+								"getAll"
+							],
+							"query": [
+								{
+									"key": "brandName",
+									"value": "Nike",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
