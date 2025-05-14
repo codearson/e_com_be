@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "392a7312-0356-4011-91ea-16dcbcd9a46d",
+		"_postman_id": "ab6df5c2-9cda-466d-8b98-09bde3f7e512",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "40720747"
+		"_exporter_id": "40723516"
 	},
 	"item": [
 		{
@@ -658,7 +658,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVAZ21haWwuY29tIiwiaWF0IjoxNzM2NTE5NTg3LCJleHAiOjE3MzY1MjMxODd9.1xWusec1rLZ4JSYUaqIDRJAbyWkctI-LKTT-mpEoGS_9M2o_uV1MJgVia08lTGak",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTYyMDE3fQ.e19ZPSL8wvXWJg0TBEH6RC2Io-cGDj-stMPLcfX_HVcz66xm7AEwzDnECrFw970S",
 									"type": "string"
 								}
 							]
@@ -667,7 +667,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"branchName\": \"KFC\",\r\n  \"address\": \"Colombo\",\r\n  \"contactNumber\": \"0212223447\",\r\n  \"emailAddress\": \"kfc.colombo@gmail.com\",\r\n  \"branchCode\": \"Jaf004\"\r\n}\r\n",
+							"raw": "{\r\n  \"branchName\": \"Vavuniya\",\r\n  \"isActive\": 1\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -697,7 +697,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVAZ21haWwuY29tIiwiaWF0IjoxNzM3NDYwOTkyLCJleHAiOjE3Mzc0NjQ1OTJ9.e-M8vJACUl98th6YnWD9ej6B1xAEjjCLAWkSqcMdfkFFh2yeeQzFI0nbIcSLvPQ2",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTYyMDE3fQ.e19ZPSL8wvXWJg0TBEH6RC2Io-cGDj-stMPLcfX_HVcz66xm7AEwzDnECrFw970S",
 									"type": "string"
 								}
 							]
@@ -706,7 +706,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id\": 5,\r\n  \"branchName\": \"Kfc Batticaloa\",\r\n  \"address\": \"No. 30, Trinco Road\",\r\n  \"contactNumber\": \"0212223451\",\r\n  \"emailAddress\": \"kfc.batticaloa@gmail.com\",\r\n  \"branchCode\": \"Bat001\"\r\n}\r\n",
+							"raw": "{\r\n    \"id\":2,\r\n    \"branchName\": \"Colombo\",\r\n    \"isActive\": 1\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -736,7 +736,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9NQU5BR0VSIn1dLCJzdWIiOiJzdmlub3RoaW5pOTZzQGdtYWlsLmNvbSIsImlhdCI6MTc0MjgzODEwMH0.jzOY5kpI2xHAX9u8Mp1xVTx9XCBd0P4OIkf3cLhtovgrCf0_4PsIn-JEFEDcYjG1",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTYyMDE3fQ.e19ZPSL8wvXWJg0TBEH6RC2Io-cGDj-stMPLcfX_HVcz66xm7AEwzDnECrFw970S",
 									"type": "string"
 								}
 							]
@@ -751,7 +751,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/branch/getAllPage?pageNumber=1&pageSize=10",
+							"raw": "http://localhost:8080/branch/getAllPage?pageNumber=1&pageSize=10&status=0",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -769,6 +769,10 @@
 								{
 									"key": "pageSize",
 									"value": "10"
+								},
+								{
+									"key": "status",
+									"value": "0"
 								}
 							]
 						}
@@ -783,7 +787,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVAZ21haWwuY29tIiwiaWF0IjoxNzM3MDY4NjczLCJleHAiOjE3MzcwNzIyNzN9.csY-AeeEKpMlYY4rZ7q6Ph_z6pKp92zK7u-O4fZufA-xTXYc7RpymFrLoljN3Kfx",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTYyMDE3fQ.e19ZPSL8wvXWJg0TBEH6RC2Io-cGDj-stMPLcfX_HVcz66xm7AEwzDnECrFw970S",
 									"type": "string"
 								}
 							]
@@ -791,7 +795,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/branch/getByName?branchName=KFC",
+							"raw": "http://localhost:8080/branch/getByName?branchName=Jaffna",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -804,7 +808,7 @@
 							"query": [
 								{
 									"key": "branchName",
-									"value": "KFC"
+									"value": "Jaffna"
 								}
 							]
 						}
@@ -819,7 +823,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVAZ21haWwuY29tIiwiaWF0IjoxNzM3NzAyNzQ4LCJleHAiOjE3Mzc3MDYzNDh9.jBa9Q5fMETZRoAgnOkfLCpTYSTuS1wb6HujxgMpKxkTnOsu-Si9D5PKK2KXmh_Vu",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTYyMDE3fQ.e19ZPSL8wvXWJg0TBEH6RC2Io-cGDj-stMPLcfX_HVcz66xm7AEwzDnECrFw970S",
 									"type": "string"
 								}
 							]
@@ -827,7 +831,7 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/branch/updateStatus?branchId=5&status=0",
+							"raw": "http://localhost:8080/branch/updateStatus?branchId=2&status=0",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -840,62 +844,12 @@
 							"query": [
 								{
 									"key": "branchId",
-									"value": "5"
+									"value": "2"
 								},
 								{
 									"key": "status",
 									"value": "0"
 								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getAll",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ0MTE3MjY4fQ.grSRbBpw-PLqUQpKk0r5a6WLt7wFfqvSdLhZYs6hCCKDtVbWsmE5ptsoB9r9yttX",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/branch/getAll",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"branch",
-								"getAll"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getAllBySBUid",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/branch/getAllBySBUid",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"branch",
-								"getAllBySBUid"
 							]
 						}
 					},
@@ -909,7 +863,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ0MTE3MjY4fQ.grSRbBpw-PLqUQpKk0r5a6WLt7wFfqvSdLhZYs6hCCKDtVbWsmE5ptsoB9r9yttX",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTYyMDE3fQ.e19ZPSL8wvXWJg0TBEH6RC2Io-cGDj-stMPLcfX_HVcz66xm7AEwzDnECrFw970S",
 									"type": "string"
 								}
 							]
@@ -917,7 +871,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/branch/getById?id=KFC",
+							"raw": "http://localhost:8080/branch/getById?id=2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -930,7 +884,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "KFC"
+									"value": "2"
 								}
 							]
 						}
@@ -1142,6 +1096,246 @@
 								{
 									"key": "status",
 									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllSearch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTQ1ODYyfQ.u9kUTSrzGkdvoD5CXS6eOTcx59ZVAB2lly0IsanP2VXgNF-jYkeciXFH6bAdtDlI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/brand/getAllBySearch",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"brand",
+								"getAllBySearch"
+							],
+							"query": [
+								{
+									"key": "brandName",
+									"value": "Nike",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Postage Partner",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTQ1ODYyfQ.u9kUTSrzGkdvoD5CXS6eOTcx59ZVAB2lly0IsanP2VXgNF-jYkeciXFH6bAdtDlI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"partnerName\": \"Thamizh Logistics\",\r\n    \"userDto\":{\r\n        \"id\":1\r\n    },\r\n    \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/postagePartner/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagePartner",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTQ1ODYyfQ.u9kUTSrzGkdvoD5CXS6eOTcx59ZVAB2lly0IsanP2VXgNF-jYkeciXFH6bAdtDlI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2,\r\n    \"partnerName\": \"NorthLink Logistics\",\r\n    \"userDto\":{\r\n        \"id\":1\r\n    },\r\n    \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/postagePartner/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagePartner",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTQ1ODYyfQ.u9kUTSrzGkdvoD5CXS6eOTcx59ZVAB2lly0IsanP2VXgNF-jYkeciXFH6bAdtDlI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/postagePartner/updateStatus?postagePartnerId=3&status=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagePartner",
+								"updateStatus"
+							],
+							"query": [
+								{
+									"key": "postagePartnerId",
+									"value": "3"
+								},
+								{
+									"key": "status",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTQ1ODYyfQ.u9kUTSrzGkdvoD5CXS6eOTcx59ZVAB2lly0IsanP2VXgNF-jYkeciXFH6bAdtDlI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/postagePartner/getAllPage?pageNumber=1&pageSize=10&status=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagePartner",
+								"getAllPage"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "status",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllBySearch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTQ1ODYyfQ.u9kUTSrzGkdvoD5CXS6eOTcx59ZVAB2lly0IsanP2VXgNF-jYkeciXFH6bAdtDlI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/postagePartner/getAllBySearch?partnerName=Logistics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagePartner",
+								"getAllBySearch"
+							],
+							"query": [
+								{
+									"key": "partnerName",
+									"value": "Logistics"
 								}
 							]
 						}

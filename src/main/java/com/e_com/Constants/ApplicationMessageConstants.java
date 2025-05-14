@@ -47,5 +47,26 @@ public interface ApplicationMessageConstants {
         String EX_UPDATE_BRAND_STATUS = "ex_update_brand_status";
         String ERR_RETRIEVE_ALL_BRAND_DETAILS = "err_retrive_all_brand_details";
         String EX_RETRIEVE_ALL_BRAND_DETAILS = "ex_retrive_all_brand_details";
+		String ERR_SAVE_BRANCH_DETAILS = "err.save.branch.details";
+		String EX_SAVE_BRANCH_DETAILS = "ex.save.branch.details";
+		String ERR_RETRIEVE_ALL_BRANCH_DETAILS = "err.get.all.branch.details";
+		String EX_RETRIEVE_ALL_BRANCH_DETAILS = "ex.get.all.branch.details";
+		String ERR_UPDATE_BRANCH_DETAILS = "err.update.branch.details";
+		String EX_UPDATE_BRANCH_DETAILS = "ex.update.branch.details";
+		String ERR_RETRIEVE_BRANCH_BY_NAME = "err.get.by.branch.name";
+		String EX_RETRIEVE_BRANCH_BY_NAME = "ex.get.by.branch.name";
+		String ERR_UPDATE_BRANCH_STATUS = "err.update.branch.status";
+		String EX_UPDATE_BRANCH_STATUS = "ex.update.branch.status";
+		String ERR_RETRIEVE_BRANCH_BY_ID ="err.get.by.branch.id";
+		String EX_RETRIEVE_BRANCH_BY_ID="ex.get.by.branch.id";
+		String ERR_SAVE_POSTAGE_PARTNER_DETAILS = "err.save.postage.partner.details";
+        String EX_SAVE_POSTAGE_PARTNER_DETAILS = "ex.save.postage.partner.details";
+        String ERR_UPDATE_POSTAGE_PARTNER_DETAILS = "err.update.postage.partner.details";
+        String EX_UPDATE_POSTAGE_PARTNER_DETAILS = "ex.update.postage.partner.details";
+        String ERR_UPDATE_POSTAGE_PARTNER_STATUS = "err.update.postage.partner.status";
+        String EX_UPDATE_POSTAGE_PARTNER_STATUS = "ex.update.postage.partner.status";
+        String ERR_RETRIEVE_ALL_POSTAGE_PARTNER_DETAILS = "err.retrive.all.postage.partner.details";
+        String EX_RETRIEVE_ALL_POSTAGE_PARTNER_DETAILS = "ex.retrive.all.postage.partner.details";
+		
 	}
 }

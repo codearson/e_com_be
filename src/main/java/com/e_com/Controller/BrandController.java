@@ -66,4 +66,11 @@ public class BrandController {
                  pageNumber, pageSize, status);
         return brandService.getAllPageBrand(pageNumber, pageSize, status, HttpReqRespUtils.getSearchParameters(webRequest));
     }
+    
+    @GetMapping("/getAllBySearch")
+    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
+    public ResponseDto getAllBrand(@RequestParam(value = "brandName", required = false) String brandName) {
+        log.info("BrandController.getAllBrand() invoked with brandName: {}", brandName);
+        return brandService.getAllBrand(brandName);
+    }
 }
