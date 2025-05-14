@@ -68,5 +68,8 @@ public interface ApplicationMessageConstants {
         String ERR_RETRIEVE_ALL_POSTAGE_PARTNER_DETAILS = "err.retrive.all.postage.partner.details";
         String EX_RETRIEVE_ALL_POSTAGE_PARTNER_DETAILS = "ex.retrive.all.postage.partner.details";
 		
+        String ERR_SAVE_PRODUCT_CATEGORY_DETAILS = "err.save.product.category.details";
+        String EX_SAVE_PRODUCT_CATEGORY_DETAILS = "ex.save.product.category.details";
+
 	}
 }
