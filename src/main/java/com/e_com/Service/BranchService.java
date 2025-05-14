@@ -30,6 +30,8 @@ public interface BranchService {
 	public ResponseDto updateBranchStatus(Integer branchId, Boolean status);
 	
 	public ResponseDto getBranchById(Integer id);
+	
+	ResponseDto getAllBranch(String branchName);
 
 
 }

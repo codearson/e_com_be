@@ -62,4 +62,9 @@ public class BranchServiceBL {
 		log.info("BranchServiceBL.getBranchById()invoked");
 		return branchDao.getBranchById(id);
 	}
+	
+	public List<BranchDto> getAllBranch(String branchName) {
+        log.info("BranchServiceBL.getAllBranch() invoked with branchName: {}", branchName);
+        return branchDao.getAllBranch(branchName);
+    }
 }
