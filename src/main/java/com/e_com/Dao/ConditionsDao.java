@@ -16,5 +16,7 @@ import com.e_com.Dto.ConditionsDto;
 public interface ConditionsDao extends BaseDao<Conditions> {
 	
 	ConditionsDto saveConditions(ConditionsDto conditionsDto);
+	
+	ConditionsDto updateConditions(ConditionsDto conditionsDto);
 
 }

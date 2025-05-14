@@ -7,7 +7,9 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.e_com.Dao.ConditionsDao;
+import com.e_com.Domain.Brand;
 import com.e_com.Domain.Conditions;
+import com.e_com.Dto.BrandDto;
 import com.e_com.Dto.ConditionsDto;
 import com.e_com.Transformer.ConditionsTransformer;
 
@@ -35,8 +37,16 @@ public class ConditionsDaoImpl extends BaseDaoImpl<Conditions> implements Condit
     public ConditionsDto saveConditions(ConditionsDto conditionsDto) {
         log.info("ConditionsDaoImpl.saveConditions() invoked.");
         Conditions conditions = conditionsTransformer.reverseTransform(conditionsDto);
-        Conditions saveConditions = saveOrUpdate(conditions); // inherited from BaseDaoImpl
+        Conditions saveConditions = saveOrUpdate(conditions); 
         return conditionsTransformer.transform(saveConditions);
+    }
+    
+    @Transactional
+    public ConditionsDto updateConditions(ConditionsDto conditionsDto) {
+        log.info("ConditionsDaoImpl.updateConditions() invoked.");
+        Conditions conditions = conditionsTransformer.reverseTransform(conditionsDto);
+        Conditions updatedConditions = saveOrUpdate(conditions);
+        return conditionsTransformer.transform(updatedConditions);
     }
     
 }

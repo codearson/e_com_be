@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "ab6df5c2-9cda-466d-8b98-09bde3f7e512",
+		"_postman_id": "7d432a5c-e393-4dc4-a79f-0b10d16ab822",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "40723516"
+		"_exporter_id": "44754112"
 	},
 	"item": [
 		{
@@ -1118,7 +1118,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/brand/getAllBySearch",
+							"raw": "http://localhost:8080/brand/getAll",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1126,7 +1126,7 @@
 							"port": "8080",
 							"path": [
 								"brand",
-								"getAllBySearch"
+								"getAll"
 							],
 							"query": [
 								{
@@ -1142,203 +1142,21 @@
 			]
 		},
 		{
-			"name": "Postage Partner",
+			"name": "Conditions",
 			"item": [
 				{
 					"name": "save",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTQ1ODYyfQ.u9kUTSrzGkdvoD5CXS6eOTcx59ZVAB2lly0IsanP2VXgNF-jYkeciXFH6bAdtDlI",
-									"type": "string"
-								}
-							]
-						},
 						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"partnerName\": \"Thamizh Logistics\",\r\n    \"userDto\":{\r\n        \"id\":1\r\n    },\r\n    \"isActive\": true\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/postagePartner/save",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"postagePartner",
-								"save"
-							]
-						}
+						"header": []
 					},
 					"response": []
 				},
 				{
 					"name": "update",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTQ1ODYyfQ.u9kUTSrzGkdvoD5CXS6eOTcx59ZVAB2lly0IsanP2VXgNF-jYkeciXFH6bAdtDlI",
-									"type": "string"
-								}
-							]
-						},
 						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"id\":2,\r\n    \"partnerName\": \"NorthLink Logistics\",\r\n    \"userDto\":{\r\n        \"id\":1\r\n    },\r\n    \"isActive\": true\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/postagePartner/update",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"postagePartner",
-								"update"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "updateStatus",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTQ1ODYyfQ.u9kUTSrzGkdvoD5CXS6eOTcx59ZVAB2lly0IsanP2VXgNF-jYkeciXFH6bAdtDlI",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PUT",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/postagePartner/updateStatus?postagePartnerId=3&status=0",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"postagePartner",
-								"updateStatus"
-							],
-							"query": [
-								{
-									"key": "postagePartnerId",
-									"value": "3"
-								},
-								{
-									"key": "status",
-									"value": "0"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getAllPage",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTQ1ODYyfQ.u9kUTSrzGkdvoD5CXS6eOTcx59ZVAB2lly0IsanP2VXgNF-jYkeciXFH6bAdtDlI",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/postagePartner/getAllPage?pageNumber=1&pageSize=10&status=1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"postagePartner",
-								"getAllPage"
-							],
-							"query": [
-								{
-									"key": "pageNumber",
-									"value": "1"
-								},
-								{
-									"key": "pageSize",
-									"value": "10"
-								},
-								{
-									"key": "status",
-									"value": "1"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getAllBySearch",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTQ1ODYyfQ.u9kUTSrzGkdvoD5CXS6eOTcx59ZVAB2lly0IsanP2VXgNF-jYkeciXFH6bAdtDlI",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/postagePartner/getAllBySearch?partnerName=Logistics",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"postagePartner",
-								"getAllBySearch"
-							],
-							"query": [
-								{
-									"key": "partnerName",
-									"value": "Logistics"
-								}
-							]
-						}
+						"header": []
 					},
 					"response": []
 				}

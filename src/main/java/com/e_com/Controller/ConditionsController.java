@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.e_com.Dto.BrandDto;
 import com.e_com.Dto.ConditionsDto;
 import com.e_com.Dto.ResponseDto;
 import com.e_com.Service.ConditionsService;
@@ -38,6 +39,13 @@ public class ConditionsController {
 	 public ResponseDto saveConditions(@RequestBody ConditionsDto conditionsDto) {
 		 log.info("ConditionsController.saveConditions() invoked");
 		 return conditionsService.saveConditions(conditionsDto);
+	    }
+	 
+	 @PostMapping("/update")
+	    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
+	    public ResponseDto updateConditions(@RequestBody ConditionsDto conditionsDto) {
+	        log.info("ConditionsController.updateConditions() invoked");
+	        return conditionsService.updateConditions(conditionsDto);
 	    }
 	    
 }
