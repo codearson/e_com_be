@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "9cf4928d-f28e-4e43-baae-8a07f8f59c1f",
+		"_postman_id": "b53ac135-984e-4966-80ab-76142aabfca6",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "40723460"
+		"_exporter_id": "40430627"
 	},
 	"item": [
 		{
@@ -1134,6 +1134,50 @@
 									"value": "Nike",
 									"disabled": true
 								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Status",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MjQzMDQwfQ.HtTNEaHkCeQL4k1tsWpVse8k6-vxLhuienccAMWaUKvsb9iPpM49gM3bOwQ8DIcW",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\": \"complete\",\r\n  \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/status/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"status",
+								"save"
 							]
 						}
 					},
