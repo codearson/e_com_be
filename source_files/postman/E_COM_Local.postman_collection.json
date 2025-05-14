@@ -1,16 +1,9 @@
 {
 	"info": {
-<<<<<<< HEAD
-		"_postman_id": "b53ac135-984e-4966-80ab-76142aabfca6",
-		"name": "E_COM_Local",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "40430627"
-=======
 		"_postman_id": "ab6df5c2-9cda-466d-8b98-09bde3f7e512",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "40723516"
->>>>>>> master
 	},
 	"item": [
 		{
@@ -1149,7 +1142,6 @@
 			]
 		},
 		{
-			"name": "Status",
 			"name": "Postage Partner",
 			"item": [
 				{
@@ -1160,7 +1152,6 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MjQzMDQwfQ.HtTNEaHkCeQL4k1tsWpVse8k6-vxLhuienccAMWaUKvsb9iPpM49gM3bOwQ8DIcW",
 									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTQ1ODYyfQ.u9kUTSrzGkdvoD5CXS6eOTcx59ZVAB2lly0IsanP2VXgNF-jYkeciXFH6bAdtDlI",
 									"type": "string"
 								}
@@ -1170,7 +1161,6 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"type\": \"complete\",\r\n  \"isActive\": 1\r\n}",
 							"raw": "{\r\n    \"partnerName\": \"Thamizh Logistics\",\r\n    \"userDto\":{\r\n        \"id\":1\r\n    },\r\n    \"isActive\": true\r\n}",
 							"options": {
 								"raw": {
@@ -1179,7 +1169,6 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/status/save",
 							"raw": "http://localhost:8080/postagePartner/save",
 							"protocol": "http",
 							"host": [
@@ -1187,7 +1176,6 @@
 							],
 							"port": "8080",
 							"path": [
-								"status",
 								"postagePartner",
 								"save"
 							]
