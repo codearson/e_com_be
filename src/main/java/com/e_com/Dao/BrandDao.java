@@ -27,4 +27,5 @@ public interface BrandDao extends BaseDao<Brand> {
     PaginatedResponseDto getAllPageBrand(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters);
     
     List<BrandDto> getAllBrand(String brandName);
+    
 }
