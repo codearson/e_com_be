@@ -59,7 +59,16 @@ public interface ApplicationMessageConstants {
 		String EX_UPDATE_BRANCH_STATUS = "ex.update.branch.status";
 		String ERR_RETRIEVE_BRANCH_BY_ID ="err.get.by.branch.id";
 		String EX_RETRIEVE_BRANCH_BY_ID="ex.get.by.branch.id";
+		String ERR_SAVE_POSTAGE_PARTNER_DETAILS = "err.save.postage.partner.details";
+        String EX_SAVE_POSTAGE_PARTNER_DETAILS = "ex.save.postage.partner.details";
+        String ERR_UPDATE_POSTAGE_PARTNER_DETAILS = "err.update.postage.partner.details";
+        String EX_UPDATE_POSTAGE_PARTNER_DETAILS = "ex.update.postage.partner.details";
+        String ERR_UPDATE_POSTAGE_PARTNER_STATUS = "err.update.postage.partner.status";
+        String EX_UPDATE_POSTAGE_PARTNER_STATUS = "ex.update.postage.partner.status";
+        String ERR_RETRIEVE_ALL_POSTAGE_PARTNER_DETAILS = "err.retrive.all.postage.partner.details";
+        String EX_RETRIEVE_ALL_POSTAGE_PARTNER_DETAILS = "ex.retrive.all.postage.partner.details";
 		String ERR_SAVE_CONDITIONS_DETAILS = "err_save_conditions_details";
 		String EX_SAVE_CONDITIONS_DETAILS = "ex_save_conditions_details";
+		
 	}
 }
