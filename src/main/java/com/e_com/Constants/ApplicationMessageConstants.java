@@ -59,5 +59,7 @@ public interface ApplicationMessageConstants {
 		String EX_UPDATE_BRANCH_STATUS = "ex.update.branch.status";
 		String ERR_RETRIEVE_BRANCH_BY_ID ="err.get.by.branch.id";
 		String EX_RETRIEVE_BRANCH_BY_ID="ex.get.by.branch.id";
+		String ERR_SAVE_CONDITIONS_DETAILS = "err_save_conditions_details";
+		String EX_SAVE_CONDITIONS_DETAILS = "ex_save_conditions_details";
 	}
 }
