@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.e_com.Dao.ConditionsDao;
+import com.e_com.Dto.BrandDto;
 import com.e_com.Dto.ConditionsDto;
 
 import lombok.extern.slf4j.Slf4j;
@@ -27,5 +28,21 @@ public class ConditionsServiceBL {
     public ConditionsDto saveConditions(ConditionsDto conditionsDto) {
         log.info("ConditionsServiceBL.saveConditions() invoked.");
         return conditionsDao.saveConditions(conditionsDto);
+    }
+    
+    public ConditionsDto updateConditions(ConditionsDto conditionsDto) {
+        log.info("ConditionsServiceBL.updateConditions() invoked.");
+        return conditionsDao.updateConditions(conditionsDto);
+    }
+    
+    public ConditionsDto updateConditionsStatus(Integer conditionsId, Boolean status) {
+        log.info("ConditionsServiceBL.updateConditionsStatus() invoked with conditionsId: {}, status: {}", conditionsId, status);
+        ConditionsDto conditionsDto = conditionsDao.checkConditionsAvailability(conditionsId);
+        if (conditionsDto != null) {
+            conditionsDto.setIsActive(status);
+            return conditionsDao.updateConditions(conditionsDto);
+        } else {
+            return null;
+        }
     }
 }

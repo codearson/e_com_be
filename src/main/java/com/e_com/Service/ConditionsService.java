@@ -15,4 +15,8 @@ public interface ConditionsService {
 
 	ResponseDto saveConditions(ConditionsDto conditionsDto);
 	
+	ResponseDto updateConditions(ConditionsDto conditionsDto);
+	
+	ResponseDto updateConditionsStatus(Integer conditionsId, Boolean status);
+	
 }

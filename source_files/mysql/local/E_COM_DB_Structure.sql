@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.40, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: ecom_db_local
+-- Host: localhost    Database: ecom_db_local
 -- ------------------------------------------------------
--- Server version	8.0.41
+-- Server version	8.0.40
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -128,6 +128,25 @@ CREATE TABLE `product_category` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `shipping_address`
+--
+
+DROP TABLE IF EXISTS `shipping_address`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `shipping_address` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `address` varchar(255) NOT NULL,
+  `is_active` bit(1) DEFAULT NULL,
+  `mobile_number` varchar(255) DEFAULT NULL,
+  `user` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK31dtw4tacfijho8xs3ppvwcle` (`user`),
+  CONSTRAINT `FK31dtw4tacfijho8xs3ppvwcle` FOREIGN KEY (`user`) REFERENCES `user` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `status`
 --
 
@@ -212,4 +231,4 @@ CREATE TABLE `user_role` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-14 18:50:11
+-- Dump completed on 2025-05-15 20:54:02

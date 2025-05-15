@@ -3,6 +3,7 @@ package com.e_com.Dao;
 import org.springframework.stereotype.Service;
 
 import com.e_com.Domain.Conditions;
+import com.e_com.Dto.BrandDto;
 import com.e_com.Dto.ConditionsDto;
 
 /**
@@ -16,5 +17,9 @@ import com.e_com.Dto.ConditionsDto;
 public interface ConditionsDao extends BaseDao<Conditions> {
 	
 	ConditionsDto saveConditions(ConditionsDto conditionsDto);
+	
+	ConditionsDto updateConditions(ConditionsDto conditionsDto);
+	
+	ConditionsDto checkConditionsAvailability(Integer conditionsId);
 
 }
