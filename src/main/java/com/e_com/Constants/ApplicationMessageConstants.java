@@ -75,6 +75,8 @@ public interface ApplicationMessageConstants {
 		String EX_UPDATE_CONDITION_STATUS = "ex_update_conditions_status";
 		String ERR_SAVE_STATUS_DETAILS = "err_save_status_details";
 		String EX_SAVE_STATUS_DETAILS = "ex_save_status_details";
+		String ERR_SAVE_BANK_DETAILS = "err_save_bank_details";
+		String EX_SAVE_BANK_DETAILS = "ex_save_bank_details";
 		String ERR_UPDATE_STATUS_DETAILS = "err_update_status_details";
 		String EX_UPDATE_STATUS_DETAILS = "ex_update_status_details";
 		String ERR_SAVE_SHIPPING_ADDRESS_DETAILS = "err.save.shipping.address.details";

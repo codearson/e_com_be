@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "096d5680-5008-42c4-b750-25630a1f1642",
+		"_postman_id": "04e651e8-c839-4700-a58b-107487fea93d",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "44754112"
+		"_exporter_id": "44724346",
+		"_collection_link": "https://asjathmusharrif.postman.co/workspace/Asjath-Musharrif's-Workspace~cbce72dc-85a4-4122-8da1-bf347f32ab8d/collection/44724346-04e651e8-c839-4700-a58b-107487fea93d?action=share&source=collection_link&creator=44724346"
 	},
 	"item": [
 		{
@@ -1711,6 +1712,51 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Bank",
+			"item": [
+				{
+					"name": "Save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MzIyMjU1fQ.uTFaW8-2MKSGGjLtnBHWoEEb7844jx6s5LRmk4Yv0gcL5CwWPEiCxaM-h3tIemDB",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"People's Bank\",\r\n  \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/bank/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bank",
+								"save"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
+		
 	]
 }
