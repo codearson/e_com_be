@@ -34,5 +34,17 @@ public class StatusServiceBL {
         log.info("StatusServiceBL.updateStatus() invoked.");
         return statusDao.updateStatus(statusDto);
     }
+    
+    public StatusDto updateForStatus(Integer statusId, Boolean status) {
+        log.info("StatusServiceBL.updateForStatus() invoked with statusId: {}, status: {}", statusId, status);
+        StatusDto statusDto = statusDao.checkStatusAvailability(statusId);
+        if (statusDto != null) {
+            statusDto.setIsActive(status);
+            return statusDao.updateStatus(statusDto);
+        } else {
+            return null;
+        }
+    }
+
 
 }

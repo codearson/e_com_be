@@ -2,6 +2,8 @@ package com.e_com.DaoImpl;
 
 import javax.transaction.Transactional;
 
+import org.hibernate.Criteria;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -45,4 +47,21 @@ public class StatusDaoImpl extends BaseDaoImpl<Status> implements StatusDao{
         Status updatedStatus = saveOrUpdate(status);
         return statusTransformer.transform(updatedStatus);
     }
+    
+    @Transactional
+    public StatusDto checkStatusAvailability(Integer statusId) {
+        log.info("StatusDaoImpl.checkStatusAvailability() invoked with statusId: {}", statusId);
+        
+        Criteria criteria = getCurrentSession().createCriteria(Status.class, "status");
+        criteria.add(Restrictions.eq("status.id", statusId)); // this line kept the same, assuming "status" alias matches your entity
+        
+        Status status = (Status) criteria.uniqueResult(); // fetch the result from DB
+        StatusDto statusDto = null;
+        if (status != null) {
+            statusDto = statusTransformer.transform(status); // transform into DTO
+        }
+        return statusDto;
+    }
+
+
 }

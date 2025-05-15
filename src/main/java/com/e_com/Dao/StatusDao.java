@@ -18,5 +18,7 @@ public interface StatusDao extends BaseDao<Status> {
     StatusDto saveStatus(StatusDto statusDto);
     
     StatusDto updateStatus(StatusDto statusDto);
+    
+    StatusDto checkStatusAvailability(Integer statusId);
 
 }
