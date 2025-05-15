@@ -55,4 +55,27 @@ public class ConditionsServiceImpl implements ConditionsService {
 
         return responseDto;
     }
+    
+    @Override
+    public ResponseDto updateConditions(ConditionsDto conditionsDto) {
+        log.info("ConditionsServiceImpl.updateConditions invoked");
+        ResponseDto responseDto = null;
+        try {
+            ConditionsDto updatedConditionsDto = conditionsServiceBL.updateConditions(conditionsDto);
+            if (updatedConditionsDto != null) {
+                log.info("Conditions details updated.");
+                responseDto = serviceUtil.getServiceResponse(updatedConditionsDto);
+            } else {
+                log.info("Unable to update conditions details.");
+                responseDto = serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_UPDATE_CONDITIONS_DETAILS);
+            }
+        } catch (Exception e) {
+            log.error("Exception occurs while updating conditions details.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_UPDATE_CONDITIONS_DETAILS);
+        }
+        return responseDto;
+    }
+
 }
