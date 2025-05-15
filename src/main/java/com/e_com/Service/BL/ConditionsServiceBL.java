@@ -34,4 +34,15 @@ public class ConditionsServiceBL {
         log.info("ConditionsServiceBL.updateConditions() invoked.");
         return conditionsDao.updateConditions(conditionsDto);
     }
+    
+    public ConditionsDto updateConditionsStatus(Integer conditionsId, Boolean status) {
+        log.info("ConditionsServiceBL.updateConditionsStatus() invoked with conditionsId: {}, status: {}", conditionsId, status);
+        ConditionsDto conditionsDto = conditionsDao.checkConditionsAvailability(conditionsId);
+        if (conditionsDto != null) {
+            conditionsDto.setIsActive(status);
+            return conditionsDao.updateConditions(conditionsDto);
+        } else {
+            return null;
+        }
+    }
 }
