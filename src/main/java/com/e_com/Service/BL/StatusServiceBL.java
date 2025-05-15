@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.e_com.Dao.StatusDao;
+import com.e_com.Dto.BrandDto;
 import com.e_com.Dto.StatusDto;
 
 import lombok.extern.slf4j.Slf4j;
@@ -28,4 +29,10 @@ public class StatusServiceBL {
         log.info("StatusServiceBL.saveStatus() invoked.");
         return statusDao.saveStatus(statusDto);
     }
+    
+    public StatusDto updateStatus(StatusDto statusDto) {
+        log.info("StatusServiceBL.updateStatus() invoked.");
+        return statusDao.updateStatus(statusDto);
+    }
+
 }

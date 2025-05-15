@@ -36,4 +36,12 @@ public class StatusController {
         log.info("StatusController.saveStatus() invoked");
         return statusService.saveStatus(statusDto);
     }
+    
+    @PostMapping("/update")
+    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
+    public ResponseDto updateStatus(@RequestBody StatusDto statusDto) {
+        log.info("StatusController.updateStatus() invoked");
+        return statusService.updateStatus(statusDto);
+    }
 }
+
