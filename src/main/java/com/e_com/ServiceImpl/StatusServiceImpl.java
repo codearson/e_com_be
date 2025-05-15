@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.e_com.Constants.ApplicationMessageConstants;
+import com.e_com.Dto.BrandDto;
 import com.e_com.Dto.ResponseDto;
 import com.e_com.Dto.StatusDto;
 import com.e_com.Service.StatusService;
@@ -49,6 +50,28 @@ public class StatusServiceImpl implements StatusService {
             log.error("Exception occurred while saving status details.", e);
             responseDto = serviceUtil.getExceptionServiceResponseByProperties(
                     ApplicationMessageConstants.ServiceErrorMessages.EX_SAVE_STATUS_DETAILS);
+        }
+        return responseDto;
+    }
+    
+    @Override
+    public ResponseDto updateStatus(StatusDto statusDto) {
+        log.info("StatusServiceImpl.updateStatus invoked");
+        ResponseDto responseDto = null;
+        try {
+        	StatusDto updatedStatusDto = statusServiceBL.updateStatus(statusDto);
+            if (updatedStatusDto != null) {
+                log.info("Status Details updated.");
+                responseDto = serviceUtil.getServiceResponse(updatedStatusDto);
+            } else {
+                log.info("Unable to update Status details.");
+                responseDto = serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_UPDATE_STATUS_DETAILS);
+            }
+        } catch (Exception e) {
+            log.error("Exception occurs while updating Status details.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_UPDATE_STATUS_DETAILS);
         }
         return responseDto;
     }

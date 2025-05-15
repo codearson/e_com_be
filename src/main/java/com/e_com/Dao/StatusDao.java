@@ -1,6 +1,7 @@
 package com.e_com.Dao;
 
 import com.e_com.Domain.Status;
+import com.e_com.Dto.BrandDto;
 import com.e_com.Dto.StatusDto;
 
 /**
@@ -15,4 +16,7 @@ import com.e_com.Dto.StatusDto;
 public interface StatusDao extends BaseDao<Status> {
 
     StatusDto saveStatus(StatusDto statusDto);
+    
+    StatusDto updateStatus(StatusDto statusDto);
+
 }
