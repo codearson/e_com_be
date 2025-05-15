@@ -1,12 +1,14 @@
 package com.e_com.ServiceImpl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.e_com.Constants.ApplicationMessageConstants;
 import com.e_com.Dto.ConditionsDto;
+import com.e_com.Dto.PaginatedResponseDto;
 import com.e_com.Dto.ResponseDto;
 import com.e_com.Dto.UserRoleDto;
 import com.e_com.Service.ConditionsService;
@@ -93,12 +95,12 @@ public class ConditionsServiceImpl implements ConditionsService {
             } else {
                 log.info("Unable to update conditions status.");
                 responseDto = serviceUtil.getErrorServiceResponse(
-                        ApplicationMessageConstants.ServiceErrorMessages.ERR_UPDATE_CONDITION_STATUS);
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_UPDATE_CONDITIONS_STATUS);
             }
         } catch (Exception e) {
             log.error("Exception occurs while updating conditions status.", e);
             responseDto = serviceUtil.getExceptionServiceResponseByProperties(
-                    ApplicationMessageConstants.ServiceErrorMessages.EX_UPDATE_CONDITION_STATUS);
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_UPDATE_CONDITIONS_STATUS);
         }
         return responseDto;
     }
@@ -124,5 +126,28 @@ public class ConditionsServiceImpl implements ConditionsService {
 		}
 		return responseDto;
 	}
+    
+    @Override
+    public ResponseDto getAllPageConditions(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters) {
+        log.info("ConditionsServiceImpl.getAllPageConditions() invoked with pageNumber: {}, pageSize: {}, status: {}", 
+                 pageNumber, pageSize, status);
+        ResponseDto responseDto = null;
+        try {
+            PaginatedResponseDto paginatedResponseDto = conditionsServiceBL.getAllPageConditions(pageNumber, pageSize, status, searchParameters);
+            if (paginatedResponseDto != null) {
+                log.info("Retrieved paginated Conditions details.");
+                responseDto = serviceUtil.getServiceResponse(paginatedResponseDto);
+            } else {
+                log.info("Unable to retrieve paginated Conditions details.");
+                responseDto = serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_CONDITIONS_DETAILS);
+            }
+        } catch (Exception e) {
+            log.error("Exception occurs while retrieving paginated Conditions details.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_CONDITIONS_DETAILS);
+        }
+        return responseDto;
+    }
 
 }

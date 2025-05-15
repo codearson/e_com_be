@@ -10,11 +10,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.context.request.WebRequest;
 
 import com.e_com.Dto.BrandDto;
 import com.e_com.Dto.ConditionsDto;
 import com.e_com.Dto.ResponseDto;
 import com.e_com.Service.ConditionsService;
+import com.e_com.Service.Utils.HttpReqRespUtils;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -64,6 +66,15 @@ public class ConditionsController {
 			log.info("ConditionsController.getAll() invoked.");
 			return conditionsService.getAllConditions();
 		}
+	 
+	 @GetMapping("/getAllPage")
+	    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
+	    public ResponseDto getAllPageConditions(@RequestParam("pageNumber") int pageNumber, @RequestParam("pageSize") int pageSize,
+	                                      @RequestParam("status") Boolean status, WebRequest webRequest) {
+	        log.info("ConditionsController.getAllPageConditions() invoked with pageNumber: {}, pageSize: {}, status: {}", 
+	                 pageNumber, pageSize, status);
+	        return conditionsService.getAllPageConditions(pageNumber, pageSize, status, HttpReqRespUtils.getSearchParameters(webRequest));
+	    }
 	    
 }
 

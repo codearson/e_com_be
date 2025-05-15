@@ -1,6 +1,7 @@
 package com.e_com.Service.BL;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.e_com.Dao.ConditionsDao;
 import com.e_com.Dto.BrandDto;
 import com.e_com.Dto.ConditionsDto;
+import com.e_com.Dto.PaginatedResponseDto;
 import com.e_com.Dto.UserRoleDto;
 
 import lombok.extern.slf4j.Slf4j;
@@ -53,4 +55,10 @@ public class ConditionsServiceBL {
 		log.info("ConditionsServiceBL.getAllCondition()invoked");
 		return conditionsDao.getAllConditions();
 	}
+    
+    public PaginatedResponseDto getAllPageConditions(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters) {
+        log.info("ConditionsServiceBL.getAllPageConditions() invoked with pageNumber: {}, pageSize: {}, status: {}", 
+                 pageNumber, pageSize, status);
+        return conditionsDao.getAllPageConditions(pageNumber, pageSize, status, searchParameters);
+    }
 }

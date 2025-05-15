@@ -1,5 +1,7 @@
 package com.e_com.Service;
 
+import java.util.Map;
+
 import com.e_com.Dto.ConditionsDto;
 import com.e_com.Dto.ResponseDto;
 
@@ -20,5 +22,8 @@ public interface ConditionsService {
 	ResponseDto updateConditionsStatus(Integer conditionsId, Boolean status);
 	
 	public ResponseDto getAllConditions();
+	
+	ResponseDto getAllPageConditions(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters);
+    
 	
 }
