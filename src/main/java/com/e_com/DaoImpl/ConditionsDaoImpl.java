@@ -2,6 +2,8 @@ package com.e_com.DaoImpl;
 
 import javax.transaction.Transactional;
 
+import org.hibernate.Criteria;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -48,5 +50,19 @@ public class ConditionsDaoImpl extends BaseDaoImpl<Conditions> implements Condit
         Conditions updatedConditions = saveOrUpdate(conditions);
         return conditionsTransformer.transform(updatedConditions);
     }
+    
+    @Transactional
+    public ConditionsDto checkConditionsAvailability(Integer conditionsId) {
+        log.info("ConditionsDaoImpl.checkConditionsAvailability() invoked with conditionsId: {}", conditionsId);
+        Criteria criteria = getCurrentSession().createCriteria(Conditions.class, "conditions");
+        criteria.add(Restrictions.eq("conditions.id", conditionsId));
+        Conditions conditions = (Conditions) criteria.uniqueResult();
+        ConditionsDto conditionsDto = null;
+        if (conditions != null) {
+            conditionsDto = conditionsTransformer.transform(conditions);
+        }
+        return conditionsDto;
+    }
+    
     
 }

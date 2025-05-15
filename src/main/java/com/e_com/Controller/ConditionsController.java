@@ -4,8 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.e_com.Dto.BrandDto;
@@ -46,6 +48,13 @@ public class ConditionsController {
 	    public ResponseDto updateConditions(@RequestBody ConditionsDto conditionsDto) {
 	        log.info("ConditionsController.updateConditions() invoked");
 	        return conditionsService.updateConditions(conditionsDto);
+	    }
+	 
+	 @PutMapping("/updateStatus")
+	    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
+	    public ResponseDto updateConditionsStatus(@RequestParam("conditionsId") Integer conditionsId, @RequestParam("status") Boolean status) {
+	        log.info("ConditionsController.updateConditionsStatus() invoked with conditionsId: {}, status: {}", conditionsId, status);
+	        return conditionsService.updateConditionsStatus(conditionsId, status);
 	    }
 	    
 }
