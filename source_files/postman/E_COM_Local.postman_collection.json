@@ -1475,6 +1475,242 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Shipping Address",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MzIwMzcxfQ.rJUE8E1E-qILXm5BnuXiJHcutc_ML98wA3dzoxgM8BE8UimCOqIxOLfhPjKCmXR9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"address\": \"jaffna\",\r\n  \"mobileNumber\": \"0765947337\",\r\n  \"userDto\": {\r\n    \"id\": 1\r\n  },\r\n  \"isActive\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/shippingAddress/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shippingAddress",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MzIxMTI5fQ.PzJozbWGcUXtj10fkRZoNB0Ihs6ca5_26A06fm3Sj_VeugB9OpjiHnxRINdWQrpS",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"address\": \"456 Elm St, Springfield\",\r\n    \"mobileNumber\": \"9876543210\",\r\n    \"userDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/shippingAddress/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shippingAddress",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MzIxMTI5fQ.PzJozbWGcUXtj10fkRZoNB0Ihs6ca5_26A06fm3Sj_VeugB9OpjiHnxRINdWQrpS",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"address\": \"456 Elm St, Springfield\",\r\n    \"mobileNumber\": \"9876543210\",\r\n    \"userDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/shippingAddress/updateStatus?shippingAddressId=1&status=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shippingAddress",
+								"updateStatus"
+							],
+							"query": [
+								{
+									"key": "shippingAddressId",
+									"value": "1"
+								},
+								{
+									"key": "status",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPage",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MzIxMTI5fQ.PzJozbWGcUXtj10fkRZoNB0Ihs6ca5_26A06fm3Sj_VeugB9OpjiHnxRINdWQrpS",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"address\": \"456 Elm St, Springfield\",\r\n    \"mobileNumber\": \"9876543210\",\r\n    \"userDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/shippingAddress/getAllPage?pageNumber=1&pageSize=10&status=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shippingAddress",
+								"getAllPage"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "status",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllBySearch",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MzIxMTI5fQ.PzJozbWGcUXtj10fkRZoNB0Ihs6ca5_26A06fm3Sj_VeugB9OpjiHnxRINdWQrpS",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"address\": \"456 Elm St, Springfield\",\r\n    \"mobileNumber\": \"9876543210\",\r\n    \"userDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/shippingAddress/getAllBySearch?address=jaffna",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shippingAddress",
+								"getAllBySearch"
+							],
+							"query": [
+								{
+									"key": "address",
+									"value": "jaffna"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

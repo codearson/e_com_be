@@ -16,7 +16,8 @@ import com.e_com.Dto.PaginatedResponseDto;
  **/
 
 public interface BranchDao {
-PaginatedResponseDto getAll(int pageNumber, int pageSize, Map<String, String> searchParams);
+	
+	PaginatedResponseDto getAll(int pageNumber, int pageSize, Map<String, String> searchParams);
 	
 	BranchDto save (BranchDto branchDto);
 
