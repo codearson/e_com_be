@@ -109,7 +109,7 @@ CREATE TABLE `postage_partner` (
   PRIMARY KEY (`id`),
   KEY `FK669m0dx1d8yfp89tegnp5ry35` (`user_id`),
   CONSTRAINT `FK669m0dx1d8yfp89tegnp5ry35` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
