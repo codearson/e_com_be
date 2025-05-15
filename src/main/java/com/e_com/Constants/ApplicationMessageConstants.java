@@ -73,12 +73,32 @@ public interface ApplicationMessageConstants {
 		String EX_UPDATE_CONDITIONS_DETAILS = "ex_update_conditions_details";
 		String ERR_UPDATE_CONDITION_STATUS = "err_update_conditions_status";
 		String EX_UPDATE_CONDITION_STATUS = "ex_update_conditions_status";
+		String ERR_RETRIEVE_ALL_CONDITIONS_DETAILS= "err.get.all.conditions.details";
+		String EX_RETRIEVE_ALL_CONDITIONS_DETAILS= "ex.get.all.conditions.details";
 		String ERR_SAVE_STATUS_DETAILS = "err_save_status_details";
 		String EX_SAVE_STATUS_DETAILS = "ex_save_status_details";
+		String ERR_SAVE_BANK_DETAILS = "err_save_bank_details";
+		String EX_SAVE_BANK_DETAILS = "ex_save_bank_details";
 		String ERR_UPDATE_STATUS_DETAILS = "err_update_status_details";
 		String EX_UPDATE_STATUS_DETAILS = "ex_update_status_details";
 		String ERR_UPDATE_FOR_STATUS = "err_update_status_status";
 		String EX_UPDATE_FOR_STATUS = "ex_update_status_status";
+		String ERR_SAVE_SHIPPING_ADDRESS_DETAILS = "err.save.shipping.address.details";
+        String EX_SAVE_SHIPPING_ADDRESS_DETAILS = "ex.save.shipping.address.details";
+        String ERR_UPDATE_SHIPPING_ADDRESS_DETAILS = "err.update.shipping.address.details";
+        String EX_UPDATE_SHIPPING_ADDRESS_DETAILS = "ex.update.shipping.address.details";
+        String ERR_UPDATE_SHIPPING_ADDRESS_STATUS = "err.update.shipping.address.status";
+        String EX_UPDATE_SHIPPING_ADDRESS_STATUS = "ex.update.shipping.address.status";
+        String ERR_RETRIEVE_ALL_SHIPPING_ADDRESS_DETAILS = "err.retrieve.all.shipping.address.details";
+        String EX_RETRIEVE_ALL_SHIPPING_ADDRESS_DETAILS = "ex.retrieve.all.shipping.address.details";
+		String ERR_SAVE_USER_BANK_DETAILS = "err.save.user.bank.details";
+        String EX_SAVE_USER_BANK_DETAILS = "ex.save.user.bank.details";
+        String ERR_UPDATE_USER_BANK_DETAILS = "err.update.user.bank.details";
+        String EX_UPDATE_USER_BANK_DETAILS = "ex.update.user.bank.details";
+        String ERR_UPDATE_USER_BANK_STATUS = "err.update.user.bank.status";
+        String EX_UPDATE_USER_BANK_STATUS = "ex.update.user.bank.status";
+        String ERR_RETRIEVE_ALL_USER_BANK_DETAILS = "err.retrive.all.user.bank.details";
+        String EX_RETRIEVE_ALL_USER_BANK_DETAILS = "ex.retrive.all.user.bank.details";
 		
 	}
 }

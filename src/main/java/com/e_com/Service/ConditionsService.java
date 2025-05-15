@@ -19,4 +19,6 @@ public interface ConditionsService {
 	
 	ResponseDto updateConditionsStatus(Integer conditionsId, Boolean status);
 	
+	public ResponseDto getAllConditions();
+	
 }
