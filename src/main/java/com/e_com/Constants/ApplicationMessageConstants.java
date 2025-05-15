@@ -71,6 +71,18 @@ public interface ApplicationMessageConstants {
 		String EX_SAVE_CONDITIONS_DETAILS = "ex_save_conditions_details";
 		String ERR_SAVE_STATUS_DETAILS = "err_save_status_details";
 		String EX_SAVE_STATUS_DETAILS = "ex_save_status_details";
+		String ERR_SAVE_PRODUCTSUBCATEGORY_DETAILS = "err.save.productsubcategory.details";
+		String EX_SAVE_PRODUCTSUBCATEGORY_DETAILS = "ex.save.productsubcategory.details";
+		String ERR_RETRIEVE_ALL_PRODUCTSUBCATEGORY_DETAILS = "err.get.all.productsubcategory.details";
+		String EX_RETRIEVE_ALL_PRODUCTSUBCATEGORY_DETAILS = "ex.get.all.productsubcategory.details";
+		String ERR_UPDATE_PRODUCTSUBCATEGORY_DETAILS = "err.update.productsubcategory.details";
+		String EX_UPDATE_PRODUCTSUBCATEGORY_DETAILS = "ex.update.productsubcategory.details";
+		String ERR_RETRIEVE_PRODUCTSUBCATEGORY_BY_NAME = "err.get.by.productsubcategory.name";
+		String EX_RETRIEVE_PRODUCTSUBCATEGORY_BY_NAME = "ex.get.by.productsubcategory.name";
+		String ERR_UPDATE_PRODUCTSUBCATEGORY_STATUS = "err.update.productsubcategory.status";
+		String EX_UPDATE_PRODUCTSUBCATEGORY_STATUS = "ex.update.productsubcategory.status";
+		String ERR_RETRIEVE_PRODUCTSUBCATEGORY_BY_ID ="err.get.by.productsubcategory.id";
+		String EX_RETRIEVE_PRODUCTSUBCATEGORY_BY_ID="ex.get.by.productsubcategory.id";
 		
 	}
 }
