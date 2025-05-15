@@ -3,6 +3,7 @@ package com.e_com.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -56,6 +57,13 @@ public class ConditionsController {
 	        log.info("ConditionsController.updateConditionsStatus() invoked with conditionsId: {}, status: {}", conditionsId, status);
 	        return conditionsService.updateConditionsStatus(conditionsId, status);
 	    }
+	 
+	 @GetMapping("/getAll")
+		@PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
+		public ResponseDto getAllConditions() {
+			log.info("ConditionsController.getAll() invoked.");
+			return conditionsService.getAllConditions();
+		}
 	    
 }
 
