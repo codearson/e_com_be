@@ -93,6 +93,8 @@ public interface ApplicationMessageConstants {
 		String EX_SAVE_BANK_DETAILS = "ex_save_bank_details";
 		String ERR_UPDATE_STATUS_DETAILS = "err_update_status_details";
 		String EX_UPDATE_STATUS_DETAILS = "ex_update_status_details";
+		String ERR_UPDATE_FOR_STATUS = "err_update_status_status";
+		String EX_UPDATE_FOR_STATUS = "ex_update_status_status";
 		String ERR_SAVE_SHIPPING_ADDRESS_DETAILS = "err.save.shipping.address.details";
         String EX_SAVE_SHIPPING_ADDRESS_DETAILS = "ex.save.shipping.address.details";
         String ERR_UPDATE_SHIPPING_ADDRESS_DETAILS = "err.update.shipping.address.details";

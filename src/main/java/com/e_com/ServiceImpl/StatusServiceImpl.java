@@ -75,4 +75,28 @@ public class StatusServiceImpl implements StatusService {
         }
         return responseDto;
     }
+    
+    @Override
+    public ResponseDto updateForStatus(Integer statusId, Boolean status) {
+        log.info("StatusServiceImpl.updateForStatus invoked with statusId: {}, status: {}", statusId, status);
+        ResponseDto responseDto = null;
+        try {
+            StatusDto updatedStatusDto = statusServiceBL.updateForStatus(statusId, status);
+            if (updatedStatusDto != null) {
+                log.info("Status updated successfully.");
+                responseDto = serviceUtil.getServiceResponse(updatedStatusDto);
+            } else {
+                log.info("Unable to update Status.");
+                responseDto = serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_UPDATE_FOR_STATUS);
+            }
+        } catch (Exception e) {
+            log.error("Exception occurs while updating Status.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_UPDATE_FOR_STATUS);
+        }
+        return responseDto;
+    }
+
+
 }
