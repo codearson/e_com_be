@@ -2,6 +2,7 @@ package com.e_com.Service;
 
 import java.util.Map;
 
+import com.e_com.Dto.BrandDto;
 import com.e_com.Dto.ResponseDto;
 import com.e_com.Dto.StatusDto;
 
@@ -14,5 +15,7 @@ import com.e_com.Dto.StatusDto;
 public interface StatusService {
     
     ResponseDto saveStatus(StatusDto statusDto);
+    
+    ResponseDto updateStatus(StatusDto statusDto);
 
 }
