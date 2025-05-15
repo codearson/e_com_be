@@ -59,5 +59,13 @@ public interface ApplicationMessageConstants {
 		String EX_UPDATE_BRANCH_STATUS = "ex.update.branch.status";
 		String ERR_RETRIEVE_BRANCH_BY_ID ="err.get.by.branch.id";
 		String EX_RETRIEVE_BRANCH_BY_ID="ex.get.by.branch.id";
+		String ERR_SAVE_SHIPPING_ADDRESS_DETAILS = "err_save_shipping_address_details";
+        String EX_SAVE_SHIPPING_ADDRESS_DETAILS = "ex_save_shipping_address_details";
+        String ERR_UPDATE_SHIPPING_ADDRESS_DETAILS = "err_update_shipping_address_details";
+        String EX_UPDATE_SHIPPING_ADDRESS_DETAILS = "ex_update_shipping_address_details";
+        String ERR_UPDATE_SHIPPING_ADDRESS_STATUS = "err_update_shipping_address_status";
+        String EX_UPDATE_SHIPPING_ADDRESS_STATUS = "ex_update_shipping_address_status";
+        String ERR_RETRIEVE_ALL_SHIPPING_ADDRESS_DETAILS = "err_retrieve_all_shipping_address_details";
+        String EX_RETRIEVE_ALL_SHIPPING_ADDRESS_DETAILS = "ex_retrieve_all_shipping_address_details";
 	}
 }
