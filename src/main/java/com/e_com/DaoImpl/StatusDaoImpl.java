@@ -37,4 +37,12 @@ public class StatusDaoImpl extends BaseDaoImpl<Status> implements StatusDao{
         Status savedStatus = saveOrUpdate(status);
         return statusTransformer.transform(savedStatus);
     }
+   
+    @Transactional
+    public StatusDto updateStatus(StatusDto statusDto) {
+        log.info("StatusDaoImpl.updateStatus() invoked.");
+        Status status = statusTransformer.reverseTransform(statusDto);
+        Status updatedStatus = saveOrUpdate(status);
+        return statusTransformer.transform(updatedStatus);
+    }
 }
