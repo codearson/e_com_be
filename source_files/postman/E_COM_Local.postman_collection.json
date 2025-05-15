@@ -1,10 +1,9 @@
 {
 	"info": {
-		"_postman_id": "04e651e8-c839-4700-a58b-107487fea93d",
+		"_postman_id": "8fd56fea-6887-47d4-ad74-f290ff801bec",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "44724346",
-		"_collection_link": "https://asjathmusharrif.postman.co/workspace/Asjath-Musharrif's-Workspace~cbce72dc-85a4-4122-8da1-bf347f32ab8d/collection/44724346-04e651e8-c839-4700-a58b-107487fea93d?action=share&source=collection_link&creator=44724346"
+		"_exporter_id": "40723516"
 	},
 	"item": [
 		{
@@ -1756,7 +1755,242 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "User Bank Details",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ2NjIzOTg5fQ.HOFOWkWhax8_aDQu64DT6FMmeJHrLr7LFq_GgRZ_9bc4NsDzEFDPntfesMczZY5D",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountHolderName\": \"Bavithragithan\",\r\n    \"accountNumber\": \"7475895000520155\",\r\n    \"createdAt\": \"2025-05-15T18:48:39\",\r\n    \"userDto\":{\r\n        \"id\": 1\r\n    },\r\n    \"bankDto\":{\r\n        \"id\": 1\r\n    },\r\n    \"branchDto\":{\r\n        \"id\": 1\r\n    },\r\n    \"isActive\":1\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/userBankDetails/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userBankDetails",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ2NjIzOTg5fQ.HOFOWkWhax8_aDQu64DT6FMmeJHrLr7LFq_GgRZ_9bc4NsDzEFDPntfesMczZY5D",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"accountHolderName\": \"Bavithragithan\",\r\n    \"accountNumber\": \"7475895000520155\",\r\n    \"createdAt\": \"2025-05-15T18:48:39\",\r\n    \"userDto\":{\r\n        \"id\": 1\r\n    },\r\n    \"bankDto\":{\r\n        \"id\": 1\r\n    },\r\n    \"branchDto\":{\r\n        \"id\": 1\r\n    },\r\n    \"isActive\":1\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/userBankDetails/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userBankDetails",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ2NjIzOTg5fQ.HOFOWkWhax8_aDQu64DT6FMmeJHrLr7LFq_GgRZ_9bc4NsDzEFDPntfesMczZY5D",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/userBankDetails/updateStatus?userBankDetailsId=1&status=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userBankDetails",
+								"updateStatus"
+							],
+							"query": [
+								{
+									"key": "userBankDetailsId",
+									"value": "1"
+								},
+								{
+									"key": "status",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ2NjIzOTg5fQ.HOFOWkWhax8_aDQu64DT6FMmeJHrLr7LFq_GgRZ_9bc4NsDzEFDPntfesMczZY5D",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/userBankDetails/getAllPage?pageNumber=1&pageSize=10&status=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userBankDetails",
+								"getAllPage"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "status",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllBySearch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ2NjIzOTg5fQ.HOFOWkWhax8_aDQu64DT6FMmeJHrLr7LFq_GgRZ_9bc4NsDzEFDPntfesMczZY5D",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/userBankDetails/getAllBySearch?accountHolderName=Bavithragithan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userBankDetails",
+								"getAllBySearch"
+							],
+							"query": [
+								{
+									"key": "accountNumber",
+									"value": "7475895000520155",
+									"disabled": true
+								},
+								{
+									"key": "accountHolderName",
+									"value": "Bavithragithan"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product Category",
+			"item": []
+		},
+		{
+			"name": "Product Sub Category",
+			"item": []
+		},
+		{
+			"name": "Product",
+			"item": []
+		},
+		{
+			"name": "Orders",
+			"item": []
+		},
+		{
+			"name": "Status",
+			"item": []
+		},
+		{
+			"name": "Order Tracking",
+			"item": []
+		},
+		{
+			"name": "Payment",
+			"item": []
 		}
-		
 	]
 }

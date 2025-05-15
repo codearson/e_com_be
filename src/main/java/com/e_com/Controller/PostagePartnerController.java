@@ -67,9 +67,9 @@ public class PostagePartnerController {
     }
     
     @GetMapping("/getAllBySearch")
-    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
+//    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
     public ResponseDto getAll(@RequestParam(value = "partnerName", required = false) String partnerName) {
-        log.info("BrandController.getAll() invoked with partnerName: {}", partnerName);
+        log.info("PostagePartnerController.getAll() invoked with partnerName: {}", partnerName);
         return postagePartnerService.getAll(partnerName);
     }
 	
