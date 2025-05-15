@@ -1,12 +1,14 @@
 package com.e_com.Dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
 import com.e_com.Domain.Conditions;
 import com.e_com.Dto.BrandDto;
 import com.e_com.Dto.ConditionsDto;
+import com.e_com.Dto.PaginatedResponseDto;
 import com.e_com.Dto.UserRoleDto;
 
 /**
@@ -26,5 +28,8 @@ public interface ConditionsDao extends BaseDao<Conditions> {
 	ConditionsDto checkConditionsAvailability(Integer conditionsId);
 	
 	List<ConditionsDto> getAllConditions();
+	
+	PaginatedResponseDto getAllPageConditions(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters);
+    
 
 }

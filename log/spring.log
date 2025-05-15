@@ -12219,3 +12219,81 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'ecom_db_local.shippingaddres
 2025-05-15 22:14:04.078  INFO 47040 --- [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 =======
 >>>>>>> master
+2025-05-15 23:45:34.924  INFO 48024 --- [restartedMain] com.e_com.EComApplication                : Starting EComApplication using Java 21.0.6 on Rfs-Marsh with PID 48024 (D:\codearson\E_Com_Soruces\e_com_be\target\classes started by Rifas in D:\codearson\E_Com_Soruces\e_com_be)
+2025-05-15 23:45:34.925  INFO 48024 --- [restartedMain] com.e_com.EComApplication                : The following profiles are active: dev
+2025-05-15 23:45:34.972  INFO 48024 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-15 23:45:34.972  INFO 48024 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-15 23:45:36.496  INFO 48024 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-15 23:45:36.524  INFO 48024 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 0 JPA repository interfaces.
+2025-05-15 23:45:37.193  INFO 48024 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-05-15 23:45:37.204  INFO 48024 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-15 23:45:37.205  INFO 48024 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-05-15 23:45:37.282  INFO 48024 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-15 23:45:37.282  INFO 48024 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2309 ms
+2025-05-15 23:45:37.466  INFO 48024 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-15 23:45:37.532  INFO 48024 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2025-05-15 23:45:37.733  INFO 48024 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-05-15 23:45:37.828  INFO 48024 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-15 23:45:38.069  INFO 48024 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-15 23:45:38.090  INFO 48024 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2025-05-15 23:45:39.456  INFO 48024 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-05-15 23:45:39.465  INFO 48024 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15 23:45:40.079  INFO 48024 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f24e9aa, org.springframework.security.web.context.SecurityContextPersistenceFilter@103e3dd7, org.springframework.security.web.header.HeaderWriterFilter@7eeedc4e, org.springframework.web.filter.CorsFilter@130ed60c, org.springframework.security.web.authentication.logout.LogoutFilter@6bf56d7d, com.e_com.Service.Utils.JwtCustomFilter@28b9c2d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1286353, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b109c1e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72232c36, org.springframework.security.web.session.SessionManagementFilter@77b0313e, org.springframework.security.web.access.ExceptionTranslationFilter@5b619b6f, org.springframework.security.web.access.intercept.AuthorizationFilter@3f2bccef]
+2025-05-15 23:45:40.288  INFO 48024 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-15 23:45:40.356  INFO 48024 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-15 23:45:40.364  INFO 48024 --- [restartedMain] com.e_com.EComApplication                : Started EComApplication in 5.89 seconds (JVM running for 7.315)
+2025-05-15 23:46:57.008  INFO 48024 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-15 23:46:57.009  INFO 48024 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-15 23:46:57.020  INFO 48024 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2025-05-15 23:46:57.056  INFO 48024 --- [http-nio-8080-exec-1] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-15 23:47:07.618  INFO 48024 --- [http-nio-8080-exec-3] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-15 23:47:07.698  INFO 48024 --- [http-nio-8080-exec-3] com.e_com.Controller.UserController      : UserController.getUserByName() invoked
+2025-05-15 23:47:07.703  INFO 48024 --- [http-nio-8080-exec-3] com.e_com.ServiceImpl.UserServiceImpl    : UserServiceImpl.login().invoked
+2025-05-15 23:47:07.703  INFO 48024 --- [http-nio-8080-exec-3] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.login() invoked
+2025-05-15 23:47:07.891  INFO 48024 --- [http-nio-8080-exec-3] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-15 23:47:07.891  INFO 48024 --- [http-nio-8080-exec-3] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-15 23:47:07.902  WARN 48024 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-15 23:47:31.575  INFO 48024 --- [http-nio-8080-exec-4] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-15 23:47:31.610  INFO 48024 --- [http-nio-8080-exec-4] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-15 23:47:31.610  INFO 48024 --- [http-nio-8080-exec-4] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-15 23:47:31.610  WARN 48024 --- [http-nio-8080-exec-4] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-15 23:47:31.642  INFO 48024 --- [http-nio-8080-exec-4] c.e_com.Controller.ConditionsController  : ConditionsController.getAllPageConditions() invoked with pageNumber: 1, pageSize: 10, status: false
+2025-05-15 23:47:31.643  INFO 48024 --- [http-nio-8080-exec-4] c.e.ServiceImpl.ConditionsServiceImpl    : ConditionsServiceImpl.getAllPageConditions() invoked with pageNumber: 1, pageSize: 10, status: false
+2025-05-15 23:47:31.645  INFO 48024 --- [http-nio-8080-exec-4] c.e_com.Service.BL.ConditionsServiceBL   : ConditionsServiceBL.getAllPageConditions() invoked with pageNumber: 1, pageSize: 10, status: false
+2025-05-15 23:47:31.650  INFO 48024 --- [http-nio-8080-exec-4] com.e_com.DaoImpl.ConditionsDaoImpl      : ConditionsDaoImpl.getAllPageConditions() invoked with pageNumber: 1, pageSize: 10, status: false
+2025-05-15 23:47:31.677  WARN 48024 --- [http-nio-8080-exec-4] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-15 23:47:31.683  INFO 48024 --- [http-nio-8080-exec-4] c.e.ServiceImpl.ConditionsServiceImpl    : Retrieved paginated Conditions details.
+2025-05-15 23:48:02.644  INFO 48024 --- [http-nio-8080-exec-5] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-15 23:48:02.651  INFO 48024 --- [http-nio-8080-exec-5] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-15 23:48:02.651  INFO 48024 --- [http-nio-8080-exec-5] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-15 23:48:02.651  WARN 48024 --- [http-nio-8080-exec-5] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-15 23:48:02.697  INFO 48024 --- [http-nio-8080-exec-5] com.e_com.Controller.BrandController     : BrandController.getAllPageBrand() invoked with pageNumber: 1, pageSize: 10, status: false
+2025-05-15 23:48:02.697  INFO 48024 --- [http-nio-8080-exec-5] com.e_com.ServiceImpl.BrandServiceImpl   : BrandServiceImpl.getAllPageBrand() invoked with pageNumber: 1, pageSize: 10, status: false
+2025-05-15 23:48:02.698  INFO 48024 --- [http-nio-8080-exec-5] com.e_com.Service.BL.BrandServiceBL      : BrandServiceBL.getAllPageBrand() invoked with pageNumber: 1, pageSize: 10, status: false
+2025-05-15 23:48:02.703  INFO 48024 --- [http-nio-8080-exec-5] com.e_com.DaoImpl.BrandDaoImpl           : BrandDaoImpl.getAllPageBrand() invoked with pageNumber: 1, pageSize: 10, status: false
+2025-05-15 23:48:02.709  WARN 48024 --- [http-nio-8080-exec-5] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-15 23:48:02.714  INFO 48024 --- [http-nio-8080-exec-5] com.e_com.ServiceImpl.BrandServiceImpl   : Retrieved paginated Brand details.
+2025-05-15 23:49:50.182  INFO 48024 --- [http-nio-8080-exec-8] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-15 23:49:50.204  INFO 48024 --- [http-nio-8080-exec-8] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-15 23:49:50.204  INFO 48024 --- [http-nio-8080-exec-8] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-15 23:49:50.205  WARN 48024 --- [http-nio-8080-exec-8] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-15 23:49:50.240  INFO 48024 --- [http-nio-8080-exec-8] c.e_com.Controller.ConditionsController  : ConditionsController.getAllPageConditions() invoked with pageNumber: 1, pageSize: 10, status: true
+2025-05-15 23:49:50.241  INFO 48024 --- [http-nio-8080-exec-8] c.e.ServiceImpl.ConditionsServiceImpl    : ConditionsServiceImpl.getAllPageConditions() invoked with pageNumber: 1, pageSize: 10, status: true
+2025-05-15 23:49:50.241  INFO 48024 --- [http-nio-8080-exec-8] c.e_com.Service.BL.ConditionsServiceBL   : ConditionsServiceBL.getAllPageConditions() invoked with pageNumber: 1, pageSize: 10, status: true
+2025-05-15 23:49:50.243  INFO 48024 --- [http-nio-8080-exec-8] com.e_com.DaoImpl.ConditionsDaoImpl      : ConditionsDaoImpl.getAllPageConditions() invoked with pageNumber: 1, pageSize: 10, status: true
+2025-05-15 23:49:50.248  WARN 48024 --- [http-nio-8080-exec-8] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-15 23:49:50.253  INFO 48024 --- [http-nio-8080-exec-8] c.e.ServiceImpl.ConditionsServiceImpl    : Retrieved paginated Conditions details.
+2025-05-15 23:50:04.094  INFO 48024 --- [http-nio-8080-exec-9] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-15 23:50:04.099  INFO 48024 --- [http-nio-8080-exec-9] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-15 23:50:04.099  INFO 48024 --- [http-nio-8080-exec-9] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-15 23:50:04.100  WARN 48024 --- [http-nio-8080-exec-9] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-15 23:50:04.110  INFO 48024 --- [http-nio-8080-exec-9] com.e_com.Controller.BrandController     : BrandController.getAllPageBrand() invoked with pageNumber: 1, pageSize: 10, status: true
+2025-05-15 23:50:04.111  INFO 48024 --- [http-nio-8080-exec-9] com.e_com.ServiceImpl.BrandServiceImpl   : BrandServiceImpl.getAllPageBrand() invoked with pageNumber: 1, pageSize: 10, status: true
+2025-05-15 23:50:04.111  INFO 48024 --- [http-nio-8080-exec-9] com.e_com.Service.BL.BrandServiceBL      : BrandServiceBL.getAllPageBrand() invoked with pageNumber: 1, pageSize: 10, status: true
+2025-05-15 23:50:04.112  INFO 48024 --- [http-nio-8080-exec-9] com.e_com.DaoImpl.BrandDaoImpl           : BrandDaoImpl.getAllPageBrand() invoked with pageNumber: 1, pageSize: 10, status: true
+2025-05-15 23:50:04.115  WARN 48024 --- [http-nio-8080-exec-9] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-15 23:50:04.118  INFO 48024 --- [http-nio-8080-exec-9] com.e_com.ServiceImpl.BrandServiceImpl   : Retrieved paginated Brand details.
+2025-05-15 23:50:39.834  INFO 48024 --- [RMI TCP Connection(13)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-05-15 23:50:39.923  INFO 48024 --- [RMI TCP Connection(13)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-15 23:50:39.935  INFO 48024 --- [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-15 23:50:39.940  INFO 48024 --- [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

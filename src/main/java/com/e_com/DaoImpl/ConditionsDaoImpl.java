@@ -2,6 +2,8 @@ package com.e_com.DaoImpl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 import javax.transaction.Transactional;
 
@@ -18,7 +20,9 @@ import com.e_com.Domain.Conditions;
 import com.e_com.Domain.UserRole;
 import com.e_com.Dto.BrandDto;
 import com.e_com.Dto.ConditionsDto;
+import com.e_com.Dto.PaginatedResponseDto;
 import com.e_com.Dto.UserRoleDto;
+import com.e_com.Service.Utils.HttpReqRespUtils;
 import com.e_com.Transformer.ConditionsTransformer;
 
 import lombok.extern.slf4j.Slf4j;
@@ -86,5 +90,46 @@ public class ConditionsDaoImpl extends BaseDaoImpl<Conditions> implements Condit
 		}
 		return conditionsDtoList;
 	}
+    
+    @Override
+    @Transactional
+    public PaginatedResponseDto getAllPageConditions(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters) {
+        log.info("ConditionsDaoImpl.getAllPageConditions() invoked with pageNumber: {}, pageSize: {}, status: {}", 
+                 pageNumber, pageSize, status);
+        PaginatedResponseDto paginatedResponseDto = null;
+        List<Conditions> conditionsList = null;
+        int recordCount = 0;
+
+        // Modify the count query to consider the status filter
+        String countString = "SELECT COUNT(*) FROM conditions";
+        if (status != null) {
+            countString += " WHERE is_active = " + (status ? "true" : "false");
+        }
+        int count = jdbcTemplate.queryForObject(countString, Integer.class);
+
+        if (pageSize == 0) {
+            pageSize = count;
+        }
+
+        Criteria criteria = getCurrentSession().createCriteria(Conditions.class, "conditions");
+
+        // Add status filter if provided
+        if (status != null) {
+            criteria.add(Restrictions.eq("isActive", status));
+        }
+
+        criteria.setFirstResult((pageNumber - 1) * pageSize);
+        criteria.setMaxResults(pageSize);
+        conditionsList = criteria.list();
+
+        if (conditionsList != null && !conditionsList.isEmpty()) {
+            paginatedResponseDto = HttpReqRespUtils.paginatedResponseMapper(conditionsList, pageNumber, pageSize, count);
+            paginatedResponseDto.setPayload(conditionsList.stream().map(brand -> {
+                return conditionsTransformer.transform(brand);
+            }).collect(Collectors.toList()));
+        }
+
+        return paginatedResponseDto;
+    }
     
 }
