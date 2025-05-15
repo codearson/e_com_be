@@ -15,19 +15,18 @@ import javax.persistence.Table;
 import lombok.Data;
 
 /**
- * Title: ShippingAddress.java. Company: www.codearson.com Copyright: Copyright (c) 2025.
+ * Title: PostagePartner.java. Company: www.codearson.com Copyright: Copyright (c) 2025.
  *
- * @author Purushorthaman Murugathas Rathakrishnan
- * @date 14 May 2025
- * @time 23:25:18
+ * @author Bavithragithan Kuganesan
+ * @date May 14, 2025
  * @version 1.0
  **/
 
 @Data
 @Entity
-@Table(name = "shippingAddress")
-public class ShippingAddress implements Serializable {
-    
+@Table(name = "postagePartner")
+public class PostagePartner implements Serializable {
+	
 	private static final long serialVersionUID = 1L;
 
     @Id
@@ -35,14 +34,12 @@ public class ShippingAddress implements Serializable {
     @Basic(optional = false)
     @Column(name = "id")
     private Integer id;
-    @Column(name = "address", nullable = false)
-    private String address;
-    @Column(name = "mobileNumber")
-    private String mobileNumber;
-    @JoinColumn(name = "user", referencedColumnName = "id")
+    @Column(name = "partnerName", nullable = false)
+    private String partnerName;
+    @JoinColumn(name = "userId", referencedColumnName = "id")
 	@ManyToOne(optional = false)
 	private User user;
     @Column(name = "isActive")
     private Boolean isActive;
-
+	
 }

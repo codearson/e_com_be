@@ -16,6 +16,15 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Dumping data for table `bank`
+--
+
+LOCK TABLES `bank` WRITE;
+/*!40000 ALTER TABLE `bank` DISABLE KEYS */;
+/*!40000 ALTER TABLE `bank` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping data for table `branch`
 --
 
@@ -23,6 +32,9 @@ LOCK TABLES `branch` WRITE;
 /*!40000 ALTER TABLE `branch` DISABLE KEYS */;
 INSERT INTO `branch` VALUES (1,'Jaffna',_binary ''),(2,'Colombo',_binary '\0');
 /*!40000 ALTER TABLE `branch` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping data for table `brand`
 --
 
@@ -33,12 +45,58 @@ INSERT INTO `brand` VALUES (1,'Nike',_binary '\0'),(2,'Adidas',_binary '\0'),(3,
 UNLOCK TABLES;
 
 --
+-- Dumping data for table `conditions`
+--
+
+LOCK TABLES `conditions` WRITE;
+/*!40000 ALTER TABLE `conditions` DISABLE KEYS */;
+/*!40000 ALTER TABLE `conditions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping data for table `password_reset_token`
 --
 
 LOCK TABLES `password_reset_token` WRITE;
 /*!40000 ALTER TABLE `password_reset_token` DISABLE KEYS */;
 /*!40000 ALTER TABLE `password_reset_token` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `postage_partner`
+--
+
+LOCK TABLES `postage_partner` WRITE;
+/*!40000 ALTER TABLE `postage_partner` DISABLE KEYS */;
+/*!40000 ALTER TABLE `postage_partner` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `product_category`
+--
+
+LOCK TABLES `product_category` WRITE;
+/*!40000 ALTER TABLE `product_category` DISABLE KEYS */;
+/*!40000 ALTER TABLE `product_category` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `shipping_address`
+--
+
+LOCK TABLES `shipping_address` WRITE;
+/*!40000 ALTER TABLE `shipping_address` DISABLE KEYS */;
+INSERT INTO `shipping_address` VALUES (1,'456 Elm St, Springfield',_binary '\0','9876543210',1),(2,'123 Super St, London',_binary '','0765947337',1),(3,'jaffna',_binary '','0765947337',1);
+/*!40000 ALTER TABLE `shipping_address` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `status`
+--
+
+LOCK TABLES `status` WRITE;
+/*!40000 ALTER TABLE `status` DISABLE KEYS */;
+/*!40000 ALTER TABLE `status` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -79,4 +137,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-13 20:38:55
+-- Dump completed on 2025-05-15 20:54:34

@@ -18,7 +18,7 @@ public class ShippingAddressDto {
 	
 	private String address;
 	
-	private Integer mobileNumber;
+	private String mobileNumber;
 	
 	private UserDto userDto;
 	

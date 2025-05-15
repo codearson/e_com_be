@@ -78,7 +78,7 @@ public class ShippingAddressDaoImpl extends BaseDaoImpl<ShippingAddress> impleme
         List<ShippingAddress> shippingAddressList = null;
 
         // Build the count query with status filter
-        StringBuilder countString = new StringBuilder("SELECT COUNT(*) FROM shippingAddress");
+        StringBuilder countString = new StringBuilder("SELECT COUNT(*) FROM shipping_address");
         if (status != null) {
             countString.append(" WHERE is_active = ").append(status ? "true" : "false");
         }

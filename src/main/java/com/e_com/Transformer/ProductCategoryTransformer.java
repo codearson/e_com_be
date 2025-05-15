@@ -6,30 +6,29 @@ import com.e_com.Domain.ProductCategory;
 import com.e_com.Dto.ProductCategoryDto;
 
 
-
 @Component
-public class ProductCategoryTransformer {
+public class ProductCategoryTransformer implements BaseTransformer<ProductCategory, ProductCategoryDto> {
 
-    // Convert Domain to DTO
+    @Override
     public ProductCategoryDto transform(ProductCategory productCategory) {
-        ProductCategoryDto dto = null;
+        ProductCategoryDto productCategoryDto = null;
         if (productCategory != null) {
-            dto = new ProductCategoryDto();
-            dto.setId(productCategory.getId());
-            dto.setName(productCategory.getName());
-            dto.setIsActive(productCategory.getIsActive());
+            productCategoryDto = new ProductCategoryDto();
+            productCategoryDto.setId(productCategory.getId());
+            productCategoryDto.setName(productCategory.getName());
+            productCategoryDto.setIsActive(productCategory.getIsActive());
         }
-        return dto;
+        return productCategoryDto;
     }
 
-    // Convert DTO to Domain
-    public ProductCategory reverseTransform(ProductCategoryDto dto) {
+    @Override
+    public ProductCategory reverseTransform(ProductCategoryDto productCategoryDto) {
         ProductCategory productCategory = null;
-        if (dto != null) {
+        if (productCategoryDto != null) {
             productCategory = new ProductCategory();
-            productCategory.setId(dto.getId());
-            productCategory.setName(dto.getName());
-            productCategory.setIsActive(dto.getIsActive());
+            productCategory.setId(productCategoryDto.getId());
+            productCategory.setName(productCategoryDto.getName());
+            productCategory.setIsActive(productCategoryDto.getIsActive());
         }
         return productCategory;
     }
