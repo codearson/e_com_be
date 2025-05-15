@@ -1,11 +1,14 @@
 package com.e_com.ServiceImpl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.e_com.Constants.ApplicationMessageConstants;
 import com.e_com.Dto.ConditionsDto;
 import com.e_com.Dto.ResponseDto;
+import com.e_com.Dto.UserRoleDto;
 import com.e_com.Service.ConditionsService;
 import com.e_com.Service.BL.ConditionsServiceBL;
 import com.e_com.Service.Utils.ServiceUtil;
@@ -99,6 +102,27 @@ public class ConditionsServiceImpl implements ConditionsService {
         }
         return responseDto;
     }
-
+    
+    @Override
+	public ResponseDto getAllConditions() {
+		log.info("ConditionsServiceImpl.getAllConditions() invoked");
+		ResponseDto responseDto = null;
+		try {
+			List<ConditionsDto> conditionsDto = conditionsServiceBL.getAllConditions();
+			if (conditionsDto != null) {
+				log.info("Retrieve All Conditions Details.");
+				responseDto = serviceUtil.getServiceResponse(conditionsDto);
+			} else {
+				log.info("Unable to retrieve All Conditions details.");
+				responseDto = serviceUtil.getErrorServiceResponse(
+						ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_CONDITIONS_DETAILS);
+			}
+		} catch (Exception e) {
+			log.error("Exception occurs while retrieving All Conditions details.", e);
+			responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+					ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_CONDITIONS_DETAILS);
+		}
+		return responseDto;
+	}
 
 }

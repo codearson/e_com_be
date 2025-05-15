@@ -1,11 +1,14 @@
 package com.e_com.Service.BL;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.e_com.Dao.ConditionsDao;
 import com.e_com.Dto.BrandDto;
 import com.e_com.Dto.ConditionsDto;
+import com.e_com.Dto.UserRoleDto;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -45,4 +48,9 @@ public class ConditionsServiceBL {
             return null;
         }
     }
+    
+    public List<ConditionsDto> getAllConditions() {
+		log.info("ConditionsServiceBL.getAllCondition()invoked");
+		return conditionsDao.getAllConditions();
+	}
 }

@@ -1,8 +1,12 @@
 package com.e_com.DaoImpl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.hibernate.Criteria;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -11,8 +15,10 @@ import org.springframework.stereotype.Repository;
 import com.e_com.Dao.ConditionsDao;
 import com.e_com.Domain.Brand;
 import com.e_com.Domain.Conditions;
+import com.e_com.Domain.UserRole;
 import com.e_com.Dto.BrandDto;
 import com.e_com.Dto.ConditionsDto;
+import com.e_com.Dto.UserRoleDto;
 import com.e_com.Transformer.ConditionsTransformer;
 
 import lombok.extern.slf4j.Slf4j;
@@ -64,5 +70,21 @@ public class ConditionsDaoImpl extends BaseDaoImpl<Conditions> implements Condit
         return conditionsDto;
     }
     
+    @Override
+	@Transactional
+	public List<ConditionsDto> getAllConditions() {
+		log.info("ConditionsDaoImpl.getAllConditions() invoked");
+		Criteria criteria = getCurrentSession().createCriteria(Conditions.class, "conditions");
+		criteria.addOrder(Order.asc("id"));
+		List<ConditionsDto> conditionsDtoList = null;
+		List<Conditions> conditionsList = (List<Conditions>) criteria.list();
+		if (conditionsList != null && !conditionsList.isEmpty()) {
+			conditionsDtoList = new ArrayList<>();
+			for (Conditions conditions : conditionsList) {
+				conditionsDtoList.add(conditionsTransformer.transform(conditions));
+			}
+		}
+		return conditionsDtoList;
+	}
     
 }
