@@ -1,5 +1,10 @@
 package com.e_com.Service;
 
+import java.util.Map;
+
+import com.e_com.Dto.ProductDto;
+import com.e_com.Dto.ResponseDto;
+
 /**
  * Title: ProductService.java. Company: www.codearson.com Copyright: Copyright (c) 2025.
  *
@@ -10,5 +15,15 @@ package com.e_com.Service;
  **/
 
 public interface ProductService {
-
+	
+    ResponseDto saveProduct(ProductDto productDto);
+    
+    ResponseDto updateProduct(ProductDto productDto);
+    
+    ResponseDto updateProductStatus(Integer productId, Boolean status);
+    
+    ResponseDto getAllPageProduct(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters);
+    
+    ResponseDto getAllBySearchProduct(String productSubCategoryName, String brandName, String conditionType, String type, String title);
+    
 }

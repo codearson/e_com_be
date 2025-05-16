@@ -63,7 +63,7 @@ public class ProductSubCategoryController {
 	
 	@GetMapping("/getByName")
 	@PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
-	public ResponseDto getProductSubCategoryByName(@RequestParam("branchName") String productSubCategoryName) {
+	public ResponseDto getProductSubCategoryByName(@RequestParam("productSubCategoryName") String productSubCategoryName) {
 	    log.info("ProductSubCategoryController.getProductSubCategoryByName() invoked");
 	    return productSubCategoryService.getProductSubCategoryByName(productSubCategoryName);
 	}
@@ -84,7 +84,7 @@ public class ProductSubCategoryController {
 	
 	@GetMapping("/getAllBySearch")
     @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
-    public ResponseDto getAllProductSubCategory(@RequestParam(value = "branchName", required = false) String productSubCategoryName) {
+    public ResponseDto getAllProductSubCategory(@RequestParam(value = "productSubCategoryName", required = false) String productSubCategoryName) {
         log.info("ProductSubCategoryController.getAllProductSubCategory() invoked with productSubCategoryName: {}", productSubCategoryName);
         return productSubCategoryService.getAllProductSubCategory(productSubCategoryName);
     }

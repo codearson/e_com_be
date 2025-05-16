@@ -1,5 +1,21 @@
 package com.e_com.ServiceImpl;
 
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.e_com.Constants.ApplicationMessageConstants;
+import com.e_com.Dto.PaginatedResponseDto;
+import com.e_com.Dto.ProductDto;
+import com.e_com.Dto.ResponseDto;
+import com.e_com.Service.ProductService;
+import com.e_com.Service.BL.ProductServiceBL;
+import com.e_com.Service.Utils.ServiceUtil;
+
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * Title: ProductServiceImpl.java. Company: www.codearson.com Copyright: Copyright (c) 2025.
  *
@@ -9,6 +25,144 @@ package com.e_com.ServiceImpl;
  * @version 1.0
  **/
 
-public class ProductServiceImpl {
+@Component
+@Slf4j
+public class ProductServiceImpl implements ProductService {
 
+    @Autowired
+    private ProductServiceBL productServiceBL;
+
+    @Autowired
+    private ServiceUtil serviceUtil;
+
+    @Override
+    public ResponseDto saveProduct(ProductDto productDto) {
+        log.info("ProductServiceImpl.saveProduct invoked");
+        ResponseDto responseDto = null;
+        try {
+            if (productDto == null || productDto.getProductSubCategoryDto() == null || 
+                productDto.getBrandDto() == null || productDto.getConditionsDto() == null || 
+                productDto.getStatusDto() == null) {
+                log.info("Invalid Product data provided.");
+                return serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_SAVE_PRODUCT_DETAILS);
+            }
+            ProductDto savedProductDto = productServiceBL.saveProduct(productDto);
+            if (savedProductDto != null) {
+                log.info("Product Details saved.");
+                responseDto = serviceUtil.getServiceResponse(savedProductDto);
+            } else {
+                log.info("Unable to save Product details.");
+                responseDto = serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_SAVE_PRODUCT_DETAILS);
+            }
+        } catch (Exception e) {
+            log.error("Exception occurs while saving Product details.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_SAVE_PRODUCT_DETAILS);
+        }
+        return responseDto;
+    }
+
+    @Override
+    public ResponseDto updateProduct(ProductDto productDto) {
+        log.info("ProductServiceImpl.updateProduct invoked");
+        ResponseDto responseDto = null;
+        try {
+            if (productDto == null || productDto.getId() == null || 
+                productDto.getProductSubCategoryDto() == null || 
+                productDto.getBrandDto() == null || productDto.getConditionsDto() == null || 
+                productDto.getStatusDto() == null) {
+                log.info("Invalid Product data provided for update.");
+                return serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_UPDATE_PRODUCT_DETAILS);
+            }
+            ProductDto updatedProductDto = productServiceBL.updateProduct(productDto);
+            if (updatedProductDto != null) {
+                log.info("Product Details updated.");
+                responseDto = serviceUtil.getServiceResponse(updatedProductDto);
+            } else {
+                log.info("Unable to update Product details.");
+                responseDto = serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_UPDATE_PRODUCT_DETAILS);
+            }
+        } catch (Exception e) {
+            log.error("Exception occurs while updating Product details.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_UPDATE_PRODUCT_DETAILS);
+        }
+        return responseDto;
+    }
+
+    @Override
+    public ResponseDto updateProductStatus(Integer productId, Boolean status) {
+        log.info("ProductServiceImpl.updateProductStatus invoked with productId: {}, status: {}", productId, status);
+        ResponseDto responseDto = null;
+        try {
+            if (productId == null) {
+                log.info("Invalid productId provided.");
+                return serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_UPDATE_PRODUCT_STATUS);
+            }
+            ProductDto updatedProductDto = productServiceBL.updateProductStatus(productId, status);
+            if (updatedProductDto != null) {
+                log.info("Product Status updated.");
+                responseDto = serviceUtil.getServiceResponse(updatedProductDto);
+            } else {
+                log.info("Unable to update Product status.");
+                responseDto = serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_UPDATE_PRODUCT_STATUS);
+            }
+        } catch (Exception e) {
+            log.error("Exception occurs while updating Product status.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_UPDATE_PRODUCT_STATUS);
+        }
+        return responseDto;
+    }
+
+    @Override
+    public ResponseDto getAllPageProduct(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters) {
+        log.info("ProductServiceImpl.getAllPageProduct() invoked with pageNumber: {}, pageSize: {}, status: {}", 
+                 pageNumber, pageSize, status);
+        ResponseDto responseDto = null;
+        try {
+            if (pageNumber < 1 || pageSize < 0) {
+                log.info("Invalid pagination parameters provided.");
+                return serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_PRODUCT_DETAILS);
+            }
+            PaginatedResponseDto paginatedResponseDto = productServiceBL.getAllPageProduct(pageNumber, pageSize, status, searchParameters);
+            if (paginatedResponseDto != null) {
+                log.info("Retrieved paginated Product details.");
+                responseDto = serviceUtil.getServiceResponse(paginatedResponseDto);
+            } else {
+                log.info("Unable to retrieve paginated Product details.");
+                responseDto = serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_PRODUCT_DETAILS);
+            }
+        } catch (Exception e) {
+            log.error("Exception occurs while retrieving paginated Product details.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_PRODUCT_DETAILS);
+        }
+        return responseDto;
+    }
+
+    @Override
+    public ResponseDto getAllBySearchProduct(String productSubCategoryName, String brandName, String conditionType, String type, String title) {
+        log.info("ProductServiceImpl.getAllBySearchProduct() invoked with productSubCategoryName: {}, brandName: {}, conditionType: {}, type: {}, title: {}", 
+                 productSubCategoryName, brandName, conditionType, type, title);
+        ResponseDto responseDto = null;
+        try {
+            List<ProductDto> productList = productServiceBL.getAllBySearchProduct(productSubCategoryName, brandName, conditionType, type, title);
+            log.info("Retrieved Product details by search.");
+            responseDto = serviceUtil.getServiceResponse(productList);
+        } catch (Exception e) {
+            log.error("Exception occurs while retrieving Product details by search.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_PRODUCT_DETAILS);
+        }
+        return responseDto;
+    }
 }

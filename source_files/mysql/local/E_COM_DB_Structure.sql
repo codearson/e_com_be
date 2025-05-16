@@ -72,7 +72,7 @@ CREATE TABLE `conditions` (
   `condition_type` varchar(255) NOT NULL,
   `is_active` bit(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -113,6 +113,41 @@ CREATE TABLE `postage_partner` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `product`
+--
+
+DROP TABLE IF EXISTS `product`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `product` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `color` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `image_url` varchar(255) DEFAULT NULL,
+  `is_active` bit(1) DEFAULT NULL,
+  `price` double DEFAULT NULL,
+  `quentity` int DEFAULT NULL,
+  `size` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `brand` int NOT NULL,
+  `conditions` int NOT NULL,
+  `product_sub_category` int NOT NULL,
+  `status` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKti0lsgnnoerhclcve20iho3un` (`brand`),
+  KEY `FKfo3i1hrgnqpradhyj3c39um61` (`conditions`),
+  KEY `FKo5o497w41ydtdh6muiins73ki` (`product_sub_category`),
+  KEY `FKrjx2c79b1cc0jykhf57lfqx0t` (`status`),
+  CONSTRAINT `FKfo3i1hrgnqpradhyj3c39um61` FOREIGN KEY (`conditions`) REFERENCES `conditions` (`id`),
+  CONSTRAINT `FKo5o497w41ydtdh6muiins73ki` FOREIGN KEY (`product_sub_category`) REFERENCES `product_sub_category` (`id`),
+  CONSTRAINT `FKrjx2c79b1cc0jykhf57lfqx0t` FOREIGN KEY (`status`) REFERENCES `status` (`id`),
+  CONSTRAINT `FKti0lsgnnoerhclcve20iho3un` FOREIGN KEY (`brand`) REFERENCES `brand` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `product_category`
 --
 
@@ -124,7 +159,25 @@ CREATE TABLE `product_category` (
   `is_active` bit(1) DEFAULT NULL,
   `name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `product_sub_category`
+--
+
+DROP TABLE IF EXISTS `product_sub_category`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `product_sub_category` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `is_active` bit(1) DEFAULT NULL,
+  `product_sub_category_name` varchar(255) DEFAULT NULL,
+  `product_category` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK9marnfn0alt7ttr1dmm9dgmsk` (`product_category`),
+  CONSTRAINT `FK9marnfn0alt7ttr1dmm9dgmsk` FOREIGN KEY (`product_category`) REFERENCES `product_category` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -158,7 +211,7 @@ CREATE TABLE `status` (
   `is_active` bit(1) DEFAULT NULL,
   `type` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -185,6 +238,32 @@ CREATE TABLE `user` (
   KEY `FKh2wc2dtfdo8maylne7mgubowq` (`user_role_id`),
   CONSTRAINT `FKh2wc2dtfdo8maylne7mgubowq` FOREIGN KEY (`user_role_id`) REFERENCES `user_role` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `user_bank_details`
+--
+
+DROP TABLE IF EXISTS `user_bank_details`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `user_bank_details` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `account_holder_name` varchar(255) NOT NULL,
+  `account_number` varchar(255) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `is_active` bit(1) DEFAULT NULL,
+  `bank_id` int NOT NULL,
+  `branch_id` int NOT NULL,
+  `user_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK9d1lkpsq95j3cnlnv7tx8y528` (`bank_id`),
+  KEY `FKc2js108qs37pidvk2007dscit` (`branch_id`),
+  KEY `FK54llyu4ktolf8lkwmfsrl1689` (`user_id`),
+  CONSTRAINT `FK54llyu4ktolf8lkwmfsrl1689` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
+  CONSTRAINT `FK9d1lkpsq95j3cnlnv7tx8y528` FOREIGN KEY (`bank_id`) REFERENCES `bank` (`id`),
+  CONSTRAINT `FKc2js108qs37pidvk2007dscit` FOREIGN KEY (`branch_id`) REFERENCES `branch` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -231,4 +310,4 @@ CREATE TABLE `user_role` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-15 20:54:02
+-- Dump completed on 2025-05-16 20:59:30

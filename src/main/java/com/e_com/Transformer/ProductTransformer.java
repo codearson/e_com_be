@@ -1,5 +1,13 @@
 package com.e_com.Transformer;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.e_com.Domain.Product;
+import com.e_com.Dto.ProductDto;
+
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * Title: ProductTransformer.java. Company: www.codearson.com Copyright: Copyright (c) 2025.
  *
@@ -9,6 +17,85 @@ package com.e_com.Transformer;
  * @version 1.0
  **/
 
-public class ProductTransformer {
+@Slf4j
+@Component
+public class ProductTransformer implements BaseTransformer<Product, ProductDto> {
 
+    @Autowired
+    private ProductSubCategoryTransformer productSubCategoryTransformer;
+
+    @Autowired
+    private BrandTransformer brandTransformer;
+
+    @Autowired
+    private ConditionsTransformer conditionsTransformer;
+
+    @Autowired
+    private StatusTransformer statusTransformer;
+
+    @Override
+    public ProductDto transform(Product product) {
+        log.debug("Transforming Product to ProductDto for id: {}", product != null ? product.getId() : null);
+        ProductDto productDto = null;
+        if (product != null) {
+            productDto = new ProductDto();
+            productDto.setId(product.getId());
+            if (product.getProductSubCategory() != null) {
+                productDto.setProductSubCategoryDto(productSubCategoryTransformer.transform(product.getProductSubCategory()));
+            }
+            if (product.getBrand() != null) {
+                productDto.setBrandDto(brandTransformer.transform(product.getBrand()));
+            }
+            if (product.getConditions() != null) {
+                productDto.setConditionsDto(conditionsTransformer.transform(product.getConditions()));
+            }
+            if (product.getStatus() != null) {
+                productDto.setStatusDto(statusTransformer.transform(product.getStatus()));
+            }
+            productDto.setTitle(product.getTitle());
+            productDto.setDescription(product.getDescription());
+            productDto.setSize(product.getSize());
+            productDto.setColor(product.getColor());
+            productDto.setPrice(product.getPrice());
+            productDto.setQuentity(product.getQuentity());
+            productDto.setCreatedAt(product.getCreatedAt());
+            productDto.setUpdatedAt(product.getUpdatedAt());
+            productDto.setImageUrl(product.getImageUrl());
+            productDto.setIsActive(product.getIsActive());
+        }
+        return productDto;
+    }
+
+    @Override
+    public Product reverseTransform(ProductDto productDto) {
+        log.debug("Reverse transforming ProductDto to Product for id: {}", productDto != null ? productDto.getId() : null);
+        Product product = null;
+        if (productDto != null) {
+            product = new Product();
+            product.setId(productDto.getId());
+            if (productDto.getProductSubCategoryDto() != null) {
+                product.setProductSubCategory(productSubCategoryTransformer.reverseTransform(productDto.getProductSubCategoryDto()));
+            }
+            if (productDto.getBrandDto() != null) {
+                product.setBrand(brandTransformer.reverseTransform(productDto.getBrandDto()));
+            }
+            if (productDto.getConditionsDto() != null) {
+                product.setConditions(conditionsTransformer.reverseTransform(productDto.getConditionsDto()));
+            }
+            if (productDto.getStatusDto() != null) {
+                product.setStatus(statusTransformer.reverseTransform(productDto.getStatusDto()));
+            }
+            product.setTitle(productDto.getTitle());
+            product.setDescription(productDto.getDescription());
+            product.setSize(productDto.getSize());
+            product.setColor(productDto.getColor());
+            product.setPrice(productDto.getPrice());
+            product.setQuentity(productDto.getQuentity());
+            product.setCreatedAt(productDto.getCreatedAt());
+            product.setUpdatedAt(productDto.getUpdatedAt());
+            product.setImageUrl(productDto.getImageUrl());
+            product.setIsActive(productDto.getIsActive());
+        }
+        return product;
+    }
 }
