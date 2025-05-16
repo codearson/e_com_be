@@ -40,7 +40,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `brand` WRITE;
 /*!40000 ALTER TABLE `brand` DISABLE KEYS */;
-INSERT INTO `brand` VALUES (1,'Nike',_binary '\0'),(2,'Adidas',_binary '\0'),(3,'Puma',_binary '\0'),(4,'Skechers',_binary ''),(5,'Reebok',_binary '');
+INSERT INTO `brand` VALUES (1,'Nike',_binary ''),(2,'Adidas',_binary ''),(3,'Puma',_binary ''),(4,'Skechers',_binary ''),(5,'Reebok',_binary '');
 /*!40000 ALTER TABLE `brand` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -50,7 +50,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `conditions` WRITE;
 /*!40000 ALTER TABLE `conditions` DISABLE KEYS */;
-INSERT INTO `conditions` VALUES (1,'Used',_binary ''),(2,'Used',_binary '\0'),(3,'New',_binary '');
+INSERT INTO `conditions` VALUES (1,'New',_binary ''),(2,'Used',_binary ''),(3,'Refurbished',_binary '');
 /*!40000 ALTER TABLE `conditions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -74,11 +74,22 @@ INSERT INTO `postage_partner` VALUES (1,_binary '','Yarl Express',1),(2,_binary
 UNLOCK TABLES;
 
 --
+-- Dumping data for table `product`
+--
+
+LOCK TABLES `product` WRITE;
+/*!40000 ALTER TABLE `product` DISABLE KEYS */;
+INSERT INTO `product` VALUES (1,'Blue','2025-05-16 20:18:15','Running shoes','Photo',_binary '\0',99.99,100,'S','Sneaker','2025-05-16 20:24:28',1,1,1,1),(2,'White','2025-05-16 20:21:24','Cotton button-down shirt','ShirtPhoto',_binary '',49.99,50,'M','Casual Shirt','2025-05-16 20:21:24',2,1,2,1);
+/*!40000 ALTER TABLE `product` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping data for table `product_category`
 --
 
 LOCK TABLES `product_category` WRITE;
 /*!40000 ALTER TABLE `product_category` DISABLE KEYS */;
+INSERT INTO `product_category` VALUES (1,_binary '','Clothing'),(2,_binary '','Electronics'),(3,_binary '','Footwear');
 /*!40000 ALTER TABLE `product_category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -88,6 +99,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `product_sub_category` WRITE;
 /*!40000 ALTER TABLE `product_sub_category` DISABLE KEYS */;
+INSERT INTO `product_sub_category` VALUES (1,_binary '','Clothing',1),(2,_binary '','Electronics',1),(3,_binary '','Footwear',1);
 /*!40000 ALTER TABLE `product_sub_category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -106,6 +118,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `status` WRITE;
 /*!40000 ALTER TABLE `status` DISABLE KEYS */;
+INSERT INTO `status` VALUES (1,_binary '','Available'),(2,_binary '','Out of Stock'),(3,_binary '','Discontinued');
 /*!40000 ALTER TABLE `status` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -156,4 +169,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-16 20:49:05
+-- Dump completed on 2025-05-16 21:00:07

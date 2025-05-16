@@ -3,7 +3,7 @@
 		"_postman_id": "d74b4972-4ab2-45dd-8052-ba6abf965a7b",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "44754112"
+		"_exporter_id": "40720747"
 	},
 	"item": [
 		{
@@ -1034,7 +1034,7 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/brand/updateStatus?brandId=3&status=0",
+							"raw": "http://localhost:8080/brand/updateStatus?brandId=3&status=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1051,7 +1051,7 @@
 								},
 								{
 									"key": "status",
-									"value": "0"
+									"value": "1"
 								}
 							]
 						}
@@ -2048,7 +2048,260 @@
 		},
 		{
 			"name": "Product",
-			"item": []
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NDAzMjg2fQ.6Ej7nqJRKj769stlmdo74nPtWWqizZA_BksXGjRQ1q6cnTVhDHvWSsceRhd5TXbx",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productSubCategoryDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"brandDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"conditionsDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"statusDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"title\": \"Sneaker\",\r\n    \"description\": \"Running shoes\",\r\n    \"size\": \"10\",\r\n    \"color\": \"Blue\",\r\n    \"price\": 99.99,\r\n    \"quentity\": 100,\r\n    \"imageUrl\":\"Photo\",\r\n    \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NDAzMjg2fQ.6Ej7nqJRKj769stlmdo74nPtWWqizZA_BksXGjRQ1q6cnTVhDHvWSsceRhd5TXbx",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"productSubCategoryDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"brandDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"conditionsDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"statusDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"title\": \"Sneaker\",\r\n    \"description\": \"Running shoes\",\r\n    \"size\": \"S\",\r\n    \"color\": \"Blue\",\r\n    \"price\": 99.99,\r\n    \"quentity\": 100,\r\n    \"imageUrl\":\"Photo\",\r\n    \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NDAzMjg2fQ.6Ej7nqJRKj769stlmdo74nPtWWqizZA_BksXGjRQ1q6cnTVhDHvWSsceRhd5TXbx",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"productSubCategoryDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"brandDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"conditionsDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"statusDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"title\": \"Sneaker\",\r\n    \"description\": \"Running shoes\",\r\n    \"size\": \"S\",\r\n    \"color\": \"Blue\",\r\n    \"price\": 99.99,\r\n    \"quentity\": 100,\r\n    \"imageUrl\":\"Photo\",\r\n    \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/updateStatus?productId=1&status=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"updateStatus"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "1"
+								},
+								{
+									"key": "status",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPage",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NDAzMjg2fQ.6Ej7nqJRKj769stlmdo74nPtWWqizZA_BksXGjRQ1q6cnTVhDHvWSsceRhd5TXbx",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"productSubCategoryDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"brandDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"conditionsDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"statusDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"title\": \"Sneaker\",\r\n    \"description\": \"Running shoes\",\r\n    \"size\": \"S\",\r\n    \"color\": \"Blue\",\r\n    \"price\": 99.99,\r\n    \"quentity\": 100,\r\n    \"imageUrl\":\"Photo\",\r\n    \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/getAllPage?pageNumber=1&pageSize=10&status=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"getAllPage"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "status",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllBySearch",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NDAzMjg2fQ.6Ej7nqJRKj769stlmdo74nPtWWqizZA_BksXGjRQ1q6cnTVhDHvWSsceRhd5TXbx",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"productSubCategoryDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"brandDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"conditionsDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"statusDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"title\": \"Sneaker\",\r\n    \"description\": \"Running shoes\",\r\n    \"size\": \"S\",\r\n    \"color\": \"Blue\",\r\n    \"price\": 99.99,\r\n    \"quentity\": 100,\r\n    \"imageUrl\":\"Photo\",\r\n    \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/getAllBySearch",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"getAllBySearch"
+							],
+							"query": [
+								{
+									"key": "brandName",
+									"value": "Nike",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "Sneaker",
+									"disabled": true
+								},
+								{
+									"key": "productSubCategoryName",
+									"value": "Clothing",
+									"disabled": true
+								},
+								{
+									"key": "conditionType",
+									"value": "New",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "Available",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "Orders",
