@@ -3,8 +3,10 @@ package com.e_com.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.e_com.Dto.ResponseDto;
@@ -43,5 +45,15 @@ public class StatusController {
         log.info("StatusController.updateStatus() invoked");
         return statusService.updateStatus(statusDto);
     }
+    
+    @PutMapping("/updateStatus")
+    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
+    public ResponseDto updateForStatus(@RequestParam("statusId") Integer statusId, @RequestParam("status") Boolean status) {
+        log.info("StatusController.updateForStatus() invoked with statusId: {}, status: {}", statusId, status);
+        return statusService.updateForStatus(statusId, status);
+    }
+
+    
+    
 }
 

@@ -17,5 +17,8 @@ public interface StatusService {
     ResponseDto saveStatus(StatusDto statusDto);
     
     ResponseDto updateStatus(StatusDto statusDto);
+    
+    ResponseDto updateForStatus(Integer statusId, Boolean status);
+
 
 }
