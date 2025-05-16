@@ -113,6 +113,24 @@ public class StatusDaoImpl extends BaseDaoImpl<Status> implements StatusDao{
 
         return paginatedResponseDto;
     }
+    
+    @Override
+    @Transactional
+    public List<StatusDto> getAllStatus(String statusName) {
+        log.info("StatusDaoImpl.getAllStatus() invoked with statusName: {}", statusName);
+        Criteria criteria = getCurrentSession().createCriteria(Status.class, "status");
+
+        // Add statusName filter if provided
+        if (statusName != null && !statusName.isEmpty()) {
+            criteria.add(Restrictions.ilike("statusName", "%" + statusName + "%"));
+        }
+
+        List<Status> statusList = criteria.list();
+        return statusList.stream()
+                         .map(status -> statusTransformer.transform(status))
+                         .collect(Collectors.toList());
+    }
+
 
 
 

@@ -1,5 +1,6 @@
 package com.e_com.Service.BL;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,6 +55,12 @@ public class StatusServiceBL {
                  pageNumber, pageSize, status);
         return statusDao.getAllPageStatus(pageNumber, pageSize, status, searchParameters);
     }
+    
+    public List<StatusDto> getAllStatus(String statusName) {
+        log.info("StatusServiceBL.getAllStatus() invoked with statusName: {}", statusName);
+        return statusDao.getAllStatus(statusName);
+    }
+
 
 
 }

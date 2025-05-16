@@ -3,7 +3,7 @@
 		"_postman_id": "ee7c5528-d190-499b-b64c-02ea7f050c8c",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "40720747"
+		"_exporter_id": "40430627"
 	},
 	"item": [
 		{
@@ -1034,7 +1034,7 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/brand/updateStatus?brandId=3&status=1",
+							"raw": "http://localhost:8080/brand/updateStatus?brandId=3&status=0",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1051,7 +1051,7 @@
 								},
 								{
 									"key": "status",
-									"value": "1"
+									"value": "0"
 								}
 							]
 						}
@@ -2680,6 +2680,42 @@
 								{
 									"key": "status",
 									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllSearch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NDE3MTk5fQ.2utBvWGxriDF2zM6E1fBzjzDd-33bk1rC2TvVx2Z32amF1c1Ipvy4gShTUpgEhhZ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/status/getAllBySearch?type=puma",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"status",
+								"getAllBySearch"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "puma"
 								}
 							]
 						}
