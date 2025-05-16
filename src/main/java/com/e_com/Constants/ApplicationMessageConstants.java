@@ -121,6 +121,14 @@ public interface ApplicationMessageConstants {
         String EX_UPDATE_PRODUCT_STATUS = "ex.update.product.status";
         String ERR_RETRIEVE_ALL_PRODUCT_DETAILS = "err.retrieve.all.product.details";
         String EX_RETRIEVE_ALL_PRODUCT_DETAILS = "ex.retrieve.all.product.details";
+        String ERR_SAVE_ORDERS_DETAILS = "err.save.orders.details";
+        String EX_SAVE_ORDERS_DETAILS = "ex.save.orders.details";
+        String ERR_UPDATE_ORDERS_DETAILS = "err.update.orders.details";
+        String EX_UPDATE_ORDERS_DETAILS = "ex.update.orders.details";
+        String ERR_UPDATE_ORDERS_STATUS = "err.update.orders.status";
+        String EX_UPDATE_ORDERS_STATUS = "ex.update.orders.status";
+        String ERR_RETRIEVE_ALL_ORDERS_DETAILS = "err.retrieve.all.orders.details";
+        String EX_RETRIEVE_ALL_ORDERS_DETAILS = "ex.retrieve.all.orders.details";
 		
 	}
 }
