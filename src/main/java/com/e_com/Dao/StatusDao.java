@@ -1,7 +1,10 @@
 package com.e_com.Dao;
 
+import java.util.Map;
+
 import com.e_com.Domain.Status;
 import com.e_com.Dto.BrandDto;
+import com.e_com.Dto.PaginatedResponseDto;
 import com.e_com.Dto.StatusDto;
 
 /**
@@ -20,5 +23,8 @@ public interface StatusDao extends BaseDao<Status> {
     StatusDto updateStatus(StatusDto statusDto);
     
     StatusDto checkStatusAvailability(Integer statusId);
+    
+    PaginatedResponseDto getAllPageStatus(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters);
+
 
 }

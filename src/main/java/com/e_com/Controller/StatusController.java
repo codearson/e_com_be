@@ -2,16 +2,19 @@ package com.e_com.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.context.request.WebRequest;
 
 import com.e_com.Dto.ResponseDto;
 import com.e_com.Dto.StatusDto;
 import com.e_com.Service.StatusService;
+import com.e_com.Service.Utils.HttpReqRespUtils;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -51,6 +54,15 @@ public class StatusController {
     public ResponseDto updateForStatus(@RequestParam("statusId") Integer statusId, @RequestParam("status") Boolean status) {
         log.info("StatusController.updateForStatus() invoked with statusId: {}, status: {}", statusId, status);
         return statusService.updateForStatus(statusId, status);
+    }
+    
+    @GetMapping("/getAllPage")
+    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
+    public ResponseDto getAllPageStatus(@RequestParam("pageNumber") int pageNumber, @RequestParam("pageSize") int pageSize,
+                                      @RequestParam("status") Boolean status, WebRequest webRequest) {
+        log.info("StatusController.getAllPageStatus() invoked with pageNumber: {}, pageSize: {}, status: {}", 
+                 pageNumber, pageSize, status);
+        return statusService.getAllPageStatus(pageNumber, pageSize, status, HttpReqRespUtils.getSearchParameters(webRequest));
     }
 
     
