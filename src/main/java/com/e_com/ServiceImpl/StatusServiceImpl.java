@@ -1,10 +1,14 @@
 package com.e_com.ServiceImpl;
 
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.e_com.Constants.ApplicationMessageConstants;
 import com.e_com.Dto.BrandDto;
+import com.e_com.Dto.PaginatedResponseDto;
 import com.e_com.Dto.ResponseDto;
 import com.e_com.Dto.StatusDto;
 import com.e_com.Service.StatusService;
@@ -97,6 +101,58 @@ public class StatusServiceImpl implements StatusService {
         }
         return responseDto;
     }
+    
+    @Override
+    public ResponseDto getAllPageStatus(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters) {
+        log.info("StatusServiceImpl.getAllPageStatus() invoked with pageNumber: {}, pageSize: {}, status: {}", 
+                 pageNumber, pageSize, status);
+        
+        ResponseDto responseDto = null;
+        
+        try {
+            PaginatedResponseDto paginatedResponseDto = statusServiceBL.getAllPageStatus(pageNumber, pageSize, status, searchParameters);
+            
+            if (paginatedResponseDto != null) {
+                log.info("Retrieved paginated Status details.");
+                responseDto = serviceUtil.getServiceResponse(paginatedResponseDto);
+            } else {
+                log.info("Unable to retrieve paginated Status details.");
+                responseDto = serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_STATUS_DETAILS);
+            }
+            
+        } catch (Exception e) {
+            log.error("Exception occurs while retrieving paginated Status details.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_STATUS_DETAILS);
+        }
+        
+        return responseDto;
+    }
+    
+    @Override
+    public ResponseDto getAllStatus(String statusName) {
+        log.info("StatusServiceImpl.getAllStatus() invoked with statusName: {}", statusName);
+        ResponseDto responseDto = null;
+        try {
+            List<StatusDto> statusList = statusServiceBL.getAllStatus(statusName);
+            if (statusList != null && !statusList.isEmpty()) {
+                log.info("Retrieved all Status details.");
+                responseDto = serviceUtil.getServiceResponse(statusList);
+            } else {
+                log.info("Unable to retrieve all Status details.");
+                responseDto = serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_STATUS_DETAILS);
+            }
+        } catch (Exception e) {
+            log.error("Exception occurs while retrieving all Status details.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_STATUS_DETAILS);
+        }
+        return responseDto;
+    }
+
+
 
 
 }
