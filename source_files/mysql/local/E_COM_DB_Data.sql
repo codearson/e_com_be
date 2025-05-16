@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
 --
--- Host: localhost    Database: ecom_db_local
+-- Host: 127.0.0.1    Database: ecom_db_local
 -- ------------------------------------------------------
--- Server version	8.0.40
+-- Server version	8.0.42
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -50,6 +50,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `conditions` WRITE;
 /*!40000 ALTER TABLE `conditions` DISABLE KEYS */;
+INSERT INTO `conditions` VALUES (1,'Used',_binary ''),(2,'Used',_binary '\0'),(3,'New',_binary '');
 /*!40000 ALTER TABLE `conditions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -68,6 +69,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `postage_partner` WRITE;
 /*!40000 ALTER TABLE `postage_partner` DISABLE KEYS */;
+INSERT INTO `postage_partner` VALUES (1,_binary '','Yarl Express',1),(2,_binary '','NorthLink Logistics',1),(3,_binary '\0','Eelam Couriers',1),(4,_binary '','Vanni Speed Post',1),(5,_binary '','Thamizh Logistics',1);
 /*!40000 ALTER TABLE `postage_partner` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -81,12 +83,20 @@ LOCK TABLES `product_category` WRITE;
 UNLOCK TABLES;
 
 --
+-- Dumping data for table `product_sub_category`
+--
+
+LOCK TABLES `product_sub_category` WRITE;
+/*!40000 ALTER TABLE `product_sub_category` DISABLE KEYS */;
+/*!40000 ALTER TABLE `product_sub_category` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping data for table `shipping_address`
 --
 
 LOCK TABLES `shipping_address` WRITE;
 /*!40000 ALTER TABLE `shipping_address` DISABLE KEYS */;
-INSERT INTO `shipping_address` VALUES (1,'456 Elm St, Springfield',_binary '\0','9876543210',1),(2,'123 Super St, London',_binary '','0765947337',1),(3,'jaffna',_binary '','0765947337',1);
 /*!40000 ALTER TABLE `shipping_address` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -107,6 +117,15 @@ LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 INSERT INTO `user` VALUES (1,'Jaffna','2025-05-09 18:05:19','skbavi61@gmail.com','Bavithragithan',_binary '','Kuganesan','0756089312',NULL,'$2a$10$lQ4C/Vuj5UNRUZTLU9TrIuNqrq/S1TBKmRJpvMB.c9BqDYpjadf.W',1,'0756089312'),(2,'Jaffna','2025-05-09 18:06:37','lathusanthurairajah@codearson.com','Lathusan',_binary '','Thurairajah','+447440641608',NULL,'$2a$10$vGkEHcuxK49rIaDk9SUHWu74OlevG8JBv0Vz9RQaomFJ7xmLIUVk6',1,'+447440641608');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `user_bank_details`
+--
+
+LOCK TABLES `user_bank_details` WRITE;
+/*!40000 ALTER TABLE `user_bank_details` DISABLE KEYS */;
+/*!40000 ALTER TABLE `user_bank_details` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -137,4 +156,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-15 20:54:34
+-- Dump completed on 2025-05-16 20:49:05
