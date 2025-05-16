@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "b53ac135-984e-4966-80ab-76142aabfca6",
+		"_postman_id": "d74b4972-4ab2-45dd-8052-ba6abf965a7b",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "40430627"
+		"_exporter_id": "40720747"
 	},
 	"item": [
 		{
@@ -1034,7 +1034,7 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/brand/updateStatus?brandId=3&status=0",
+							"raw": "http://localhost:8080/brand/updateStatus?brandId=3&status=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1051,7 +1051,7 @@
 								},
 								{
 									"key": "status",
-									"value": "0"
+									"value": "1"
 								}
 							]
 						}
@@ -1140,6 +1140,1172 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Postage Partner",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTQ1ODYyfQ.u9kUTSrzGkdvoD5CXS6eOTcx59ZVAB2lly0IsanP2VXgNF-jYkeciXFH6bAdtDlI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"partnerName\": \"Thamizh Logistics\",\r\n    \"userDto\":{\r\n        \"id\":1\r\n    },\r\n    \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/postagePartner/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagePartner",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTQ1ODYyfQ.u9kUTSrzGkdvoD5CXS6eOTcx59ZVAB2lly0IsanP2VXgNF-jYkeciXFH6bAdtDlI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2,\r\n    \"partnerName\": \"NorthLink Logistics\",\r\n    \"userDto\":{\r\n        \"id\":1\r\n    },\r\n    \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/postagePartner/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagePartner",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTQ1ODYyfQ.u9kUTSrzGkdvoD5CXS6eOTcx59ZVAB2lly0IsanP2VXgNF-jYkeciXFH6bAdtDlI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/postagePartner/updateStatus?postagePartnerId=3&status=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagePartner",
+								"updateStatus"
+							],
+							"query": [
+								{
+									"key": "postagePartnerId",
+									"value": "3"
+								},
+								{
+									"key": "status",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTQ1ODYyfQ.u9kUTSrzGkdvoD5CXS6eOTcx59ZVAB2lly0IsanP2VXgNF-jYkeciXFH6bAdtDlI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/postagePartner/getAllPage?pageNumber=1&pageSize=10&status=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagePartner",
+								"getAllPage"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "status",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllBySearch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MTQ1ODYyfQ.u9kUTSrzGkdvoD5CXS6eOTcx59ZVAB2lly0IsanP2VXgNF-jYkeciXFH6bAdtDlI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/postagePartner/getAllBySearch?partnerName=Logistics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagePartner",
+								"getAllBySearch"
+							],
+							"query": [
+								{
+									"key": "partnerName",
+									"value": "Logistics"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Conditions",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MjMzNjg3fQ.8sA5tSZHOG3UNo1SArwgi-ZaNXZH2J20rKMVYWM7vPjSrQ7mZkHVvcwzwNEAW3mA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"conditionType\": \"New\",\r\n  \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/conditions/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"conditions",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MjQ0NDI2fQ.073Aw7zDxZAKHVTmx4ArVYeSnymXnkYV_6fFsuk7I6z6clTWEd_RrlAK1xd0YTkC",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2,\r\n    \"conditionType\": \"Used\",\r\n    \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/conditions/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"conditions",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MzEzODIxfQ.Xdqyxq3vfTkhq0pxMNLGwLhwr7gvSwsx25r04ej9TT3S5nBDSPwogF_b5I3enm6x",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/conditions/updateStatus?conditionsId=3&status=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"conditions",
+								"updateStatus"
+							],
+							"query": [
+								{
+									"key": "conditionsId",
+									"value": "3"
+								},
+								{
+									"key": "status",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MzMzMDI4fQ.X4OsGt3Wo25FbEjdOlfKrwJp98YvoEbAHVnFJ1K_tuhsEmhYSDrL9_yChewlHoT9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/conditions/getAllPage?pageNumber=1&pageSize=10&status=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"conditions",
+								"getAllPage"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "status",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NDAwMjY2fQ.COU-ZcSy3dUdedM50601geNu9mBRwdaexg1nZW4uFq2MRoAGbIaseT8AJvGpzR9I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/conditions/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"conditions",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Shipping Address",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MzIwMzcxfQ.rJUE8E1E-qILXm5BnuXiJHcutc_ML98wA3dzoxgM8BE8UimCOqIxOLfhPjKCmXR9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"address\": \"jaffna\",\r\n  \"mobileNumber\": \"0765947337\",\r\n  \"userDto\": {\r\n    \"id\": 1\r\n  },\r\n  \"isActive\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/shippingAddress/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shippingAddress",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MzIxMTI5fQ.PzJozbWGcUXtj10fkRZoNB0Ihs6ca5_26A06fm3Sj_VeugB9OpjiHnxRINdWQrpS",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"address\": \"456 Elm St, Springfield\",\r\n    \"mobileNumber\": \"9876543210\",\r\n    \"userDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/shippingAddress/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shippingAddress",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MzIxMTI5fQ.PzJozbWGcUXtj10fkRZoNB0Ihs6ca5_26A06fm3Sj_VeugB9OpjiHnxRINdWQrpS",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"address\": \"456 Elm St, Springfield\",\r\n    \"mobileNumber\": \"9876543210\",\r\n    \"userDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/shippingAddress/updateStatus?shippingAddressId=1&status=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shippingAddress",
+								"updateStatus"
+							],
+							"query": [
+								{
+									"key": "shippingAddressId",
+									"value": "1"
+								},
+								{
+									"key": "status",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPage",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MzIxMTI5fQ.PzJozbWGcUXtj10fkRZoNB0Ihs6ca5_26A06fm3Sj_VeugB9OpjiHnxRINdWQrpS",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"address\": \"456 Elm St, Springfield\",\r\n    \"mobileNumber\": \"9876543210\",\r\n    \"userDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/shippingAddress/getAllPage?pageNumber=1&pageSize=10&status=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shippingAddress",
+								"getAllPage"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "status",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllBySearch",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MzIxMTI5fQ.PzJozbWGcUXtj10fkRZoNB0Ihs6ca5_26A06fm3Sj_VeugB9OpjiHnxRINdWQrpS",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"address\": \"456 Elm St, Springfield\",\r\n    \"mobileNumber\": \"9876543210\",\r\n    \"userDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/shippingAddress/getAllBySearch?address=jaffna",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shippingAddress",
+								"getAllBySearch"
+							],
+							"query": [
+								{
+									"key": "address",
+									"value": "jaffna"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bank",
+			"item": [
+				{
+					"name": "Save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3MzIyMjU1fQ.uTFaW8-2MKSGGjLtnBHWoEEb7844jx6s5LRmk4Yv0gcL5CwWPEiCxaM-h3tIemDB",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"People's Bank\",\r\n  \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/bank/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bank",
+								"save"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Bank Details",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ2NjIzOTg5fQ.HOFOWkWhax8_aDQu64DT6FMmeJHrLr7LFq_GgRZ_9bc4NsDzEFDPntfesMczZY5D",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountHolderName\": \"Bavithragithan\",\r\n    \"accountNumber\": \"7475895000520155\",\r\n    \"createdAt\": \"2025-05-15T18:48:39\",\r\n    \"userDto\":{\r\n        \"id\": 1\r\n    },\r\n    \"bankDto\":{\r\n        \"id\": 1\r\n    },\r\n    \"branchDto\":{\r\n        \"id\": 1\r\n    },\r\n    \"isActive\":1\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/userBankDetails/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userBankDetails",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ2NjIzOTg5fQ.HOFOWkWhax8_aDQu64DT6FMmeJHrLr7LFq_GgRZ_9bc4NsDzEFDPntfesMczZY5D",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"accountHolderName\": \"Bavithragithan\",\r\n    \"accountNumber\": \"7475895000520155\",\r\n    \"createdAt\": \"2025-05-15T18:48:39\",\r\n    \"userDto\":{\r\n        \"id\": 1\r\n    },\r\n    \"bankDto\":{\r\n        \"id\": 1\r\n    },\r\n    \"branchDto\":{\r\n        \"id\": 1\r\n    },\r\n    \"isActive\":1\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/userBankDetails/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userBankDetails",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ2NjIzOTg5fQ.HOFOWkWhax8_aDQu64DT6FMmeJHrLr7LFq_GgRZ_9bc4NsDzEFDPntfesMczZY5D",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/userBankDetails/updateStatus?userBankDetailsId=1&status=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userBankDetails",
+								"updateStatus"
+							],
+							"query": [
+								{
+									"key": "userBankDetailsId",
+									"value": "1"
+								},
+								{
+									"key": "status",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ2NjIzOTg5fQ.HOFOWkWhax8_aDQu64DT6FMmeJHrLr7LFq_GgRZ_9bc4NsDzEFDPntfesMczZY5D",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/userBankDetails/getAllPage?pageNumber=1&pageSize=10&status=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userBankDetails",
+								"getAllPage"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "status",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllBySearch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ2NjIzOTg5fQ.HOFOWkWhax8_aDQu64DT6FMmeJHrLr7LFq_GgRZ_9bc4NsDzEFDPntfesMczZY5D",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/userBankDetails/getAllBySearch?accountHolderName=Bavithragithan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"userBankDetails",
+								"getAllBySearch"
+							],
+							"query": [
+								{
+									"key": "accountNumber",
+									"value": "7475895000520155",
+									"disabled": true
+								},
+								{
+									"key": "accountHolderName",
+									"value": "Bavithragithan"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product Category",
+			"item": []
+		},
+		{
+			"name": "Product Sub Category",
+			"item": []
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NDAzMjg2fQ.6Ej7nqJRKj769stlmdo74nPtWWqizZA_BksXGjRQ1q6cnTVhDHvWSsceRhd5TXbx",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productSubCategoryDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"brandDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"conditionsDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"statusDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"title\": \"Sneaker\",\r\n    \"description\": \"Running shoes\",\r\n    \"size\": \"10\",\r\n    \"color\": \"Blue\",\r\n    \"price\": 99.99,\r\n    \"quentity\": 100,\r\n    \"imageUrl\":\"Photo\",\r\n    \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NDAzMjg2fQ.6Ej7nqJRKj769stlmdo74nPtWWqizZA_BksXGjRQ1q6cnTVhDHvWSsceRhd5TXbx",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"productSubCategoryDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"brandDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"conditionsDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"statusDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"title\": \"Sneaker\",\r\n    \"description\": \"Running shoes\",\r\n    \"size\": \"S\",\r\n    \"color\": \"Blue\",\r\n    \"price\": 99.99,\r\n    \"quentity\": 100,\r\n    \"imageUrl\":\"Photo\",\r\n    \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NDAzMjg2fQ.6Ej7nqJRKj769stlmdo74nPtWWqizZA_BksXGjRQ1q6cnTVhDHvWSsceRhd5TXbx",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"productSubCategoryDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"brandDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"conditionsDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"statusDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"title\": \"Sneaker\",\r\n    \"description\": \"Running shoes\",\r\n    \"size\": \"S\",\r\n    \"color\": \"Blue\",\r\n    \"price\": 99.99,\r\n    \"quentity\": 100,\r\n    \"imageUrl\":\"Photo\",\r\n    \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/updateStatus?productId=1&status=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"updateStatus"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "1"
+								},
+								{
+									"key": "status",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPage",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NDAzMjg2fQ.6Ej7nqJRKj769stlmdo74nPtWWqizZA_BksXGjRQ1q6cnTVhDHvWSsceRhd5TXbx",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"productSubCategoryDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"brandDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"conditionsDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"statusDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"title\": \"Sneaker\",\r\n    \"description\": \"Running shoes\",\r\n    \"size\": \"S\",\r\n    \"color\": \"Blue\",\r\n    \"price\": 99.99,\r\n    \"quentity\": 100,\r\n    \"imageUrl\":\"Photo\",\r\n    \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/getAllPage?pageNumber=1&pageSize=10&status=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"getAllPage"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "status",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllBySearch",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NDAzMjg2fQ.6Ej7nqJRKj769stlmdo74nPtWWqizZA_BksXGjRQ1q6cnTVhDHvWSsceRhd5TXbx",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"productSubCategoryDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"brandDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"conditionsDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"statusDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"title\": \"Sneaker\",\r\n    \"description\": \"Running shoes\",\r\n    \"size\": \"S\",\r\n    \"color\": \"Blue\",\r\n    \"price\": 99.99,\r\n    \"quentity\": 100,\r\n    \"imageUrl\":\"Photo\",\r\n    \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/getAllBySearch",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"getAllBySearch"
+							],
+							"query": [
+								{
+									"key": "brandName",
+									"value": "Nike",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "Sneaker",
+									"disabled": true
+								},
+								{
+									"key": "productSubCategoryName",
+									"value": "Clothing",
+									"disabled": true
+								},
+								{
+									"key": "conditionType",
+									"value": "New",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "Available",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": []
 		},
 		{
 			"name": "Status",
