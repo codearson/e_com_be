@@ -16,22 +16,19 @@ import lombok.*;
 
 @Data
 @Entity
-@NoArgsConstructor
-@Table(name = "product_Category")
-
+@Table(name = "productCategory")
 public class ProductCategory implements Serializable {
-	private static final long serialVersionUID = 1L;
+    
+    private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Basic(optional = false)
-	@Column(name = "id")
-	private Integer id;
-
-	@Column(name = "name")
-	private String name;
-
-	@Column(name = "isActive")
-	private Boolean isActive;
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "id")
+    private Integer id;
+    @Column(name = "name", nullable = false)
+    private String name;
+    @Column(name = "isActive")
+    private Boolean isActive;
+    
 }

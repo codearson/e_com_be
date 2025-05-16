@@ -25,9 +25,9 @@ import lombok.Data;
 @Entity
 @Table(name = "brand")
 public class Brand implements Serializable {
-    
+   
 	private static final long serialVersionUID = 1L;
-
+ 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
@@ -37,4 +37,5 @@ public class Brand implements Serializable {
     private String brandName;
     @Column(name = "isActive")
     private Boolean isActive;
+
 }
