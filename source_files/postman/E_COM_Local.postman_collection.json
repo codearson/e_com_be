@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "d74b4972-4ab2-45dd-8052-ba6abf965a7b",
+		"_postman_id": "ee7c5528-d190-499b-b64c-02ea7f050c8c",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "40720747"
@@ -2152,7 +2152,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/product/updateStatus?productId=1&status=0",
+							"raw": "http://localhost:8080/product/updateStatus?productId=1&status=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -2169,7 +2169,7 @@
 								},
 								{
 									"key": "status",
-									"value": "0"
+									"value": "1"
 								}
 							]
 						}
@@ -2305,7 +2305,221 @@
 		},
 		{
 			"name": "Orders",
-			"item": []
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NDE2ODU2fQ.6npzDDuT5j50BpCC6DXERCflQB3fpve8DC7jccjlIJzeYbxT1dApHDm55Wigp3mv",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productDto\": {\r\n        \"id\": 2\r\n    },\r\n    \"userDto\": {\r\n        \"id\": 2\r\n    },\r\n    \"postagePartnerDto\": {\r\n        \"id\": 2\r\n    },\r\n    \"shippingAddressDto\": {\r\n        \"id\": 2\r\n    },\r\n    \"statusDto\": {\r\n        \"id\": 2\r\n    },\r\n    \"quantity\": 10,\r\n    \"estimateDeliveryDate\": \"2025-07-20T12:00:00\",\r\n    \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/orders/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NDE2ODU2fQ.6npzDDuT5j50BpCC6DXERCflQB3fpve8DC7jccjlIJzeYbxT1dApHDm55Wigp3mv",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2,\r\n    \"productDto\": {\r\n        \"id\": 2\r\n    },\r\n    \"userDto\": {\r\n        \"id\": 2\r\n    },\r\n    \"postagePartnerDto\": {\r\n        \"id\": 2\r\n    },\r\n    \"shippingAddressDto\": {\r\n        \"id\": 2\r\n    },\r\n    \"statusDto\": {\r\n        \"id\": 2\r\n    },\r\n    \"quantity\": 1,\r\n    \"estimateDeliveryDate\": \"2025-06-20T12:00:00\",\r\n    \"isActive\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/orders/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NDE2ODU2fQ.6npzDDuT5j50BpCC6DXERCflQB3fpve8DC7jccjlIJzeYbxT1dApHDm55Wigp3mv",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/orders/updateStatus?ordersId=1&status=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"updateStatus"
+							],
+							"query": [
+								{
+									"key": "ordersId",
+									"value": "1"
+								},
+								{
+									"key": "status",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NDE2ODU2fQ.6npzDDuT5j50BpCC6DXERCflQB3fpve8DC7jccjlIJzeYbxT1dApHDm55Wigp3mv",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/orders/getAllPage?pageNumber=1&pageSize=10&status=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"getAllPage"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "status",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllBySearch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NDE2ODU2fQ.6npzDDuT5j50BpCC6DXERCflQB3fpve8DC7jccjlIJzeYbxT1dApHDm55Wigp3mv",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/orders/getAllBySearch?type=Available",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"getAllBySearch"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Sneaker",
+									"disabled": true
+								},
+								{
+									"key": "firstName",
+									"value": "Bavithragithan",
+									"disabled": true
+								},
+								{
+									"key": "partnerName",
+									"value": "FastShip",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "Available"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "Status",
