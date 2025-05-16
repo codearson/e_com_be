@@ -1,7 +1,6 @@
 package com.e_com.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -43,21 +42,18 @@ public class ProductController {
     }
 
     @PostMapping("/update")
-    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
     public ResponseDto updateProduct(@RequestBody ProductDto productDto) {
         log.info("ProductController.updateProduct() invoked");
         return productService.updateProduct(productDto);
     }
 
     @PutMapping("/updateStatus")
-    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
     public ResponseDto updateProductStatus(@RequestParam("productId") Integer productId, @RequestParam("status") Boolean status) {
         log.info("ProductController.updateProductStatus() invoked with productId: {}, status: {}", productId, status);
         return productService.updateProductStatus(productId, status);
     }
 
     @GetMapping("/getAllPage")
-    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
     public ResponseDto getAllPageProduct(@RequestParam("pageNumber") int pageNumber, 
                                         @RequestParam("pageSize") int pageSize,
                                         @RequestParam("status") Boolean status,
@@ -68,7 +64,6 @@ public class ProductController {
     }
 
     @GetMapping("/getAllBySearch")
-    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
     public ResponseDto getAllBySearchProduct(@RequestParam(value = "productSubCategoryName", required = false) String productSubCategoryName,
                                             @RequestParam(value = "brandName", required = false) String brandName,
                                             @RequestParam(value = "conditionType", required = false) String conditionType,

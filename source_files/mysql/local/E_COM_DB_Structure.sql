@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: ecom_db_local
+-- Host: localhost    Database: ecom_db_local
 -- ------------------------------------------------------
--- Server version	8.0.42
+-- Server version	8.0.40
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -72,6 +72,39 @@ CREATE TABLE `conditions` (
   `condition_type` varchar(255) NOT NULL,
   `is_active` bit(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `orders`
+--
+
+DROP TABLE IF EXISTS `orders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `orders` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `created_at` datetime DEFAULT NULL,
+  `estimate_delivery_date` datetime DEFAULT NULL,
+  `is_active` bit(1) DEFAULT NULL,
+  `quantity` int DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `postage_partner` int NOT NULL,
+  `product` int NOT NULL,
+  `shipping_address` int NOT NULL,
+  `status` int NOT NULL,
+  `user` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKc7yrcevlvrkjljc2xn0x4psuy` (`postage_partner`),
+  KEY `FKsjy57s9vk9ei2v8n5hxgpuab2` (`product`),
+  KEY `FK6omtfgu4o7c757ltn0x9mhrhg` (`shipping_address`),
+  KEY `FK4adkd09gxmrp46ohi2oqc0q2h` (`status`),
+  KEY `FKmh56yymll54s83noc1v5dt535` (`user`),
+  CONSTRAINT `FK4adkd09gxmrp46ohi2oqc0q2h` FOREIGN KEY (`status`) REFERENCES `status` (`id`),
+  CONSTRAINT `FK6omtfgu4o7c757ltn0x9mhrhg` FOREIGN KEY (`shipping_address`) REFERENCES `shipping_address` (`id`),
+  CONSTRAINT `FKc7yrcevlvrkjljc2xn0x4psuy` FOREIGN KEY (`postage_partner`) REFERENCES `postage_partner` (`id`),
+  CONSTRAINT `FKmh56yymll54s83noc1v5dt535` FOREIGN KEY (`user`) REFERENCES `user` (`id`),
+  CONSTRAINT `FKsjy57s9vk9ei2v8n5hxgpuab2` FOREIGN KEY (`product`) REFERENCES `product` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -181,24 +214,6 @@ CREATE TABLE `product_sub_category` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `product_sub_category`
---
-
-DROP TABLE IF EXISTS `product_sub_category`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `product_sub_category` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `is_active` bit(1) DEFAULT NULL,
-  `product_sub_category_name` varchar(255) DEFAULT NULL,
-  `product_category` int NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FK9marnfn0alt7ttr1dmm9dgmsk` (`product_category`),
-  CONSTRAINT `FK9marnfn0alt7ttr1dmm9dgmsk` FOREIGN KEY (`product_category`) REFERENCES `product_category` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Table structure for table `shipping_address`
 --
 
@@ -214,7 +229,7 @@ CREATE TABLE `shipping_address` (
   PRIMARY KEY (`id`),
   KEY `FK31dtw4tacfijho8xs3ppvwcle` (`user`),
   CONSTRAINT `FK31dtw4tacfijho8xs3ppvwcle` FOREIGN KEY (`user`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -328,4 +343,4 @@ CREATE TABLE `user_role` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-16 20:59:30
+-- Dump completed on 2025-05-16 23:21:37

@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: ecom_db_local
+-- Host: localhost    Database: ecom_db_local
 -- ------------------------------------------------------
--- Server version	8.0.42
+-- Server version	8.0.40
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -55,6 +55,16 @@ INSERT INTO `conditions` VALUES (1,'New',_binary ''),(2,'Used',_binary ''),(3,
 UNLOCK TABLES;
 
 --
+-- Dumping data for table `orders`
+--
+
+LOCK TABLES `orders` WRITE;
+/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` VALUES (1,'2025-05-16 23:05:41','2025-05-20 12:00:00',_binary '\0',2,'2025-05-16 23:07:54',1,1,1,1,1),(2,'2025-05-16 23:06:19','2025-06-20 12:00:00',_binary '',1,'2025-05-16 23:07:03',2,2,2,2,2),(3,'2025-05-16 23:17:56','2025-07-20 12:00:00',_binary '',10,'2025-05-16 23:17:56',2,2,2,2,2);
+/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping data for table `password_reset_token`
 --
 
@@ -69,7 +79,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `postage_partner` WRITE;
 /*!40000 ALTER TABLE `postage_partner` DISABLE KEYS */;
-INSERT INTO `postage_partner` VALUES (1,_binary '','Yarl Express',1),(2,_binary '','NorthLink Logistics',1),(3,_binary '\0','Eelam Couriers',1),(4,_binary '','Vanni Speed Post',1),(5,_binary '','Thamizh Logistics',1);
+INSERT INTO `postage_partner` VALUES (1,_binary '','FastShip',1),(2,_binary '\0','EcoFreight',1),(3,_binary '','GlobalPost',1),(4,_binary '','SpeedyLogistics',1),(5,_binary '\0','MailRiser',1);
 /*!40000 ALTER TABLE `postage_partner` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -79,7 +89,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES (1,'Blue','2025-05-16 20:18:15','Running shoes','Photo',_binary '\0',99.99,100,'S','Sneaker','2025-05-16 20:24:28',1,1,1,1),(2,'White','2025-05-16 20:21:24','Cotton button-down shirt','ShirtPhoto',_binary '',49.99,50,'M','Casual Shirt','2025-05-16 20:21:24',2,1,2,1);
+INSERT INTO `product` VALUES (1,'Blue','2025-05-16 20:18:15','Running shoes','Photo',_binary '',99.99,100,'S','Sneaker','2025-05-16 23:12:16',1,1,1,1),(2,'White','2025-05-16 20:21:24','Cotton button-down shirt','ShirtPhoto',_binary '',49.99,50,'M','Casual Shirt','2025-05-16 20:21:24',2,1,2,1);
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -109,6 +119,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `shipping_address` WRITE;
 /*!40000 ALTER TABLE `shipping_address` DISABLE KEYS */;
+INSERT INTO `shipping_address` VALUES (1,'456 Elm St, Springfield',_binary '\0','9876543210',1),(2,'123 Super St, London',_binary '','0765947337',1),(3,'jaffna',_binary '','0765947337',1);
 /*!40000 ALTER TABLE `shipping_address` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -169,4 +180,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-16 21:00:07
+-- Dump completed on 2025-05-16 23:22:09
