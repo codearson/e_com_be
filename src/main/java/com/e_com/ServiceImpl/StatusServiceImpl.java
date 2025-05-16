@@ -1,5 +1,6 @@
 package com.e_com.ServiceImpl;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -128,6 +129,29 @@ public class StatusServiceImpl implements StatusService {
         
         return responseDto;
     }
+    
+    @Override
+    public ResponseDto getAllStatus(String statusName) {
+        log.info("StatusServiceImpl.getAllStatus() invoked with statusName: {}", statusName);
+        ResponseDto responseDto = null;
+        try {
+            List<StatusDto> statusList = statusServiceBL.getAllStatus(statusName);
+            if (statusList != null && !statusList.isEmpty()) {
+                log.info("Retrieved all Status details.");
+                responseDto = serviceUtil.getServiceResponse(statusList);
+            } else {
+                log.info("Unable to retrieve all Status details.");
+                responseDto = serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_STATUS_DETAILS);
+            }
+        } catch (Exception e) {
+            log.error("Exception occurs while retrieving all Status details.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_STATUS_DETAILS);
+        }
+        return responseDto;
+    }
+
 
 
 
