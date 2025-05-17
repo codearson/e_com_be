@@ -20,13 +20,13 @@ public class OrderTrackingDto {
 	
 	private Integer id;
 	
-	private PostagePartner postagePartner;
+	private PostagePartnerDto postagePartnerDto;
 	
-	private Branch branch;
+	private BranchDto branchDto;
 	
-	private User user;
+	private UserDto userDto;
 	
-	private Orders orders;
+	private OrdersDto ordersDto;
 	
 	private String trackingId;
 	
