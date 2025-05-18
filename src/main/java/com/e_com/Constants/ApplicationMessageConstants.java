@@ -77,8 +77,6 @@ public interface ApplicationMessageConstants {
 		String EX_RETRIEVE_ALL_CONDITIONS_DETAILS= "ex.get.all.conditions.details";
 		String ERR_SAVE_STATUS_DETAILS = "err_save_status_details";
 		String EX_SAVE_STATUS_DETAILS = "ex_save_status_details";
-		String ERR_SAVE_BANK_DETAILS = "err_save_bank_details";
-		String EX_SAVE_BANK_DETAILS = "ex_save_bank_details";
 		String ERR_UPDATE_STATUS_DETAILS = "err_update_status_details";
 		String EX_UPDATE_STATUS_DETAILS = "ex_update_status_details";
 		String ERR_SAVE_SHIPPING_ADDRESS_DETAILS = "err.save.shipping.address.details";
@@ -97,6 +95,19 @@ public interface ApplicationMessageConstants {
         String EX_UPDATE_USER_BANK_STATUS = "ex.update.user.bank.status";
         String ERR_RETRIEVE_ALL_USER_BANK_DETAILS = "err.retrive.all.user.bank.details";
         String EX_RETRIEVE_ALL_USER_BANK_DETAILS = "ex.retrive.all.user.bank.details";
+    	String ERR_SAVE_BANK_DETAILS = "err_save_bank_details";
+		String EX_SAVE_BANK_DETAILS = "ex_save_bank_details";
+		String ERR_UPDATE_BANK_DETAILS = "err.update.bank.details";
+		String EX_UPDATE_BANK_DETAILS = "ex.update.bank.details";
+       	String ERR_UPDATE_BANK_STATUS = "err_update_bank_status";
+		String EX_UPDATE_BANK_STATUS = "ex_update_bank_status";
+		String ERR_RETRIEVE_ALL_BANK_DETAILS = "err_retrive_all_bank_details";
+		String EX_RETRIEVE_ALL_BANK_DETAILS = "ex_retrive_all_bank_details";
+
+		
+
+        
+		
 		
 	}
 }
