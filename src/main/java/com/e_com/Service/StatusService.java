@@ -17,5 +17,11 @@ public interface StatusService {
     ResponseDto saveStatus(StatusDto statusDto);
     
     ResponseDto updateStatus(StatusDto statusDto);
+    
+    ResponseDto updateForStatus(Integer statusId, Boolean status);
+    
+    ResponseDto getAllPageStatus(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters);
+
+    ResponseDto getAllStatus(String statusName);
 
 }

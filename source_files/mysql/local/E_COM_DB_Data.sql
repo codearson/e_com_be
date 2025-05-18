@@ -41,7 +41,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `brand` WRITE;
 /*!40000 ALTER TABLE `brand` DISABLE KEYS */;
-INSERT INTO `brand` VALUES (1,'Nike',_binary '\0'),(2,'Adidas',_binary '\0'),(3,'Puma',_binary '\0'),(4,'Skechers',_binary ''),(5,'Reebok',_binary ''),(6,'Reebok',_binary '');
+INSERT INTO `brand` VALUES (1,'Nike',_binary ''),(2,'Adidas',_binary ''),(3,'Puma',_binary ''),(4,'Skechers',_binary ''),(5,'Reebok',_binary '');
 /*!40000 ALTER TABLE `brand` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -51,7 +51,18 @@ UNLOCK TABLES;
 
 LOCK TABLES `conditions` WRITE;
 /*!40000 ALTER TABLE `conditions` DISABLE KEYS */;
+INSERT INTO `conditions` VALUES (1,'New',_binary ''),(2,'Used',_binary ''),(3,'Refurbished',_binary '');
 /*!40000 ALTER TABLE `conditions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `orders`
+--
+
+LOCK TABLES `orders` WRITE;
+/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` VALUES (1,'2025-05-16 23:05:41','2025-05-20 12:00:00',_binary '\0',2,'2025-05-16 23:07:54',1,1,1,1,1),(2,'2025-05-16 23:06:19','2025-06-20 12:00:00',_binary '',1,'2025-05-16 23:07:03',2,2,2,2,2),(3,'2025-05-16 23:17:56','2025-07-20 12:00:00',_binary '',10,'2025-05-16 23:17:56',2,2,2,2,2);
+/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -69,8 +80,18 @@ UNLOCK TABLES;
 
 LOCK TABLES `postage_partner` WRITE;
 /*!40000 ALTER TABLE `postage_partner` DISABLE KEYS */;
-INSERT INTO `postage_partner` VALUES (1,_binary '','Yarl Express',1),(2,_binary '','NorthLink Logistics',1),(3,_binary '\0','Eelam Couriers',1),(4,_binary '','Vanni Speed Post',1),(5,_binary '','Thamizh Logistics',1);
+INSERT INTO `postage_partner` VALUES (1,_binary '','FastShip',1),(2,_binary '\0','EcoFreight',1),(3,_binary '','GlobalPost',1),(4,_binary '','SpeedyLogistics',1),(5,_binary '\0','MailRiser',1);
 /*!40000 ALTER TABLE `postage_partner` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `product`
+--
+
+LOCK TABLES `product` WRITE;
+/*!40000 ALTER TABLE `product` DISABLE KEYS */;
+INSERT INTO `product` VALUES (1,'Blue','2025-05-16 20:18:15','Running shoes','Photo',_binary '',99.99,100,'S','Sneaker','2025-05-16 23:12:16',1,1,1,1),(2,'White','2025-05-16 20:21:24','Cotton button-down shirt','ShirtPhoto',_binary '',49.99,50,'M','Casual Shirt','2025-05-16 20:21:24',2,1,2,1);
+/*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -79,7 +100,18 @@ UNLOCK TABLES;
 
 LOCK TABLES `product_category` WRITE;
 /*!40000 ALTER TABLE `product_category` DISABLE KEYS */;
+INSERT INTO `product_category` VALUES (1,_binary '','Clothing'),(2,_binary '','Electronics'),(3,_binary '','Footwear');
 /*!40000 ALTER TABLE `product_category` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `product_sub_category`
+--
+
+LOCK TABLES `product_sub_category` WRITE;
+/*!40000 ALTER TABLE `product_sub_category` DISABLE KEYS */;
+INSERT INTO `product_sub_category` VALUES (1,_binary '','Clothing',1),(2,_binary '','Electronics',1),(3,_binary '','Footwear',1);
+/*!40000 ALTER TABLE `product_sub_category` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -97,6 +129,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `status` WRITE;
 /*!40000 ALTER TABLE `status` DISABLE KEYS */;
+INSERT INTO `status` VALUES (1,_binary '','Available'),(2,_binary '','Out of Stock'),(3,_binary '','Discontinued');
 /*!40000 ALTER TABLE `status` ENABLE KEYS */;
 UNLOCK TABLES;
 

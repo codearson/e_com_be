@@ -72,7 +72,67 @@ CREATE TABLE `conditions` (
   `condition_type` varchar(255) NOT NULL,
   `is_active` bit(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `order_tracking`
+--
+
+DROP TABLE IF EXISTS `order_tracking`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `order_tracking` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `is_active` bit(1) DEFAULT NULL,
+  `tracking_id` varchar(255) NOT NULL,
+  `region` int NOT NULL,
+  `order_id` int NOT NULL,
+  `postage_partner_id` int NOT NULL,
+  `user_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKm9b8fnwnnx6qre91tyibjy9n9` (`region`),
+  KEY `FKeu0lumcx8bcx6lk035xiklty0` (`order_id`),
+  KEY `FK6uk92r48f675lo3pvfbd1r65` (`postage_partner_id`),
+  KEY `FKmh4wr66nj05y93lyebsfu3ri6` (`user_id`),
+  CONSTRAINT `FK6uk92r48f675lo3pvfbd1r65` FOREIGN KEY (`postage_partner_id`) REFERENCES `postage_partner` (`id`),
+  CONSTRAINT `FKeu0lumcx8bcx6lk035xiklty0` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`),
+  CONSTRAINT `FKm9b8fnwnnx6qre91tyibjy9n9` FOREIGN KEY (`region`) REFERENCES `branch` (`id`),
+  CONSTRAINT `FKmh4wr66nj05y93lyebsfu3ri6` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `orders`
+--
+
+DROP TABLE IF EXISTS `orders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `orders` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `created_at` datetime DEFAULT NULL,
+  `estimate_delivery_date` datetime DEFAULT NULL,
+  `is_active` bit(1) DEFAULT NULL,
+  `quantity` int DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `postage_partner` int NOT NULL,
+  `product` int NOT NULL,
+  `shipping_address` int NOT NULL,
+  `status` int NOT NULL,
+  `user` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKc7yrcevlvrkjljc2xn0x4psuy` (`postage_partner`),
+  KEY `FKsjy57s9vk9ei2v8n5hxgpuab2` (`product`),
+  KEY `FK6omtfgu4o7c757ltn0x9mhrhg` (`shipping_address`),
+  KEY `FK4adkd09gxmrp46ohi2oqc0q2h` (`status`),
+  KEY `FKmh56yymll54s83noc1v5dt535` (`user`),
+  CONSTRAINT `FK4adkd09gxmrp46ohi2oqc0q2h` FOREIGN KEY (`status`) REFERENCES `status` (`id`),
+  CONSTRAINT `FK6omtfgu4o7c757ltn0x9mhrhg` FOREIGN KEY (`shipping_address`) REFERENCES `shipping_address` (`id`),
+  CONSTRAINT `FKc7yrcevlvrkjljc2xn0x4psuy` FOREIGN KEY (`postage_partner`) REFERENCES `postage_partner` (`id`),
+  CONSTRAINT `FKmh56yymll54s83noc1v5dt535` FOREIGN KEY (`user`) REFERENCES `user` (`id`),
+  CONSTRAINT `FKsjy57s9vk9ei2v8n5hxgpuab2` FOREIGN KEY (`product`) REFERENCES `product` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -113,6 +173,41 @@ CREATE TABLE `postage_partner` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `product`
+--
+
+DROP TABLE IF EXISTS `product`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `product` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `color` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `image_url` varchar(255) DEFAULT NULL,
+  `is_active` bit(1) DEFAULT NULL,
+  `price` double DEFAULT NULL,
+  `quentity` int DEFAULT NULL,
+  `size` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `brand` int NOT NULL,
+  `conditions` int NOT NULL,
+  `product_sub_category` int NOT NULL,
+  `status` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKti0lsgnnoerhclcve20iho3un` (`brand`),
+  KEY `FKfo3i1hrgnqpradhyj3c39um61` (`conditions`),
+  KEY `FKo5o497w41ydtdh6muiins73ki` (`product_sub_category`),
+  KEY `FKrjx2c79b1cc0jykhf57lfqx0t` (`status`),
+  CONSTRAINT `FKfo3i1hrgnqpradhyj3c39um61` FOREIGN KEY (`conditions`) REFERENCES `conditions` (`id`),
+  CONSTRAINT `FKo5o497w41ydtdh6muiins73ki` FOREIGN KEY (`product_sub_category`) REFERENCES `product_sub_category` (`id`),
+  CONSTRAINT `FKrjx2c79b1cc0jykhf57lfqx0t` FOREIGN KEY (`status`) REFERENCES `status` (`id`),
+  CONSTRAINT `FKti0lsgnnoerhclcve20iho3un` FOREIGN KEY (`brand`) REFERENCES `brand` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `product_category`
 --
 
@@ -124,7 +219,25 @@ CREATE TABLE `product_category` (
   `is_active` bit(1) DEFAULT NULL,
   `name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `product_sub_category`
+--
+
+DROP TABLE IF EXISTS `product_sub_category`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `product_sub_category` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `is_active` bit(1) DEFAULT NULL,
+  `product_sub_category_name` varchar(255) DEFAULT NULL,
+  `product_category` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK9marnfn0alt7ttr1dmm9dgmsk` (`product_category`),
+  CONSTRAINT `FK9marnfn0alt7ttr1dmm9dgmsk` FOREIGN KEY (`product_category`) REFERENCES `product_category` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -158,7 +271,7 @@ CREATE TABLE `status` (
   `is_active` bit(1) DEFAULT NULL,
   `type` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -257,4 +370,4 @@ CREATE TABLE `user_role` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-18 23:14:11
+-- Dump completed on 2025-05-17 16:00:41
