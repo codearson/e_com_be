@@ -137,6 +137,8 @@ public interface ApplicationMessageConstants {
         String EX_UPDATE_PRODUCT_CATEGORY_STATUS = "ex.update.product.category.status";
         String ERR_RETRIEVE_ALL_PRODUCT_CATEGORY_DETAILS = "err.retrieve.all.product.category.details";
         String EX_RETRIEVE_ALL_PRODUCT_CATEGORY_DETAILS = "ex.retrieve.all.product.category.details";
+		String ERR_SAVE_PAYMENT_DETAILS = "err.save.payment.details";
+		String EX_SAVE_PAYMENT_DETAILS = "ex.save.payment.details";
 		
 	}
 }
