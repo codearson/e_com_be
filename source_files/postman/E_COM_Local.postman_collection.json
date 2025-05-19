@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "ee7c5528-d190-499b-b64c-02ea7f050c8c",
+		"_postman_id": "936a3181-adcb-4c78-bd91-1566ac74b35d",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "40430627"
@@ -2956,6 +2956,10 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Payment",
+			"item": []
 		}
 	]
 }
