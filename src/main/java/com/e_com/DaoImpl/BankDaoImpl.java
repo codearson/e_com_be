@@ -1,13 +1,22 @@
 package com.e_com.DaoImpl;
 
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 import javax.transaction.Transactional;
 
+import org.hibernate.Criteria;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.e_com.Dao.BankDao;
 import com.e_com.Domain.Bank;
 import com.e_com.Dto.BankDto;
+import com.e_com.Dto.PaginatedResponseDto;
+import com.e_com.Service.Utils.HttpReqRespUtils;
 import com.e_com.Transformer.BankTransformer;
 
 import lombok.extern.slf4j.Slf4j;
