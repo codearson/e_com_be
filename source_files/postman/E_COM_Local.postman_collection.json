@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "ee7c5528-d190-499b-b64c-02ea7f050c8c",
+		"_postman_id": "65f84fb1-8979-4adc-b8df-cfb3f5d2a603",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "40430627"
+		"_exporter_id": "44754112"
 	},
 	"item": [
 		{
@@ -1450,7 +1450,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/conditions/updateStatus?conditionsId=3&status=1",
+							"raw": "http://localhost:8080/conditions/updateStatus?conditionsId=3&status=0",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1467,7 +1467,7 @@
 								},
 								{
 									"key": "status",
-									"value": "1"
+									"value": "0"
 								}
 							]
 						}
@@ -2950,6 +2950,193 @@
 									"key": "type",
 									"value": "puma"
 								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order Tracking",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NjYzNDk5fQ.2XfgCJZsdjgAmvgdeKoGU1iz_9AXswHl0NjpXHeOj1eluHEw7m2PTgrZ5m1gdk72",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postagePartnerDto\":{ \"id\": 2 },\r\n    \"branchDto\":{\"id\": 2},\r\n    \"userDto\":{\"id\":2},\r\n    \"ordersDto\":{\"id\": 2},\r\n    \"trackingId\":\"2030tw\",\r\n    \"isActive\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/orderTracking/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orderTracking",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NjY0NDA3fQ.yBzWciNvJO_TNro2c2NsPmKhpTBnI8sNQ8RqPWRBEDHzcrS3d4G0ec9CWSsqdNkE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2,\r\n    \"postagePartnerDto\":{ \"id\": 3 },\r\n    \"branchDto\":{\"id\": 2},\r\n    \"userDto\":{\"id\":1},\r\n    \"ordersDto\":{\"id\": 2},\r\n    \"trackingId\":\"2050www\",\r\n    \"isActive\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/orderTracking/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orderTracking",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NjY3MDkzfQ.LnkhAbkcvfKTqecAaGHMwrxsVysWS33q8nWpJg944kmLfSM7eFAEq28PZOzVuTz4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/orderTracking/updateStatus?orderTrackingId=2&status=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orderTracking",
+								"updateStatus"
+							],
+							"query": [
+								{
+									"key": "orderTrackingId",
+									"value": "2"
+								},
+								{
+									"key": "status",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NjY5ODA5fQ.7fYYd18eymK0D-5HlBlE3MTxHtaCs7Ks1Z-wHWFq8WDw9eZ9A0DfBtFONadD6urW",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/orderTracking/getAllPage?pageNumber=1&pageSize=10&status=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orderTracking",
+								"getAllPage"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "status",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/orderTracking/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orderTracking",
+								"getAll"
 							]
 						}
 					},
