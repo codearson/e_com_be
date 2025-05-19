@@ -137,6 +137,13 @@ public interface ApplicationMessageConstants {
         String EX_UPDATE_PRODUCT_CATEGORY_STATUS = "ex.update.product.category.status";
         String ERR_RETRIEVE_ALL_PRODUCT_CATEGORY_DETAILS = "err.retrieve.all.product.category.details";
         String EX_RETRIEVE_ALL_PRODUCT_CATEGORY_DETAILS = "ex.retrieve.all.product.category.details";
-		
+		String ERR_SAVE_ORDER_TRACKING_DETAILS = "err.save.order.tracking.details";
+		String EX_SAVE_ORDER_TRACKING_DETAILS = "ex.save.order.tracking.details";
+		String ERR_UPDATE_ORDER_TRACKING_DETAILS = "err.update.order.tracking.details";
+		String EX_UPDATE_ORDER_TRACKING_DETAILS = "ex.update.order.tracking.details";
+		String ERR_UPDATE_ORDER_TRACKING_STATUS = "err.update.order.tracking.status";
+		String EX_UPDATE_ORDER_TRACKING_STATUS = "ex.update.order.tracking.status";
+		String ERR_RETRIEVE_ALL_ORDER_TRACKING_DETAILS = "err.retrieve.all.order.tracking.details";
+		String EX_RETRIEVE_ALL_ORDER_TRACKING_DETAILS = "ex.retrieve.all.order.tracking.details";
 	}
 }
