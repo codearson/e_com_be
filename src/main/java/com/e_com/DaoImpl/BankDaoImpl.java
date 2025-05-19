@@ -22,8 +22,6 @@ import com.e_com.Transformer.BankTransformer;
 
 import lombok.extern.slf4j.Slf4j;
 
-
-
 /**
  * Title: BankDaoImpl.java. Company: www.codearson.com Copyright: Copyright (c) 2025.
  *
@@ -32,7 +30,6 @@ import lombok.extern.slf4j.Slf4j;
  * @time 7:52:15 PM
  * @version 1.0
  **/
-
 
 @Slf4j
 @Repository
@@ -44,7 +41,6 @@ public class BankDaoImpl extends BaseDaoImpl<Bank> implements BankDao {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    @Override
     @Transactional
     public BankDto saveBank(BankDto bankDto) {
         log.info("BankDaoImpl.saveBank() invoked.");
@@ -53,8 +49,6 @@ public class BankDaoImpl extends BaseDaoImpl<Bank> implements BankDao {
         return bankTransformer.transform(savedBank);
     }
     
-
-    @Override
     @Transactional
     public BankDto updateBank(BankDto bankDto) {
         log.info("BankDaoImpl.updateBank() invoked.");
@@ -84,16 +78,15 @@ public class BankDaoImpl extends BaseDaoImpl<Bank> implements BankDao {
 
         PaginatedResponseDto paginatedResponseDto = null;
         List<Bank> bankList = null;
+        int recordCount = 0;
 
-        // Build count query with status filter
-        String countQuery = "SELECT COUNT(*) FROM bank";
+       
+        String countString = "SELECT COUNT(*) FROM bank";
         if (status != null) {
-            countQuery += " WHERE is_active = " + (status ? "true" : "false");
+        	countString += " WHERE is_active = " + (status ? "true" : "false");
         }
+        int count = jdbcTemplate.queryForObject(countString, Integer.class);
 
-        int count = jdbcTemplate.queryForObject(countQuery, Integer.class);
-
-        // Set full size if pageSize is 0
         if (pageSize == 0) {
             pageSize = count;
         }
@@ -112,10 +105,9 @@ public class BankDaoImpl extends BaseDaoImpl<Bank> implements BankDao {
 
         if (bankList != null && !bankList.isEmpty()) {
             paginatedResponseDto = HttpReqRespUtils.paginatedResponseMapper(bankList, pageNumber, pageSize, count);
-            paginatedResponseDto.setPayload(
-                bankList.stream()
-                        .map(bank -> bankTransformer.transform(bank))
-                        .collect(Collectors.toList())
+            paginatedResponseDto.setPayload(bankList.stream().map(bank -> {
+            	return bankTransformer.transform(bank);
+            }).collect(Collectors.toList())
             );
         }
 
@@ -127,10 +119,11 @@ public class BankDaoImpl extends BaseDaoImpl<Bank> implements BankDao {
     public List<BankDto> getAllBank(String bankName) {
         log.info("BankDaoImpl.getAllBank() invoked with bankName: {}", bankName);
 
-        Criteria criteria = getCurrentSession().createCriteria(Bank.class);
+        Criteria criteria = getCurrentSession().createCriteria(Bank.class,"bank");
 
+        // Add brandName filter if provided
         if (bankName != null && !bankName.isEmpty()) {
-            criteria.add(Restrictions.ilike("bankName", bankName, MatchMode.ANYWHERE));
+            criteria.add(Restrictions.ilike("bankName", "%" +  bankName + "%" ));
         }
 
         List<Bank> bankList = criteria.list();

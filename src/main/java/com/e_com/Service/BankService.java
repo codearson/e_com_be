@@ -22,9 +22,13 @@ import com.e_com.Dto.ResponseDto;
 public interface BankService {
 
     ResponseDto saveBank(BankDto bankDto);
+    
     ResponseDto updateBank(BankDto bankDto); 
+    
     ResponseDto updateBankStatus(Integer bankId, Boolean status);
+    
     ResponseDto getAllPageBank(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters);
+    
     ResponseDto getAllBank(String bankName);
 }
     

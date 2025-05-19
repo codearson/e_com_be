@@ -41,7 +41,7 @@ public class BankServiceImpl implements BankService {
     @Override
     public ResponseDto saveBank(BankDto bankDto) {
         log.info("BankServiceImpl.saveBank invoked");
-        ResponseDto responseDto;
+        ResponseDto responseDto = null;
         try {
             BankDto savedBankDto = bankServiceBL.saveBank(bankDto);
             if (savedBankDto != null) {

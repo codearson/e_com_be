@@ -23,8 +23,6 @@ import lombok.extern.slf4j.Slf4j;
  * @version 1.0
  **/
 
-
-
 @Slf4j
 @Service
 public class BankServiceBL {
@@ -63,6 +61,4 @@ public class BankServiceBL {
        log.info("BankServiceBL.getAllBank() invoked with bankName: {}", bankName);
        return bankDao.getAllBank(bankName);
    }
-   
-   
 }

@@ -19,11 +19,8 @@ import com.e_com.Service.Utils.HttpReqRespUtils;
 
 import lombok.extern.slf4j.Slf4j;
 
-
 /**
- * Title: BankController.java
- * Company: www.codearson.com
- * Copyright: Copyright (c) 2025.
+ * Title: BankController.java. Company: www.codearson.com Copyright: Copyright (c) 2025.
  * 
  * @author Asjath Musharrif Abusalif
  * @date 13 May 2025
@@ -64,10 +61,8 @@ public class BankController {
     
     @GetMapping("/getAllPage")
     @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
-    public ResponseDto getAllPageBank(@RequestParam("pageNumber") int pageNumber,
-                                      @RequestParam("pageSize") int pageSize,
-                                      @RequestParam("status") Boolean status,
-                                      WebRequest webRequest) {
+    public ResponseDto getAllPageBank(@RequestParam("pageNumber") int pageNumber, @RequestParam("pageSize") int pageSize,
+                                      @RequestParam("status") Boolean status, WebRequest webRequest) {
         log.info("BankController.getAllPageBank() invoked with pageNumber: {}, pageSize: {}, status: {}",
                  pageNumber, pageSize, status);
         return bankService.getAllPageBank(pageNumber, pageSize, status, HttpReqRespUtils.getSearchParameters(webRequest));
@@ -81,5 +76,3 @@ public class BankController {
     }
     
 }
-
-
