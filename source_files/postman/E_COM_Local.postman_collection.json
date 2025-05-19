@@ -1790,7 +1790,7 @@
 			"name": "Bank",
 			"item": [
 				{
-					"name": "Save",
+					"name": "save",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -1806,7 +1806,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"name\": \"People's Bank\",\r\n  \"isActive\": true\r\n}",
+							"raw": "{\r\n  \"name\": \"people's Bank\",\r\n  \"isActive\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1827,50 +1827,6 @@
 						}
 					},
 					"response": []
-				}
-			]
-		},
-		{
-			"name": "User Bank Details",
-			"item": [
-				{
-					"name": "save",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ2NjIzOTg5fQ.HOFOWkWhax8_aDQu64DT6FMmeJHrLr7LFq_GgRZ_9bc4NsDzEFDPntfesMczZY5D",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"accountHolderName\": \"Bavithragithan\",\r\n    \"accountNumber\": \"7475895000520155\",\r\n    \"createdAt\": \"2025-05-15T18:48:39\",\r\n    \"userDto\":{\r\n        \"id\": 1\r\n    },\r\n    \"bankDto\":{\r\n        \"id\": 1\r\n    },\r\n    \"branchDto\":{\r\n        \"id\": 1\r\n    },\r\n    \"isActive\":1\r\n\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/userBankDetails/save",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"userBankDetails",
-								"save"
-							]
-						}
-					},
-					"response": []
 				},
 				{
 					"name": "update",
@@ -1880,7 +1836,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ2NjIzOTg5fQ.HOFOWkWhax8_aDQu64DT6FMmeJHrLr7LFq_GgRZ_9bc4NsDzEFDPntfesMczZY5D",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NDk0ODQ0fQ.MOu3WtFejUJOVOBf0z7gCirKkJZKo0xqU0pzWYlLNEX2PV_nocWl09JZnVDH74VC",
 									"type": "string"
 								}
 							]
@@ -1889,7 +1845,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\":1,\r\n    \"accountHolderName\": \"Bavithragithan\",\r\n    \"accountNumber\": \"7475895000520155\",\r\n    \"createdAt\": \"2025-05-15T18:48:39\",\r\n    \"userDto\":{\r\n        \"id\": 1\r\n    },\r\n    \"bankDto\":{\r\n        \"id\": 1\r\n    },\r\n    \"branchDto\":{\r\n        \"id\": 1\r\n    },\r\n    \"isActive\":1\r\n\r\n}",
+							"raw": "{\r\n    \"id\":3,\r\n    \"name\": \"sampath Bank\",\r\n    \"isActive\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1897,14 +1853,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/userBankDetails/update",
+							"raw": "http://localhost:8080/bank/update",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"userBankDetails",
+								"bank",
 								"update"
 							]
 						}
@@ -1919,7 +1875,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ2NjIzOTg5fQ.HOFOWkWhax8_aDQu64DT6FMmeJHrLr7LFq_GgRZ_9bc4NsDzEFDPntfesMczZY5D",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NTg5OTIyfQ._uy1WB3vFRLHYqiEn9EYRxgql9V9Soz-ODzFPhxUx83BoYC5xM0f4NJ6LrqHtcv8",
 									"type": "string"
 								}
 							]
@@ -1927,24 +1883,24 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/userBankDetails/updateStatus?userBankDetailsId=1&status=0",
+							"raw": "http://localhost:8080/bank/updateStatus?bankId=2&status=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"userBankDetails",
+								"bank",
 								"updateStatus"
 							],
 							"query": [
 								{
-									"key": "userBankDetailsId",
-									"value": "1"
+									"key": "bankId",
+									"value": "2"
 								},
 								{
 									"key": "status",
-									"value": "0"
+									"value": "1"
 								}
 							]
 						}
@@ -1959,7 +1915,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ2NjIzOTg5fQ.HOFOWkWhax8_aDQu64DT6FMmeJHrLr7LFq_GgRZ_9bc4NsDzEFDPntfesMczZY5D",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NTg2NTQ3fQ.Skq8Thlroczx6VSMk3ErRbqT2dNLW8TjCi_Gsrnq7AihydcdS1I8xF9HzitHFtxv",
 									"type": "string"
 								}
 							]
@@ -1967,14 +1923,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/userBankDetails/getAllPage?pageNumber=1&pageSize=10&status=1",
+							"raw": "http://localhost:8080/bank/getAllPage?pageNumber=1&pageSize=10&status=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"userBankDetails",
+								"bank",
 								"getAllPage"
 							],
 							"query": [
@@ -1996,14 +1952,14 @@
 					"response": []
 				},
 				{
-					"name": "getAllBySearch",
+					"name": "getAllSearch",
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ2NjIzOTg5fQ.HOFOWkWhax8_aDQu64DT6FMmeJHrLr7LFq_GgRZ_9bc4NsDzEFDPntfesMczZY5D",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NTg2NTQ3fQ.Skq8Thlroczx6VSMk3ErRbqT2dNLW8TjCi_Gsrnq7AihydcdS1I8xF9HzitHFtxv",
 									"type": "string"
 								}
 							]
@@ -2011,26 +1967,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/userBankDetails/getAllBySearch?accountHolderName=Bavithragithan",
+							"raw": "http://localhost:8080/bank/getAllBySearch",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"userBankDetails",
+								"bank",
 								"getAllBySearch"
-							],
-							"query": [
-								{
-									"key": "accountNumber",
-									"value": "7475895000520155",
-									"disabled": true
-								},
-								{
-									"key": "accountHolderName",
-									"value": "Bavithragithan"
-								}
 							]
 						}
 					},

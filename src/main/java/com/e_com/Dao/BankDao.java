@@ -1,7 +1,11 @@
 package com.e_com.Dao;
 
+import java.util.List;
+import java.util.Map;
+
 import com.e_com.Domain.Bank;
 import com.e_com.Dto.BankDto;
+import com.e_com.Dto.PaginatedResponseDto;
 
 
 /**
@@ -17,4 +21,12 @@ import com.e_com.Dto.BankDto;
 public interface BankDao extends BaseDao<Bank> {
 
     BankDto saveBank(BankDto bankDto);
+    
+    BankDto updateBank(BankDto bankDto);
+    
+    BankDto checkBankAvailability(Integer bankId);
+    
+    PaginatedResponseDto getAllPageBank(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters);
+    
+    List<BankDto> getAllBank(String bankName);
 }

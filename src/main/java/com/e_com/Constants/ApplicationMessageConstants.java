@@ -89,8 +89,6 @@ public interface ApplicationMessageConstants {
 		String EX_UPDATE_PRODUCTSUBCATEGORY_STATUS = "ex.update.productsubcategory.status";
 		String ERR_RETRIEVE_PRODUCTSUBCATEGORY_BY_ID ="err.get.by.productsubcategory.id";
 		String EX_RETRIEVE_PRODUCTSUBCATEGORY_BY_ID="ex.get.by.productsubcategory.id";
-		String ERR_SAVE_BANK_DETAILS = "err_save_bank_details";
-		String EX_SAVE_BANK_DETAILS = "ex_save_bank_details";
 		String ERR_UPDATE_STATUS_DETAILS = "err_update_status_details";
 		String EX_UPDATE_STATUS_DETAILS = "ex_update_status_details";
 		String ERR_UPDATE_FOR_STATUS = "err_update_status_status";
@@ -111,32 +109,19 @@ public interface ApplicationMessageConstants {
         String EX_UPDATE_USER_BANK_STATUS = "ex.update.user.bank.status";
         String ERR_RETRIEVE_ALL_USER_BANK_DETAILS = "err.retrive.all.user.bank.details";
         String EX_RETRIEVE_ALL_USER_BANK_DETAILS = "ex.retrive.all.user.bank.details";
-		String ERR_RETRIEVE_ALL_STATUS_DETAILS = "err.get.all.status.details";
-		String EX_RETRIEVE_ALL_STATUS_DETAILS = "ex.get.all.status.details";
-        String ERR_SAVE_PRODUCT_DETAILS = "err.save.product.details";
-        String EX_SAVE_PRODUCT_DETAILS = "ex.save.product.details";
-        String ERR_UPDATE_PRODUCT_DETAILS = "err.update.product.details";
-        String EX_UPDATE_PRODUCT_DETAILS = "ex.update.product.details";
-        String ERR_UPDATE_PRODUCT_STATUS = "err.update.product.status";
-        String EX_UPDATE_PRODUCT_STATUS = "ex.update.product.status";
-        String ERR_RETRIEVE_ALL_PRODUCT_DETAILS = "err.retrieve.all.product.details";
-        String EX_RETRIEVE_ALL_PRODUCT_DETAILS = "ex.retrieve.all.product.details";
-        String ERR_SAVE_ORDERS_DETAILS = "err.save.orders.details";
-        String EX_SAVE_ORDERS_DETAILS = "ex.save.orders.details";
-        String ERR_UPDATE_ORDERS_DETAILS = "err.update.orders.details";
-        String EX_UPDATE_ORDERS_DETAILS = "ex.update.orders.details";
-        String ERR_UPDATE_ORDERS_STATUS = "err.update.orders.status";
-        String EX_UPDATE_ORDERS_STATUS = "ex.update.orders.status";
-        String ERR_RETRIEVE_ALL_ORDERS_DETAILS = "err.retrieve.all.orders.details";
-        String EX_RETRIEVE_ALL_ORDERS_DETAILS = "ex.retrieve.all.orders.details";
-		String ERR_SAVE_PRODUCT_CATEGORY_DETAILS = "err.save.product.category.details";
-        String EX_SAVE_PRODUCT_CATEGORY_DETAILS = "ex.save.product.category.details";
-        String ERR_UPDATE_PRODUCT_CATEGORY_DETAILS = "err.update.product.category.details";
-        String EX_UPDATE_PRODUCT_CATEGORY_DETAILS = "ex.update.product.category.details";
-        String ERR_UPDATE_PRODUCT_CATEGORY_STATUS = "err.update.product.category.status";
-        String EX_UPDATE_PRODUCT_CATEGORY_STATUS = "ex.update.product.category.status";
-        String ERR_RETRIEVE_ALL_PRODUCT_CATEGORY_DETAILS = "err.retrieve.all.product.category.details";
-        String EX_RETRIEVE_ALL_PRODUCT_CATEGORY_DETAILS = "ex.retrieve.all.product.category.details";
+    	String ERR_SAVE_BANK_DETAILS = "err_save_bank_details";
+		String EX_SAVE_BANK_DETAILS = "ex_save_bank_details";
+		String ERR_UPDATE_BANK_DETAILS = "err.update.bank.details";
+		String EX_UPDATE_BANK_DETAILS = "ex.update.bank.details";
+       	String ERR_UPDATE_BANK_STATUS = "err_update_bank_status";
+		String EX_UPDATE_BANK_STATUS = "ex_update_bank_status";
+		String ERR_RETRIEVE_ALL_BANK_DETAILS = "err_retrive_all_bank_details";
+		String EX_RETRIEVE_ALL_BANK_DETAILS = "ex_retrive_all_bank_details";
+
+		
+
+        
+		
 		
 	}
 }
