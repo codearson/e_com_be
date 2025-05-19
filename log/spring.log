@@ -6399,3 +6399,784 @@ Caused by: java.lang.Error: Unresolved compilation problem:
 2025-05-19 18:53:09.747  INFO 8844 --- [RMI TCP Connection(7)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-05-19 18:53:09.751  INFO 8844 --- [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-05-19 18:53:09.968  INFO 8844 --- [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-19 22:26:37.464  INFO 19608 --- [restartedMain] com.e_com.EComApplication                : Starting EComApplication using Java 21.0.6 on Mshrf02 with PID 19608 (C:\Codearson\E-com Sources\e_com_be\target\classes started by Inazawa Electronics in C:\Codearson\E-com Sources\e_com_be)
+2025-05-19 22:26:37.465  INFO 19608 --- [restartedMain] com.e_com.EComApplication                : The following profiles are active: dev
+2025-05-19 22:26:37.532  INFO 19608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-19 22:26:37.532  INFO 19608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-19 22:26:39.730  INFO 19608 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-19 22:26:39.770  INFO 19608 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 0 JPA repository interfaces.
+2025-05-19 22:26:40.637  INFO 19608 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-05-19 22:26:40.655  INFO 19608 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-19 22:26:40.655  INFO 19608 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-05-19 22:26:40.746  INFO 19608 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-19 22:26:40.747  INFO 19608 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3214 ms
+2025-05-19 22:26:40.961  INFO 19608 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-19 22:26:41.030  INFO 19608 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2025-05-19 22:26:41.242  INFO 19608 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-05-19 22:26:41.349  INFO 19608 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-19 22:26:41.565  INFO 19608 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-19 22:26:41.582  INFO 19608 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2025-05-19 22:26:42.776  INFO 19608 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-05-19 22:26:42.784  INFO 19608 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-19 22:26:43.667  INFO 19608 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e00304, org.springframework.security.web.context.SecurityContextPersistenceFilter@302b3f39, org.springframework.security.web.header.HeaderWriterFilter@1eb6471e, org.springframework.web.filter.CorsFilter@2cafecdb, org.springframework.security.web.authentication.logout.LogoutFilter@1dc567d, com.e_com.Service.Utils.JwtCustomFilter@7d336a9f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b44b8b0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d74407, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@29422dab, org.springframework.security.web.session.SessionManagementFilter@58f6e19b, org.springframework.security.web.access.ExceptionTranslationFilter@361c9f11, org.springframework.security.web.access.intercept.AuthorizationFilter@724ef4d9]
+2025-05-19 22:26:43.939  INFO 19608 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-19 22:26:44.026  INFO 19608 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-19 22:26:44.048  INFO 19608 --- [restartedMain] com.e_com.EComApplication                : Started EComApplication in 7.132 seconds (JVM running for 8.445)
+2025-05-19 22:27:29.196  INFO 19608 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-19 22:27:29.198  INFO 19608 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-19 22:27:29.201  INFO 19608 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-05-19 22:27:29.246  INFO 19608 --- [http-nio-8080-exec-2] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-19 22:27:29.636  INFO 19608 --- [http-nio-8080-exec-2] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-19 22:27:29.636  INFO 19608 --- [http-nio-8080-exec-2] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-19 22:27:29.653  WARN 19608 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:27:29.986  INFO 19608 --- [http-nio-8080-exec-2] com.e_com.Controller.BankController      : BankController.saveBank() invoked
+2025-05-19 22:27:29.987  INFO 19608 --- [http-nio-8080-exec-2] com.e_com.ServiceImpl.BankServiceImpl    : BankServiceImpl.saveBank invoked
+2025-05-19 22:27:29.988  INFO 19608 --- [http-nio-8080-exec-2] com.e_com.Service.BL.BankServiceBL       : BankServiceBL.saveBank() invoked.
+2025-05-19 22:27:30.004  INFO 19608 --- [http-nio-8080-exec-2] com.e_com.DaoImpl.BankDaoImpl            : BankDaoImpl.saveBank() invoked.
+2025-05-19 22:27:30.052  INFO 19608 --- [http-nio-8080-exec-2] com.e_com.ServiceImpl.BankServiceImpl    : Bank details saved.
+2025-05-19 22:27:42.228  INFO 19608 --- [http-nio-8080-exec-3] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-19 22:27:42.232  INFO 19608 --- [http-nio-8080-exec-3] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-19 22:27:42.232  INFO 19608 --- [http-nio-8080-exec-3] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-19 22:27:42.233  WARN 19608 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:27:42.251  INFO 19608 --- [http-nio-8080-exec-3] com.e_com.Controller.BankController      : BankController.updateBank() invoked
+2025-05-19 22:27:42.252  INFO 19608 --- [http-nio-8080-exec-3] com.e_com.ServiceImpl.BankServiceImpl    : BankServiceImpl.updateBank invoked
+2025-05-19 22:27:42.252  INFO 19608 --- [http-nio-8080-exec-3] com.e_com.Service.BL.BankServiceBL       : BankServiceBL.updateBank() invoked.
+2025-05-19 22:27:42.255  INFO 19608 --- [http-nio-8080-exec-3] com.e_com.DaoImpl.BankDaoImpl            : BankDaoImpl.updateBank() invoked.
+2025-05-19 22:27:42.279  INFO 19608 --- [http-nio-8080-exec-3] o.h.e.j.b.internal.AbstractBatchImpl     : HHH000010: On release of batch it still contained JDBC statements
+2025-05-19 22:27:42.297 ERROR 19608 --- [http-nio-8080-exec-3] com.e_com.ServiceImpl.BankServiceImpl    : Exception occurs while updating Bank details.
+
+org.springframework.orm.ObjectOptimisticLockingFailureException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1; statement executed: update bank set is_active=?, name=? where id=?; nested exception is org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1; statement executed: update bank set is_active=?, name=? where id=?
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:318) ~[spring-orm-5.3.13.jar:5.3.13]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233) ~[spring-orm-5.3.13.jar:5.3.13]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:566) ~[spring-orm-5.3.13.jar:5.3.13]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743) ~[spring-tx-5.3.13.jar:5.3.13]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711) ~[spring-tx-5.3.13.jar:5.3.13]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654) ~[spring-tx-5.3.13.jar:5.3.13]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407) ~[spring-tx-5.3.13.jar:5.3.13]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.13.jar:5.3.13]
+	at com.e_com.DaoImpl.BankDaoImpl$$EnhancerBySpringCGLIB$$e516142e.updateBank(<generated>) ~[classes/:na]
+	at com.e_com.Service.BL.BankServiceBL.updateBank(BankServiceBL.java:38) ~[classes/:na]
+	at com.e_com.ServiceImpl.BankServiceImpl.updateBank(BankServiceImpl.java:69) ~[classes/:na]
+	at com.e_com.Controller.BankController.updateBank(BankController.java:52) ~[classes/:na]
+	at com.e_com.Controller.BankController$$FastClassBySpringCGLIB$$92076a96.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.invoke(AuthorizationManagerBeforeMethodInterceptor.java:159) ~[spring-security-core-5.6.0.jar:5.6.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.13.jar:5.3.13]
+	at com.e_com.Controller.BankController$$EnhancerBySpringCGLIB$$cfc60305.updateBank(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.55.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.55.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:113) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilterInternal(AuthorizationFilter.java:58) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at com.e_com.Service.Utils.JwtCustomFilter.doFilterInternal(JwtCustomFilter.java:65) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1; statement executed: update bank set is_active=?, name=? where id=?
+	at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:67) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:54) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:47) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3571) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.updateOrInsert(AbstractEntityPersister.java:3438) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3852) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:201) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:986) ~[na:na]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:344) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1416) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:507) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3299) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2434) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:449) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562) ~[spring-orm-5.3.13.jar:5.3.13]
+	... 114 common frames omitted
+
+2025-05-19 22:27:49.207  INFO 19608 --- [http-nio-8080-exec-4] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-19 22:27:49.212  INFO 19608 --- [http-nio-8080-exec-4] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-19 22:27:49.212  INFO 19608 --- [http-nio-8080-exec-4] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-19 22:27:49.213  WARN 19608 --- [http-nio-8080-exec-4] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:27:49.241  INFO 19608 --- [http-nio-8080-exec-4] com.e_com.Controller.BankController      : BankController.updateBankStatus() invoked with bankId: 2, status: true
+2025-05-19 22:27:49.241  INFO 19608 --- [http-nio-8080-exec-4] com.e_com.ServiceImpl.BankServiceImpl    : BankServiceImpl.updateBankStatus invoked with bankId: 2, status: true
+2025-05-19 22:27:49.241  INFO 19608 --- [http-nio-8080-exec-4] com.e_com.Service.BL.BankServiceBL       : BankServiceBL.updateBankStatus() invoked with bankId: 2, status: true
+2025-05-19 22:27:49.242  INFO 19608 --- [http-nio-8080-exec-4] com.e_com.DaoImpl.BankDaoImpl            : BankDaoImpl.checkBankAvailability() invoked with bankId: 2
+2025-05-19 22:27:49.243  WARN 19608 --- [http-nio-8080-exec-4] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:27:49.246  INFO 19608 --- [http-nio-8080-exec-4] com.e_com.ServiceImpl.BankServiceImpl    : Unable to update Bank status.
+2025-05-19 22:27:49.253 ERROR 19608 --- [http-nio-8080-exec-4] com.e_com.ServiceImpl.BankServiceImpl    : Exception occurs while updating Bank status.
+
+java.lang.NullPointerException: Cannot invoke "String.indexOf(String)" because "errorMessage" is null
+	at com.e_com.MessageConfig.getErrorCode(MessageConfig.java:30) ~[classes/:na]
+	at com.e_com.Service.Utils.ServiceUtil.getErrorServiceResponse(ServiceUtil.java:43) ~[classes/:na]
+	at com.e_com.ServiceImpl.BankServiceImpl.updateBankStatus(BankServiceImpl.java:97) ~[classes/:na]
+	at com.e_com.Controller.BankController.updateBankStatus(BankController.java:59) ~[classes/:na]
+	at com.e_com.Controller.BankController$$FastClassBySpringCGLIB$$92076a96.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.invoke(AuthorizationManagerBeforeMethodInterceptor.java:159) ~[spring-security-core-5.6.0.jar:5.6.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.13.jar:5.3.13]
+	at com.e_com.Controller.BankController$$EnhancerBySpringCGLIB$$cfc60305.updateBankStatus(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:684) ~[tomcat-embed-core-9.0.55.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.55.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:113) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilterInternal(AuthorizationFilter.java:58) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at com.e_com.Service.Utils.JwtCustomFilter.doFilterInternal(JwtCustomFilter.java:65) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-05-19 22:28:13.970  INFO 19608 --- [http-nio-8080-exec-5] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-19 22:28:13.981  INFO 19608 --- [http-nio-8080-exec-5] com.e_com.Controller.UserController      : UserController.getUserByName() invoked
+2025-05-19 22:28:13.989  INFO 19608 --- [http-nio-8080-exec-5] com.e_com.ServiceImpl.UserServiceImpl    : UserServiceImpl.login().invoked
+2025-05-19 22:28:13.990  INFO 19608 --- [http-nio-8080-exec-5] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.login() invoked
+2025-05-19 22:28:14.135  INFO 19608 --- [http-nio-8080-exec-5] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-19 22:28:14.135  INFO 19608 --- [http-nio-8080-exec-5] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-19 22:28:14.135  WARN 19608 --- [http-nio-8080-exec-5] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:28:31.585  INFO 19608 --- [http-nio-8080-exec-6] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-19 22:28:31.589  INFO 19608 --- [http-nio-8080-exec-6] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-19 22:28:31.589  INFO 19608 --- [http-nio-8080-exec-6] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-19 22:28:31.590  WARN 19608 --- [http-nio-8080-exec-6] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:28:31.607  INFO 19608 --- [http-nio-8080-exec-6] com.e_com.Controller.BankController      : BankController.updateBank() invoked
+2025-05-19 22:28:31.607  INFO 19608 --- [http-nio-8080-exec-6] com.e_com.ServiceImpl.BankServiceImpl    : BankServiceImpl.updateBank invoked
+2025-05-19 22:28:31.607  INFO 19608 --- [http-nio-8080-exec-6] com.e_com.Service.BL.BankServiceBL       : BankServiceBL.updateBank() invoked.
+2025-05-19 22:28:31.608  INFO 19608 --- [http-nio-8080-exec-6] com.e_com.DaoImpl.BankDaoImpl            : BankDaoImpl.updateBank() invoked.
+2025-05-19 22:28:31.612  INFO 19608 --- [http-nio-8080-exec-6] o.h.e.j.b.internal.AbstractBatchImpl     : HHH000010: On release of batch it still contained JDBC statements
+2025-05-19 22:28:31.616 ERROR 19608 --- [http-nio-8080-exec-6] com.e_com.ServiceImpl.BankServiceImpl    : Exception occurs while updating Bank details.
+
+org.springframework.orm.ObjectOptimisticLockingFailureException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1; statement executed: update bank set is_active=?, name=? where id=?; nested exception is org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1; statement executed: update bank set is_active=?, name=? where id=?
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:318) ~[spring-orm-5.3.13.jar:5.3.13]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233) ~[spring-orm-5.3.13.jar:5.3.13]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:566) ~[spring-orm-5.3.13.jar:5.3.13]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743) ~[spring-tx-5.3.13.jar:5.3.13]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711) ~[spring-tx-5.3.13.jar:5.3.13]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654) ~[spring-tx-5.3.13.jar:5.3.13]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407) ~[spring-tx-5.3.13.jar:5.3.13]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.13.jar:5.3.13]
+	at com.e_com.DaoImpl.BankDaoImpl$$EnhancerBySpringCGLIB$$e516142e.updateBank(<generated>) ~[classes/:na]
+	at com.e_com.Service.BL.BankServiceBL.updateBank(BankServiceBL.java:38) ~[classes/:na]
+	at com.e_com.ServiceImpl.BankServiceImpl.updateBank(BankServiceImpl.java:69) ~[classes/:na]
+	at com.e_com.Controller.BankController.updateBank(BankController.java:52) ~[classes/:na]
+	at com.e_com.Controller.BankController$$FastClassBySpringCGLIB$$92076a96.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.invoke(AuthorizationManagerBeforeMethodInterceptor.java:159) ~[spring-security-core-5.6.0.jar:5.6.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.13.jar:5.3.13]
+	at com.e_com.Controller.BankController$$EnhancerBySpringCGLIB$$cfc60305.updateBank(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.55.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.55.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:113) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilterInternal(AuthorizationFilter.java:58) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at com.e_com.Service.Utils.JwtCustomFilter.doFilterInternal(JwtCustomFilter.java:65) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1; statement executed: update bank set is_active=?, name=? where id=?
+	at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:67) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:54) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:47) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3571) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.updateOrInsert(AbstractEntityPersister.java:3438) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3852) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:201) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:986) ~[na:na]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:344) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1416) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:507) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3299) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2434) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:449) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562) ~[spring-orm-5.3.13.jar:5.3.13]
+	... 114 common frames omitted
+
+2025-05-19 22:28:36.882  INFO 19608 --- [http-nio-8080-exec-7] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-19 22:28:36.886  INFO 19608 --- [http-nio-8080-exec-7] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-19 22:28:36.886  INFO 19608 --- [http-nio-8080-exec-7] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-19 22:28:36.887  WARN 19608 --- [http-nio-8080-exec-7] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:28:36.902  INFO 19608 --- [http-nio-8080-exec-7] com.e_com.Controller.BankController      : BankController.updateBank() invoked
+2025-05-19 22:28:36.902  INFO 19608 --- [http-nio-8080-exec-7] com.e_com.ServiceImpl.BankServiceImpl    : BankServiceImpl.updateBank invoked
+2025-05-19 22:28:36.903  INFO 19608 --- [http-nio-8080-exec-7] com.e_com.Service.BL.BankServiceBL       : BankServiceBL.updateBank() invoked.
+2025-05-19 22:28:36.904  INFO 19608 --- [http-nio-8080-exec-7] com.e_com.DaoImpl.BankDaoImpl            : BankDaoImpl.updateBank() invoked.
+2025-05-19 22:28:36.907  INFO 19608 --- [http-nio-8080-exec-7] o.h.e.j.b.internal.AbstractBatchImpl     : HHH000010: On release of batch it still contained JDBC statements
+2025-05-19 22:28:36.909 ERROR 19608 --- [http-nio-8080-exec-7] com.e_com.ServiceImpl.BankServiceImpl    : Exception occurs while updating Bank details.
+
+org.springframework.orm.ObjectOptimisticLockingFailureException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1; statement executed: update bank set is_active=?, name=? where id=?; nested exception is org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1; statement executed: update bank set is_active=?, name=? where id=?
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:318) ~[spring-orm-5.3.13.jar:5.3.13]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233) ~[spring-orm-5.3.13.jar:5.3.13]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:566) ~[spring-orm-5.3.13.jar:5.3.13]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743) ~[spring-tx-5.3.13.jar:5.3.13]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711) ~[spring-tx-5.3.13.jar:5.3.13]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654) ~[spring-tx-5.3.13.jar:5.3.13]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407) ~[spring-tx-5.3.13.jar:5.3.13]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.13.jar:5.3.13]
+	at com.e_com.DaoImpl.BankDaoImpl$$EnhancerBySpringCGLIB$$e516142e.updateBank(<generated>) ~[classes/:na]
+	at com.e_com.Service.BL.BankServiceBL.updateBank(BankServiceBL.java:38) ~[classes/:na]
+	at com.e_com.ServiceImpl.BankServiceImpl.updateBank(BankServiceImpl.java:69) ~[classes/:na]
+	at com.e_com.Controller.BankController.updateBank(BankController.java:52) ~[classes/:na]
+	at com.e_com.Controller.BankController$$FastClassBySpringCGLIB$$92076a96.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.invoke(AuthorizationManagerBeforeMethodInterceptor.java:159) ~[spring-security-core-5.6.0.jar:5.6.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.13.jar:5.3.13]
+	at com.e_com.Controller.BankController$$EnhancerBySpringCGLIB$$cfc60305.updateBank(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.55.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.13.jar:5.3.13]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.55.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:113) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilterInternal(AuthorizationFilter.java:58) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at com.e_com.Service.Utils.JwtCustomFilter.doFilterInternal(JwtCustomFilter.java:65) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.0.jar:5.6.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.13.jar:5.3.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1; statement executed: update bank set is_active=?, name=? where id=?
+	at org.hibernate.jdbc.Expectations$BasicExpectation.checkBatched(Expectations.java:67) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.jdbc.Expectations$BasicExpectation.verifyOutcome(Expectations.java:54) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:47) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3571) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.updateOrInsert(AbstractEntityPersister.java:3438) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3852) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:201) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:986) ~[na:na]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:344) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1416) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:507) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3299) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2434) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:449) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562) ~[spring-orm-5.3.13.jar:5.3.13]
+	... 114 common frames omitted
+
+2025-05-19 22:29:43.153  INFO 19608 --- [http-nio-8080-exec-10] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-19 22:29:43.158  INFO 19608 --- [http-nio-8080-exec-10] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-19 22:29:43.158  INFO 19608 --- [http-nio-8080-exec-10] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-19 22:29:43.158  WARN 19608 --- [http-nio-8080-exec-10] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:29:43.171  INFO 19608 --- [http-nio-8080-exec-10] com.e_com.Controller.BankController      : BankController.saveBank() invoked
+2025-05-19 22:29:43.171  INFO 19608 --- [http-nio-8080-exec-10] com.e_com.ServiceImpl.BankServiceImpl    : BankServiceImpl.saveBank invoked
+2025-05-19 22:29:43.171  INFO 19608 --- [http-nio-8080-exec-10] com.e_com.Service.BL.BankServiceBL       : BankServiceBL.saveBank() invoked.
+2025-05-19 22:29:43.172  INFO 19608 --- [http-nio-8080-exec-10] com.e_com.DaoImpl.BankDaoImpl            : BankDaoImpl.saveBank() invoked.
+2025-05-19 22:29:43.183  INFO 19608 --- [http-nio-8080-exec-10] com.e_com.ServiceImpl.BankServiceImpl    : Bank details saved.
+2025-05-19 22:30:16.036  INFO 19608 --- [http-nio-8080-exec-1] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-19 22:30:16.040  INFO 19608 --- [http-nio-8080-exec-1] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-19 22:30:16.040  INFO 19608 --- [http-nio-8080-exec-1] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-19 22:30:16.040  WARN 19608 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:30:16.053  INFO 19608 --- [http-nio-8080-exec-1] com.e_com.Controller.BankController      : BankController.saveBank() invoked
+2025-05-19 22:30:16.053  INFO 19608 --- [http-nio-8080-exec-1] com.e_com.ServiceImpl.BankServiceImpl    : BankServiceImpl.saveBank invoked
+2025-05-19 22:30:16.053  INFO 19608 --- [http-nio-8080-exec-1] com.e_com.Service.BL.BankServiceBL       : BankServiceBL.saveBank() invoked.
+2025-05-19 22:30:16.054  INFO 19608 --- [http-nio-8080-exec-1] com.e_com.DaoImpl.BankDaoImpl            : BankDaoImpl.saveBank() invoked.
+2025-05-19 22:30:16.063  INFO 19608 --- [http-nio-8080-exec-1] com.e_com.ServiceImpl.BankServiceImpl    : Bank details saved.
+2025-05-19 22:30:24.306  INFO 19608 --- [http-nio-8080-exec-2] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-19 22:30:24.309  INFO 19608 --- [http-nio-8080-exec-2] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-19 22:30:24.309  INFO 19608 --- [http-nio-8080-exec-2] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-19 22:30:24.309  WARN 19608 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:30:24.323  INFO 19608 --- [http-nio-8080-exec-2] com.e_com.Controller.BankController      : BankController.saveBank() invoked
+2025-05-19 22:30:24.324  INFO 19608 --- [http-nio-8080-exec-2] com.e_com.ServiceImpl.BankServiceImpl    : BankServiceImpl.saveBank invoked
+2025-05-19 22:30:24.324  INFO 19608 --- [http-nio-8080-exec-2] com.e_com.Service.BL.BankServiceBL       : BankServiceBL.saveBank() invoked.
+2025-05-19 22:30:24.325  INFO 19608 --- [http-nio-8080-exec-2] com.e_com.DaoImpl.BankDaoImpl            : BankDaoImpl.saveBank() invoked.
+2025-05-19 22:30:24.335  INFO 19608 --- [http-nio-8080-exec-2] com.e_com.ServiceImpl.BankServiceImpl    : Bank details saved.
+2025-05-19 22:31:39.549  INFO 19608 --- [http-nio-8080-exec-5] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-19 22:31:39.554  INFO 19608 --- [http-nio-8080-exec-5] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-19 22:31:39.555  INFO 19608 --- [http-nio-8080-exec-5] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-19 22:31:39.555  WARN 19608 --- [http-nio-8080-exec-5] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:31:39.566  INFO 19608 --- [http-nio-8080-exec-5] com.e_com.Controller.BankController      : BankController.updateBank() invoked
+2025-05-19 22:31:39.566  INFO 19608 --- [http-nio-8080-exec-5] com.e_com.ServiceImpl.BankServiceImpl    : BankServiceImpl.updateBank invoked
+2025-05-19 22:31:39.567  INFO 19608 --- [http-nio-8080-exec-5] com.e_com.Service.BL.BankServiceBL       : BankServiceBL.updateBank() invoked.
+2025-05-19 22:31:39.567  INFO 19608 --- [http-nio-8080-exec-5] com.e_com.DaoImpl.BankDaoImpl            : BankDaoImpl.updateBank() invoked.
+2025-05-19 22:31:39.577  INFO 19608 --- [http-nio-8080-exec-5] com.e_com.ServiceImpl.BankServiceImpl    : Bank Details updated.
+2025-05-19 22:31:48.895  INFO 19608 --- [http-nio-8080-exec-6] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-19 22:31:48.897  INFO 19608 --- [http-nio-8080-exec-6] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-19 22:31:48.897  INFO 19608 --- [http-nio-8080-exec-6] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-19 22:31:48.898  WARN 19608 --- [http-nio-8080-exec-6] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:31:48.908  INFO 19608 --- [http-nio-8080-exec-6] com.e_com.Controller.BankController      : BankController.updateBankStatus() invoked with bankId: 2, status: true
+2025-05-19 22:31:48.909  INFO 19608 --- [http-nio-8080-exec-6] com.e_com.ServiceImpl.BankServiceImpl    : BankServiceImpl.updateBankStatus invoked with bankId: 2, status: true
+2025-05-19 22:31:48.909  INFO 19608 --- [http-nio-8080-exec-6] com.e_com.Service.BL.BankServiceBL       : BankServiceBL.updateBankStatus() invoked with bankId: 2, status: true
+2025-05-19 22:31:48.910  INFO 19608 --- [http-nio-8080-exec-6] com.e_com.DaoImpl.BankDaoImpl            : BankDaoImpl.checkBankAvailability() invoked with bankId: 2
+2025-05-19 22:31:48.910  WARN 19608 --- [http-nio-8080-exec-6] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:31:48.915  INFO 19608 --- [http-nio-8080-exec-6] com.e_com.DaoImpl.BankDaoImpl            : BankDaoImpl.updateBank() invoked.
+2025-05-19 22:31:48.917  INFO 19608 --- [http-nio-8080-exec-6] com.e_com.ServiceImpl.BankServiceImpl    : Bank Status updated.
+2025-05-19 22:32:04.495  INFO 19608 --- [http-nio-8080-exec-7] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-19 22:32:04.499  INFO 19608 --- [http-nio-8080-exec-7] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-19 22:32:04.499  INFO 19608 --- [http-nio-8080-exec-7] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-19 22:32:04.499  WARN 19608 --- [http-nio-8080-exec-7] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:32:04.516  INFO 19608 --- [http-nio-8080-exec-7] com.e_com.Controller.BankController      : BankController.updateBankStatus() invoked with bankId: 2, status: false
+2025-05-19 22:32:04.516  INFO 19608 --- [http-nio-8080-exec-7] com.e_com.ServiceImpl.BankServiceImpl    : BankServiceImpl.updateBankStatus invoked with bankId: 2, status: false
+2025-05-19 22:32:04.516  INFO 19608 --- [http-nio-8080-exec-7] com.e_com.Service.BL.BankServiceBL       : BankServiceBL.updateBankStatus() invoked with bankId: 2, status: false
+2025-05-19 22:32:04.517  INFO 19608 --- [http-nio-8080-exec-7] com.e_com.DaoImpl.BankDaoImpl            : BankDaoImpl.checkBankAvailability() invoked with bankId: 2
+2025-05-19 22:32:04.518  WARN 19608 --- [http-nio-8080-exec-7] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:32:04.523  INFO 19608 --- [http-nio-8080-exec-7] com.e_com.DaoImpl.BankDaoImpl            : BankDaoImpl.updateBank() invoked.
+2025-05-19 22:32:04.531  INFO 19608 --- [http-nio-8080-exec-7] com.e_com.ServiceImpl.BankServiceImpl    : Bank Status updated.
+2025-05-19 22:32:25.733  INFO 19608 --- [http-nio-8080-exec-8] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-19 22:32:25.736  INFO 19608 --- [http-nio-8080-exec-8] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-19 22:32:25.736  INFO 19608 --- [http-nio-8080-exec-8] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-19 22:32:25.737  WARN 19608 --- [http-nio-8080-exec-8] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:32:25.756  INFO 19608 --- [http-nio-8080-exec-8] com.e_com.Controller.BankController      : BankController.getAllPageBank() invoked with pageNumber: 1, pageSize: 10, status: true
+2025-05-19 22:32:25.760  INFO 19608 --- [http-nio-8080-exec-8] com.e_com.ServiceImpl.BankServiceImpl    : BankServiceImpl.getAllPageBank() invoked with pageNumber: 1, pageSize: 10, status: true
+2025-05-19 22:32:25.760  INFO 19608 --- [http-nio-8080-exec-8] com.e_com.Service.BL.BankServiceBL       : BankServiceBL.getAllPageBank() invoked with pageNumber: 1, pageSize: 10, status: true
+2025-05-19 22:32:25.761  INFO 19608 --- [http-nio-8080-exec-8] com.e_com.DaoImpl.BankDaoImpl            : BankDaoImpl.getAllPageBank() invoked with pageNumber: 1, pageSize: 10, status: true
+2025-05-19 22:32:25.770  WARN 19608 --- [http-nio-8080-exec-8] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:32:25.776  INFO 19608 --- [http-nio-8080-exec-8] com.e_com.ServiceImpl.BankServiceImpl    : Retrieved paginated Bank details.
+2025-05-19 22:32:48.482  INFO 19608 --- [http-nio-8080-exec-9] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-19 22:32:48.486  INFO 19608 --- [http-nio-8080-exec-9] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-19 22:32:48.486  INFO 19608 --- [http-nio-8080-exec-9] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-19 22:32:48.486  WARN 19608 --- [http-nio-8080-exec-9] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:32:48.498  INFO 19608 --- [http-nio-8080-exec-9] com.e_com.Controller.BankController      : BankController.getAllPageBank() invoked with pageNumber: 1, pageSize: 10, status: false
+2025-05-19 22:32:48.499  INFO 19608 --- [http-nio-8080-exec-9] com.e_com.ServiceImpl.BankServiceImpl    : BankServiceImpl.getAllPageBank() invoked with pageNumber: 1, pageSize: 10, status: false
+2025-05-19 22:32:48.499  INFO 19608 --- [http-nio-8080-exec-9] com.e_com.Service.BL.BankServiceBL       : BankServiceBL.getAllPageBank() invoked with pageNumber: 1, pageSize: 10, status: false
+2025-05-19 22:32:48.500  INFO 19608 --- [http-nio-8080-exec-9] com.e_com.DaoImpl.BankDaoImpl            : BankDaoImpl.getAllPageBank() invoked with pageNumber: 1, pageSize: 10, status: false
+2025-05-19 22:32:48.501  WARN 19608 --- [http-nio-8080-exec-9] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:32:48.505  INFO 19608 --- [http-nio-8080-exec-9] com.e_com.ServiceImpl.BankServiceImpl    : Retrieved paginated Bank details.
+2025-05-19 22:32:56.233  INFO 19608 --- [http-nio-8080-exec-10] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-19 22:32:56.238  INFO 19608 --- [http-nio-8080-exec-10] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-19 22:32:56.238  INFO 19608 --- [http-nio-8080-exec-10] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-19 22:32:56.239  WARN 19608 --- [http-nio-8080-exec-10] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:32:56.252  INFO 19608 --- [http-nio-8080-exec-10] com.e_com.Controller.BankController      : BankController.getAllPageBank() invoked with pageNumber: 1, pageSize: 10, status: true
+2025-05-19 22:32:56.252  INFO 19608 --- [http-nio-8080-exec-10] com.e_com.ServiceImpl.BankServiceImpl    : BankServiceImpl.getAllPageBank() invoked with pageNumber: 1, pageSize: 10, status: true
+2025-05-19 22:32:56.252  INFO 19608 --- [http-nio-8080-exec-10] com.e_com.Service.BL.BankServiceBL       : BankServiceBL.getAllPageBank() invoked with pageNumber: 1, pageSize: 10, status: true
+2025-05-19 22:32:56.254  INFO 19608 --- [http-nio-8080-exec-10] com.e_com.DaoImpl.BankDaoImpl            : BankDaoImpl.getAllPageBank() invoked with pageNumber: 1, pageSize: 10, status: true
+2025-05-19 22:32:56.255  WARN 19608 --- [http-nio-8080-exec-10] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:32:56.260  INFO 19608 --- [http-nio-8080-exec-10] com.e_com.ServiceImpl.BankServiceImpl    : Retrieved paginated Bank details.
+2025-05-19 22:32:59.910  INFO 19608 --- [http-nio-8080-exec-1] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-19 22:32:59.913  INFO 19608 --- [http-nio-8080-exec-1] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-19 22:32:59.914  INFO 19608 --- [http-nio-8080-exec-1] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-19 22:32:59.914  WARN 19608 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:32:59.926  INFO 19608 --- [http-nio-8080-exec-1] com.e_com.Controller.BankController      : BankController.getAllBank() invoked with bankName: null
+2025-05-19 22:32:59.928  INFO 19608 --- [http-nio-8080-exec-1] com.e_com.ServiceImpl.BankServiceImpl    : BankServiceImpl.getAllBank() invoked with bankName: null
+2025-05-19 22:32:59.928  INFO 19608 --- [http-nio-8080-exec-1] com.e_com.Service.BL.BankServiceBL       : BankServiceBL.getAllBank() invoked with bankName: null
+2025-05-19 22:32:59.929  INFO 19608 --- [http-nio-8080-exec-1] com.e_com.DaoImpl.BankDaoImpl            : BankDaoImpl.getAllBank() invoked with bankName: null
+2025-05-19 22:32:59.929  WARN 19608 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:32:59.935  INFO 19608 --- [http-nio-8080-exec-1] com.e_com.ServiceImpl.BankServiceImpl    : Retrieved all Bank details.
+2025-05-19 22:39:21.466  INFO 19608 --- [http-nio-8080-exec-4] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-19 22:39:21.474  INFO 19608 --- [http-nio-8080-exec-4] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-19 22:39:21.474  INFO 19608 --- [http-nio-8080-exec-4] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-19 22:39:21.476  WARN 19608 --- [http-nio-8080-exec-4] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:39:21.502  INFO 19608 --- [http-nio-8080-exec-4] com.e_com.Controller.BankController      : BankController.saveBank() invoked
+2025-05-19 22:39:21.502  INFO 19608 --- [http-nio-8080-exec-4] com.e_com.ServiceImpl.BankServiceImpl    : BankServiceImpl.saveBank invoked
+2025-05-19 22:39:21.502  INFO 19608 --- [http-nio-8080-exec-4] com.e_com.Service.BL.BankServiceBL       : BankServiceBL.saveBank() invoked.
+2025-05-19 22:39:21.504  INFO 19608 --- [http-nio-8080-exec-4] com.e_com.DaoImpl.BankDaoImpl            : BankDaoImpl.saveBank() invoked.
+2025-05-19 22:39:21.516  INFO 19608 --- [http-nio-8080-exec-4] com.e_com.ServiceImpl.BankServiceImpl    : Bank details saved.
+2025-05-19 22:39:27.745  INFO 19608 --- [http-nio-8080-exec-5] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-19 22:39:27.750  INFO 19608 --- [http-nio-8080-exec-5] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-19 22:39:27.751  INFO 19608 --- [http-nio-8080-exec-5] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-19 22:39:27.753  WARN 19608 --- [http-nio-8080-exec-5] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:39:27.766  INFO 19608 --- [http-nio-8080-exec-5] com.e_com.Controller.BankController      : BankController.updateBank() invoked
+2025-05-19 22:39:27.766  INFO 19608 --- [http-nio-8080-exec-5] com.e_com.ServiceImpl.BankServiceImpl    : BankServiceImpl.updateBank invoked
+2025-05-19 22:39:27.767  INFO 19608 --- [http-nio-8080-exec-5] com.e_com.Service.BL.BankServiceBL       : BankServiceBL.updateBank() invoked.
+2025-05-19 22:39:27.768  INFO 19608 --- [http-nio-8080-exec-5] com.e_com.DaoImpl.BankDaoImpl            : BankDaoImpl.updateBank() invoked.
+2025-05-19 22:39:27.773  INFO 19608 --- [http-nio-8080-exec-5] com.e_com.ServiceImpl.BankServiceImpl    : Bank Details updated.
+2025-05-19 22:39:38.779  INFO 19608 --- [http-nio-8080-exec-6] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-19 22:39:38.783  INFO 19608 --- [http-nio-8080-exec-6] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-19 22:39:38.784  INFO 19608 --- [http-nio-8080-exec-6] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-19 22:39:38.785  WARN 19608 --- [http-nio-8080-exec-6] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:39:38.799  INFO 19608 --- [http-nio-8080-exec-6] com.e_com.Controller.BankController      : BankController.updateBankStatus() invoked with bankId: 2, status: false
+2025-05-19 22:39:38.799  INFO 19608 --- [http-nio-8080-exec-6] com.e_com.ServiceImpl.BankServiceImpl    : BankServiceImpl.updateBankStatus invoked with bankId: 2, status: false
+2025-05-19 22:39:38.799  INFO 19608 --- [http-nio-8080-exec-6] com.e_com.Service.BL.BankServiceBL       : BankServiceBL.updateBankStatus() invoked with bankId: 2, status: false
+2025-05-19 22:39:38.799  INFO 19608 --- [http-nio-8080-exec-6] com.e_com.DaoImpl.BankDaoImpl            : BankDaoImpl.checkBankAvailability() invoked with bankId: 2
+2025-05-19 22:39:38.801  WARN 19608 --- [http-nio-8080-exec-6] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:39:38.805  INFO 19608 --- [http-nio-8080-exec-6] com.e_com.DaoImpl.BankDaoImpl            : BankDaoImpl.updateBank() invoked.
+2025-05-19 22:39:38.807  INFO 19608 --- [http-nio-8080-exec-6] com.e_com.ServiceImpl.BankServiceImpl    : Bank Status updated.
+2025-05-19 22:39:43.723  INFO 19608 --- [http-nio-8080-exec-7] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-19 22:39:43.725  INFO 19608 --- [http-nio-8080-exec-7] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-19 22:39:43.725  INFO 19608 --- [http-nio-8080-exec-7] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-19 22:39:43.726  WARN 19608 --- [http-nio-8080-exec-7] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:39:43.740  INFO 19608 --- [http-nio-8080-exec-7] com.e_com.Controller.BankController      : BankController.getAllPageBank() invoked with pageNumber: 1, pageSize: 10, status: true
+2025-05-19 22:39:43.741  INFO 19608 --- [http-nio-8080-exec-7] com.e_com.ServiceImpl.BankServiceImpl    : BankServiceImpl.getAllPageBank() invoked with pageNumber: 1, pageSize: 10, status: true
+2025-05-19 22:39:43.741  INFO 19608 --- [http-nio-8080-exec-7] com.e_com.Service.BL.BankServiceBL       : BankServiceBL.getAllPageBank() invoked with pageNumber: 1, pageSize: 10, status: true
+2025-05-19 22:39:43.742  INFO 19608 --- [http-nio-8080-exec-7] com.e_com.DaoImpl.BankDaoImpl            : BankDaoImpl.getAllPageBank() invoked with pageNumber: 1, pageSize: 10, status: true
+2025-05-19 22:39:43.743  WARN 19608 --- [http-nio-8080-exec-7] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:39:43.746  INFO 19608 --- [http-nio-8080-exec-7] com.e_com.ServiceImpl.BankServiceImpl    : Retrieved paginated Bank details.
+2025-05-19 22:39:48.421  INFO 19608 --- [http-nio-8080-exec-8] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-05-19 22:39:48.424  INFO 19608 --- [http-nio-8080-exec-8] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-05-19 22:39:48.424  INFO 19608 --- [http-nio-8080-exec-8] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-05-19 22:39:48.424  WARN 19608 --- [http-nio-8080-exec-8] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:39:48.437  INFO 19608 --- [http-nio-8080-exec-8] com.e_com.Controller.BankController      : BankController.getAllBank() invoked with bankName: null
+2025-05-19 22:39:48.437  INFO 19608 --- [http-nio-8080-exec-8] com.e_com.ServiceImpl.BankServiceImpl    : BankServiceImpl.getAllBank() invoked with bankName: null
+2025-05-19 22:39:48.437  INFO 19608 --- [http-nio-8080-exec-8] com.e_com.Service.BL.BankServiceBL       : BankServiceBL.getAllBank() invoked with bankName: null
+2025-05-19 22:39:48.438  INFO 19608 --- [http-nio-8080-exec-8] com.e_com.DaoImpl.BankDaoImpl            : BankDaoImpl.getAllBank() invoked with bankName: null
+2025-05-19 22:39:48.438  WARN 19608 --- [http-nio-8080-exec-8] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-19 22:39:48.441  INFO 19608 --- [http-nio-8080-exec-8] com.e_com.ServiceImpl.BankServiceImpl    : Retrieved all Bank details.
+2025-05-19 22:41:25.643  INFO 19608 --- [RMI TCP Connection(24)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-05-19 22:41:25.668  INFO 19608 --- [RMI TCP Connection(24)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-19 22:41:25.672  INFO 19608 --- [RMI TCP Connection(24)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-19 22:41:25.674  INFO 19608 --- [RMI TCP Connection(24)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
