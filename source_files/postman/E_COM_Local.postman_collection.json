@@ -1,9 +1,10 @@
 {
   "info": {
-    "_postman_id": "65f84fb1-8979-4adc-b8df-cfb3f5d2a603",
+    "_postman_id": "05e8ac38-3d9e-48ed-9570-08b0248da2fb",
     "name": "E_COM_Local",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "44754112"
+    "_exporter_id": "44724346",
+    "_collection_link": "https://asjathmusharrif.postman.co/workspace/Asjath-Musharrif's-Workspace~cbce72dc-85a4-4122-8da1-bf347f32ab8d/collection/44724346-05e8ac38-3d9e-48ed-9570-08b0248da2fb?action=share&source=collection_link&creator=44724346"
   },
   "item": [
     {
@@ -1265,7 +1266,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8080/conditions/updateStatus?conditionsId=3&status=0",
+              "raw": "http://localhost:8080/conditions/updateStatus?conditionsId=3&status=1",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8080",
@@ -1277,7 +1278,7 @@
                 },
                 {
                   "key": "status",
-                  "value": "0"
+                  "value": "1"
                 }
               ]
             }
@@ -1594,6 +1595,139 @@
               "host": ["localhost"],
               "port": "8080",
               "path": ["bank", "save"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NjczODk0fQ.pyZxmVb5DZ5Ox0QHe28IADGKxmZA6rTa7cu9v8VACw65XAOv3B0p8F9rMkMKsGrE",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\":4,\r\n    \"name\": \"Commercial Bank\",\r\n    \"isActive\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/bank/update",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["bank", "update"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updateStatus",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NTg5OTIyfQ._uy1WB3vFRLHYqiEn9EYRxgql9V9Soz-ODzFPhxUx83BoYC5xM0f4NJ6LrqHtcv8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/bank/updateStatus?bankId=2&status=0",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["bank", "updateStatus"],
+              "query": [
+                {
+                  "key": "bankId",
+                  "value": "2"
+                },
+                {
+                  "key": "status",
+                  "value": "0"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllPage",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NTg2NTQ3fQ.Skq8Thlroczx6VSMk3ErRbqT2dNLW8TjCi_Gsrnq7AihydcdS1I8xF9HzitHFtxv",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/bank/getAllPage?pageNumber=1&pageSize=10&status=1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["bank", "getAllPage"],
+              "query": [
+                {
+                  "key": "pageNumber",
+                  "value": "1"
+                },
+                {
+                  "key": "pageSize",
+                  "value": "10"
+                },
+                {
+                  "key": "status",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllBySearch",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NTg2NTQ3fQ.Skq8Thlroczx6VSMk3ErRbqT2dNLW8TjCi_Gsrnq7AihydcdS1I8xF9HzitHFtxv",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/bank/getAllBySearch",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["bank", "getAllBySearch"]
             }
           },
           "response": []
@@ -2596,6 +2730,45 @@
                   "value": "puma"
                 }
               ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Payment",
+      "item": [
+        {
+          "name": "save",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3Njc1MDY3fQ.XJeADebOM525J08RvY2maJS7w2X_7b4PndkwJE_REKAEKLwS6KXtkboYk65PIEZT",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"amount\": 500.00,\r\n    \"status\": \"Paid\",\r\n    \"ordersDto\": {\r\n        \"id\": 2\r\n    }\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/payment/save",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["payment", "save"]
             }
           },
           "response": []
