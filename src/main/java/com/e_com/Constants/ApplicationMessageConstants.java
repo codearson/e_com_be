@@ -157,8 +157,8 @@ public interface ApplicationMessageConstants {
 		String EX_UPDATE_PAYMENT_DETAILS = "ex.update.payment.details";
 		String ERR_UPDATE_PAYMENT_STATUS = "err.update.payment.status";
 		String EX_UPDATE_PAYMENT_STATUS = "ex.update.payment.status";
-		String ERR_RETRIEVE_ALL_PAYMENT_DETAILS = "err.save.payment.details";
-		String EX_RETRIEVE_ALL_PAYMENT_DETAILS = "ex.save.payment.details";
+		String ERR_RETRIEVE_ALL_PAYMENT_DETAILS = "err.retrieve.all.payment.details";
+		String EX_RETRIEVE_ALL_PAYMENT_DETAILS = "ex.retrieve.all.payment.details";
 		
 	}
 }
