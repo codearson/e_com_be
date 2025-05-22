@@ -21,4 +21,6 @@ public class PaymentDto {
     private OrdersDto ordersDto;
 
     private String status;
+    
+    private Boolean isPaid; 
 }

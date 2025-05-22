@@ -1,5 +1,7 @@
 package com.e_com.Service;
 
+import java.util.Map;
+
 import com.e_com.Dto.PaymentDto;
 import com.e_com.Dto.ResponseDto;
 
@@ -15,5 +17,13 @@ import com.e_com.Dto.ResponseDto;
 public interface PaymentService {
 
     ResponseDto savePayment(PaymentDto paymentDto);
+    
+    ResponseDto updatePayment(PaymentDto paymentDto);
+    
+    ResponseDto updatePaymentStatus(Integer paymentId, Boolean status);
+    
+    ResponseDto getAllPagePayment(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters);
+
+    ResponseDto getAllBySearchPayment(String title, String firstName, String partnerName, String type);
 
 }
