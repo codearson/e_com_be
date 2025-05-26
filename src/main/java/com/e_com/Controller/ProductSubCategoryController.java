@@ -39,12 +39,14 @@ public class ProductSubCategoryController {
 	ProductSubCategoryService productSubCategoryService;
 	
 	@GetMapping("/getAllPage")
-	public ResponseDto getAll(@RequestParam("pageNumber") int pageNumber, @RequestParam("pageSize") int pageSize,
-			@RequestParam("status") Boolean status, WebRequest webRequest) {
-		log.info("ProductSubCategoryController.getAll() invoked.");
-		Map<String, String> searchParams = HttpReqRespUtils.getSearchParameters(webRequest);
-		searchParams.put("status", status.toString());
-		return productSubCategoryService.getAll(pageNumber, pageSize, searchParams);
+	public ResponseDto getAllPageProductSubCategory(@RequestParam("pageNumber") int pageNumber, 
+												 @RequestParam("pageSize") int pageSize,
+												 @RequestParam("status") Boolean status, 
+												 WebRequest webRequest) {
+		log.info("ProductSubCategoryController.getAllPageProductSubCategory() invoked with pageNumber: {}, pageSize: {}, status: {}", 
+				 pageNumber, pageSize, status);
+		Map<String, String> searchParameters = HttpReqRespUtils.getSearchParameters(webRequest);
+		return productSubCategoryService.getAllPageProductSubCategory(pageNumber, pageSize, status, searchParameters);
 	}
 	
 	@PostMapping("/save")

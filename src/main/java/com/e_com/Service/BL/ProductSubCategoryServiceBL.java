@@ -27,9 +27,10 @@ public class ProductSubCategoryServiceBL {
 	@Autowired
 	ProductSubCategoryDao productSubCategoryDao;
 
-	public PaginatedResponseDto getAll(int pageNumber, int pageSize, Map<String, String> searchParams) {
-		log.info("ProductSubCategoryServiceBL.getAll()invoked");
-		return productSubCategoryDao.getAll(pageNumber, pageSize, searchParams);
+	public PaginatedResponseDto getAllPageProductSubCategory(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters) {
+		log.info("ProductSubCategoryServiceBL.getAllPageProductSubCategory() invoked with pageNumber: {}, pageSize: {}, status: {}", 
+				 pageNumber, pageSize, status);
+		return productSubCategoryDao.getAllPageProductSubCategory(pageNumber, pageSize, status, searchParameters);
 	}
 
 	public ProductSubCategoryDto save(ProductSubCategoryDto productSubCategoryDto) {

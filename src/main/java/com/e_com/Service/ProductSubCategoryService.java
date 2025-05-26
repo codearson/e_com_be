@@ -18,7 +18,7 @@ import com.e_com.Dto.ResponseDto;
 @Service
 public interface ProductSubCategoryService {
  
-	    ResponseDto getAll(int pageNumber, int pageSize, Map<String, String> searchParams);
+	    ResponseDto getAllPageProductSubCategory(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters);
 		
 		public ResponseDto save(ProductSubCategoryDto productSubCategoryDto);
 		
