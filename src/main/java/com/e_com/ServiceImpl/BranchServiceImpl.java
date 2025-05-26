@@ -39,23 +39,29 @@ public class BranchServiceImpl implements BranchService {
 	BranchServiceBL branchServiceBL;
 
 	@Override
-	public ResponseDto getAll(int pageNumber, int pageSize, Map<String, String> searchParams) {
-		log.info("BranchServiceImpl.getAll() invoked");
+	public ResponseDto getAllPageBranch(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters) {
+		log.info("BranchServiceImpl.getAllPageBranch() invoked with pageNumber: {}, pageSize: {}, status: {}", 
+				 pageNumber, pageSize, status);
 		ResponseDto responseDto = null;
 		try {
-			PaginatedResponseDto paginatedResponseDto = branchServiceBL.getAll(pageNumber, pageSize, searchParams);
+			if (pageNumber < 1 || pageSize < 0) {
+				log.info("Invalid pagination parameters provided.");
+				return serviceUtil.getErrorServiceResponse(
+						ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_PAGINATED_BRANCH_DETAILS);
+			}
+			PaginatedResponseDto paginatedResponseDto = branchServiceBL.getAllPageBranch(pageNumber, pageSize, status, searchParameters);
 			if (paginatedResponseDto != null) {
-				log.info("Retrieve All Branch Details.");
+				log.info("Retrieved paginated Branch details.");
 				responseDto = serviceUtil.getServiceResponse(paginatedResponseDto);
 			} else {
-				log.info("Unable to retrieve All Branch details.");
+				log.info("Unable to retrieve paginated Branch details.");
 				responseDto = serviceUtil.getErrorServiceResponse(
-						ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_BRANCH_DETAILS);
+						ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_PAGINATED_BRANCH_DETAILS);
 			}
 		} catch (Exception e) {
-			log.error("Exception occurs while retrieving All Branch details.", e);
+			log.error("Exception occurs while retrieving paginated Branch details.", e);
 			responseDto = serviceUtil.getExceptionServiceResponseByProperties(
-					ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_BRANCH_DETAILS);
+					ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_PAGINATED_BRANCH_DETAILS);
 		}
 		return responseDto;
 	}

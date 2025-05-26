@@ -46,42 +46,43 @@ public class BranchDaoImpl extends BaseDaoImpl<Branch> implements BranchDao{
 
 	@Override
 	@Transactional
-	public PaginatedResponseDto getAll(int pageNumber, int pageSize, Map<String, String> searchParams) {
-		log.info("BranchDaoImpl.getAll()invoked");
+	public PaginatedResponseDto getAllPageBranch(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters) {
+		log.info("BranchDaoImpl.getAllPageBranch() invoked with pageNumber: {}, pageSize: {}, status: {}", 
+				 pageNumber, pageSize, status);
 		PaginatedResponseDto paginatedResponseDto = null;
-		List<Branch> allBranchList = null;
-		int recordCount = 0;
-		String countString = "SELECT COUNT(*) FROM branch";
-		if (searchParams != null && searchParams.containsKey("status")) {
-			Boolean status = Boolean.parseBoolean(searchParams.get("status"));
-			countString += " WHERE is_active = " + (status ? "true" : "false");
+		List<Branch> branchList = null;
+
+		// Build the count query with status filter
+		StringBuilder countString = new StringBuilder("SELECT COUNT(*) FROM branch");
+		if (status != null) {
+			countString.append(" WHERE is_active = ?");
 		}
-		int count = jdbcTemplate.queryForObject(countString, Integer.class);
+		int count = status != null 
+			? jdbcTemplate.queryForObject(countString.toString(), new Object[]{status}, Integer.class)
+			: jdbcTemplate.queryForObject(countString.toString(), Integer.class);
 
 		if (pageSize == 0) {
 			pageSize = count;
 		}
 
 		Criteria criteria = getCurrentSession().createCriteria(Branch.class, "branch");
-		
-		// Check if status is provided in searchParams
-		if (searchParams != null && searchParams.containsKey("status")) {
-			Boolean status = Boolean.parseBoolean(searchParams.get("status"));
+
+		// Add status filter if provided
+		if (status != null) {
 			criteria.add(Restrictions.eq("isActive", status));
-		} else {
-			criteria.add(Restrictions.eq("isActive", true));
 		}
-		
+
 		criteria.setFirstResult((pageNumber - 1) * pageSize);
 		criteria.setMaxResults(pageSize);
-		allBranchList = criteria.list();
-		recordCount = allBranchList.size();
-		if (allBranchList != null && !allBranchList.isEmpty()) {
-			paginatedResponseDto = HttpReqRespUtils.paginatedResponseMapper(allBranchList, pageNumber, pageSize, count);
-			paginatedResponseDto.setPayload(allBranchList.stream().map(Invoice -> {
-				return branchTransformer.transform(Invoice);
-			}).collect(Collectors.toList()));
+		branchList = criteria.list();
+
+		if (branchList != null && !branchList.isEmpty()) {
+			paginatedResponseDto = HttpReqRespUtils.paginatedResponseMapper(branchList, pageNumber, pageSize, count);
+			paginatedResponseDto.setPayload(branchList.stream()
+				.map(branchTransformer::transform)
+				.collect(Collectors.toList()));
 		}
+
 		return paginatedResponseDto;
 	}
 
