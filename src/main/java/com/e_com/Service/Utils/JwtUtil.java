@@ -45,14 +45,14 @@ public class JwtUtil {
 
     private boolean isTokenExpired(String token) {
         // Commented out expiration check
-        // return extractExpiration(token).before(new Date());
-        return false; // Tokens never expire
+        return extractExpiration(token).before(new Date());
+//        return false; // Tokens never expire
     }
 
     public boolean validateToken(String token) {
         try {
-            // Commented out expiration check
-            // if (!isTokenExpired(token)) {
+             //Commented out expiration check
+             if (!isTokenExpired(token)) {
                 String username = extractUsername(token);
                 Date previousExpiry = previousTokenExpiry.get(username);
                 Date currentExpiry = extractExpiration(token);
@@ -62,7 +62,7 @@ public class JwtUtil {
                 } else {
                     log.error("Old token is being used after generating a new token.");
                 }
-            // }
+             }
         } catch (Exception e) {
             log.error("Invalid JWT token: {}", e.getMessage());
         }
@@ -73,21 +73,21 @@ public class JwtUtil {
         Map<String, Object> claims = new HashMap<>();
         claims.put("roles", userDetails.getAuthorities());
         String username = userDetails.getUsername();
-        // Commented out expiration date
-        // Date expiryDate = new Date(System.currentTimeMillis() + 1000 * 60 * 60); // 1 hour expiration
-        // previousTokenExpiry.put(username, expiryDate);
-        // Revoke existing tokens for this user
+         //Commented out expiration date
+         Date expiryDate = new Date(System.currentTimeMillis() + 1000 * 60 * 60); // 1 hour expiration
+         previousTokenExpiry.put(username, expiryDate);
+         //Revoke existing tokens for this user
         previousTokenExpiry.remove(username);
-        return createToken(claims, username);
+        return createToken(claims, username, expiryDate);
     }
 
-    private String createToken(Map<String, Object> claims, String subject) {
+    private String createToken(Map<String, Object> claims, String subject, Date expiryDate) {
         return Jwts.builder()
                 .setClaims(claims) // Add custom claims
                 .setSubject(subject) // Set the subject (username)
                 .setIssuedAt(new Date()) // Set the issue time
                 // Commented out expiration
-                // .setExpiration(expiryDate) // Set the expiration time
+                 .setExpiration(expiryDate) // Set the expiration time
                 .signWith(getSignKey()) // Sign the token
                 .compact(); // Build the token
     }
