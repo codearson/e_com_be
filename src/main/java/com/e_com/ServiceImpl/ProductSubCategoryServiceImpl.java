@@ -38,23 +38,29 @@ public class ProductSubCategoryServiceImpl implements ProductSubCategoryService{
 	ProductSubCategoryServiceBL productSubCategoryServiceBL;
 	
 	@Override
-	public ResponseDto getAll(int pageNumber, int pageSize, Map<String, String> searchParams) {
-		log.info("ProductSubCategoryServiceImpl.getAll() invoked");
+	public ResponseDto getAllPageProductSubCategory(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters) {
+		log.info("ProductSubCategoryServiceImpl.getAllPageProductSubCategory() invoked with pageNumber: {}, pageSize: {}, status: {}", 
+				 pageNumber, pageSize, status);
 		ResponseDto responseDto = null;
 		try {
-			PaginatedResponseDto paginatedResponseDto = productSubCategoryServiceBL.getAll(pageNumber, pageSize, searchParams);
+			if (pageNumber < 1 || pageSize < 0) {
+				log.info("Invalid pagination parameters provided.");
+				return serviceUtil.getErrorServiceResponse(
+						ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_PAGINATED_PRODUCTSUBCATEGORY_DETAILS);
+			}
+			PaginatedResponseDto paginatedResponseDto = productSubCategoryServiceBL.getAllPageProductSubCategory(pageNumber, pageSize, status, searchParameters);
 			if (paginatedResponseDto != null) {
-				log.info("Retrieve All ProductSubCategory Details.");
+				log.info("Retrieved paginated ProductSubCategory details.");
 				responseDto = serviceUtil.getServiceResponse(paginatedResponseDto);
 			} else {
-				log.info("Unable to retrieve All ProductSubCategory details.");
+				log.info("Unable to retrieve paginated ProductSubCategory details.");
 				responseDto = serviceUtil.getErrorServiceResponse(
-						ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_PRODUCTSUBCATEGORY_DETAILS);
+						ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_PAGINATED_PRODUCTSUBCATEGORY_DETAILS);
 			}
 		} catch (Exception e) {
-			log.error("Exception occurs while retrieving All ProductSubCategory details.", e);
+			log.error("Exception occurs while retrieving paginated ProductSubCategory details.", e);
 			responseDto = serviceUtil.getExceptionServiceResponseByProperties(
-					ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_PRODUCTSUBCATEGORY_DETAILS);
+					ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_PAGINATED_PRODUCTSUBCATEGORY_DETAILS);
 		}
 		return responseDto;
 	}

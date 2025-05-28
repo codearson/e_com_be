@@ -39,23 +39,29 @@ public class BranchServiceImpl implements BranchService {
 	BranchServiceBL branchServiceBL;
 
 	@Override
-	public ResponseDto getAll(int pageNumber, int pageSize, Map<String, String> searchParams) {
-		log.info("BranchServiceImpl.getAll() invoked");
+	public ResponseDto getAllPageBranch(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters) {
+		log.info("BranchServiceImpl.getAllPageBranch() invoked with pageNumber: {}, pageSize: {}, status: {}", 
+				 pageNumber, pageSize, status);
 		ResponseDto responseDto = null;
 		try {
-			PaginatedResponseDto paginatedResponseDto = branchServiceBL.getAll(pageNumber, pageSize, searchParams);
+			if (pageNumber < 1 || pageSize < 0) {
+				log.info("Invalid pagination parameters provided.");
+				return serviceUtil.getErrorServiceResponse(
+						ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_PAGINATED_BRANCH_DETAILS);
+			}
+			PaginatedResponseDto paginatedResponseDto = branchServiceBL.getAllPageBranch(pageNumber, pageSize, status, searchParameters);
 			if (paginatedResponseDto != null) {
-				log.info("Retrieve All Branch Details.");
+				log.info("Retrieved paginated Branch details.");
 				responseDto = serviceUtil.getServiceResponse(paginatedResponseDto);
 			} else {
-				log.info("Unable to retrieve All Branch details.");
+				log.info("Unable to retrieve paginated Branch details.");
 				responseDto = serviceUtil.getErrorServiceResponse(
-						ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_BRANCH_DETAILS);
+						ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_PAGINATED_BRANCH_DETAILS);
 			}
 		} catch (Exception e) {
-			log.error("Exception occurs while retrieving All Branch details.", e);
+			log.error("Exception occurs while retrieving paginated Branch details.", e);
 			responseDto = serviceUtil.getExceptionServiceResponseByProperties(
-					ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_BRANCH_DETAILS);
+					ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_PAGINATED_BRANCH_DETAILS);
 		}
 		return responseDto;
 	}
@@ -169,21 +175,15 @@ public class BranchServiceImpl implements BranchService {
 	}
 	
 	@Override
-    public ResponseDto getAllBranch(String branchName) {
-        log.info("BranchServiceImpl.getAllBranch() invoked with branchName: {}", branchName);
+    public ResponseDto getAllBySearch(String branchName) {
+        log.info("BranchServiceImpl.getAllBySearch() invoked with branchName: {}", branchName);
         ResponseDto responseDto = null;
         try {
-            List<BranchDto> branchList = branchServiceBL.getAllBranch(branchName);
-            if (branchList != null && !branchList.isEmpty()) {
-                log.info("Retrieved all Branch details.");
-                responseDto = serviceUtil.getServiceResponse(branchList);
-            } else {
-                log.info("Unable to retrieve all Branch details.");
-                responseDto = serviceUtil.getErrorServiceResponse(
-                        ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_BRANCH_DETAILS);
-            }
+            List<BranchDto> branchList = branchServiceBL.getAllBySearch(branchName);
+            log.info("Retrieved Branch details. Found {} branches.", branchList.size());
+            responseDto = serviceUtil.getServiceResponse(branchList);
         } catch (Exception e) {
-            log.error("Exception occurs while retrieving all Branch details.", e);
+            log.error("Exception occurred while retrieving Branch details.", e);
             responseDto = serviceUtil.getExceptionServiceResponseByProperties(
                     ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_BRANCH_DETAILS);
         }

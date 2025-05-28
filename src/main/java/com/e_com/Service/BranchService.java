@@ -19,7 +19,7 @@ import com.e_com.Dto.ResponseDto;
 
 @Service
 public interface BranchService {
-    ResponseDto getAll(int pageNumber, int pageSize, Map<String, String> searchParams);
+    ResponseDto getAllPageBranch(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters);
 	
 	public ResponseDto save(BranchDto branchDto);
 	
@@ -31,7 +31,7 @@ public interface BranchService {
 	
 	public ResponseDto getBranchById(Integer id);
 	
-	ResponseDto getAllBranch(String branchName);
+	ResponseDto getAllBySearch(String branchName);
 
 
 }

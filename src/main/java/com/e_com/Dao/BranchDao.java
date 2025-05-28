@@ -17,7 +17,7 @@ import com.e_com.Dto.PaginatedResponseDto;
 
 public interface BranchDao {
 	
-	PaginatedResponseDto getAll(int pageNumber, int pageSize, Map<String, String> searchParams);
+	PaginatedResponseDto getAllPageBranch(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters);
 	
 	BranchDto save (BranchDto branchDto);
 
@@ -29,5 +29,5 @@ public interface BranchDao {
 	
 	List<BranchDto> getBranchById(Integer id);
 	
-	List<BranchDto> getAllBranch(String branchName);
+	List<BranchDto> getAllBySearch(String branchName);
 }

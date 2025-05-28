@@ -28,9 +28,10 @@ public class BranchServiceBL {
 	@Autowired
 	BranchDao branchDao;
 
-	public PaginatedResponseDto getAll(int pageNumber, int pageSize, Map<String, String> searchParams) {
-		log.info("BranchServiceBL.getAll()invoked");
-		return branchDao.getAll(pageNumber, pageSize, searchParams);
+	public PaginatedResponseDto getAllPageBranch(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters) {
+		log.info("BranchServiceBL.getAllPageBranch() invoked with pageNumber: {}, pageSize: {}, status: {}", 
+				 pageNumber, pageSize, status);
+		return branchDao.getAllPageBranch(pageNumber, pageSize, status, searchParameters);
 	}
 
 	public BranchDto save(BranchDto branchDto) {
@@ -63,8 +64,8 @@ public class BranchServiceBL {
 		return branchDao.getBranchById(id);
 	}
 	
-	public List<BranchDto> getAllBranch(String branchName) {
-        log.info("BranchServiceBL.getAllBranch() invoked with branchName: {}", branchName);
-        return branchDao.getAllBranch(branchName);
+	public List<BranchDto> getAllBySearch(String branchName) {
+        log.info("BranchServiceBL.getAllBySearch() invoked with branchName: {}", branchName);
+        return branchDao.getAllBySearch(branchName);
     }
 }

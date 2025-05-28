@@ -51,6 +51,8 @@ public interface ApplicationMessageConstants {
 		String EX_SAVE_BRANCH_DETAILS = "ex.save.branch.details";
 		String ERR_RETRIEVE_ALL_BRANCH_DETAILS = "err.get.all.branch.details";
 		String EX_RETRIEVE_ALL_BRANCH_DETAILS = "ex.get.all.branch.details";
+		String ERR_RETRIEVE_PAGINATED_BRANCH_DETAILS = "err.get.paginated.branch.details";
+		String EX_RETRIEVE_PAGINATED_BRANCH_DETAILS = "ex.get.paginated.branch.details";
 		String ERR_UPDATE_BRANCH_DETAILS = "err.update.branch.details";
 		String EX_UPDATE_BRANCH_DETAILS = "ex.update.branch.details";
 		String ERR_RETRIEVE_BRANCH_BY_NAME = "err.get.by.branch.name";
@@ -81,6 +83,8 @@ public interface ApplicationMessageConstants {
 		String EX_SAVE_PRODUCTSUBCATEGORY_DETAILS = "ex.save.productsubcategory.details";
 		String ERR_RETRIEVE_ALL_PRODUCTSUBCATEGORY_DETAILS = "err.get.all.productsubcategory.details";
 		String EX_RETRIEVE_ALL_PRODUCTSUBCATEGORY_DETAILS = "ex.get.all.productsubcategory.details";
+		String ERR_RETRIEVE_PAGINATED_PRODUCTSUBCATEGORY_DETAILS = "err.get.paginated.productsubcategory.details";
+		String EX_RETRIEVE_PAGINATED_PRODUCTSUBCATEGORY_DETAILS = "ex.get.paginated.productsubcategory.details";
 		String ERR_UPDATE_PRODUCTSUBCATEGORY_DETAILS = "err.update.productsubcategory.details";
 		String EX_UPDATE_PRODUCTSUBCATEGORY_DETAILS = "ex.update.productsubcategory.details";
 		String ERR_RETRIEVE_PRODUCTSUBCATEGORY_BY_NAME = "err.get.by.productsubcategory.name";
