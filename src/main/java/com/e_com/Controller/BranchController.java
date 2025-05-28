@@ -88,9 +88,9 @@ public class BranchController {
 	
 	@GetMapping("/getAllBySearch")
     @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
-    public ResponseDto getAllBranch(@RequestParam(value = "branchName", required = false) String branchName) {
-        log.info("BranchController.getAllBranch() invoked with branchName: {}", branchName);
-        return branchService.getAllBranch(branchName);
+    public ResponseDto getAllBySearch(@RequestParam(value = "name", required = false) String branchName) {
+        log.info("BranchController.getAllBySearch() invoked with name: {}", branchName);
+        return branchService.getAllBySearch(branchName);
     }
 
 }

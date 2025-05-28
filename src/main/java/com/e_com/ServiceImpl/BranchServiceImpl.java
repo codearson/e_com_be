@@ -175,21 +175,15 @@ public class BranchServiceImpl implements BranchService {
 	}
 	
 	@Override
-    public ResponseDto getAllBranch(String branchName) {
-        log.info("BranchServiceImpl.getAllBranch() invoked with branchName: {}", branchName);
+    public ResponseDto getAllBySearch(String branchName) {
+        log.info("BranchServiceImpl.getAllBySearch() invoked with branchName: {}", branchName);
         ResponseDto responseDto = null;
         try {
-            List<BranchDto> branchList = branchServiceBL.getAllBranch(branchName);
-            if (branchList != null && !branchList.isEmpty()) {
-                log.info("Retrieved all Branch details.");
-                responseDto = serviceUtil.getServiceResponse(branchList);
-            } else {
-                log.info("Unable to retrieve all Branch details.");
-                responseDto = serviceUtil.getErrorServiceResponse(
-                        ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_BRANCH_DETAILS);
-            }
+            List<BranchDto> branchList = branchServiceBL.getAllBySearch(branchName);
+            log.info("Retrieved Branch details. Found {} branches.", branchList.size());
+            responseDto = serviceUtil.getServiceResponse(branchList);
         } catch (Exception e) {
-            log.error("Exception occurs while retrieving all Branch details.", e);
+            log.error("Exception occurred while retrieving Branch details.", e);
             responseDto = serviceUtil.getExceptionServiceResponseByProperties(
                     ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_BRANCH_DETAILS);
         }

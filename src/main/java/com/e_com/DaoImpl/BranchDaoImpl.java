@@ -159,20 +159,20 @@ public class BranchDaoImpl extends BaseDaoImpl<Branch> implements BranchDao{
 	        .collect(Collectors.toList());
 	}
 	
-	 @Override
-	    @Transactional
-	    public List<BranchDto> getAllBranch(String branchName) {
-	        log.info("BranchDaoImpl.getAllBranch() invoked with branchName: {}", branchName);
-	        Criteria criteria = getCurrentSession().createCriteria(Branch.class, "branch");
+	@Override
+    @Transactional
+    public List<BranchDto> getAllBySearch(String branchName) {
+        log.info("BranchDaoImpl.getAllBySearch() invoked with branchName: {}", branchName);
+        Criteria criteria = getCurrentSession().createCriteria(Branch.class, "branch");
 
-	        // Add branchName filter if provided
-	        if (branchName != null && !branchName.isEmpty()) {
-	            criteria.add(Restrictions.ilike("branchName", "%" + branchName + "%"));
-	        }
+        // Add branchName filter if provided and not empty
+        if (branchName != null && !branchName.trim().isEmpty()) {
+            criteria.add(Restrictions.ilike("branchName", "%" + branchName.trim() + "%"));
+        }
 
-	        List<Branch> branchList = criteria.list();
-	        return branchList.stream()
-	                       .map(branch -> branchTransformer.transform(branch))
-	                       .collect(Collectors.toList());
-	    }
+        List<Branch> branchList = criteria.list();
+        return branchList.stream()
+                        .map(branchTransformer::transform)
+                        .collect(Collectors.toList());
+    }
 }
