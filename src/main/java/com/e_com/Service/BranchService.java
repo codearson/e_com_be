@@ -31,7 +31,7 @@ public interface BranchService {
 	
 	public ResponseDto getBranchById(Integer id);
 	
-	ResponseDto getAllBranch(String branchName);
+	ResponseDto getAllBySearch(String branchName);
 
 
 }

@@ -29,5 +29,5 @@ public interface BranchDao {
 	
 	List<BranchDto> getBranchById(Integer id);
 	
-	List<BranchDto> getAllBranch(String branchName);
+	List<BranchDto> getAllBySearch(String branchName);
 }

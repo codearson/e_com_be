@@ -63,8 +63,8 @@ public class BranchServiceBL {
 		return branchDao.getBranchById(id);
 	}
 	
-	public List<BranchDto> getAllBranch(String branchName) {
-        log.info("BranchServiceBL.getAllBranch() invoked with branchName: {}", branchName);
-        return branchDao.getAllBranch(branchName);
+	public List<BranchDto> getAllBySearch(String branchName) {
+        log.info("BranchServiceBL.getAllBySearch() invoked with branchName: {}", branchName);
+        return branchDao.getAllBySearch(branchName);
     }
 }
