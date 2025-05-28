@@ -16,11 +16,21 @@ public class ShippingAddressDto {
 	
 	private Integer id;
 	
+	private String name;
+	
 	private String address;
 	
 	private String mobileNumber;
 	
+	private String district;
+	
+	private String province;
+	
+	private String postalCode;
+	
 	private UserDto userDto;
+	
+	private Boolean isPrimary;
 	
 	private Boolean isActive;
 
