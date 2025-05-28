@@ -27,11 +27,16 @@ public class ShippingAddressTransformer implements BaseTransformer<ShippingAddre
 		if (shippingAddress != null) {
 			shippingAddressDto = new ShippingAddressDto();
 			shippingAddressDto.setId(shippingAddress.getId());
+			shippingAddressDto.setName(shippingAddress.getName());
 			shippingAddressDto.setAddress(shippingAddress.getAddress());
 			shippingAddressDto.setMobileNumber(shippingAddress.getMobileNumber());
+			shippingAddressDto.setDistrict(shippingAddress.getDistrict());
+			shippingAddressDto.setProvince(shippingAddress.getProvince());
+			shippingAddressDto.setPostalCode(shippingAddress.getPostalCode());
 			if (shippingAddress.getUser() != null) {
 				shippingAddressDto.setUserDto(userTransformer.transform(shippingAddress.getUser()));
 			}
+			shippingAddressDto.setIsPrimary(shippingAddress.getIsPrimary());
 			shippingAddressDto.setIsActive(shippingAddress.getIsActive());
 		}
 		return shippingAddressDto;
@@ -43,12 +48,17 @@ public class ShippingAddressTransformer implements BaseTransformer<ShippingAddre
 		if (shippingAddressDto != null) {
 			shippingAddress = new ShippingAddress();
 			shippingAddress.setId(shippingAddressDto.getId());
+			shippingAddress.setName(shippingAddressDto.getName());
 			shippingAddress.setAddress(shippingAddressDto.getAddress());
 			shippingAddress.setMobileNumber(shippingAddressDto.getMobileNumber());
+			shippingAddress.setDistrict(shippingAddressDto.getDistrict());
+			shippingAddress.setProvince(shippingAddressDto.getProvince());
+			shippingAddress.setPostalCode(shippingAddressDto.getPostalCode());
 			if (shippingAddressDto.getUserDto() != null) {
 				shippingAddress.setUser(
 						userTransformer.reverseTransform(shippingAddressDto.getUserDto()));
 			}
+			shippingAddress.setIsPrimary(shippingAddressDto.getIsPrimary());
 			shippingAddress.setIsActive(shippingAddressDto.getIsActive());
 		}
 		return shippingAddress;
