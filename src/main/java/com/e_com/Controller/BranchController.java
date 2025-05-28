@@ -41,12 +41,14 @@ public class BranchController {
 	BranchService branchService;
 	
 	@GetMapping("/getAllPage")
-	public ResponseDto getAll(@RequestParam("pageNumber") int pageNumber, @RequestParam("pageSize") int pageSize,
-			@RequestParam("status") Boolean status, WebRequest webRequest) {
-		log.info("BranchController.getAll() invoked.");
-		Map<String, String> searchParams = HttpReqRespUtils.getSearchParameters(webRequest);
-		searchParams.put("status", status.toString());
-		return branchService.getAll(pageNumber, pageSize, searchParams);
+	public ResponseDto getAllPageBranch(@RequestParam("pageNumber") int pageNumber, 
+									  @RequestParam("pageSize") int pageSize,
+									  @RequestParam("status") Boolean status, 
+									  WebRequest webRequest) {
+		log.info("BranchController.getAllPageBranch() invoked with pageNumber: {}, pageSize: {}, status: {}", 
+				 pageNumber, pageSize, status);
+		Map<String, String> searchParameters = HttpReqRespUtils.getSearchParameters(webRequest);
+		return branchService.getAllPageBranch(pageNumber, pageSize, status, searchParameters);
 	}
 	
 	@PostMapping("/save")

@@ -17,7 +17,7 @@ import com.e_com.Dto.ProductSubCategoryDto;
 
 public interface ProductSubCategoryDao {
 
-    PaginatedResponseDto getAll(int pageNumber, int pageSize, Map<String, String> searchParams);
+    PaginatedResponseDto getAllPageProductSubCategory(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters);
 	
     ProductSubCategoryDto save (ProductSubCategoryDto productSubCategoryDto);
 
