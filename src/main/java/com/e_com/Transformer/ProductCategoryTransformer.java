@@ -21,6 +21,8 @@ public class ProductCategoryTransformer implements BaseTransformer<ProductCatego
             productCategoryDto = new ProductCategoryDto();
             productCategoryDto.setId(productCategory.getId());
             productCategoryDto.setName(productCategory.getName());
+            productCategoryDto.setParentId(productCategory.getParentId());
+            productCategoryDto.setLevel(productCategory.getLevel());
             productCategoryDto.setIsActive(productCategory.getIsActive());
         }
         return productCategoryDto;
@@ -35,6 +37,8 @@ public class ProductCategoryTransformer implements BaseTransformer<ProductCatego
             productCategory = new ProductCategory();
             productCategory.setId(productCategoryDto.getId());
             productCategory.setName(productCategoryDto.getName());
+            productCategory.setParentId(productCategoryDto.getParentId());
+            productCategory.setLevel(productCategoryDto.getLevel());
             productCategory.setIsActive(productCategoryDto.getIsActive());
         }
         return productCategory;

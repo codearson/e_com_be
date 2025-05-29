@@ -9,6 +9,10 @@ public class ProductCategoryDto {
     private Integer id;
 
     private String name;
+    
+    private Integer parentId;
+    
+    private Integer level;
 
     private Boolean isActive;
 }

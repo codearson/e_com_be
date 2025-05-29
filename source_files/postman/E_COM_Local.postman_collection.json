@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "cf436598-cbbf-4a33-abe5-640bb540cc89",
+		"_postman_id": "8266d7f1-2b3b-4915-8a35-9081218c1206",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "40430627"
+		"_exporter_id": "40723516"
 	},
 	"item": [
 		{
@@ -2211,7 +2211,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Electronics\",\r\n    \"isActive\": 1\r\n}\r\n",
+							"raw": "{\r\n    \"name\": \"Electronics\",\r\n    \"level\": 1,\r\n    \"parentId\": null,\r\n    \"isActive\": 1\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2250,7 +2250,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\":4,\r\n    \"name\": \"Eletric\",\r\n    \"isActive\": 1\r\n}\r\n",
+							"raw": "{\r\n    \"id\":4,\r\n    \"name\": \"Eletric\",\r\n    \"level\": 1,\r\n    \"parentId\": null,\r\n    \"isActive\": 1\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
