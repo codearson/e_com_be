@@ -22,7 +22,7 @@ import lombok.extern.slf4j.Slf4j;
 public class ProductTransformer implements BaseTransformer<Product, ProductDto> {
 
     @Autowired
-    private ProductSubCategoryTransformer productSubCategoryTransformer;
+    private ProductCategoryTransformer productCategoryTransformer;
 
     @Autowired
     private BrandTransformer brandTransformer;
@@ -40,8 +40,8 @@ public class ProductTransformer implements BaseTransformer<Product, ProductDto> 
         if (product != null) {
             productDto = new ProductDto();
             productDto.setId(product.getId());
-            if (product.getProductSubCategory() != null) {
-                productDto.setProductSubCategoryDto(productSubCategoryTransformer.transform(product.getProductSubCategory()));
+            if (product.getProductCategory() != null) {
+                productDto.setProductCategoryDto(productCategoryTransformer.transform(product.getProductCategory()));
             }
             if (product.getBrand() != null) {
                 productDto.setBrandDto(brandTransformer.transform(product.getBrand()));
@@ -73,8 +73,8 @@ public class ProductTransformer implements BaseTransformer<Product, ProductDto> 
         if (productDto != null) {
             product = new Product();
             product.setId(productDto.getId());
-            if (productDto.getProductSubCategoryDto() != null) {
-                product.setProductSubCategory(productSubCategoryTransformer.reverseTransform(productDto.getProductSubCategoryDto()));
+            if (productDto.getProductCategoryDto() != null) {
+                product.setProductCategory(productCategoryTransformer.reverseTransform(productDto.getProductCategoryDto()));
             }
             if (productDto.getBrandDto() != null) {
                 product.setBrand(brandTransformer.reverseTransform(productDto.getBrandDto()));
