@@ -125,6 +125,16 @@ INSERT INTO `product_category` VALUES (1,_binary '','Clothing'),(2,_binary '',
 UNLOCK TABLES;
 
 --
+-- Dumping data for table `product_image`
+--
+
+LOCK TABLES `product_image` WRITE;
+/*!40000 ALTER TABLE `product_image` DISABLE KEYS */;
+INSERT INTO `product_image` VALUES (1,_binary '',1,'pic.lk'),(2,_binary '',2,'image.lk'),(3,_binary '',3,'img.lk'),(4,_binary '',3,'img.lk'),(5,_binary '',3,'frrpic.lk'),(6,_binary '',2,'frpic.lk');
+/*!40000 ALTER TABLE `product_image` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping data for table `product_sub_category`
 --
 
@@ -202,4 +212,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-21 18:16:17
+-- Dump completed on 2025-05-30 23:58:21
