@@ -18,7 +18,7 @@ public class ProductDto {
 	
 	private Integer id;
 	
-	private ProductSubCategoryDto productSubCategoryDto;
+	private ProductCategoryDto productCategoryDto;
 	
 	private BrandDto brandDto;
 	

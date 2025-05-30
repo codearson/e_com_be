@@ -52,7 +52,7 @@ public class ProductServiceImpl implements ProductService {
         log.info("ProductServiceImpl.saveProduct invoked");
         ResponseDto responseDto = null;
         try {
-            if (productDto == null || productDto.getProductSubCategoryDto() == null || 
+            if (productDto == null || productDto.getProductCategoryDto() == null || 
                 productDto.getBrandDto() == null || productDto.getConditionsDto() == null || 
                 productDto.getStatusDto() == null) {
                 log.info("Invalid Product data provided.");
@@ -82,7 +82,7 @@ public class ProductServiceImpl implements ProductService {
         ResponseDto responseDto = null;
         try {
             if (productDto == null || productDto.getId() == null || 
-                productDto.getProductSubCategoryDto() == null || 
+                productDto.getProductCategoryDto() == null || 
                 productDto.getBrandDto() == null || productDto.getConditionsDto() == null || 
                 productDto.getStatusDto() == null) {
                 log.info("Invalid Product data provided for update.");

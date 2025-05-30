@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.40, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: ecom_db_local
 -- ------------------------------------------------------
--- Server version	8.0.42
+-- Server version	8.0.41
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -211,15 +211,15 @@ CREATE TABLE `product` (
   `updated_at` datetime DEFAULT NULL,
   `brand` int NOT NULL,
   `conditions` int NOT NULL,
-  `product_sub_category` int NOT NULL,
   `status` int NOT NULL,
+  `product_category_id` int NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FKti0lsgnnoerhclcve20iho3un` (`brand`),
   KEY `FKfo3i1hrgnqpradhyj3c39um61` (`conditions`),
-  KEY `FKo5o497w41ydtdh6muiins73ki` (`product_sub_category`),
   KEY `FKrjx2c79b1cc0jykhf57lfqx0t` (`status`),
+  KEY `FKcwclrqu392y86y0pmyrsi649r` (`product_category_id`),
+  CONSTRAINT `FKcwclrqu392y86y0pmyrsi649r` FOREIGN KEY (`product_category_id`) REFERENCES `product_category` (`id`),
   CONSTRAINT `FKfo3i1hrgnqpradhyj3c39um61` FOREIGN KEY (`conditions`) REFERENCES `conditions` (`id`),
-  CONSTRAINT `FKo5o497w41ydtdh6muiins73ki` FOREIGN KEY (`product_sub_category`) REFERENCES `product_sub_category` (`id`),
   CONSTRAINT `FKrjx2c79b1cc0jykhf57lfqx0t` FOREIGN KEY (`status`) REFERENCES `status` (`id`),
   CONSTRAINT `FKti0lsgnnoerhclcve20iho3un` FOREIGN KEY (`brand`) REFERENCES `brand` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -236,8 +236,10 @@ CREATE TABLE `product_category` (
   `id` int NOT NULL AUTO_INCREMENT,
   `is_active` bit(1) DEFAULT NULL,
   `name` varchar(255) NOT NULL,
+  `level` int DEFAULT NULL,
+  `parent_id` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -289,6 +291,11 @@ CREATE TABLE `shipping_address` (
   `is_active` bit(1) DEFAULT NULL,
   `mobile_number` varchar(255) DEFAULT NULL,
   `user` int NOT NULL,
+  `district` varchar(255) NOT NULL,
+  `is_primary` bit(1) DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `postal_code` varchar(255) NOT NULL,
+  `province` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK31dtw4tacfijho8xs3ppvwcle` (`user`),
   CONSTRAINT `FK31dtw4tacfijho8xs3ppvwcle` FOREIGN KEY (`user`) REFERENCES `user` (`id`)

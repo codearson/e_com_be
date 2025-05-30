@@ -4,10 +4,10 @@ app:
 #database
 spring:
   datasource:
-    url: jdbc:mysql://nozomi.proxy.rlwy.net:50993/ecom_db_cloud?allowPublicKeyRetrieval=true&useSSL=false
+    url: jdbc:mysql://yamabiko.proxy.rlwy.net:39416/ecom_db_cloud?allowPublicKeyRetrieval=true&useSSL=false
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: EULnrwNfsISbejzIAflzOfxQSMMptbGA
+    password: kpHIULKxZoHYZKLvZQiJxRvSBOfgnJuI
     tomcat:
       initial-size: 10
       max-wait: 20000

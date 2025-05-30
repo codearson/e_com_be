@@ -36,9 +36,9 @@ public class Product implements Serializable {
     @Basic(optional = false)
     @Column(name = "id")
     private Integer id;
-    @JoinColumn(name = "productSubCategory", referencedColumnName = "id")
+    @JoinColumn(name = "productCategoryId", referencedColumnName = "id")
     @ManyToOne(optional = false)
-    private ProductSubCategory productSubCategory;
+    private ProductCategory productCategory;
     @JoinColumn(name = "brand", referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Brand brand;
