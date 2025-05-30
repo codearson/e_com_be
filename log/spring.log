@@ -4312,3 +4312,8 @@ java.lang.NullPointerException: Cannot invoke "com.e_com.Dao.ProductImageDao.upd
 2025-05-30 23:33:30.275  INFO 2924 --- [http-nio-8080-exec-4] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
 2025-05-30 23:33:30.275  INFO 2924 --- [http-nio-8080-exec-4] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
 2025-05-30 23:33:30.275  WARN 2924 --- [http-nio-8080-exec-4] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-05-30 23:33:30.285  INFO 2924 --- [http-nio-8080-exec-4] c.e.Controller.ProductImageController    : ProductImageController.getAllProductImages() invoked with productImageUrl: null
+2025-05-30 23:50:42.409  INFO 2924 --- [RMI TCP Connection(82)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-05-30 23:50:42.426  INFO 2924 --- [RMI TCP Connection(82)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-30 23:50:42.427  INFO 2924 --- [RMI TCP Connection(82)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-05-30 23:50:42.429  INFO 2924 --- [RMI TCP Connection(82)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
