@@ -62,7 +62,17 @@ public class ProductController {
                  pageNumber, pageSize, status);
         return productService.getAllPageProduct(pageNumber, pageSize, status, HttpReqRespUtils.getSearchParameters(webRequest));
     }
-
+    @GetMapping("/getAllPageBySearch")
+    public ResponseDto getAllPageProductBySearch(@RequestParam("pageNumber") int pageNumber, 
+                                        @RequestParam("pageSize") int pageSize,
+                                        @RequestParam("status") Boolean status,
+                                        @RequestParam(value = "title", required = false) String title,
+                                        @RequestParam(value = "description", required = false) String description,
+                                        WebRequest webRequest) {
+        log.info("ProductController.getAllPageProductBySearch() invoked with pageNumber: {}, pageSize: {}, status: {},title: {},description: {}", 
+                 pageNumber, pageSize, status, title, description);
+        return productService.getAllPageProductBySearch(pageNumber, pageSize, status, title, description, HttpReqRespUtils.getSearchParameters(webRequest));
+    }
     @GetMapping("/getAllBySearch")
     public ResponseDto getAllBySearchProduct(@RequestParam(value = "productSubCategoryName", required = false) String productSubCategoryName,
                                             @RequestParam(value = "brandName", required = false) String brandName,
