@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "8266d7f1-2b3b-4915-8a35-9081218c1206",
+		"_postman_id": "2b0c96af-2af0-4548-a86b-06f0b704c50d",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "40723516"
+		"_exporter_id": "44754112"
 	},
 	"item": [
 		{
@@ -2874,6 +2874,58 @@
 									"key": "type",
 									"value": "Available",
 									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPageBySearch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ4NjI2MjMwfQ.qvk1hzHFfq1AbnBDhmTpUfVbfJDx6pe_eZ4GGTwTRJ_VnMsLsrDsrSiyyzmYYgLe",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/getAllPageBySearch?pageNumber=1&pageSize=10&status=1&description=white sneaker&title=sneaker",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"getAllPageBySearch"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "status",
+									"value": "1"
+								},
+								{
+									"key": "description",
+									"value": "white sneaker"
+								},
+								{
+									"key": "title",
+									"value": "sneaker"
 								}
 							]
 						}

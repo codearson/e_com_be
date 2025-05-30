@@ -117,6 +117,56 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao {
 
         return paginatedResponseDto;
     }
+    
+    @Override
+    @Transactional
+    public PaginatedResponseDto getAllPageProductBySearch(int pageNumber, int pageSize, Boolean status, String title, String description, Map<String, String> searchParameters) {
+        log.info("ProductDaoImpl.getAllPageProductBySearch() invoked with pageNumber: {}, pageSize: {}, status: {}, title: {}, description: {}", 
+                 pageNumber, pageSize, status, title, description);
+        PaginatedResponseDto paginatedResponseDto = null;
+        List<Product> productList = null;
+
+        // Build the count query with status filter
+        StringBuilder countString = new StringBuilder("SELECT COUNT(*) FROM product");
+        if (status != null) {
+            countString.append(" WHERE is_active = ?");
+        }
+        int count = status != null 
+            ? jdbcTemplate.queryForObject(countString.toString(), new Object[]{status}, Integer.class)
+            : jdbcTemplate.queryForObject(countString.toString(), Integer.class);
+
+        if (pageSize == 0) {
+            pageSize = count;
+        }
+
+        Criteria criteria = getCurrentSession().createCriteria(Product.class, "product");
+
+        if (status != null) {
+            criteria.add(Restrictions.eq("isActive", status));
+        }
+
+        if (title != null && !title.trim().isEmpty()) {
+            criteria.add(Restrictions.ilike("title", "%" + title.trim() + "%"));
+        }
+
+        if (description != null && !description.trim().isEmpty()) {
+            criteria.add(Restrictions.ilike("description", "%" + description.trim() + "%"));
+        }
+
+        criteria.setFirstResult((pageNumber - 1) * pageSize);
+        criteria.setMaxResults(pageSize);
+        productList = criteria.list();
+
+
+        if (productList != null && !productList.isEmpty()) {
+            paginatedResponseDto = HttpReqRespUtils.paginatedResponseMapper(productList, pageNumber, pageSize, count);
+            paginatedResponseDto.setPayload(productList.stream()
+                .map(productTransformer::transform)
+                .collect(Collectors.toList()));
+        }
+
+        return paginatedResponseDto;
+    }
 
     @Override
     @Transactional

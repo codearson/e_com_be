@@ -70,6 +70,12 @@ public class ProductServiceBL {
                  pageNumber, pageSize, status);
         return productDao.getAllPageProduct(pageNumber, pageSize, status, searchParameters);
     }
+    
+    public PaginatedResponseDto getAllPageProductBySearch(int pageNumber, int pageSize, Boolean status,String title,String description, Map<String, String> searchParameters) {
+        log.info("ProductServiceBL.getAllPageProductBySearch() invoked with pageNumber: {}, pageSize: {}, status: {},title: {},description: {}", 
+                 pageNumber, pageSize, status, title, description);
+        return productDao.getAllPageProductBySearch(pageNumber, pageSize, status, title, description, searchParameters);
+    }
 
     public List<ProductDto> getAllBySearchProduct(String productSubCategoryName, String brandName, String conditionType, String type, String title) {
         log.info("ProductServiceBL.getAllBySearchProduct() invoked with productSubCategoryName: {}, brandName: {}, conditionType: {}, type: {}, title: {}", 

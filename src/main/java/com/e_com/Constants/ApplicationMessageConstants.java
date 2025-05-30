@@ -163,6 +163,7 @@ public interface ApplicationMessageConstants {
 		String EX_UPDATE_PAYMENT_STATUS = "ex.update.payment.status";
 		String ERR_RETRIEVE_ALL_PAYMENT_DETAILS = "err.retrieve.all.payment.details";
 		String EX_RETRIEVE_ALL_PAYMENT_DETAILS = "ex.retrieve.all.payment.details";
-		
+        String ERR_RETRIEVE_ALL_PRODUCT_DETAILS_BY_SEARCH = "err.retrieve.all.product.details.by.search";
+        String EX_RETRIEVE_ALL_PRODUCT_DETAILS_BY_SEARCH = "ex.retrieve.all.product.details.by.search";
 	}
 }
