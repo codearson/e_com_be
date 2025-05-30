@@ -2,7 +2,7 @@ spring:
   application:
     name: e_com_api
   profiles:
-    active: "prod"
+    active: "dev"
   mail:
     host: smtp.gmail.com
     port: 587

@@ -163,6 +163,14 @@ public interface ApplicationMessageConstants {
 		String EX_UPDATE_PAYMENT_STATUS = "ex.update.payment.status";
 		String ERR_RETRIEVE_ALL_PAYMENT_DETAILS = "err.retrieve.all.payment.details";
 		String EX_RETRIEVE_ALL_PAYMENT_DETAILS = "ex.retrieve.all.payment.details";
+		String ERR_SAVE_PRODUCT_IMAGE_DETAILS = "err_save_productImage_details";
+		String EX_SAVE_PRODUCT_IMAGE_DETAILS = "ex_save_productImage_details";
+		String ERR_UPDATE_PRODUCT_IMAGE_DETAILS = "err_update_productImage_details";
+		String EX_UPDATE_PRODUCT_IMAGE_DETAILS = "ex_update_productImage_details";
+		String ERR_PRODUCT_IMAGE_STATUS = "err_update_productImage_status";
+		String EX_PRODUCT_IMAGE_STATUS = "ex_update_productImage_status";
+		String ERR_RETRIEVE_ALL_PRODUCT_IMAGE_DETAILS = "ex_retrive_all_productImage_details";
+		String EX_RETRIEVE_ALL_PRODUCT_IMAGE_DETAILS = "ex_retrive_all_productImage_details";
 		
 	}
 }

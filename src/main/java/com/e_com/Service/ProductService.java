@@ -2,6 +2,9 @@ package com.e_com.Service;
 
 import java.util.Map;
 
+import org.springframework.data.domain.Page;
+
+import com.e_com.Domain.Product;
 import com.e_com.Dto.ProductDto;
 import com.e_com.Dto.ResponseDto;
 
@@ -23,7 +26,5 @@ public interface ProductService {
     ResponseDto updateProductStatus(Integer productId, Boolean status);
     
     ResponseDto getAllPageProduct(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters);
-    
-    ResponseDto getAllBySearchProduct(String productSubCategoryName, String brandName, String conditionType, String type, String title);
     
 }
