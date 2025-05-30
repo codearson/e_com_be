@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.40, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: ecom_db_local
 -- ------------------------------------------------------
--- Server version	8.0.42
+-- Server version	8.0.41
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -110,7 +110,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES (1,'Blue','2025-05-16 20:18:15','Running shoes','Photo',_binary '',99.99,100,'S','Sneaker','2025-05-16 23:12:16',1,1,1,1),(2,'White','2025-05-16 20:21:24','Cotton button-down shirt','ShirtPhoto',_binary '',49.99,50,'M','Casual Shirt','2025-05-16 20:21:24',2,1,2,1),(3,'Black ','2025-05-20 19:40:22','Gaming Mouse with RGB','Photo',_binary '',9.99,50,'','Mouse','2025-05-20 19:40:22',1,1,1,1),(4,'White','2025-05-20 23:24:37','LED Light','Photo',_binary '',5.9,100,'','LED Light','2025-05-20 23:24:37',7,1,4,1),(5,'White','2025-05-20 23:26:16','White Sneaker','Photo',_binary '',100,100,'7','Sneaker','2025-05-20 23:26:16',1,1,5,1),(6,'Green','2025-05-20 23:28:02',' Alovera For oily Skin','Photo',_binary '',10,100,'','FaceWash','2025-05-20 23:28:02',10,1,7,1),(7,'Yellow','2025-05-20 23:29:37',' Boot','Photo',_binary '',100,100,'8','Football Boots','2025-05-20 23:29:37',2,1,8,1),(8,'Green','2025-05-20 23:34:40',' Kids Kit','Photo',_binary '',50,100,'m','Boys Baseball Kit','2025-05-20 23:34:40',9,1,6,1),(9,'White','2025-05-20 23:37:55','Cotton Short Summer Style','Photo',_binary '',20,100,'L','Short','2025-05-20 23:37:55',8,1,9,1);
+INSERT INTO `product` VALUES (1,'Blue','2025-05-16 20:18:15','Running shoes','Photo',_binary '',99.99,100,'S','Sneaker','2025-05-16 23:12:16',1,1,1,1),(2,'White','2025-05-16 20:21:24','Cotton button-down shirt','ShirtPhoto',_binary '',49.99,50,'M','Casual Shirt','2025-05-16 20:21:24',2,1,1,1),(3,'Black ','2025-05-20 19:40:22','Gaming Mouse with RGB','Photo',_binary '',9.99,50,'','Mouse','2025-05-20 19:40:22',1,1,1,2),(4,'White','2025-05-20 23:24:37','LED Light','Photo',_binary '',5.9,100,'','LED Light','2025-05-20 23:24:37',7,1,1,2),(5,'White','2025-05-20 23:26:16','White Sneaker','Photo',_binary '',100,100,'7','Sneaker','2025-05-20 23:26:16',1,1,1,3),(6,'Green','2025-05-20 23:28:02',' Alovera For oily Skin','Photo',_binary '',10,100,'','FaceWash','2025-05-20 23:28:02',10,1,1,1),(7,'Yellow','2025-05-20 23:29:37',' Boot','Photo',_binary '',100,100,'8','Football Boots','2025-05-20 23:29:37',2,1,1,4),(8,'Green','2025-05-20 23:34:40',' Kids Kit','Photo',_binary '',50,100,'m','Boys Baseball Kit','2025-05-20 23:34:40',9,1,1,4),(9,'White','2025-05-20 23:37:55','Cotton Short Summer Style','Photo',_binary '',20,100,'L','Short','2025-05-20 23:37:55',8,1,1,2);
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -120,7 +120,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `product_category` WRITE;
 /*!40000 ALTER TABLE `product_category` DISABLE KEYS */;
-INSERT INTO `product_category` VALUES (1,_binary '','Clothing'),(2,_binary '','Electronics'),(3,_binary '','Footwear'),(4,_binary '','Kids'),(5,_binary '','Women'),(6,_binary '','Men'),(7,_binary '','Sports'),(8,_binary '','Beauty'),(9,_binary '','Jewelry'),(10,_binary '','Automotive');
+INSERT INTO `product_category` VALUES (1,_binary '','Clothing',1,NULL),(2,_binary '','Jewels',1,NULL),(3,_binary '','Kids',1,NULL),(4,_binary '','Electronics',1,NULL),(5,_binary '','Home',1,NULL),(6,_binary '','Entertainment',1,NULL),(7,_binary '','Sports',1,NULL),(8,_binary '','Beauty Items',1,NULL),(9,_binary '','Books & Stationery',1,NULL),(10,_binary '','Others',1,NULL),(11,_binary '','Women',2,1),(12,_binary '','Men',2,1),(13,_binary '','Unisex',2,1),(14,_binary '','Others',2,1);
 /*!40000 ALTER TABLE `product_category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -140,7 +140,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `shipping_address` WRITE;
 /*!40000 ALTER TABLE `shipping_address` DISABLE KEYS */;
-INSERT INTO `shipping_address` VALUES (1,'456 Elm St, Springfield',_binary '\0','9876543210',1),(2,'123 Super St, London',_binary '','0765947337',1),(3,'jaffna',_binary '','0765947337',1),(4,'Colombo',_binary '','0764545761',2),(5,'Puttalam',_binary '','0767489247',2),(6,'Kurunagala',_binary '','0762778957',1),(7,'Polanaruwa',_binary '','0762235657',1);
+INSERT INTO `shipping_address` VALUES (1,'456 Elm St, Springfield',_binary '\0','9876543210',1,'',NULL,'','',''),(2,'123 Super St, London',_binary '','0765947337',1,'',NULL,'','',''),(3,'jaffna',_binary '','0765947337',1,'',NULL,'','',''),(4,'Colombo',_binary '','0764545761',2,'',NULL,'','',''),(5,'Puttalam',_binary '','0767489247',2,'',NULL,'','',''),(6,'Kurunagala',_binary '','0762778957',1,'',NULL,'','',''),(7,'Polanaruwa',_binary '','0762235657',1,'',NULL,'','','');
 /*!40000 ALTER TABLE `shipping_address` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -202,4 +202,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-21 18:16:17
+-- Dump completed on 2025-05-30 16:23:17
