@@ -26,6 +26,8 @@ public interface ProductDao extends BaseDao<Product> {
     
     PaginatedResponseDto getAllPageProduct(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters);
     
+    PaginatedResponseDto getAllPageProductBySearch(int pageNumber, int pageSize, Boolean status, String title, String description, Map<String, String> searchParameters);
+    
     List<ProductDto> getAllBySearchProduct(String productSubCategoryName, String brandName, String conditionType, String type, String title);
     
 }
