@@ -1,7 +1,10 @@
 package com.e_com.Dao;
 
+import java.awt.print.Pageable;
 import java.util.List;
 import java.util.Map;
+
+import org.springframework.data.domain.Page;
 
 import com.e_com.Domain.Product;
 import com.e_com.Dto.PaginatedResponseDto;
@@ -30,4 +33,5 @@ public interface ProductDao extends BaseDao<Product> {
     
     List<ProductDto> getAllBySearchProduct(String productSubCategoryName, String brandName, String conditionType, String type, String title);
     
+   
 }

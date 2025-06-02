@@ -2,11 +2,17 @@ package com.e_com.ServiceImpl;
 
 import java.util.List;
 import java.util.Map;
-
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
+import org.apache.tomcat.util.http.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
 
 import com.e_com.Constants.ApplicationMessageConstants;
+import com.e_com.Dao.ProductDao;
+import com.e_com.Domain.Product;
 import com.e_com.Dto.PaginatedResponseDto;
 import com.e_com.Dto.ProductDto;
 import com.e_com.Dto.ResponseDto;
@@ -15,6 +21,8 @@ import com.e_com.Service.BL.ProductServiceBL;
 import com.e_com.Service.Utils.ServiceUtil;
 
 import lombok.extern.slf4j.Slf4j;
+
+
 
 /**
  * Title: ProductServiceImpl.java. Company: www.codearson.com Copyright: Copyright (c) 2025.
@@ -34,6 +42,10 @@ public class ProductServiceImpl implements ProductService {
 
     @Autowired
     private ServiceUtil serviceUtil;
+    
+    @Autowired
+    private ProductDao productDao;
+
 
     @Override
     public ResponseDto saveProduct(ProductDto productDto) {
