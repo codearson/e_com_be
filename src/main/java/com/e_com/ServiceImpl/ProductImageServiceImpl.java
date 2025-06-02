@@ -138,7 +138,7 @@ public class ProductImageServiceImpl implements ProductImageService {
         log.info("BrandServiceImpl.getAllBrand() invoked with brandName: {}", productImageUrl);
         ResponseDto responseDto = null;
         try {
-            List<ProductImageDto> productImageList = ProductImageServiceBL.getAllProductImage(productImageUrl);
+            List<ProductImageDto> productImageList = productImageServiceBL.getAllProductImage(productImageUrl);
             if (productImageList != null && !productImageList.isEmpty()) {
                 log.info("Retrieved all ProductImage details.");
                 responseDto = serviceUtil.getServiceResponse(productImageList);
