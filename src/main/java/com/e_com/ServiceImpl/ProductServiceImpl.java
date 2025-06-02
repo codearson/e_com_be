@@ -161,8 +161,48 @@ public class ProductServiceImpl implements ProductService {
         return responseDto;
     }
 
-   
-    
+    @Override
+    public ResponseDto getAllPageProductBySearch(int pageNumber, int pageSize, Boolean status, String title, String description, Map<String, String> searchParameters) {
+        log.info("ProductServiceImpl.getAllPageProductBySearch() invoked with pageNumber: {}, pageSize: {}, status: {}, title: {}, description: {}", 
+                 pageNumber, pageSize, status, title, description);
+        ResponseDto responseDto = null;
+        try {
+            if (pageNumber < 1 || pageSize < 0) {
+                log.info("Invalid pagination search parameters provided.");
+                return serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_PRODUCT_DETAILS_BY_SEARCH);
+            }
+            PaginatedResponseDto paginatedResponseDto = productServiceBL.getAllPageProductBySearch(pageNumber, pageSize, status, title, description, searchParameters);
+            if (paginatedResponseDto != null) {
+                log.info("Retrieved paginated search Product details.");
+                responseDto = serviceUtil.getServiceResponse(paginatedResponseDto);
+            } else {
+                log.info("Unable to retrieve paginated search Product details.");
+                responseDto = serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_PRODUCT_DETAILS_BY_SEARCH);
+            }
+        } catch (Exception e) {
+            log.error("Exception occurs while retrieving paginated search Product details.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_PRODUCT_DETAILS_BY_SEARCH);
+        }
+        return responseDto;
+    }
 
-
+    @Override
+    public ResponseDto getAllBySearchProduct(String productSubCategoryName, String brandName, String conditionType, String type, String title) {
+        log.info("ProductServiceImpl.getAllBySearchProduct() invoked with productSubCategoryName: {}, brandName: {}, conditionType: {}, type: {}, title: {}", 
+                 productSubCategoryName, brandName, conditionType, type, title);
+        ResponseDto responseDto = null;
+        try {
+            List<ProductDto> productList = productServiceBL.getAllBySearchProduct(productSubCategoryName, brandName, conditionType, type, title);
+            log.info("Retrieved Product details by search.");
+            responseDto = serviceUtil.getServiceResponse(productList);
+        } catch (Exception e) {
+            log.error("Exception occurs while retrieving Product details by search.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_PRODUCT_DETAILS);
+        }
+        return responseDto;
+    }
 }

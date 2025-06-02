@@ -2882,12 +2882,22 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "getAllPageBySearch",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ4NjI2MjMwfQ.qvk1hzHFfq1AbnBDhmTpUfVbfJDx6pe_eZ4GGTwTRJ_VnMsLsrDsrSiyyzmYYgLe",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/product/getAllPageSortByPrice?pageNumber=0&pageSize=10&status=true&ascending=true",
+							"raw": "http://localhost:8080/product/getAllPageBySearch?pageNumber=1&pageSize=10&status=1&description=white sneaker&title=sneaker",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -2895,12 +2905,12 @@
 							"port": "8080",
 							"path": [
 								"product",
-								"getAllPageSortByPrice"
+								"getAllPageBySearch"
 							],
 							"query": [
 								{
 									"key": "pageNumber",
-									"value": "0"
+									"value": "1"
 								},
 								{
 									"key": "pageSize",
@@ -2908,11 +2918,15 @@
 								},
 								{
 									"key": "status",
-									"value": "true"
+									"value": "1"
 								},
 								{
-									"key": "ascending",
-									"value": "true"
+									"key": "description",
+									"value": "white sneaker"
+								},
+								{
+									"key": "title",
+									"value": "sneaker"
 								}
 							]
 						}

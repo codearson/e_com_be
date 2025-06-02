@@ -171,6 +171,7 @@ public interface ApplicationMessageConstants {
 		String EX_PRODUCT_IMAGE_STATUS = "ex_update_productImage_status";
 		String ERR_RETRIEVE_ALL_PRODUCT_IMAGE_DETAILS = "ex_retrive_all_productImage_details";
 		String EX_RETRIEVE_ALL_PRODUCT_IMAGE_DETAILS = "ex_retrive_all_productImage_details";
-		
+        String ERR_RETRIEVE_ALL_PRODUCT_DETAILS_BY_SEARCH = "err.retrieve.all.product.details.by.search";
+        String EX_RETRIEVE_ALL_PRODUCT_DETAILS_BY_SEARCH = "ex.retrieve.all.product.details.by.search";
 	}
 }
