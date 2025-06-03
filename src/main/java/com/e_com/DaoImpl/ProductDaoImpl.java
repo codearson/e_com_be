@@ -170,20 +170,20 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao {
 
     @Override
     @Transactional
-    public List<ProductDto> getAllBySearchProduct(String productSubCategoryName, String brandName, String conditionType, String type, String title) {
-        log.info("ProductDaoImpl.getAllBySearchProduct() invoked with productSubCategoryName: {}, brandName: {}, conditionType: {}, type: {}, title: {}", 
-                 productSubCategoryName, brandName, conditionType, type, title);
+    public List<ProductDto> getAllBySearchProduct(String productCategoryName, String brandName, String conditionType, String type, String title) {
+        log.info("ProductDaoImpl.getAllBySearchProduct() invoked with productCategoryName: {}, brandName: {}, conditionType: {}, type: {}, title: {}", 
+                 productCategoryName, brandName, conditionType, type, title);
         Criteria criteria = getCurrentSession().createCriteria(Product.class, "product");
 
         // Join related entities
-        criteria.createAlias("productSubCategory", "subCategory", JoinType.INNER_JOIN);
+        criteria.createAlias("productCategory", "productCategory", JoinType.INNER_JOIN);
         criteria.createAlias("brand", "brand", JoinType.INNER_JOIN);
         criteria.createAlias("conditions", "conditions", JoinType.INNER_JOIN);
         criteria.createAlias("status", "status", JoinType.INNER_JOIN);
 
         // Add search filters if provided
-        if (productSubCategoryName != null && !productSubCategoryName.trim().isEmpty()) {
-            criteria.add(Restrictions.ilike("subCategory.productSubCategoryName", "%" + productSubCategoryName.trim() + "%"));
+        if (productCategoryName != null && !productCategoryName.trim().isEmpty()) {
+            criteria.add(Restrictions.ilike("productCategory.name", "%" + productCategoryName.trim() + "%"));
         }
         if (brandName != null && !brandName.trim().isEmpty()) {
             criteria.add(Restrictions.ilike("brand.brandName", "%" + brandName.trim() + "%"));

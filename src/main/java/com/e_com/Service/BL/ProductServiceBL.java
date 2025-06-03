@@ -77,9 +77,9 @@ public class ProductServiceBL {
         return productDao.getAllPageProductBySearch(pageNumber, pageSize, status, title, description, searchParameters);
     }
 
-    public List<ProductDto> getAllBySearchProduct(String productSubCategoryName, String brandName, String conditionType, String type, String title) {
-        log.info("ProductServiceBL.getAllBySearchProduct() invoked with productSubCategoryName: {}, brandName: {}, conditionType: {}, type: {}, title: {}", 
-                 productSubCategoryName, brandName, conditionType, type, title);
-        return productDao.getAllBySearchProduct(productSubCategoryName, brandName, conditionType, type, title);
+    public List<ProductDto> getAllBySearchProduct(String productCategoryName, String brandName, String conditionType, String type, String title) {
+        log.info("ProductServiceBL.getAllBySearchProduct() invoked with productCategoryName: {}, brandName: {}, conditionType: {}, type: {}, title: {}", 
+                 productCategoryName, brandName, conditionType, type, title);
+        return productDao.getAllBySearchProduct(productCategoryName, brandName, conditionType, type, title);
     }
 }
