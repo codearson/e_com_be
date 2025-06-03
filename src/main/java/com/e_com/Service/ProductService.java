@@ -29,6 +29,6 @@ public interface ProductService {
     
     ResponseDto getAllPageProductBySearch(int pageNumber, int pageSize, Boolean status, String title, String description, Map<String, String> searchParameters);
     
-    ResponseDto getAllBySearchProduct(String productSubCategoryName, String brandName, String conditionType, String type, String title);
+    ResponseDto getAllBySearchProduct(String productCategoryName, String brandName, String conditionType, String type, String title);
     
 }

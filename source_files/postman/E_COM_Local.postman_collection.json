@@ -1,10 +1,9 @@
 {
 	"info": {
-		"_postman_id": "075d21da-3f7a-46a6-991e-e474f5c142a2",
+		"_postman_id": "6290e43b-01ea-486b-b9c7-1820b2f470d3",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "44724346",
-		"_collection_link": "https://asjathmusharrif.postman.co/workspace/Asjath-Musharrif's-Workspace~cbce72dc-85a4-4122-8da1-bf347f32ab8d/collection/44724346-075d21da-3f7a-46a6-991e-e474f5c142a2?action=share&source=collection_link&creator=44724346"
+		"_exporter_id": "40723516"
 	},
 	"item": [
 		{
@@ -2646,7 +2645,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productSubCategoryDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"brandDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"conditionsDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"statusDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"title\": \"Sneaker\",\r\n    \"description\": \"Running shoes\",\r\n    \"size\": \"10\",\r\n    \"color\": \"Blue\",\r\n    \"price\": 99.99,\r\n    \"quentity\": 100,\r\n    \"imageUrl\":\"Photo\",\r\n    \"isActive\": 1\r\n}",
+							"raw": "{\r\n    \"productCategoryDto\": {\r\n        \"id\": 146\r\n    },\r\n    \"brandDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"conditionsDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"statusDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"title\": \"DDR4 RAM\",\r\n    \"description\": \"8GB DDR4 RAM\",\r\n    \"size\": null,\r\n    \"color\": null,\r\n    \"price\": 12999.00,\r\n    \"quentity\": 2,\r\n    \"imageUrl\":\"Ram Image\",\r\n    \"isActive\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2685,7 +2684,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\":1,\r\n    \"productSubCategoryDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"brandDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"conditionsDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"statusDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"title\": \"Sneaker\",\r\n    \"description\": \"Running shoes\",\r\n    \"size\": \"S\",\r\n    \"color\": \"Blue\",\r\n    \"price\": 99.99,\r\n    \"quentity\": 100,\r\n    \"imageUrl\":\"Photo\",\r\n    \"isActive\": 1\r\n}",
+							"raw": "{\r\n    \"id\":10,\r\n    \"productCategoryDto\": {\r\n        \"id\": 146\r\n    },\r\n    \"brandDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"conditionsDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"statusDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"title\": \"DDR4 RAM\",\r\n    \"description\": \"8GB DDR4 RAM\",\r\n    \"size\": null,\r\n    \"color\": null,\r\n    \"price\": 12999.00,\r\n    \"quentity\": 2,\r\n    \"imageUrl\":\"Ram Image\",\r\n    \"isActive\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2732,7 +2731,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/product/updateStatus?productId=1&status=1",
+							"raw": "http://localhost:8080/product/updateStatus?productId=1&status=0",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -2749,7 +2748,7 @@
 								},
 								{
 									"key": "status",
-									"value": "1"
+									"value": "0"
 								}
 							]
 						}
@@ -2784,7 +2783,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/product/getAllPage?pageNumber=1&pageSize=10&status=0",
+							"raw": "http://localhost:8080/product/getAllPage?pageNumber=1&pageSize=10&status=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -2805,7 +2804,7 @@
 								},
 								{
 									"key": "status",
-									"value": "0"
+									"value": "1"
 								}
 							]
 						}
@@ -2862,7 +2861,7 @@
 									"disabled": true
 								},
 								{
-									"key": "productSubCategoryName",
+									"key": "productCategoryName",
 									"value": "Clothing",
 									"disabled": true
 								},
@@ -2897,7 +2896,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/product/getAllPageBySearch?pageNumber=1&pageSize=10&status=1&description=white sneaker&title=sneaker",
+							"raw": "http://localhost:8080/product/getAllPageBySearch?pageNumber=1&pageSize=10&status=1&description=white sneaker",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -2926,7 +2925,8 @@
 								},
 								{
 									"key": "title",
-									"value": "sneaker"
+									"value": "sneaker",
+									"disabled": true
 								}
 							]
 						}

@@ -190,12 +190,12 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public ResponseDto getAllBySearchProduct(String productSubCategoryName, String brandName, String conditionType, String type, String title) {
-        log.info("ProductServiceImpl.getAllBySearchProduct() invoked with productSubCategoryName: {}, brandName: {}, conditionType: {}, type: {}, title: {}", 
-                 productSubCategoryName, brandName, conditionType, type, title);
+    public ResponseDto getAllBySearchProduct(String productCategoryName, String brandName, String conditionType, String type, String title) {
+        log.info("ProductServiceImpl.getAllBySearchProduct() invoked with productCategoryName: {}, brandName: {}, conditionType: {}, type: {}, title: {}", 
+                 productCategoryName, brandName, conditionType, type, title);
         ResponseDto responseDto = null;
         try {
-            List<ProductDto> productList = productServiceBL.getAllBySearchProduct(productSubCategoryName, brandName, conditionType, type, title);
+            List<ProductDto> productList = productServiceBL.getAllBySearchProduct(productCategoryName, brandName, conditionType, type, title);
             log.info("Retrieved Product details by search.");
             responseDto = serviceUtil.getServiceResponse(productList);
         } catch (Exception e) {
