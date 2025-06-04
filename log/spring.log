@@ -16186,3 +16186,69 @@ Caused by: java.lang.Error: Unresolved compilation problem:
 2025-06-03 19:09:51.996  INFO 7580 --- [RMI TCP Connection(72)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-06-03 19:09:52.033  INFO 7580 --- [RMI TCP Connection(72)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-06-03 19:09:52.037  INFO 7580 --- [RMI TCP Connection(72)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-04 18:51:11.306  INFO 6612 --- [restartedMain] com.e_com.EComApplication                : Starting EComApplication using Java 21.0.5 on SK_BAVI18 with PID 6612 (D:\E Com Source\e_com_be\target\classes started by skbav in D:\E Com Source\e_com_be)
+2025-06-04 18:51:11.307  INFO 6612 --- [restartedMain] com.e_com.EComApplication                : The following profiles are active: dev
+2025-06-04 18:51:11.347  INFO 6612 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-04 18:51:11.348  INFO 6612 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-04 18:51:15.277  INFO 6612 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-04 18:51:15.300  INFO 6612 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2025-06-04 18:51:15.799  INFO 6612 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-06-04 18:51:15.809  INFO 6612 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-04 18:51:15.809  INFO 6612 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-06-04 18:51:15.872  INFO 6612 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-04 18:51:15.872  INFO 6612 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4524 ms
+2025-06-04 18:51:16.024  INFO 6612 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-04 18:51:16.076  INFO 6612 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2025-06-04 18:51:16.250  INFO 6612 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-06-04 18:51:16.330  INFO 6612 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-04 18:51:16.485  INFO 6612 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-04 18:51:16.500  INFO 6612 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2025-06-04 18:51:17.505  INFO 6612 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-06-04 18:51:17.510  INFO 6612 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-04 18:51:18.062  INFO 6612 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2ab0c493, org.springframework.security.web.context.SecurityContextPersistenceFilter@93b6769, org.springframework.security.web.header.HeaderWriterFilter@24ca8e85, org.springframework.web.filter.CorsFilter@7191bd86, org.springframework.security.web.authentication.logout.LogoutFilter@54a315b1, com.e_com.Service.Utils.JwtCustomFilter@6110c188, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41637b22, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@37c387b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@36a7c39d, org.springframework.security.web.session.SessionManagementFilter@2529d55f, org.springframework.security.web.access.ExceptionTranslationFilter@69f91f01, org.springframework.security.web.access.intercept.AuthorizationFilter@257c51b8]
+2025-06-04 18:51:18.222  INFO 6612 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-04 18:51:18.269  INFO 6612 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-04 18:51:18.276  INFO 6612 --- [restartedMain] com.e_com.EComApplication                : Started EComApplication in 7.257 seconds (JVM running for 7.921)
+2025-06-04 18:51:47.657  INFO 6612 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-04 18:51:47.657  INFO 6612 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-04 18:51:47.659  INFO 6612 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-06-04 18:51:47.713  INFO 6612 --- [http-nio-8080-exec-5] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-06-04 18:51:47.713  INFO 6612 --- [http-nio-8080-exec-4] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-06-04 18:51:47.972  INFO 6612 --- [http-nio-8080-exec-5] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :skbavi61@gmail.com
+2025-06-04 18:51:47.972  INFO 6612 --- [http-nio-8080-exec-4] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :skbavi61@gmail.com
+2025-06-04 18:51:47.973  INFO 6612 --- [http-nio-8080-exec-4] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-06-04 18:51:47.973  INFO 6612 --- [http-nio-8080-exec-5] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-06-04 18:51:47.983  WARN 6612 --- [http-nio-8080-exec-4] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-04 18:51:47.983  WARN 6612 --- [http-nio-8080-exec-5] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-04 18:51:48.131  INFO 6612 --- [http-nio-8080-exec-5] com.e_com.Controller.UserController      : UserController.getUserByEmailAddress() invoked with emailAddress
+2025-06-04 18:51:48.133  INFO 6612 --- [http-nio-8080-exec-4] c.e.C.ProductCategoryController          : ProductCategoryController.getAllBySearchProductCategory() invoked with name: null
+2025-06-04 18:51:48.133  INFO 6612 --- [http-nio-8080-exec-4] c.e.S.ProductCategoryServiceImpl         : ProductCategoryServiceImpl.getAllBySearchProductCategory() invoked with name: null
+2025-06-04 18:51:48.133  INFO 6612 --- [http-nio-8080-exec-4] c.e.Service.BL.ProductCategoryServiceBL  : ProductCategoryServiceBL.getAllBySearchProductCategory() invoked with name: null
+2025-06-04 18:51:48.137  INFO 6612 --- [http-nio-8080-exec-5] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByEmailAddress()invoked
+2025-06-04 18:51:48.138  INFO 6612 --- [http-nio-8080-exec-4] c.e_com.DaoImpl.ProductCategoryDaoImpl   : ProductCategoryDaoImpl.getAllBySearchProductCategory() invoked with name: null
+2025-06-04 18:51:48.138  WARN 6612 --- [http-nio-8080-exec-4] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-04 18:51:48.140  WARN 6612 --- [http-nio-8080-exec-5] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-04 18:51:48.145  INFO 6612 --- [http-nio-8080-exec-5] com.e_com.ServiceImpl.UserServiceImpl    : user detail retreived successfully.
+2025-06-04 18:51:48.181  INFO 6612 --- [http-nio-8080-exec-4] c.e.S.ProductCategoryServiceImpl         : Retrieved ProductCategory details by search.
+2025-06-04 18:51:48.225  INFO 6612 --- [http-nio-8080-exec-7] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-06-04 18:51:48.226  INFO 6612 --- [http-nio-8080-exec-8] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-06-04 18:51:48.228  INFO 6612 --- [http-nio-8080-exec-8] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :skbavi61@gmail.com
+2025-06-04 18:51:48.228  INFO 6612 --- [http-nio-8080-exec-7] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :skbavi61@gmail.com
+2025-06-04 18:51:48.229  INFO 6612 --- [http-nio-8080-exec-7] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-06-04 18:51:48.229  INFO 6612 --- [http-nio-8080-exec-8] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-06-04 18:51:48.229  WARN 6612 --- [http-nio-8080-exec-8] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-04 18:51:48.229  WARN 6612 --- [http-nio-8080-exec-7] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-04 18:51:48.241  INFO 6612 --- [http-nio-8080-exec-8] com.e_com.Controller.UserController      : UserController.getUserByEmailAddress() invoked with emailAddress
+2025-06-04 18:51:48.241  INFO 6612 --- [http-nio-8080-exec-7] c.e.C.ProductCategoryController          : ProductCategoryController.getAllBySearchProductCategory() invoked with name: null
+2025-06-04 18:51:48.241  INFO 6612 --- [http-nio-8080-exec-7] c.e.S.ProductCategoryServiceImpl         : ProductCategoryServiceImpl.getAllBySearchProductCategory() invoked with name: null
+2025-06-04 18:51:48.241  INFO 6612 --- [http-nio-8080-exec-7] c.e.Service.BL.ProductCategoryServiceBL  : ProductCategoryServiceBL.getAllBySearchProductCategory() invoked with name: null
+2025-06-04 18:51:48.242  INFO 6612 --- [http-nio-8080-exec-8] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByEmailAddress()invoked
+2025-06-04 18:51:48.242  INFO 6612 --- [http-nio-8080-exec-7] c.e_com.DaoImpl.ProductCategoryDaoImpl   : ProductCategoryDaoImpl.getAllBySearchProductCategory() invoked with name: null
+2025-06-04 18:51:48.242  WARN 6612 --- [http-nio-8080-exec-8] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-04 18:51:48.242  WARN 6612 --- [http-nio-8080-exec-7] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-04 18:51:48.245  INFO 6612 --- [http-nio-8080-exec-8] com.e_com.ServiceImpl.UserServiceImpl    : user detail retreived successfully.
+2025-06-04 18:51:48.264  INFO 6612 --- [http-nio-8080-exec-7] c.e.S.ProductCategoryServiceImpl         : Retrieved ProductCategory details by search.
+2025-06-04 18:52:45.630  INFO 6612 --- [RMI TCP Connection(11)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-04 18:52:45.664  INFO 6612 --- [RMI TCP Connection(11)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-04 18:52:45.670  INFO 6612 --- [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-04 18:52:45.682  INFO 6612 --- [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
