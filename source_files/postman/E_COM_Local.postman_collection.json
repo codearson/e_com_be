@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "6290e43b-01ea-486b-b9c7-1820b2f470d3",
+		"_postman_id": "000e45ee-5f4c-4ac3-a843-26e0d82ca9d6",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "40723516"
+		"_exporter_id": "40430627"
 	},
 	"item": [
 		{
@@ -2930,6 +2930,14 @@
 								}
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPageFilter",
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}

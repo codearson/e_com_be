@@ -76,6 +76,22 @@ public class ProductController {
                  pageNumber, pageSize, status, title, description);
         return productService.getAllPageProductBySearch(pageNumber, pageSize, status, title, description, HttpReqRespUtils.getSearchParameters(webRequest));
     }
+    
+    @GetMapping("/getAllPageFilter")
+    public ResponseDto getAllPageFilter(@RequestParam("pageNumber") int pageNumber,
+                                        @RequestParam("pageSize") int pageSize,
+                                        @RequestParam("status") Boolean status,
+                                        @RequestParam(value = "category", required = false) String category,
+                                        @RequestParam(value = "size", required = false) String size,
+                                        @RequestParam(value = "brandName", required = false) String brandName,
+                                        @RequestParam(value = "conditionType", required = false) String conditionType,
+                                        @RequestParam(value = "color", required = false) String color,
+                                        WebRequest webRequest) {
+        log.info("ProductController.getAllPageFilter() invoked with pageNumber: {}, pageSize: {}, status: {}, category: {}, size: {}, brandName: {}, condition: {}, color: {}",
+                 pageNumber, pageSize, status, category, size, brandName, conditionType, color);
+        return productService.getAllPageFilter(pageNumber, pageSize, status, category, size, brandName, conditionType, color, HttpReqRespUtils.getSearchParameters(webRequest));
+    }
+
     @GetMapping("/getAllBySearch")
     public ResponseDto getAllBySearchProduct(@RequestParam(value = "productCategoryName", required = false) String productCategoryName,
                                             @RequestParam(value = "brandName", required = false) String brandName,
