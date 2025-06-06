@@ -1,8 +1,10 @@
 package com.e_com.DaoImpl;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import org.hibernate.criterion.Order;
 
 import javax.transaction.Transactional;
 
@@ -203,4 +205,68 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao {
                          .map(productTransformer::transform)
                          .collect(Collectors.toList());
     }
+    
+    @Override
+    @Transactional
+    public PaginatedResponseDto getAllPageSortByPrice(int pageNumber, int pageSize, Boolean status, Boolean asc) {
+        log.info("ProductDaoImpl.getAllPageSortByPrice() invoked with pageNumber: {}, pageSize: {}, status: {}, asc: {}", 
+                 pageNumber, pageSize, status, asc);
+
+        PaginatedResponseDto paginatedResponseDto = null;
+        List<Product> productList = null;
+
+        // Build the count query with optional status filter
+        StringBuilder countQuery = new StringBuilder("SELECT COUNT(*) FROM product");
+        if (status != null) {
+            countQuery.append(" WHERE is_active = ?");
+        }
+        int count = status != null 
+            ? jdbcTemplate.queryForObject(countQuery.toString(), new Object[]{status}, Integer.class)
+            : jdbcTemplate.queryForObject(countQuery.toString(), Integer.class);
+
+        // Handle case where pageSize is 0 (fetch all)
+        if (pageSize == 0) {
+            pageSize = count;
+        }
+
+        // Create criteria query
+        Criteria criteria = getCurrentSession().createCriteria(Product.class, "product");
+
+        // Apply status filter if provided
+        if (status != null) {
+            criteria.add(Restrictions.eq("isActive", status));
+        }
+
+        // Apply sorting based on asc boolean
+        if (Boolean.TRUE.equals(asc)) {
+            criteria.addOrder(Order.asc("price"));
+        } else {
+            criteria.addOrder(Order.desc("price"));
+        }
+
+        // Set pagination
+        criteria.setFirstResult((pageNumber - 1) * pageSize);
+        criteria.setMaxResults(pageSize);
+
+        // Execute query
+        productList = criteria.list();
+
+     // Prepare response
+        paginatedResponseDto = HttpReqRespUtils.paginatedResponseMapper(productList, pageNumber, pageSize, count);
+
+        if (productList != null && !productList.isEmpty()) {
+            paginatedResponseDto.setPayload(
+                productList.stream()
+                    .map(productTransformer::transform)
+                    .collect(Collectors.toList())
+            );
+        } else {
+            log.info("No products found matching criteria. Returning empty payload.");
+            paginatedResponseDto.setPayload(Collections.emptyList());
+        }
+
+
+        return paginatedResponseDto;
+    }
+
 }
