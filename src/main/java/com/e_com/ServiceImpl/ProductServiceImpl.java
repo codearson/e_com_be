@@ -191,6 +191,35 @@ public class ProductServiceImpl implements ProductService {
         }
         return responseDto;
     }
+    
+    @Override
+    public ResponseDto getAllPageFilter(int pageNumber, int pageSize, Boolean status, String category, String size, String brandName, String conditionType, String color, Map<String, String> searchParameters) {
+        log.info("ProductServiceImpl.getAllPageFilter() invoked with pageNumber: {}, pageSize: {}, status: {}, category: {}, size: {}, brandName: {}, conditionType: {}, color: {}", 
+                 pageNumber, pageSize, status, category, size, brandName, conditionType, color);
+        ResponseDto responseDto = null;
+        try {
+            if (pageNumber < 1 || pageSize < 0) {
+                log.info("Invalid pagination parameters provided.");
+                return serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_FILTERED_PRODUCT_DETAILS);
+            }
+            PaginatedResponseDto paginatedResponseDto = productServiceBL.getAllPageFilter(pageNumber, pageSize, status, category, size, brandName, conditionType, color, searchParameters);
+            if (paginatedResponseDto != null) {
+                log.info("Retrieved paginated filtered Product details.");
+                responseDto = serviceUtil.getServiceResponse(paginatedResponseDto);
+            } else {
+                log.info("Unable to retrieve paginated filtered Product details.");
+                responseDto = serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_FILTERED_PRODUCT_DETAILS);
+            }
+        } catch (Exception e) {
+            log.error("Exception occurs while retrieving paginated filtered Product details.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_FILTERED_PRODUCT_DETAILS);
+        }
+        return responseDto;
+    }
+
 
     @Override
     public ResponseDto getAllBySearchProduct(String productCategoryName, String brandName, String conditionType, String type, String title) {

@@ -1,5 +1,6 @@
 package com.e_com.Dto;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import lombok.Data;
@@ -16,6 +17,9 @@ public class UserDto {
 	private Integer id;
 	private String firstName;
 	private String lastName;
+	private String userUrl;
+	private String gender;
+	private LocalDate dateOfBirth;
 	private String password;
 	private String address;
 	private String emailAddress;
@@ -24,6 +28,7 @@ public class UserDto {
 	private LocalDateTime createdDate;
 	private LocalDateTime modifiedDate;
 	private Boolean isActive;
+	private String about;
 	private UserRoleDto userRoleDto;
 
 }
