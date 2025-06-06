@@ -46,6 +46,10 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private ProductDao productDao;
 
+    @Autowired
+    private ProductDao productRepository; 
+
+    
 
     @Override
     public ResponseDto saveProduct(ProductDto productDto) {
@@ -73,8 +77,7 @@ public class ProductServiceImpl implements ProductService {
             responseDto = serviceUtil.getExceptionServiceResponseByProperties(
                     ApplicationMessageConstants.ServiceErrorMessages.EX_SAVE_PRODUCT_DETAILS);
         }
-        return responseDto;
-    }
+        return responseDto;    }
 
     @Override
     public ResponseDto updateProduct(ProductDto productDto) {
@@ -234,4 +237,34 @@ public class ProductServiceImpl implements ProductService {
         }
         return responseDto;
     }
+    
+    @Override
+    public ResponseDto getAllPageSortByPrice(int pageNumber, int pageSize, Boolean status, Boolean asc) {
+        log.info("ProductServiceImpl.getAllPageSortByPrice() invoked with pageNumber: {}, pageSize: {}, status: {}, asc: {}", 
+                 pageNumber, pageSize, status, asc);
+        ResponseDto responseDto = null;
+        try {
+            if (pageNumber < 1 || pageSize < 0) {
+                log.info("Invalid pagination parameters provided.");
+                return serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_PRODUCT_DETAILS);
+            }
+            PaginatedResponseDto paginatedResponseDto = productServiceBL.getAllPageSortByPrice(pageNumber, pageSize, status, asc);
+            if (paginatedResponseDto != null) {
+                log.info("Retrieved paginated Product details.");
+                responseDto = serviceUtil.getServiceResponse(paginatedResponseDto);
+            } else {
+                log.info("Unable to retrieve paginated Product details.");
+                responseDto = serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_PRODUCT_DETAILS);
+            }
+        } catch (Exception e) {
+            log.error("Exception occurs while retrieving paginated Product details.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_PRODUCT_DETAILS);
+        }
+        return responseDto;
+    }
+
+
 }
