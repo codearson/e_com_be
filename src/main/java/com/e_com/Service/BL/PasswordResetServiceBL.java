@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import com.e_com.Dao.PasswordResetTokenDao;
 import com.e_com.Dao.UserDao;
 import com.e_com.Domain.PasswordResetToken;
+import com.e_com.Domain.EmailVerificationToken;
 import com.e_com.Domain.User;
 import com.e_com.Dto.PasswordResetRequestDto;
 import com.e_com.Dto.ResetPasswordDto;
@@ -19,6 +20,8 @@ import com.e_com.Dto.UserLogsDto;
 import com.e_com.Service.EmailService;
 import com.e_com.Service.UserLogsService;
 import com.e_com.Transformer.PasswordResetTokenTransformer;
+import com.e_com.Transformer.EmailVerificationTokenTransformer;
+
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -123,4 +126,23 @@ public class PasswordResetServiceBL {
         
 		return true;
 	}
+	
+	public String emailTokenSend(PasswordResetRequestDto request) {
+	    log.info("Processing password reset token for email: {}", request.getEmail());
+
+
+	    EmailVerificationToken token = EmailVerificationTokenTransformer.toEntity(request.getEmail());
+	    tokenDao.save(token);
+
+	    String emailBody = "Hi, Your email verification token is: " + token.getToken() + "\n\n" +
+	                       "This token will expire in 1 hour.\n\n" +
+	                       "Regards,\n E-comm";
+
+	    emailService.sendEmail(request.getEmail(), "Email Verification", emailBody);
+
+	    log.info("Email verification token sent to: {}", request.getEmail());
+	    return "Email verification token sent successfully";
+	}
+
+
 }

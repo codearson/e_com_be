@@ -15,13 +15,9 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.e_com.Dao.ConditionsDao;
-import com.e_com.Domain.Brand;
 import com.e_com.Domain.Conditions;
-import com.e_com.Domain.UserRole;
-import com.e_com.Dto.BrandDto;
 import com.e_com.Dto.ConditionsDto;
 import com.e_com.Dto.PaginatedResponseDto;
-import com.e_com.Dto.UserRoleDto;
 import com.e_com.Service.Utils.HttpReqRespUtils;
 import com.e_com.Transformer.ConditionsTransformer;
 

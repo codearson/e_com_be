@@ -1,6 +1,7 @@
 package com.e_com.Domain;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import javax.persistence.Basic;
@@ -37,6 +38,8 @@ public class User implements Serializable{
 	private String firstName;
 	@Column(name = "lastName",nullable = false)
 	private String lastName;
+	@Column(name = "userUrl")
+	private String userUrl;
 	@Column(name = "password",nullable = false)
 	private String password;
 	@Column(name = "address")
@@ -51,6 +54,12 @@ public class User implements Serializable{
 	private LocalDateTime createdDate;
 	@Column(name = "modifiedDate")
 	private LocalDateTime modifiedDate;
+	@Column(name = "gender")
+	private String gender;
+	@Column(name = "dateOfBirth")
+	private LocalDate dateOfBirth;
+	@Column(name = "about")
+	private String about;
 	@Column(name = "isActive")
 	private Boolean isActive;
 	@JoinColumn(name = "userRoleId", referencedColumnName = "id")

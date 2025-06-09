@@ -40,6 +40,16 @@ public class JwtCustomFilter extends OncePerRequestFilter {
 	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
 			throws ServletException, IOException {
+		
+		String path = request.getRequestURI();
+
+		// Skip JWT validation for public endpoints
+		if (path.startsWith("/user/emailTokenSend")
+		) {
+		    filterChain.doFilter(request, response);
+		    return;
+		}
+
 
 		log.info("request enter the custom filter");
 		try {

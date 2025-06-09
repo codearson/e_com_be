@@ -76,14 +76,44 @@ public class ProductController {
                  pageNumber, pageSize, status, title, description);
         return productService.getAllPageProductBySearch(pageNumber, pageSize, status, title, description, HttpReqRespUtils.getSearchParameters(webRequest));
     }
+    
+    @GetMapping("/getAllPageFilter")
+    public ResponseDto getAllPageFilter(@RequestParam("pageNumber") int pageNumber,
+                                        @RequestParam("pageSize") int pageSize,
+                                        @RequestParam("status") Boolean status,
+                                        @RequestParam(value = "category", required = false) String category,
+                                        @RequestParam(value = "size", required = false) String size,
+                                        @RequestParam(value = "brandName", required = false) String brandName,
+                                        @RequestParam(value = "conditionType", required = false) String conditionType,
+                                        @RequestParam(value = "color", required = false) String color,
+                                        WebRequest webRequest) {
+        log.info("ProductController.getAllPageFilter() invoked with pageNumber: {}, pageSize: {}, status: {}, category: {}, size: {}, brandName: {}, condition: {}, color: {}",
+                 pageNumber, pageSize, status, category, size, brandName, conditionType, color);
+        return productService.getAllPageFilter(pageNumber, pageSize, status, category, size, brandName, conditionType, color, HttpReqRespUtils.getSearchParameters(webRequest));
+    }
+
     @GetMapping("/getAllBySearch")
-    public ResponseDto getAllBySearchProduct(@RequestParam(value = "productSubCategoryName", required = false) String productSubCategoryName,
+    public ResponseDto getAllBySearchProduct(@RequestParam(value = "productCategoryName", required = false) String productCategoryName,
                                             @RequestParam(value = "brandName", required = false) String brandName,
                                             @RequestParam(value = "conditionType", required = false) String conditionType,
                                             @RequestParam(value = "type", required = false) String type,
                                             @RequestParam(value = "title", required = false) String title) {
-        log.info("ProductController.getAllBySearchProduct() invoked with productSubCategoryName: {}, brandName: {}, conditionType: {}, type: {}, title: {}", 
-                 productSubCategoryName, brandName, conditionType, type, title);
-        return productService.getAllBySearchProduct(productSubCategoryName, brandName, conditionType, type, title);
+        log.info("ProductController.getAllBySearchProduct() invoked with productCategoryName: {}, brandName: {}, conditionType: {}, type: {}, title: {}", 
+                 productCategoryName, brandName, conditionType, type, title);
+        return productService.getAllBySearchProduct(productCategoryName, brandName, conditionType, type, title);
     }
+    
+    
+    @GetMapping("/getAllPageSortByPrice")
+    public ResponseDto getAllPageSortByPrice(@RequestParam("pageNumber") int pageNumber, 
+                                             @RequestParam("pageSize") int pageSize,
+                                             @RequestParam("status") Boolean status,
+                                             @RequestParam("asc") Boolean asc) {
+        log.info("ProductController.getAllPageSortByPrice() invoked with pageNumber: {}, pageSize: {}, status: {}, asc: {}", 
+                 pageNumber, pageSize, status, asc);
+
+        return productService.getAllPageSortByPrice(pageNumber, pageSize, status, asc); 
+    }
+
+
 }

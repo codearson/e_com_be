@@ -26,6 +26,9 @@ public class UserTransfomer implements BaseTransformer<User, UserDto> {
 			userDto.setId(user.getId());
 			userDto.setFirstName(user.getFirstName());
 			userDto.setLastName(user.getLastName());
+			userDto.setUserUrl(user.getUserUrl());
+			userDto.setDateOfBirth(user.getDateOfBirth());
+			userDto.setGender(user.getGender());
 			userDto.setPassword(user.getPassword());
 			userDto.setAddress(user.getAddress());
 			userDto.setEmailAddress(user.getEmailAddress());
@@ -33,6 +36,7 @@ public class UserTransfomer implements BaseTransformer<User, UserDto> {
 			userDto.setWhatsappNumber(user.getWhatsappNumber());
 			userDto.setCreatedDate(user.getCreatedDate());
 			userDto.setModifiedDate(user.getModifiedDate());
+			userDto.setAbout(user.getAbout());
 			userDto.setIsActive(user.getIsActive());
 			if (user.getUserRole() != null) {
 				userDto.setUserRoleDto(userRoleTransfomer.transform(user.getUserRole()));
@@ -49,6 +53,9 @@ public class UserTransfomer implements BaseTransformer<User, UserDto> {
 			user.setId(userDto.getId());
 			user.setFirstName(userDto.getFirstName());
 			user.setLastName(userDto.getLastName());
+			user.setUserUrl(userDto.getUserUrl());
+			user.setDateOfBirth(userDto.getDateOfBirth());
+			user.setGender(userDto.getGender());
 			user.setPassword(userDto.getPassword());
 			user.setAddress(userDto.getAddress());
 			user.setEmailAddress(userDto.getEmailAddress());
@@ -56,6 +63,7 @@ public class UserTransfomer implements BaseTransformer<User, UserDto> {
 			user.setWhatsappNumber(userDto.getWhatsappNumber());
 			user.setCreatedDate(userDto.getCreatedDate());
 			user.setModifiedDate(userDto.getModifiedDate());
+			user.setAbout(userDto.getAbout());
 			user.setIsActive(userDto.getIsActive());
 			if (userDto.getUserRoleDto() != null) {
 				user.setUserRole(userRoleTransfomer.reverseTransform(userDto.getUserRoleDto()));

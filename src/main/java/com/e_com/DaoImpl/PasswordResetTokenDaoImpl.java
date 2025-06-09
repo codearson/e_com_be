@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.e_com.Dao.PasswordResetTokenDao;
 import com.e_com.Domain.PasswordResetToken;
+import com.e_com.Domain.EmailVerificationToken;
 
 /**
  * Title: PasswordResetTokenDaoImpl.java. Company: www.codearson.com Copyright: Copyright (c) 2025.
@@ -36,5 +37,9 @@ public class PasswordResetTokenDaoImpl implements PasswordResetTokenDao {
 
     public void delete(PasswordResetToken token) {
         entityManager.remove(token);
+    }
+    
+    public void save(EmailVerificationToken token) {
+    	entityManager.persist(token); 
     }
 }
