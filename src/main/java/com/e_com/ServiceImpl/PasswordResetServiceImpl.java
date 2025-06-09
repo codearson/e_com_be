@@ -96,4 +96,33 @@ public class PasswordResetServiceImpl implements PasswordResetService {
         
         return responseDto;
     }
+    
+
+    @Override
+    public ResponseDto emailTokenSend(PasswordResetRequestDto request) {
+        log.info("PasswordResetServiceImpl.emailTokenSend invoked for email: {}", request.getEmail());
+        ResponseDto responseDto;
+
+        try {
+            String result = passwordResetServiceBL.emailTokenSend(request);
+
+            if ("Email verification token sent successfully".equals(result)) {
+                log.info("Email token sent successfully.");
+                responseDto = serviceUtil.getServiceResponse("Verification token sent successfully!");
+            } else {
+                log.warn("Failed to send email token: {}", result);
+                responseDto = serviceUtil.getErrorServiceResponse(
+                    ApplicationMessageConstants.ServiceErrorMessages.ERR_EMAIL_VERIFICATION_TOKEN_SEND);
+            }
+        } catch (Exception e) {
+            log.error("Exception in emailTokenSend process.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                ApplicationMessageConstants.ServiceErrorMessages.EX_EMAIL_VERIFICATION_TOKEN_SEND);
+        }
+
+        return responseDto;
+    }
+
+
+
 }

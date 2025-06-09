@@ -18,4 +18,6 @@ public interface PasswordResetService {
 	
 	ResponseDto resetPassword(ResetPasswordDto request);
 	
+	ResponseDto emailTokenSend(PasswordResetRequestDto request);
+	
 }
