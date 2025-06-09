@@ -28,6 +28,9 @@ public class ProductServiceBL {
 
     @Autowired
     private ProductDao productDao;
+    
+    @Autowired
+    private ProductServiceBL productServiceBL;
 
     public ProductDto saveProduct(ProductDto productDto) {
         log.info("ProductServiceBL.saveProduct() invoked.");
@@ -88,5 +91,11 @@ public class ProductServiceBL {
         log.info("ProductServiceBL.getAllBySearchProduct() invoked with productCategoryName: {}, brandName: {}, conditionType: {}, type: {}, title: {}", 
                  productCategoryName, brandName, conditionType, type, title);
         return productDao.getAllBySearchProduct(productCategoryName, brandName, conditionType, type, title);
+    }
+    
+    public PaginatedResponseDto getAllPageSortByPrice(int pageNumber, int pageSize, Boolean status,Boolean asc) {
+        log.info("ProductServiceBL.getAllPageProduct() invoked with pageNumber: {}, pageSize: {}, status: {}", 
+                 pageNumber, pageSize, status);
+        return productDao.getAllPageSortByPrice(pageNumber, pageSize, status, asc);
     }
 }

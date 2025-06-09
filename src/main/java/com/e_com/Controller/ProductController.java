@@ -102,4 +102,18 @@ public class ProductController {
                  productCategoryName, brandName, conditionType, type, title);
         return productService.getAllBySearchProduct(productCategoryName, brandName, conditionType, type, title);
     }
+    
+    
+    @GetMapping("/getAllPageSortByPrice")
+    public ResponseDto getAllPageSortByPrice(@RequestParam("pageNumber") int pageNumber, 
+                                             @RequestParam("pageSize") int pageSize,
+                                             @RequestParam("status") Boolean status,
+                                             @RequestParam("asc") Boolean asc) {
+        log.info("ProductController.getAllPageSortByPrice() invoked with pageNumber: {}, pageSize: {}, status: {}, asc: {}", 
+                 pageNumber, pageSize, status, asc);
+
+        return productService.getAllPageSortByPrice(pageNumber, pageSize, status, asc); 
+    }
+
+
 }
