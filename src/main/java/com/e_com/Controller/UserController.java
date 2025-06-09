@@ -1,6 +1,8 @@
 package com.e_com.Controller;
 
 import com.e_com.Dto.LoginRequestDto;
+import com.e_com.Dto.PasswordResetRequestDto;
+import com.e_com.Dto.ResetPasswordDto;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -10,6 +12,7 @@ import org.springframework.web.context.request.WebRequest;
 import com.e_com.Dto.ResponseDto;
 import com.e_com.Dto.UserDto;
 import com.e_com.Service.UserService;
+import com.e_com.Service.BL.PasswordResetServiceBL;
 import com.e_com.Service.Utils.HttpReqRespUtils;
 
 import lombok.extern.slf4j.Slf4j;
@@ -28,6 +31,9 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private PasswordResetServiceBL passwordResetServiceBL;
 
 	@PostMapping("/register")
 	public ResponseDto registerUser(@RequestBody UserDto userDto) {
@@ -109,6 +115,12 @@ public class UserController {
 	public ResponseDto getUserByEmailAddress(@RequestParam("emailAddress") String emailAddress) {
 	    log.info("UserController.getUserByEmailAddress() invoked with emailAddress", emailAddress);
 	    return userService.getUserByEmailAddress(emailAddress);
+	}
+	
+	@PostMapping("/emailTokenSend")
+    public String emailTokenSend(@RequestBody PasswordResetRequestDto request) {
+    	String message = passwordResetServiceBL.emailTokenSend(request);
+        return message;
 	}
 
 }

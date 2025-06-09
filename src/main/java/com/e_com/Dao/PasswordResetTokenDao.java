@@ -1,6 +1,8 @@
 package com.e_com.Dao;
 
 import com.e_com.Domain.PasswordResetToken;
+import com.e_com.Domain.EmailVerificationToken;
+
 
 /**
  * Title: PasswordResetTokenDao.java. Company: www.codearson.com Copyright: Copyright (c) 2025.
@@ -17,5 +19,9 @@ public interface PasswordResetTokenDao {
     PasswordResetToken findByToken(String token);
     
     void delete(PasswordResetToken token);
+    
+    void save(EmailVerificationToken token);
+    
+
 	
 }
