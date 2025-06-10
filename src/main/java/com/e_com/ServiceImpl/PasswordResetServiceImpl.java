@@ -13,6 +13,7 @@ import com.e_com.Dao.PasswordResetTokenDao;
 import com.e_com.Dao.UserDao;
 import com.e_com.Domain.PasswordResetToken;
 import com.e_com.Domain.User;
+import com.e_com.Dto.EmailVerificationDto;
 import com.e_com.Dto.PasswordResetRequestDto;
 import com.e_com.Dto.ResetPasswordDto;
 import com.e_com.Dto.UserDto;
@@ -122,6 +123,36 @@ public class PasswordResetServiceImpl implements PasswordResetService {
 
         return responseDto;
     }
+    
+    
+    @Override
+    public ResponseDto verifyEmailToken(EmailVerificationDto request) {
+        log.info("PasswordResetServiceImpl.verifyEmailToken invoked for email: {}", request.getEmail());
+        ResponseDto responseDto;
+
+        try {
+            boolean isVerified = passwordResetServiceBL.verifyEmailToken(request);
+
+            if (isVerified) {
+                log.info("Email verification successful for email: {}", request.getEmail());
+                responseDto = serviceUtil.getServiceResponse("Email verified successfully!");
+            } else {
+                log.warn("Email verification failed for email: {}", request.getEmail());
+               
+                responseDto = serviceUtil.getErrorServiceResponse(
+                    ApplicationMessageConstants.ServiceErrorMessages.ERR_EMAIL_VERIFICATION_FAILED);
+            }
+        } catch (Exception e) {
+            log.error("Exception during email verification process for email: {}", request.getEmail(), e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_EMAIL_VERIFICATION);
+        }
+
+        return responseDto;
+    }
+
+
+
 
 
 
