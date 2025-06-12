@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "000e45ee-5f4c-4ac3-a843-26e0d82ca9d6",
+		"_postman_id": "4ca1ec51-0934-42b5-b22d-8ecb0803f4a7",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "40430627"
+		"_exporter_id": "44754112"
 	},
 	"item": [
 		{
@@ -4073,6 +4073,98 @@
 							"path": [
 								"productImage",
 								"getAllBySearch"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Two Step Verification",
+			"item": [
+				{
+					"name": "TwoStepOtpRequest",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJyZnNtYXJzaDEyQGdtYWlsLmNvbSIsImlhdCI6MTc0OTczNjUyMX0.OHaWQPGR2yNcjKn5hMmIzBv2BRsP8d1v3E5YII88gUTetcGeH1QzKAgdsANYSeXc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"rfsmarsh12@gmail.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/two-step-verify/twoFaRequest",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"two-step-verify",
+								"twoFaRequest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TwoStepVerify",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoicmlmYXNtaGQzMzMzQGdtYWlsLmNvbSIsImlhdCI6MTc0OTY1NDgwM30.oj6ljM0t3ZUZTtuTEqc4LM1YdWO1sIA2sYqI7w3NnphU5iZNG9V0y5uV_tIt_29n",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"token\": \"792858\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/two-step-verify/twoFaVerification",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"two-step-verify",
+								"twoFaVerification"
 							]
 						}
 					},

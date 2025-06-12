@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.40, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: ecom_db_local
 -- ------------------------------------------------------
--- Server version	8.0.41
+-- Server version	8.0.42
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -56,6 +56,16 @@ INSERT INTO `conditions` VALUES (1,'New',_binary ''),(2,'Used',_binary ''),(3,
 UNLOCK TABLES;
 
 --
+-- Dumping data for table `email_verification_token`
+--
+
+LOCK TABLES `email_verification_token` WRITE;
+/*!40000 ALTER TABLE `email_verification_token` DISABLE KEYS */;
+INSERT INTO `email_verification_token` VALUES (1,'rifasmhd3333@gmail.com','2025-06-12 01:59:49','714891');
+/*!40000 ALTER TABLE `email_verification_token` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping data for table `order_tracking`
 --
 
@@ -81,6 +91,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `password_reset_token` WRITE;
 /*!40000 ALTER TABLE `password_reset_token` DISABLE KEYS */;
+INSERT INTO `password_reset_token` VALUES (1,'2025-06-12 15:46:02','4XZQ3O',1),(2,'2025-06-12 15:46:19','ILUL6K',4),(3,'2025-06-12 15:57:29','MOWOET',4),(4,'2025-06-12 15:57:59','JDL37I',4),(5,'2025-06-12 16:24:22','O0ZJIK',4);
 /*!40000 ALTER TABLE `password_reset_token` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -134,6 +145,16 @@ LOCK TABLES `product_image` WRITE;
 UNLOCK TABLES;
 
 --
+-- Dumping data for table `product_sub_category`
+--
+
+LOCK TABLES `product_sub_category` WRITE;
+/*!40000 ALTER TABLE `product_sub_category` DISABLE KEYS */;
+INSERT INTO `product_sub_category` VALUES (1,_binary '','Clothing',1),(2,_binary '','Electronics',1),(3,_binary '\0','Footwear',1),(4,_binary '','Lights',4),(5,_binary '','Shoes',3),(6,_binary '','Boys',4),(7,_binary '','Skin Care',8),(8,_binary '','Sport Shoes',7),(9,_binary '','Shorts',6),(10,_binary '','Casual Short',5);
+/*!40000 ALTER TABLE `product_sub_category` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping data for table `shipping_address`
 --
 
@@ -154,12 +175,22 @@ INSERT INTO `status` VALUES (1,_binary '','Available'),(2,_binary '','Out of S
 UNLOCK TABLES;
 
 --
+-- Dumping data for table `two_step_verification`
+--
+
+LOCK TABLES `two_step_verification` WRITE;
+/*!40000 ALTER TABLE `two_step_verification` DISABLE KEYS */;
+INSERT INTO `two_step_verification` VALUES (41,'2025-06-12 19:45:25','208102',4);
+/*!40000 ALTER TABLE `two_step_verification` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping data for table `user`
 --
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Jaffna','2025-05-09 18:05:19','skbavi61@gmail.com','Bavithragithan',_binary '','Kuganesan','0756089312',NULL,'$2a$10$lQ4C/Vuj5UNRUZTLU9TrIuNqrq/S1TBKmRJpvMB.c9BqDYpjadf.W',1,'0756089312'),(2,'Jaffna','2025-05-09 18:06:37','lathusanthurairajah@codearson.com','Lathusan',_binary '','Thurairajah','+447440641608',NULL,'$2a$10$vGkEHcuxK49rIaDk9SUHWu74OlevG8JBv0Vz9RQaomFJ7xmLIUVk6',1,'+447440641608');
+INSERT INTO `user` VALUES (1,'Jaffna','2025-05-09 18:05:19','skbavi61@gmail.com','Bavithragithan',_binary '','Kuganesan','0756089312',NULL,'$2a$10$lQ4C/Vuj5UNRUZTLU9TrIuNqrq/S1TBKmRJpvMB.c9BqDYpjadf.W',1,'0756089312',NULL,NULL,NULL,NULL),(2,'Jaffna','2025-05-09 18:06:37','lathusanthurairajah@codearson.com','Lathusan',_binary '','Thurairajah','+447440641608',NULL,'$2a$10$vGkEHcuxK49rIaDk9SUHWu74OlevG8JBv0Vz9RQaomFJ7xmLIUVk6',1,'+447440641608',NULL,NULL,NULL,NULL),(4,'polonnaruwa','2025-06-10 19:31:03','rifasmhd3333@gmail.com','rifas',_binary '','mhd','+94755158190',NULL,'$2a$10$IUiiLLoeGy6gq8NLMFzMcuV.5WFzUh5QipJrrmK/tddc1Z/sX/Q/.',1,'+94755158190',NULL,NULL,NULL,NULL),(5,'','2025-06-12 14:18:05','rfsmarsh12@gmail.com','rifas',_binary '','mhd','07561782009',NULL,'$2a$10$0Cg60.rVC2aSexZQI01Rqu4WF2xXhW1uL1dDkCp/D9UgzL/DtsSEK',3,'07561782009',NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -179,6 +210,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `user_logs` WRITE;
 /*!40000 ALTER TABLE `user_logs` DISABLE KEYS */;
+INSERT INTO `user_logs` VALUES (1,'Initiated 2-step verification. OTP sent.','2025-06-11 00:49:02',NULL,_binary '\0',4),(2,'Initiated 2-step verification. OTP sent.','2025-06-11 00:51:43',NULL,_binary '\0',4),(3,'Initiated 2-step verification. OTP sent.','2025-06-11 00:55:00',NULL,_binary '\0',4),(4,'Initiated 2-step verification. OTP sent.','2025-06-11 00:59:01',NULL,_binary '\0',4),(5,'Initiated 2-step verification. OTP sent.','2025-06-11 01:01:45',NULL,_binary '\0',4),(6,'Initiated 2-step verification. OTP sent.','2025-06-11 01:07:51',NULL,_binary '\0',4),(7,'Initiated 2-step verification. OTP sent.','2025-06-11 01:13:59',NULL,_binary '\0',4),(8,'Initiated 2-step verification. OTP sent.','2025-06-11 01:14:29',NULL,_binary '\0',4),(9,'Initiated 2-step verification. OTP sent.','2025-06-11 01:26:53',NULL,_binary '\0',4),(10,'Initiated 2-step verification. OTP sent.','2025-06-11 16:51:16',NULL,_binary '\0',4),(11,'Initiated 2-step verification. OTP sent.','2025-06-11 16:52:53',NULL,_binary '\0',4),(12,'Password reset successfully','2025-06-12 15:01:16',NULL,_binary '\0',4);
 /*!40000 ALTER TABLE `user_logs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -201,4 +233,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-06-03 20:52:30
+-- Dump completed on 2025-06-12 19:42:35
