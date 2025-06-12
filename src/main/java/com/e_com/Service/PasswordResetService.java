@@ -1,5 +1,6 @@
 package com.e_com.Service;
 
+import com.e_com.Dto.EmailVerificationDto;
 import com.e_com.Dto.PasswordResetRequestDto;
 import com.e_com.Dto.ResetPasswordDto;
 import com.e_com.Dto.ResponseDto;
@@ -20,4 +21,5 @@ public interface PasswordResetService {
 	
 	ResponseDto emailTokenSend(PasswordResetRequestDto request);
 	
+	ResponseDto verifyEmailToken(EmailVerificationDto request);
 }

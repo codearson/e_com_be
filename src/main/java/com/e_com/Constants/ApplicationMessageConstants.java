@@ -181,5 +181,7 @@ public interface ApplicationMessageConstants {
 		String EX_TWO_STEP_SEND = "ex.two.setp.verification.mail.send";
 		String ERR_TWO_STEP_VERIFICATION = "err.two.step.verification";
 		String EX_TWO_STEP_VERIFICATION = "ex.two.setp.verification";
+		String ERR_EMAIL_VERIFICATION_FAILED = "err.email.verification";
+		String EX_EMAIL_VERIFICATION = "ex.email.verification";
 	}
 }

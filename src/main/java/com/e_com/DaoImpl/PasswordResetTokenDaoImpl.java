@@ -42,4 +42,10 @@ public class PasswordResetTokenDaoImpl implements PasswordResetTokenDao {
     public void save(EmailVerificationToken token) {
     	entityManager.persist(token); 
     }
+    
+    public EmailVerificationToken findByEmailToken(String token) {
+        return entityManager.createQuery("SELECT t FROM EmailVerificationToken t WHERE t.token = :token", EmailVerificationToken.class)
+                .setParameter("token", token)
+                .getSingleResult();
+    }
 }

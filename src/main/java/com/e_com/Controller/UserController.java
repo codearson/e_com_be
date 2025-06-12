@@ -1,5 +1,6 @@
 package com.e_com.Controller;
 
+import com.e_com.Dto.EmailVerificationDto;
 import com.e_com.Dto.LoginRequestDto;
 import com.e_com.Dto.PasswordResetRequestDto;
 import com.e_com.Dto.ResetPasswordDto;
@@ -11,6 +12,7 @@ import org.springframework.web.context.request.WebRequest;
 
 import com.e_com.Dto.ResponseDto;
 import com.e_com.Dto.UserDto;
+import com.e_com.Service.PasswordResetService;
 import com.e_com.Service.UserService;
 import com.e_com.Service.BL.PasswordResetServiceBL;
 import com.e_com.Service.Utils.HttpReqRespUtils;
@@ -34,6 +36,9 @@ public class UserController {
 	
 	@Autowired
 	private PasswordResetServiceBL passwordResetServiceBL;
+	
+	@Autowired
+    private PasswordResetService passwordResetService;
 
 	@PostMapping("/register")
 	public ResponseDto registerUser(@RequestBody UserDto userDto) {
@@ -122,5 +127,15 @@ public class UserController {
     	String message = passwordResetServiceBL.emailTokenSend(request);
         return message;
 	}
+	
+	@PostMapping("/verifyEmailToken")
+	public ResponseDto verifyEmailToken(@RequestBody EmailVerificationDto request) {
+	    log.info("UserController.verifyEmailToken() invoked with email: {}", request.getEmail());
+	    return passwordResetService.verifyEmailToken(request);
+	    
+	}
+
+
+
 
 }

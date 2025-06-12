@@ -13,6 +13,7 @@ import com.e_com.Dao.UserDao;
 import com.e_com.Domain.PasswordResetToken;
 import com.e_com.Domain.EmailVerificationToken;
 import com.e_com.Domain.User;
+import com.e_com.Dto.EmailVerificationDto;
 import com.e_com.Dto.PasswordResetRequestDto;
 import com.e_com.Dto.ResetPasswordDto;
 import com.e_com.Dto.UserDto;
@@ -110,7 +111,6 @@ public class PasswordResetServiceBL {
 		
 //      Prepare UserLogsDto
 
-
         UserLogsDto userLogsDto = new UserLogsDto();
         UserDto userDto = new UserDto();
         userDto.setId(user.getId()); // Set user ID in UserDto
@@ -134,8 +134,9 @@ public class PasswordResetServiceBL {
 	    EmailVerificationToken token = EmailVerificationTokenTransformer.toEntity(request.getEmail());
 	    tokenDao.save(token);
 
-	    String emailBody = "Hi, Your email verification token is: " + token.getToken() + "\n\n" +
-	                       "This token will expire in 1 hour.\n\n" +
+	    String emailBody = "Hi! Thank you for signin up with e-comm \n"+
+	    				   "To complete your account creation, please verify your email address by entering the verification token below:\n\n " + 
+	                       "Your Verification Token: "+ token.getToken() + "\n" +
 	                       "Regards,\n E-comm";
 
 	    emailService.sendEmail(request.getEmail(), "Email Verification", emailBody);
@@ -143,6 +144,34 @@ public class PasswordResetServiceBL {
 	    log.info("Email verification token sent to: {}", request.getEmail());
 	    return "Email verification token sent successfully";
 	}
+	
+	
+	public boolean verifyEmailToken(EmailVerificationDto request) {
+	    log.info("PasswordResetServiceBL.verifyEmailToken processing for email: {}", request.getEmail());
+
+	    EmailVerificationToken token = tokenDao.findByEmailToken(request.getToken());
+
+	    if (token == null) {
+	        log.warn("Invalid token.");
+	        throw new IllegalArgumentException("Invalid token.");
+	    }
+
+	    if (token.getExpiryTokenTime().isBefore(LocalDateTime.now())) {
+	        log.warn("Token expired.");
+	        throw new IllegalArgumentException("Token expired.");
+	    }
+
+	    if (!token.getEmail().equalsIgnoreCase(request.getEmail())) {
+	        log.warn("Email in token does not match request email. Token email: {}, Request email: {}", token.getEmail(), request.getEmail());
+	        throw new IllegalArgumentException("Email does not match the token.");
+	    }
+
+	    log.info("Email verified successfully for email: {}", request.getEmail());
+	    return true;
+	}
+
+
+
 
 
 }

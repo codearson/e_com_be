@@ -22,6 +22,6 @@ public interface PasswordResetTokenDao {
     
     void save(EmailVerificationToken token);
     
+    EmailVerificationToken findByEmailToken(String token);
 
-	
 }
