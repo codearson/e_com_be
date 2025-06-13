@@ -60,6 +60,8 @@ public class User implements Serializable{
 	private LocalDate dateOfBirth;
 	@Column(name = "about")
 	private String about;
+	@Column(name = "twoStepVerification")
+	private Boolean twoStepVerification;
 	@Column(name = "isActive")
 	private Boolean isActive;
 	@JoinColumn(name = "userRoleId", referencedColumnName = "id")
