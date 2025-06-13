@@ -29,6 +29,7 @@ public class UserDto {
 	private LocalDateTime modifiedDate;
 	private Boolean isActive;
 	private String about;
+	private Boolean twoStepVerification;
 	private UserRoleDto userRoleDto;
 
 }
