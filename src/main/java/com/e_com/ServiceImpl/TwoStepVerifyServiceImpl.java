@@ -5,13 +5,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.context.annotation.Primary;
 
 import com.e_com.Constants.ApplicationMessageConstants; // Still used for constants
-import com.e_com.Dto.PasswordResetRequestDto;
-import com.e_com.Dto.ResetPasswordDto;
 import com.e_com.Dto.ResponseDto;
 import com.e_com.Dto.TwoStepOtpVerificationRequestDto;
 import com.e_com.Dto.TwoStepVerificationDto;
 import com.e_com.Service.TwoStepVerifyService;
-import com.e_com.Service.BL.PasswordResetServiceBL;
 import com.e_com.Service.BL.TwoStepVerifyServiceBL;
 import com.e_com.Service.Utils.ServiceUtil; // Keep if ServiceUtil is used elsewhere or for logging
 

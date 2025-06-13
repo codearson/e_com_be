@@ -1,17 +1,12 @@
 package com.e_com.DaoImpl;
 
-import java.util.Optional;
-
 import javax.persistence.EntityManager;
-import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
 import com.e_com.Dao.TwoStepVerifyDao; // Import the TwoStepVerifyDao interface
-import com.e_com.Domain.EmailVerificationToken;
-import com.e_com.Domain.PasswordResetToken;
 import com.e_com.Domain.TwoStepVerify; // Import the TwoStepVerify domain object
 import com.e_com.Domain.User;
 

@@ -1,6 +1,5 @@
 package com.e_com.Service;
 
-import com.e_com.Dto.PasswordResetRequestDto;
 import com.e_com.Dto.ResponseDto;
 import com.e_com.Dto.TwoStepOtpVerificationRequestDto;
 import com.e_com.Dto.TwoStepVerificationDto;

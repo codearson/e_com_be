@@ -178,9 +178,9 @@ public interface ApplicationMessageConstants {
 		String ERR_EMAIL_VERIFICATION_TOKEN_SEND = "err.verification.token.email";
 		String EX_EMAIL_VERIFICATION_TOKEN_SEND = "ex.verification.token.email";
 		String ERR_TWO_STEP_SEND = "err.two.step.verification.mail.send";
-		String EX_TWO_STEP_SEND = "ex.two.setp.verification.mail.send";
+		String EX_TWO_STEP_SEND = "ex.two.step.verification.mail.send";
 		String ERR_TWO_STEP_VERIFICATION = "err.two.step.verification";
-		String EX_TWO_STEP_VERIFICATION = "ex.two.setp.verification";
+		String EX_TWO_STEP_VERIFICATION = "ex.two.step.verification";
 		String ERR_EMAIL_VERIFICATION_FAILED = "err.email.verification";
 		String EX_EMAIL_VERIFICATION = "ex.email.verification";
 	}

@@ -1,22 +1,16 @@
 package com.e_com.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.e_com.Dto.PasswordResetRequestDto;
-import com.e_com.Dto.ResetPasswordDto;
 import com.e_com.Dto.ResponseDto; // Assuming ResponseDto exists and is used
 import com.e_com.Dto.TwoStepOtpVerificationRequestDto; // DTO for initiating/verifying OTP
 import com.e_com.Dto.TwoStepVerificationDto;
-import com.e_com.Service.PasswordResetService;
 import com.e_com.Service.TwoStepVerifyService; // Your 2-step verification service interface
-import com.e_com.Service.BL.PasswordResetServiceBL;
 import com.e_com.Service.BL.TwoStepVerifyServiceBL;
 
 import lombok.extern.slf4j.Slf4j;
@@ -48,9 +42,8 @@ public class TwoStepVerifyController {
 	    }
 
 	    @PostMapping("/twoFaVerification")
-	    public String twoFaVerification(@RequestBody TwoStepVerificationDto request) {
-	    	twoStepVerifyService.twoFaVerification(request);
-	        return "2-Step Verification is successfull!";
+	    public ResponseDto twoFaVerification(@RequestBody TwoStepVerificationDto request) {
+	        return twoStepVerifyService.twoFaVerification(request);
 	    }
 
 }

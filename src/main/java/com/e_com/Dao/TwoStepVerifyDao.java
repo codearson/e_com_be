@@ -1,12 +1,7 @@
 package com.e_com.Dao;
 
-import java.util.Optional;
+import com.e_com.Domain.TwoStepVerify;
 
-import com.e_com.Domain.EmailVerificationToken;
-import com.e_com.Domain.PasswordResetToken;
-import com.e_com.Domain.TwoStepVerify;
-import com.e_com.Domain.TwoStepVerify;
-import com.e_com.Domain.User;
 /**
  * Title: TwoFaTokenDao.java. Company: www.codearson.com Copyright: Copyright (c) 2025.
  *
