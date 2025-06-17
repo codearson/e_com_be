@@ -93,7 +93,14 @@ public class TwoStepVerifyServiceBL {
 			return false;
 		}
 
+		// ✅ Get user and update twoStepVerification flag
+		User user = token.getUser(); // assuming TwoStepVerify has a User reference
+		if (user != null) {
+			user.setTwoStepVerification(true);  
+			userDao.update(user); 
+			log.info("User twoStepVerification flag set to true for userId: {}", user.getId());
+		}
+
 		return true;
 	}
-
 }

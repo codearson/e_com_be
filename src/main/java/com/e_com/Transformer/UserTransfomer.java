@@ -37,6 +37,7 @@ public class UserTransfomer implements BaseTransformer<User, UserDto> {
 			userDto.setCreatedDate(user.getCreatedDate());
 			userDto.setModifiedDate(user.getModifiedDate());
 			userDto.setAbout(user.getAbout());
+			userDto.setTwoStepVerification(user.getTwoStepVerification());
 			userDto.setIsActive(user.getIsActive());
 			if (user.getUserRole() != null) {
 				userDto.setUserRoleDto(userRoleTransfomer.transform(user.getUserRole()));
@@ -64,6 +65,7 @@ public class UserTransfomer implements BaseTransformer<User, UserDto> {
 			user.setCreatedDate(userDto.getCreatedDate());
 			user.setModifiedDate(userDto.getModifiedDate());
 			user.setAbout(userDto.getAbout());
+			user.setTwoStepVerification(userDto.getTwoStepVerification());
 			user.setIsActive(userDto.getIsActive());
 			if (userDto.getUserRoleDto() != null) {
 				user.setUserRole(userRoleTransfomer.reverseTransform(userDto.getUserRoleDto()));
