@@ -36,6 +36,7 @@ public interface ProductDao extends BaseDao<Product> {
     List<ProductDto> getAllBySearchProduct(String productCategoryName, String brandName, String conditionType, String type, String title);
     
     PaginatedResponseDto getAllPageSortByPrice(int pageNumber, int pageSize,Boolean status, Boolean asc);
+ 
+    void updateProductIsActiveBasedOnQuantity(Integer productId);
 
-   
 }

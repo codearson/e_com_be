@@ -98,4 +98,9 @@ public class ProductServiceBL {
                  pageNumber, pageSize, status);
         return productDao.getAllPageSortByPrice(pageNumber, pageSize, status, asc);
     }
+
+    
+    public void updateProductIsActiveBasedOnQuantity(Integer productId) {
+        productDao.updateProductIsActiveBasedOnQuantity(productId);
+    }
 }
