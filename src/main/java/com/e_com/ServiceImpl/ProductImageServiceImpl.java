@@ -2,6 +2,7 @@ package com.e_com.ServiceImpl;
 
 import java.util.List;
 import java.util.Map;
+import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -13,7 +14,10 @@ import com.e_com.Dto.ProductImageDto;
 import com.e_com.Service.ProductImageService;
 import com.e_com.Service.BL.ProductImageServiceBL;
 import com.e_com.Service.Utils.ServiceUtil;
-
+import org.springframework.web.multipart.MultipartFile;
+import com.e_com.Service.BL.ProductServiceBL;
+import com.e_com.Dao.ProductDao;
+import com.e_com.Dto.ProductDto;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -38,6 +42,13 @@ public class ProductImageServiceImpl implements ProductImageService {
 
     @Autowired
     private ServiceUtil serviceUtil;
+
+    @Autowired
+    private ProductServiceBL productServiceBL;
+
+    @Autowired
+    private ProductDao productDao;
+
 
     @Override
     public ResponseDto saveProductImage(ProductImageDto productImageDto) {
@@ -154,6 +165,71 @@ public class ProductImageServiceImpl implements ProductImageService {
         }
         return responseDto;
     }
+    
+    @Override
+    public ResponseDto uploadImageToLocalAndSave(MultipartFile[] files, Integer productId) {
+        log.info("ProductImageServiceImpl.uploadImageToDriveAndSave() invoked with productId: {}", productId);
+        try {
+            if (productId == null) {
+                log.warn("No productId provided for upload.");
+                return serviceUtil.getErrorServiceResponse(
+                    ApplicationMessageConstants.ServiceErrorMessages.ERR_PRODUCT_IMAGE_PRODUCT_ID_REQUIRED
+                );
+            }
+            if (files == null || files.length == 0) {
+                log.warn("No files provided for upload.");
+                return serviceUtil.getErrorServiceResponse(
+                    ApplicationMessageConstants.ServiceErrorMessages.ERR_UPLOAD_AND_SAVE_PRODUCT_IMAGE
+                );
+            }
 
+            String uploadDir = "uploads/"; // You can make this configurable
+            List<ProductImageDto> savedImages = new ArrayList<>();
+            boolean hasValidFile = false;
+            for (MultipartFile file : files) {
+                if (file == null || file.isEmpty()) {
+                    log.warn("Skipping empty file in upload.");
+                    continue;
+                }
+                hasValidFile = true;
+                String fileName = System.currentTimeMillis() + "_" + file.getOriginalFilename();
+                try {
+                    com.e_com.Service.Utils.FileUploadUtil.saveFile(uploadDir, fileName, file);
+                } catch (Exception e) {
+                    log.error("Failed to save file to local disk: {}", fileName, e);
+                    continue;
+                }
+                String url = "/uploads/" + fileName; // This assumes static resource mapping
+
+                ProductImageDto dto = new ProductImageDto();
+                dto.setUrl(url);
+
+                ProductDto productDto = new ProductDto();
+                productDto.setId(productId);
+                dto.setProductDto(productDto);
+
+                dto.setIsActive(true);
+
+                ProductImageDto savedDto = productImageServiceBL.saveProductImage(dto);
+                savedImages.add(savedDto);
+            }
+            if (!hasValidFile) {
+                log.warn("All provided files were empty.");
+                return serviceUtil.getErrorServiceResponse(
+                    ApplicationMessageConstants.ServiceErrorMessages.ERR_UPLOAD_AND_SAVE_PRODUCT_IMAGE
+                );
+            }
+            log.info("Successfully uploaded and saved {} product images.", savedImages.size());
+            return serviceUtil.getServiceResponse(savedImages);
+
+        } catch (Exception e) {
+            log.error("Exception occurred while uploading images and saving to ProductImage table.", e);
+            return serviceUtil.getExceptionServiceResponseByProperties(
+                ApplicationMessageConstants.ServiceErrorMessages.EX_PRODUCT_IMAGE_PRODUCT_ID_REQUIRED
+            );
+        }
+    }
+
+        
 
 }

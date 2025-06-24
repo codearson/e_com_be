@@ -6,11 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.WebRequest;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.e_com.Dto.ProductImageDto;
 import com.e_com.Dto.ResponseDto;
 import com.e_com.Service.ProductImageService;
 import com.e_com.Service.Utils.HttpReqRespUtils;
+import com.e_com.Dto.ProductDto;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -30,6 +32,8 @@ public class ProductImageController {
 
     @Autowired
     ProductImageService productImageService;
+
+
 
     @PostMapping("/save")
     @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
@@ -70,8 +74,10 @@ public class ProductImageController {
         return productImageService.getAllPageProductImage(1, 0, null, Map.of("ProductImageUrl", productImageUrl));
     }
 
-    
-
-	
-
+    @PostMapping("/uploadToLocal")
+    public ResponseDto uploadImageToLocal(@RequestParam("files") MultipartFile[] files,
+                                          @RequestParam(value = "productId", required = false) Integer productId) {
+        log.info("ProductImageController.uploadImageToLocal() invoked");
+        return productImageService.uploadImageToLocalAndSave(files, productId);
+    }
 }
