@@ -183,5 +183,9 @@ public interface ApplicationMessageConstants {
 		String EX_TWO_STEP_VERIFICATION = "ex.two.step.verification";
 		String ERR_EMAIL_VERIFICATION_FAILED = "err.email.verification";
 		String EX_EMAIL_VERIFICATION = "ex.email.verification";
+		String ERR_UPLOAD_AND_SAVE_PRODUCT_IMAGE = "err.upload.and.save.product.image";
+		String EX_UPLOAD_AND_SAVE_PRODUCT_IMAGE = "ex.upload.and.save.product.image";
+		String ERR_PRODUCT_IMAGE_PRODUCT_ID_REQUIRED = "err.product.image.product.id.required";
+		String EX_PRODUCT_IMAGE_PRODUCT_ID_REQUIRED = "ex.product.image.product.id.required";
 	}
 }
