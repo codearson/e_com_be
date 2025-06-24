@@ -476,35 +476,6 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "verifyEmailToken",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"wazeemmh007@gmail.com\",\r\n    \"token\": \"BF7CRM\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/user/verifyEmailToken",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"user",
-								"verifyEmailToken"
-							]
-						}
-					},
-					"response": []
 				}
 			]
 		},
@@ -4102,6 +4073,60 @@
 							"path": [
 								"productImage",
 								"getAllBySearch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploadToLocalAndSave",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJyZnNtYXJzaDEyQGdtYWlsLmNvbSIsImlhdCI6MTc1MDQxNDkwNX0.gXgxgRDMAFLOrBz3BCQZcfKTfXo3m-8YFrSRj1Jk_VxOcmc1upz0mgXZaVQAAYcX",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": "postman-cloud:///1f04c4db-b960-4810-80cb-ab7b9cdcbc14"
+								},
+								{
+									"key": "productId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/productImage/uploadToLocal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"productImage",
+								"uploadToLocal"
 							]
 						}
 					},

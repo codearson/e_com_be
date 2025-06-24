@@ -4,6 +4,7 @@ import java.util.Map;
 
 import com.e_com.Dto.ProductImageDto;
 import com.e_com.Dto.ResponseDto;
+import org.springframework.web.multipart.MultipartFile;
 /**
  * Title: ProductImageService.java. Company: www.codearson.com Copyright: Copyright (c) 2025.
  *
@@ -24,5 +25,7 @@ public interface ProductImageService {
     ResponseDto getAllPageProductImage(int pageNumber, int pageSize, Boolean status, Map<String, String> searchParameters);
 
     ResponseDto getAllProductImage(String ProductImageUrl);
+
+    ResponseDto uploadImageToLocalAndSave(MultipartFile[] files, Integer productId);
 
 }
