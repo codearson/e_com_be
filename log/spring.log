@@ -1692,7 +1692,6 @@ Caused by: java.lang.ClassFormatError: Duplicate method name "save" with signatu
 org.springframework.dao.EmptyResultDataAccessException: No entity found for query; nested exception is javax.persistence.NoResultException: No entity found for query
 	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:382) ~[spring-orm-5.3.13.jar:5.3.13]
 	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:235) ~[spring-orm-5.3.13.jar:5.3.13]
-<<<<<<< HEAD
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:551) ~[spring-orm-5.3.13.jar:5.3.13]
 	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-5.3.13.jar:5.3.13]
 	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242) ~[spring-tx-5.3.13.jar:5.3.13]
@@ -1940,8 +1939,6 @@ Caused by: javax.persistence.NoResultException: No entity found for query
 org.springframework.dao.InvalidDataAccessApiUsageException: Not-null property references a transient value - transient instance must be saved before current operation : com.e_com.Domain.UserLogs.user -> com.e_com.Domain.User; nested exception is org.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : com.e_com.Domain.UserLogs.user -> com.e_com.Domain.User
 	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:300) ~[spring-orm-5.3.13.jar:5.3.13]
 	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:230) ~[spring-orm-5.3.13.jar:5.3.13]
-=======
->>>>>>> master
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:551) ~[spring-orm-5.3.13.jar:5.3.13]
 	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-5.3.13.jar:5.3.13]
 	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242) ~[spring-tx-5.3.13.jar:5.3.13]
@@ -1954,7 +1951,6 @@ org.springframework.dao.InvalidDataAccessApiUsageException: Not-null property re
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.13.jar:5.3.13]
-<<<<<<< HEAD
 	at com.e_com.DaoImpl.UserLogsDaoImpl$$EnhancerBySpringCGLIB$$ef0f2825.login(<generated>) ~[classes/:na]
 	at com.e_com.Service.BL.UserLogsServiceBL.save(UserLogsServiceBL.java:43) ~[classes/:na]
 	at com.e_com.ServiceImpl.UserLogsServiceImpl.save(UserLogsServiceImpl.java:66) ~[classes/:na]
@@ -1962,7 +1958,6 @@ org.springframework.dao.InvalidDataAccessApiUsageException: Not-null property re
 	at com.e_com.Controller.TwoStepVerifyController.twoFaVerification(TwoStepVerifyController.java:50) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-=======
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl$$EnhancerBySpringCGLIB$$7e805f46.findByEmailToken(<generated>) ~[classes/:na]
 	at com.e_com.Service.BL.PasswordResetServiceBL.verifyEmailToken(PasswordResetServiceBL.java:151) ~[classes/:na]
 	at com.e_com.ServiceImpl.PasswordResetServiceImpl.verifyEmailToken(PasswordResetServiceImpl.java:133) ~[classes/:na]
@@ -1975,7 +1970,6 @@ org.springframework.dao.InvalidDataAccessApiUsageException: Not-null property re
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
->>>>>>> master
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.13.jar:5.3.13]
 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.13.jar:5.3.13]
 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.13.jar:5.3.13]
@@ -2065,7 +2059,6 @@ org.springframework.dao.InvalidDataAccessApiUsageException: Not-null property re
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
-<<<<<<< HEAD
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 Caused by: org.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : com.e_com.Domain.UserLogs.user -> com.e_com.Domain.User
 	at org.hibernate.action.internal.UnresolvedEntityInsertActions.checkNoUnresolvedActionsAfterOperation(UnresolvedEntityInsertActions.java:122) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
@@ -2080,19 +2073,16 @@ Caused by: org.hibernate.TransientPropertyValueException: Not-null property refe
 	at jdk.proxy8/jdk.proxy8.$Proxy130.saveOrUpdate(Unknown Source) ~[na:na]
 	at com.e_com.DaoImpl.UserLogsDaoImpl.login(UserLogsDaoImpl.java:44) ~[classes/:na]
 	at com.e_com.DaoImpl.UserLogsDaoImpl$$FastClassBySpringCGLIB$$40334808.invoke(<generated>) ~[classes/:na]
-=======
 	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
 Caused by: javax.persistence.NoResultException: No entity found for query
 	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1667) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl.findByEmailToken(PasswordResetTokenDaoImpl.java:49) ~[classes/:na]
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl$$FastClassBySpringCGLIB$$fafb52dd.invoke(<generated>) ~[classes/:na]
->>>>>>> master
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.13.jar:5.3.13]
-<<<<<<< HEAD
 	... 105 common frames omitted
 
 2025-06-12 15:13:36.603  INFO 11804 --- [http-nio-8080-exec-4] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
@@ -2638,7 +2628,6 @@ Caused by: java.lang.Error: Unresolved compilation problem:
 2025-06-12 16:42:49.235  INFO 11684 --- [http-nio-8080-exec-3] c.e.Service.BL.TwoStepVerifyServiceBL    : TwoStepVerifyServiceBL.twoFaVerification processing.
 2025-06-12 16:42:49.378 ERROR 11684 --- [http-nio-8080-exec-3] c.e.S.TwoStepVerifyServiceImpl           : Exception in 2-step verification process.
 
-=======
 	... 110 common frames omitted
 
 2025-06-10 16:54:51.959  INFO 19328 --- [http-nio-8080-exec-10] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
@@ -2646,7 +2635,6 @@ Caused by: java.lang.Error: Unresolved compilation problem:
 2025-06-10 16:54:51.961  INFO 19328 --- [http-nio-8080-exec-10] c.e.Service.BL.PasswordResetServiceBL    : PasswordResetServiceBL.verifyEmailToken processing.
 2025-06-10 16:54:51.969 ERROR 19328 --- [http-nio-8080-exec-10] c.e.S.PasswordResetServiceImpl           : Exception during email verification process.
 
->>>>>>> master
 org.springframework.dao.EmptyResultDataAccessException: No entity found for query; nested exception is javax.persistence.NoResultException: No entity found for query
 	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:382) ~[spring-orm-5.3.13.jar:5.3.13]
 	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:235) ~[spring-orm-5.3.13.jar:5.3.13]
@@ -2662,14 +2650,12 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.13.jar:5.3.13]
-<<<<<<< HEAD
 	at com.e_com.DaoImpl.TwoStepVerifyDaoImpl$$EnhancerBySpringCGLIB$$7dbd1e2.findByToken(<generated>) ~[classes/:na]
 	at com.e_com.Service.BL.TwoStepVerifyServiceBL.twoFaVerification(TwoStepVerifyServiceBL.java:91) ~[classes/:na]
 	at com.e_com.ServiceImpl.TwoStepVerifyServiceImpl.twoFaVerification(TwoStepVerifyServiceImpl.java:71) ~[classes/:na]
 	at com.e_com.Controller.TwoStepVerifyController.twoFaVerification(TwoStepVerifyController.java:50) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-=======
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl$$EnhancerBySpringCGLIB$$7e805f46.findByEmailToken(<generated>) ~[classes/:na]
 	at com.e_com.Service.BL.PasswordResetServiceBL.verifyEmailToken(PasswordResetServiceBL.java:151) ~[classes/:na]
 	at com.e_com.ServiceImpl.PasswordResetServiceImpl.verifyEmailToken(PasswordResetServiceImpl.java:133) ~[classes/:na]
@@ -2682,7 +2668,6 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
->>>>>>> master
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.13.jar:5.3.13]
 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.13.jar:5.3.13]
 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.13.jar:5.3.13]
@@ -2772,19 +2757,16 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
-<<<<<<< HEAD
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 Caused by: javax.persistence.NoResultException: No entity found for query
 	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1667) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
 	at com.e_com.DaoImpl.TwoStepVerifyDaoImpl.findByToken(TwoStepVerifyDaoImpl.java:41) ~[classes/:na]
 	at com.e_com.DaoImpl.TwoStepVerifyDaoImpl$$FastClassBySpringCGLIB$$6029bf11.invoke(<generated>) ~[classes/:na]
-=======
 	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
 Caused by: javax.persistence.NoResultException: No entity found for query
 	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1667) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl.findByEmailToken(PasswordResetTokenDaoImpl.java:49) ~[classes/:na]
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl$$FastClassBySpringCGLIB$$fafb52dd.invoke(<generated>) ~[classes/:na]
->>>>>>> master
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.13.jar:5.3.13]
@@ -2792,7 +2774,6 @@ Caused by: javax.persistence.NoResultException: No entity found for query
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.13.jar:5.3.13]
 	... 110 common frames omitted
 
-<<<<<<< HEAD
 2025-06-12 16:50:53.465  INFO 11684 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-06-12 16:50:53.473  INFO 11684 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-06-12 16:50:53.476  INFO 11684 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -2834,12 +2815,10 @@ Caused by: javax.persistence.NoResultException: No entity found for query
 2025-06-12 16:51:53.207  INFO 11684 --- [http-nio-8080-exec-3] c.e.S.TwoStepVerifyServiceImpl           : TwoStepVerifyServiceImpl.twoFaVerification invoked.
 2025-06-12 16:51:53.207  INFO 11684 --- [http-nio-8080-exec-3] c.e.Service.BL.TwoStepVerifyServiceBL    : TwoStepVerifyServiceBL.twoFaVerification processing.
 2025-06-12 16:51:53.234 ERROR 11684 --- [http-nio-8080-exec-3] c.e.S.TwoStepVerifyServiceImpl           : Exception in 2-step verification process.
-=======
 2025-06-10 16:55:01.085  INFO 19328 --- [http-nio-8080-exec-1] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
 2025-06-10 16:55:01.086  INFO 19328 --- [http-nio-8080-exec-1] c.e.S.PasswordResetServiceImpl           : EmailVerificationServiceImpl.verifyEmailToken invoked.
 2025-06-10 16:55:01.087  INFO 19328 --- [http-nio-8080-exec-1] c.e.Service.BL.PasswordResetServiceBL    : PasswordResetServiceBL.verifyEmailToken processing.
 2025-06-10 16:55:01.092 ERROR 19328 --- [http-nio-8080-exec-1] c.e.S.PasswordResetServiceImpl           : Exception during email verification process.
->>>>>>> master
 
 org.springframework.dao.EmptyResultDataAccessException: No entity found for query; nested exception is javax.persistence.NoResultException: No entity found for query
 	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:382) ~[spring-orm-5.3.13.jar:5.3.13]
@@ -2856,14 +2835,12 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.13.jar:5.3.13]
-<<<<<<< HEAD
 	at com.e_com.DaoImpl.TwoStepVerifyDaoImpl$$EnhancerBySpringCGLIB$$7dbd1e2.findByToken(<generated>) ~[classes/:na]
 	at com.e_com.Service.BL.TwoStepVerifyServiceBL.twoFaVerification(TwoStepVerifyServiceBL.java:103) ~[classes/:na]
 	at com.e_com.ServiceImpl.TwoStepVerifyServiceImpl.twoFaVerification(TwoStepVerifyServiceImpl.java:71) ~[classes/:na]
 	at com.e_com.Controller.TwoStepVerifyController.twoFaVerification(TwoStepVerifyController.java:50) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-=======
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl$$EnhancerBySpringCGLIB$$7e805f46.findByEmailToken(<generated>) ~[classes/:na]
 	at com.e_com.Service.BL.PasswordResetServiceBL.verifyEmailToken(PasswordResetServiceBL.java:151) ~[classes/:na]
 	at com.e_com.ServiceImpl.PasswordResetServiceImpl.verifyEmailToken(PasswordResetServiceImpl.java:133) ~[classes/:na]
@@ -2876,7 +2853,6 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
->>>>>>> master
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.13.jar:5.3.13]
 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.13.jar:5.3.13]
 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.13.jar:5.3.13]
@@ -2966,25 +2942,21 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
-<<<<<<< HEAD
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 Caused by: javax.persistence.NoResultException: No entity found for query
 	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1667) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
 	at com.e_com.DaoImpl.TwoStepVerifyDaoImpl.findByToken(TwoStepVerifyDaoImpl.java:41) ~[classes/:na]
 	at com.e_com.DaoImpl.TwoStepVerifyDaoImpl$$FastClassBySpringCGLIB$$6029bf11.invoke(<generated>) ~[classes/:na]
-=======
 	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
 Caused by: javax.persistence.NoResultException: No entity found for query
 	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1667) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl.findByEmailToken(PasswordResetTokenDaoImpl.java:49) ~[classes/:na]
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl$$FastClassBySpringCGLIB$$fafb52dd.invoke(<generated>) ~[classes/:na]
->>>>>>> master
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.13.jar:5.3.13]
-<<<<<<< HEAD
 	... 104 common frames omitted
 
 2025-06-12 16:52:05.852  INFO 11684 --- [RMI TCP Connection(21)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
@@ -3089,7 +3061,6 @@ Caused by: javax.persistence.NoResultException: No entity found for query
 2025-06-12 16:55:30.104  INFO 23012 --- [http-nio-8080-exec-3] c.e.S.TwoStepVerifyServiceImpl           : TwoStepVerifyServiceImpl.twoFaVerification invoked.
 2025-06-12 16:55:30.105  INFO 23012 --- [http-nio-8080-exec-3] c.e.Service.BL.TwoStepVerifyServiceBL    : TwoStepVerifyServiceBL.twoFaVerification processing.
 2025-06-12 16:55:30.338 ERROR 23012 --- [http-nio-8080-exec-3] c.e.S.TwoStepVerifyServiceImpl           : Exception in 2-step verification process.
-=======
 	... 110 common frames omitted
 
 2025-06-10 16:55:32.577  INFO 19328 --- [RMI TCP Connection(31)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
@@ -3326,7 +3297,6 @@ Caused by: javax.persistence.NoResultException: No entity found for query
 2025-06-10 17:22:30.233  INFO 19576 --- [http-nio-8080-exec-8] c.e.S.PasswordResetServiceImpl           : PasswordResetServiceImpl.verifyEmailToken invoked for email: mohomedwazeem729@gmail.com
 2025-06-10 17:22:30.233  INFO 19576 --- [http-nio-8080-exec-8] c.e.Service.BL.PasswordResetServiceBL    : PasswordResetServiceBL.verifyEmailToken processing.
 2025-06-10 17:22:30.276 ERROR 19576 --- [http-nio-8080-exec-8] c.e.S.PasswordResetServiceImpl           : Exception during email verification process for email: mohomedwazeem729@gmail.com
->>>>>>> master
 
 org.springframework.dao.EmptyResultDataAccessException: No entity found for query; nested exception is javax.persistence.NoResultException: No entity found for query
 	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:382) ~[spring-orm-5.3.13.jar:5.3.13]
@@ -3343,14 +3313,12 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.13.jar:5.3.13]
-<<<<<<< HEAD
 	at com.e_com.DaoImpl.TwoStepVerifyDaoImpl$$EnhancerBySpringCGLIB$$f5c3f72d.findByToken(<generated>) ~[classes/:na]
 	at com.e_com.Service.BL.TwoStepVerifyServiceBL.twoFaVerification(TwoStepVerifyServiceBL.java:103) ~[classes/:na]
 	at com.e_com.ServiceImpl.TwoStepVerifyServiceImpl.twoFaVerification(TwoStepVerifyServiceImpl.java:71) ~[classes/:na]
 	at com.e_com.Controller.TwoStepVerifyController.twoFaVerification(TwoStepVerifyController.java:50) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-=======
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl$$EnhancerBySpringCGLIB$$e19d1f9a.findByEmailToken(<generated>) ~[classes/:na]
 	at com.e_com.Service.BL.PasswordResetServiceBL.verifyEmailToken(PasswordResetServiceBL.java:151) ~[classes/:na]
 	at com.e_com.ServiceImpl.PasswordResetServiceImpl.verifyEmailToken(PasswordResetServiceImpl.java:159) ~[classes/:na]
@@ -3363,7 +3331,6 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
->>>>>>> master
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.13.jar:5.3.13]
 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.13.jar:5.3.13]
 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.13.jar:5.3.13]
@@ -3453,25 +3420,21 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
-<<<<<<< HEAD
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 Caused by: javax.persistence.NoResultException: No entity found for query
 	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1667) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
 	at com.e_com.DaoImpl.TwoStepVerifyDaoImpl.findByToken(TwoStepVerifyDaoImpl.java:41) ~[classes/:na]
 	at com.e_com.DaoImpl.TwoStepVerifyDaoImpl$$FastClassBySpringCGLIB$$6029bf11.invoke(<generated>) ~[classes/:na]
-=======
 	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
 Caused by: javax.persistence.NoResultException: No entity found for query
 	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1667) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl.findByEmailToken(PasswordResetTokenDaoImpl.java:49) ~[classes/:na]
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl$$FastClassBySpringCGLIB$$fafb52dd.invoke(<generated>) ~[classes/:na]
->>>>>>> master
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.13.jar:5.3.13]
-<<<<<<< HEAD
 	... 104 common frames omitted
 
 2025-06-12 16:58:30.477  INFO 23012 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -4660,7 +4623,6 @@ com.e_com.Controller.TwoStepVerifyController#twoFaVerification(TwoStepVerificati
 org.springframework.dao.InvalidDataAccessApiUsageException: Not-null property references a transient value - transient instance must be saved before current operation : com.e_com.Domain.UserLogs.user -> com.e_com.Domain.User; nested exception is org.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : com.e_com.Domain.UserLogs.user -> com.e_com.Domain.User
 	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:300) ~[spring-orm-5.3.13.jar:5.3.13]
 	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:230) ~[spring-orm-5.3.13.jar:5.3.13]
-=======
 	... 110 common frames omitted
 
 2025-06-10 17:22:50.294  INFO 19576 --- [http-nio-8080-exec-9] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
@@ -9311,7 +9273,6 @@ Caused by: javax.persistence.NoResultException: No entity found for query
 org.springframework.dao.EmptyResultDataAccessException: No entity found for query; nested exception is javax.persistence.NoResultException: No entity found for query
 	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:382) ~[spring-orm-5.3.13.jar:5.3.13]
 	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:235) ~[spring-orm-5.3.13.jar:5.3.13]
->>>>>>> master
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:551) ~[spring-orm-5.3.13.jar:5.3.13]
 	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-5.3.13.jar:5.3.13]
 	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242) ~[spring-tx-5.3.13.jar:5.3.13]
@@ -9324,7 +9285,6 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.13.jar:5.3.13]
-<<<<<<< HEAD
 	at com.e_com.DaoImpl.UserLogsDaoImpl$$EnhancerBySpringCGLIB$$150371d4.login(<generated>) ~[classes/:na]
 	at com.e_com.Service.BL.UserLogsServiceBL.save(UserLogsServiceBL.java:43) ~[classes/:na]
 	at com.e_com.ServiceImpl.UserLogsServiceImpl.save(UserLogsServiceImpl.java:66) ~[classes/:na]
@@ -9333,7 +9293,6 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at com.e_com.Controller.TwoStepVerifyController.twoFaVerification(TwoStepVerifyController.java:52) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-=======
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl$$EnhancerBySpringCGLIB$$e19d1f9a.findByEmailToken(<generated>) ~[classes/:na]
 	at com.e_com.Service.BL.PasswordResetServiceBL.verifyEmailToken(PasswordResetServiceBL.java:152) ~[classes/:na]
 	at com.e_com.ServiceImpl.PasswordResetServiceImpl.verifyEmailToken(PasswordResetServiceImpl.java:162) ~[classes/:na]
@@ -9346,7 +9305,6 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
->>>>>>> master
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.13.jar:5.3.13]
 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.13.jar:5.3.13]
 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.13.jar:5.3.13]
@@ -9436,7 +9394,6 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
-<<<<<<< HEAD
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 Caused by: org.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : com.e_com.Domain.UserLogs.user -> com.e_com.Domain.User
 	at org.hibernate.action.internal.UnresolvedEntityInsertActions.checkNoUnresolvedActionsAfterOperation(UnresolvedEntityInsertActions.java:122) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
@@ -9451,19 +9408,16 @@ Caused by: org.hibernate.TransientPropertyValueException: Not-null property refe
 	at jdk.proxy8/jdk.proxy8.$Proxy130.saveOrUpdate(Unknown Source) ~[na:na]
 	at com.e_com.DaoImpl.UserLogsDaoImpl.login(UserLogsDaoImpl.java:44) ~[classes/:na]
 	at com.e_com.DaoImpl.UserLogsDaoImpl$$FastClassBySpringCGLIB$$40334808.invoke(<generated>) ~[classes/:na]
-=======
 	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
 Caused by: javax.persistence.NoResultException: No entity found for query
 	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1667) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl.findByEmailToken(PasswordResetTokenDaoImpl.java:49) ~[classes/:na]
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl$$FastClassBySpringCGLIB$$fafb52dd.invoke(<generated>) ~[classes/:na]
->>>>>>> master
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.13.jar:5.3.13]
-<<<<<<< HEAD
 	... 106 common frames omitted
 
 2025-06-12 17:35:20.724  INFO 26900 --- [http-nio-8080-exec-2] c.e.S.TwoStepVerifyServiceImpl           : 2-step verification successfull.
@@ -9521,7 +9475,6 @@ Caused by: javax.persistence.NoResultException: No entity found for query
 org.springframework.dao.InvalidDataAccessApiUsageException: Not-null property references a transient value - transient instance must be saved before current operation : com.e_com.Domain.UserLogs.user -> com.e_com.Domain.User; nested exception is org.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : com.e_com.Domain.UserLogs.user -> com.e_com.Domain.User
 	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:300) ~[spring-orm-5.3.13.jar:5.3.13]
 	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:230) ~[spring-orm-5.3.13.jar:5.3.13]
-=======
 	... 110 common frames omitted
 
 2025-06-10 19:12:08.510  INFO 19576 --- [Thread-83] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -9560,7 +9513,6 @@ org.springframework.dao.InvalidDataAccessApiUsageException: Not-null property re
 org.springframework.dao.EmptyResultDataAccessException: No entity found for query; nested exception is javax.persistence.NoResultException: No entity found for query
 	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:382) ~[spring-orm-5.3.13.jar:5.3.13]
 	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:235) ~[spring-orm-5.3.13.jar:5.3.13]
->>>>>>> master
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:551) ~[spring-orm-5.3.13.jar:5.3.13]
 	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-5.3.13.jar:5.3.13]
 	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242) ~[spring-tx-5.3.13.jar:5.3.13]
@@ -9573,7 +9525,6 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.13.jar:5.3.13]
-<<<<<<< HEAD
 	at com.e_com.DaoImpl.UserLogsDaoImpl$$EnhancerBySpringCGLIB$$150371d4.login(<generated>) ~[classes/:na]
 	at com.e_com.Service.BL.UserLogsServiceBL.save(UserLogsServiceBL.java:43) ~[classes/:na]
 	at com.e_com.ServiceImpl.UserLogsServiceImpl.save(UserLogsServiceImpl.java:66) ~[classes/:na]
@@ -9582,7 +9533,6 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at com.e_com.Controller.TwoStepVerifyController.twoFaVerification(TwoStepVerifyController.java:52) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-=======
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl$$EnhancerBySpringCGLIB$$e19d1f9a.findByEmailToken(<generated>) ~[classes/:na]
 	at com.e_com.Service.BL.PasswordResetServiceBL.verifyEmailToken(PasswordResetServiceBL.java:152) ~[classes/:na]
 	at com.e_com.ServiceImpl.PasswordResetServiceImpl.verifyEmailToken(PasswordResetServiceImpl.java:134) ~[classes/:na]
@@ -9595,7 +9545,6 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
->>>>>>> master
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.13.jar:5.3.13]
 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.13.jar:5.3.13]
 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.13.jar:5.3.13]
@@ -9685,7 +9634,6 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
-<<<<<<< HEAD
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 Caused by: org.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : com.e_com.Domain.UserLogs.user -> com.e_com.Domain.User
 	at org.hibernate.action.internal.UnresolvedEntityInsertActions.checkNoUnresolvedActionsAfterOperation(UnresolvedEntityInsertActions.java:122) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
@@ -9700,19 +9648,16 @@ Caused by: org.hibernate.TransientPropertyValueException: Not-null property refe
 	at jdk.proxy9/jdk.proxy9.$Proxy132.saveOrUpdate(Unknown Source) ~[na:na]
 	at com.e_com.DaoImpl.UserLogsDaoImpl.login(UserLogsDaoImpl.java:44) ~[classes/:na]
 	at com.e_com.DaoImpl.UserLogsDaoImpl$$FastClassBySpringCGLIB$$40334808.invoke(<generated>) ~[classes/:na]
-=======
 	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
 Caused by: javax.persistence.NoResultException: No entity found for query
 	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1667) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl.findByEmailToken(PasswordResetTokenDaoImpl.java:49) ~[classes/:na]
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl$$FastClassBySpringCGLIB$$fafb52dd.invoke(<generated>) ~[classes/:na]
->>>>>>> master
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.13.jar:5.3.13]
-<<<<<<< HEAD
 	... 106 common frames omitted
 
 2025-06-12 17:41:24.759  INFO 26900 --- [http-nio-8080-exec-3] c.e.S.TwoStepVerifyServiceImpl           : 2-step verification successfull.
@@ -9758,7 +9703,6 @@ Caused by: javax.persistence.NoResultException: No entity found for query
 org.springframework.dao.DataIntegrityViolationException: not-null property references a null or transient value : com.e_com.Domain.UserLogs.user; nested exception is org.hibernate.PropertyValueException: not-null property references a null or transient value : com.e_com.Domain.UserLogs.user
 	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:294) ~[spring-orm-5.3.13.jar:5.3.13]
 	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:230) ~[spring-orm-5.3.13.jar:5.3.13]
-=======
 	... 110 common frames omitted
 
 2025-06-10 19:24:37.306  INFO 19576 --- [http-nio-8080-exec-3] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
@@ -9802,7 +9746,6 @@ org.springframework.dao.DataIntegrityViolationException: not-null property refer
 org.springframework.dao.EmptyResultDataAccessException: No entity found for query; nested exception is javax.persistence.NoResultException: No entity found for query
 	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:382) ~[spring-orm-5.3.13.jar:5.3.13]
 	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:235) ~[spring-orm-5.3.13.jar:5.3.13]
->>>>>>> master
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:551) ~[spring-orm-5.3.13.jar:5.3.13]
 	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-5.3.13.jar:5.3.13]
 	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242) ~[spring-tx-5.3.13.jar:5.3.13]
@@ -9815,7 +9758,6 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.13.jar:5.3.13]
-<<<<<<< HEAD
 	at com.e_com.DaoImpl.UserLogsDaoImpl$$EnhancerBySpringCGLIB$$150371d4.login(<generated>) ~[classes/:na]
 	at com.e_com.Service.BL.UserLogsServiceBL.save(UserLogsServiceBL.java:43) ~[classes/:na]
 	at com.e_com.ServiceImpl.UserLogsServiceImpl.save(UserLogsServiceImpl.java:66) ~[classes/:na]
@@ -9824,7 +9766,6 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at com.e_com.Controller.TwoStepVerifyController.twoFaVerification(TwoStepVerifyController.java:52) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-=======
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl$$EnhancerBySpringCGLIB$$e19d1f9a.findByEmailToken(<generated>) ~[classes/:na]
 	at com.e_com.Service.BL.PasswordResetServiceBL.verifyEmailToken(PasswordResetServiceBL.java:152) ~[classes/:na]
 	at com.e_com.ServiceImpl.PasswordResetServiceImpl.verifyEmailToken(PasswordResetServiceImpl.java:134) ~[classes/:na]
@@ -9837,7 +9778,6 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
->>>>>>> master
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.13.jar:5.3.13]
 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.13.jar:5.3.13]
 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.13.jar:5.3.13]
@@ -9927,7 +9867,6 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
-<<<<<<< HEAD
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 Caused by: org.hibernate.PropertyValueException: not-null property references a null or transient value : com.e_com.Domain.UserLogs.user
 	at org.hibernate.engine.internal.Nullability.checkNullability(Nullability.java:111) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
@@ -9956,19 +9895,16 @@ Caused by: org.hibernate.PropertyValueException: not-null property references a 
 	at jdk.proxy10/jdk.proxy10.$Proxy134.saveOrUpdate(Unknown Source) ~[na:na]
 	at com.e_com.DaoImpl.UserLogsDaoImpl.login(UserLogsDaoImpl.java:44) ~[classes/:na]
 	at com.e_com.DaoImpl.UserLogsDaoImpl$$FastClassBySpringCGLIB$$40334808.invoke(<generated>) ~[classes/:na]
-=======
 	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
 Caused by: javax.persistence.NoResultException: No entity found for query
 	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1667) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl.findByEmailToken(PasswordResetTokenDaoImpl.java:49) ~[classes/:na]
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl$$FastClassBySpringCGLIB$$fafb52dd.invoke(<generated>) ~[classes/:na]
->>>>>>> master
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.13.jar:5.3.13]
-<<<<<<< HEAD
 	... 106 common frames omitted
 
 2025-06-12 17:42:31.555  INFO 26900 --- [http-nio-8080-exec-2] c.e.S.TwoStepVerifyServiceImpl           : 2-step verification successfull.
@@ -10163,7 +10099,6 @@ Caused by: javax.persistence.NoResultException: No entity found for query
 2025-06-12 17:46:37.190  INFO 28532 --- [http-nio-8080-exec-4] c.e.S.TwoStepVerifyServiceImpl           : TwoStepVerifyServiceImpl.twoFaVerification invoked.
 2025-06-12 17:46:37.191  INFO 28532 --- [http-nio-8080-exec-4] c.e.Service.BL.TwoStepVerifyServiceBL    : TwoStepVerifyServiceBL.twoFaVerification processing.
 2025-06-12 17:46:37.205 ERROR 28532 --- [http-nio-8080-exec-4] c.e.S.TwoStepVerifyServiceImpl           : Exception in 2-step verification process.
-=======
 	... 110 common frames omitted
 
 2025-06-10 19:26:58.507  INFO 19576 --- [http-nio-8080-exec-3] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
@@ -10171,7 +10106,6 @@ Caused by: javax.persistence.NoResultException: No entity found for query
 2025-06-10 19:26:58.507  INFO 19576 --- [http-nio-8080-exec-3] c.e.S.PasswordResetServiceImpl           : PasswordResetServiceImpl.verifyEmailToken invoked for email: wazeemmh007@gmail.com
 2025-06-10 19:26:58.508  INFO 19576 --- [http-nio-8080-exec-3] c.e.Service.BL.PasswordResetServiceBL    : PasswordResetServiceBL.verifyEmailToken processing for email: wazeemmh007@gmail.com
 2025-06-10 19:26:58.510 ERROR 19576 --- [http-nio-8080-exec-3] c.e.S.PasswordResetServiceImpl           : Exception during email verification process for email: wazeemmh007@gmail.com
->>>>>>> master
 
 org.springframework.dao.EmptyResultDataAccessException: No entity found for query; nested exception is javax.persistence.NoResultException: No entity found for query
 	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:382) ~[spring-orm-5.3.13.jar:5.3.13]
@@ -10188,14 +10122,12 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.13.jar:5.3.13]
-<<<<<<< HEAD
 	at com.e_com.DaoImpl.TwoStepVerifyDaoImpl$$EnhancerBySpringCGLIB$$39e0ecb.findByToken(<generated>) ~[classes/:na]
 	at com.e_com.Service.BL.TwoStepVerifyServiceBL.twoFaVerification(TwoStepVerifyServiceBL.java:103) ~[classes/:na]
 	at com.e_com.ServiceImpl.TwoStepVerifyServiceImpl.twoFaVerification(TwoStepVerifyServiceImpl.java:71) ~[classes/:na]
 	at com.e_com.Controller.TwoStepVerifyController.twoFaVerification(TwoStepVerifyController.java:52) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-=======
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl$$EnhancerBySpringCGLIB$$e19d1f9a.findByEmailToken(<generated>) ~[classes/:na]
 	at com.e_com.Service.BL.PasswordResetServiceBL.verifyEmailToken(PasswordResetServiceBL.java:152) ~[classes/:na]
 	at com.e_com.ServiceImpl.PasswordResetServiceImpl.verifyEmailToken(PasswordResetServiceImpl.java:134) ~[classes/:na]
@@ -10208,7 +10140,6 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
->>>>>>> master
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.13.jar:5.3.13]
 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.13.jar:5.3.13]
 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.13.jar:5.3.13]
@@ -10298,13 +10229,11 @@ org.springframework.dao.EmptyResultDataAccessException: No entity found for quer
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.55.jar:9.0.55]
-<<<<<<< HEAD
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 Caused by: javax.persistence.NoResultException: No entity found for query
 	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1667) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
 	at com.e_com.DaoImpl.TwoStepVerifyDaoImpl.findByToken(TwoStepVerifyDaoImpl.java:41) ~[classes/:na]
 	at com.e_com.DaoImpl.TwoStepVerifyDaoImpl$$FastClassBySpringCGLIB$$6029bf11.invoke(<generated>) ~[classes/:na]
-=======
 	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
 Caused by: javax.persistence.NoResultException: No entity found for query
 	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1667) ~[hibernate-core-5.6.1.Final.jar:5.6.1.Final]
@@ -13452,7 +13381,6 @@ java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'lathusanthur
 	at jdk.proxy4/jdk.proxy4.$Proxy106.persist(Unknown Source) ~[na:na]
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl.save(PasswordResetTokenDaoImpl.java:43) ~[classes/:na]
 	at com.e_com.DaoImpl.PasswordResetTokenDaoImpl$$FastClassBySpringCGLIB$$fafb52dd.invoke(<generated>) ~[classes/:na]
->>>>>>> master
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.13.jar:5.3.13]
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.13.jar:5.3.13]
@@ -18003,3 +17931,90 @@ Caused by: java.lang.Error: Unresolved compilation problems:
 2025-06-24 21:04:41.511  INFO 45224 --- [RMI TCP Connection(10)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-06-24 21:04:41.515  INFO 45224 --- [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-06-24 21:04:41.524  INFO 45224 --- [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-23 21:51:41.352  INFO 37044 --- [restartedMain] com.e_com.EComApplication                : Starting EComApplication using Java 17.0.12 on Wazeem with PID 37044 (D:\Codearson\e-comm\e_com_be\target\classes started by wazee in D:\Codearson\e-comm\e_com_be)
+2025-06-23 21:51:41.353  INFO 37044 --- [restartedMain] com.e_com.EComApplication                : The following profiles are active: dev
+2025-06-23 21:51:41.409  INFO 37044 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-23 21:51:41.409  INFO 37044 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-23 21:51:42.341  INFO 37044 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-23 21:51:42.393  INFO 37044 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 0 JPA repository interfaces.
+2025-06-23 21:51:43.075  INFO 37044 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-06-23 21:51:43.084  INFO 37044 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-23 21:51:43.084  INFO 37044 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-06-23 21:51:43.166  INFO 37044 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-23 21:51:43.166  INFO 37044 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1755 ms
+2025-06-23 21:51:43.345  INFO 37044 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-23 21:51:43.393  INFO 37044 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2025-06-23 21:51:43.682  INFO 37044 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-06-23 21:51:43.837  INFO 37044 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-23 21:51:44.017  INFO 37044 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-23 21:51:44.035  INFO 37044 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2025-06-23 21:51:45.043  INFO 37044 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-06-23 21:51:45.052  INFO 37044 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-23 21:51:45.860  INFO 37044 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74a22b05, org.springframework.security.web.context.SecurityContextPersistenceFilter@2d24d18e, org.springframework.security.web.header.HeaderWriterFilter@2f4613eb, org.springframework.web.filter.CorsFilter@3bb9399f, org.springframework.security.web.authentication.logout.LogoutFilter@2c441d71, com.e_com.Service.Utils.JwtCustomFilter@48fc6a57, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5d31a9d0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2af80edb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@21fab375, org.springframework.security.web.session.SessionManagementFilter@20bf798, org.springframework.security.web.access.ExceptionTranslationFilter@668d51b, org.springframework.security.web.access.intercept.AuthorizationFilter@66bf8cd9]
+2025-06-23 21:51:46.073  INFO 37044 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-23 21:51:46.139  INFO 37044 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-23 21:51:46.155  INFO 37044 --- [restartedMain] com.e_com.EComApplication                : Started EComApplication in 5.389 seconds (JVM running for 6.221)
+2025-06-23 21:52:16.695  INFO 37044 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-23 21:52:16.699  INFO 37044 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-23 21:52:16.708  INFO 37044 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-23 21:52:16.830  INFO 37044 --- [restartedMain] com.e_com.EComApplication                : Starting EComApplication using Java 17.0.12 on Wazeem with PID 37044 (D:\Codearson\e-comm\e_com_be\target\classes started by wazee in D:\Codearson\e-comm\e_com_be)
+2025-06-23 21:52:16.830  INFO 37044 --- [restartedMain] com.e_com.EComApplication                : The following profiles are active: dev
+2025-06-23 21:52:17.372  INFO 37044 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-23 21:52:17.399  INFO 37044 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 0 JPA repository interfaces.
+2025-06-23 21:52:17.522  INFO 37044 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-06-23 21:52:17.523  INFO 37044 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-23 21:52:17.524  INFO 37044 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-06-23 21:52:17.556  INFO 37044 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-23 21:52:17.556  INFO 37044 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 721 ms
+2025-06-23 21:52:17.627  INFO 37044 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-23 21:52:17.632  INFO 37044 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-06-23 21:52:17.640  INFO 37044 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-06-23 21:52:17.641  INFO 37044 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2025-06-23 21:52:17.949  INFO 37044 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-06-23 21:52:17.949  INFO 37044 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-23 21:52:18.327  INFO 37044 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51ea1a35, org.springframework.security.web.context.SecurityContextPersistenceFilter@5c8b1412, org.springframework.security.web.header.HeaderWriterFilter@242e0b0a, org.springframework.web.filter.CorsFilter@a8dd720, org.springframework.security.web.authentication.logout.LogoutFilter@4d64ec8, com.e_com.Service.Utils.JwtCustomFilter@331a9ba, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@793a557, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@533188f4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7a2bdee7, org.springframework.security.web.session.SessionManagementFilter@269eb0bb, org.springframework.security.web.access.ExceptionTranslationFilter@fca912d, org.springframework.security.web.access.intercept.AuthorizationFilter@641d545d]
+2025-06-23 21:52:18.400  INFO 37044 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-23 21:52:18.415  INFO 37044 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-23 21:52:18.425  INFO 37044 --- [restartedMain] com.e_com.EComApplication                : Started EComApplication in 1.659 seconds (JVM running for 38.491)
+2025-06-23 21:52:18.430  INFO 37044 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-06-23 21:56:16.517  INFO 37044 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-23 21:56:16.519  INFO 37044 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-23 21:56:16.524  INFO 37044 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2025-06-23 21:56:16.572  INFO 37044 --- [http-nio-8080-exec-2] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-06-23 21:56:16.784  INFO 37044 --- [http-nio-8080-exec-2] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-06-23 21:56:16.785  INFO 37044 --- [http-nio-8080-exec-2] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-06-23 21:56:16.791  WARN 37044 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-23 21:56:23.687  INFO 37044 --- [http-nio-8080-exec-3] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-06-23 21:56:23.689  INFO 37044 --- [http-nio-8080-exec-3] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-06-23 21:56:23.690  INFO 37044 --- [http-nio-8080-exec-3] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-06-23 21:56:23.690  WARN 37044 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-23 21:56:23.724  INFO 37044 --- [http-nio-8080-exec-3] com.e_com.Controller.BrandController     : BrandController.getAllBrand() invoked with brandName: null
+2025-06-23 21:56:23.724  INFO 37044 --- [http-nio-8080-exec-3] com.e_com.ServiceImpl.BrandServiceImpl   : BrandServiceImpl.getAllBrand() invoked with brandName: null
+2025-06-23 21:56:23.724  INFO 37044 --- [http-nio-8080-exec-3] com.e_com.Service.BL.BrandServiceBL      : BrandServiceBL.getAllBrand() invoked with brandName: null
+2025-06-23 21:56:23.730  INFO 37044 --- [http-nio-8080-exec-3] com.e_com.DaoImpl.BrandDaoImpl           : BrandDaoImpl.getAllBrand() invoked with brandName: null
+2025-06-23 21:56:23.730  WARN 37044 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-23 21:56:23.738  INFO 37044 --- [http-nio-8080-exec-3] com.e_com.ServiceImpl.BrandServiceImpl   : Retrieved all Brand details.
+2025-06-23 21:56:36.270  INFO 37044 --- [http-nio-8080-exec-4] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-06-23 21:56:36.274  INFO 37044 --- [http-nio-8080-exec-4] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-06-23 21:56:36.274  INFO 37044 --- [http-nio-8080-exec-4] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-06-23 21:56:36.275  WARN 37044 --- [http-nio-8080-exec-4] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-23 21:56:36.290  INFO 37044 --- [http-nio-8080-exec-4] com.e_com.Controller.StatusController    : StatusController.getAllStatus() invoked with statusName: null
+2025-06-23 21:56:36.291  INFO 37044 --- [http-nio-8080-exec-4] com.e_com.ServiceImpl.StatusServiceImpl  : StatusServiceImpl.getAllStatus() invoked with statusName: null
+2025-06-23 21:56:36.291  INFO 37044 --- [http-nio-8080-exec-4] com.e_com.Service.BL.StatusServiceBL     : StatusServiceBL.getAllStatus() invoked with statusName: null
+2025-06-23 21:56:36.296  INFO 37044 --- [http-nio-8080-exec-4] com.e_com.DaoImpl.StatusDaoImpl          : StatusDaoImpl.getAllStatus() invoked with statusName: null
+2025-06-23 21:56:36.297  WARN 37044 --- [http-nio-8080-exec-4] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-23 21:56:36.302  INFO 37044 --- [http-nio-8080-exec-4] com.e_com.ServiceImpl.StatusServiceImpl  : Retrieved all Status details.
+2025-06-23 21:56:43.289  INFO 37044 --- [http-nio-8080-exec-5] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-06-23 21:56:43.293  INFO 37044 --- [http-nio-8080-exec-5] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-06-23 21:56:43.293  INFO 37044 --- [http-nio-8080-exec-5] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-06-23 21:56:43.294  WARN 37044 --- [http-nio-8080-exec-5] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-23 21:56:43.304  INFO 37044 --- [http-nio-8080-exec-5] com.e_com.Controller.StatusController    : StatusController.getAllStatus() invoked with statusName: null
+2025-06-23 21:56:43.304  INFO 37044 --- [http-nio-8080-exec-5] com.e_com.ServiceImpl.StatusServiceImpl  : StatusServiceImpl.getAllStatus() invoked with statusName: null
+2025-06-23 21:56:43.304  INFO 37044 --- [http-nio-8080-exec-5] com.e_com.Service.BL.StatusServiceBL     : StatusServiceBL.getAllStatus() invoked with statusName: null
+2025-06-23 21:56:43.304  INFO 37044 --- [http-nio-8080-exec-5] com.e_com.DaoImpl.StatusDaoImpl          : StatusDaoImpl.getAllStatus() invoked with statusName: null
+2025-06-23 21:56:43.304  WARN 37044 --- [http-nio-8080-exec-5] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-23 21:56:43.306  INFO 37044 --- [http-nio-8080-exec-5] com.e_com.ServiceImpl.StatusServiceImpl  : Retrieved all Status details.
+2025-06-23 21:57:13.613  INFO 37044 --- [RMI TCP Connection(19)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-23 21:57:13.636  INFO 37044 --- [RMI TCP Connection(19)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-23 21:57:13.637  INFO 37044 --- [RMI TCP Connection(19)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-06-23 21:57:13.638  INFO 37044 --- [RMI TCP Connection(19)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
