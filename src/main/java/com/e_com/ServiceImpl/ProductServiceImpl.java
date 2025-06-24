@@ -95,6 +95,7 @@ public class ProductServiceImpl implements ProductService {
             ProductDto updatedProductDto = productServiceBL.updateProduct(productDto);
             if (updatedProductDto != null) {
                 log.info("Product Details updated.");
+                productServiceBL.updateProductIsActiveBasedOnQuantity(updatedProductDto.getId());
                 responseDto = serviceUtil.getServiceResponse(updatedProductDto);
             } else {
                 log.info("Unable to update Product details.");
