@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "4ca1ec51-0934-42b5-b22d-8ecb0803f4a7",
+		"_postman_id": "21aa7168-eace-48d7-954e-51dcdf2831ef",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "44754112"
+		"_exporter_id": "40430627"
 	},
 	"item": [
 		{
@@ -1154,7 +1154,7 @@
 					"response": []
 				},
 				{
-					"name": "getAllSearch",
+					"name": "getAllBySearch",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -3450,7 +3450,7 @@
 					"response": []
 				},
 				{
-					"name": "getAllSearch",
+					"name": "getAllBySearch",
 					"request": {
 						"auth": {
 							"type": "bearer",
