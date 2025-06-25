@@ -17108,6 +17108,268 @@ Caused by: javax.persistence.NoResultException: No entity found for query
 2025-06-13 20:27:05.620  INFO 9988 --- [RMI TCP Connection(15)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-06-13 20:27:05.621  INFO 9988 --- [RMI TCP Connection(15)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
 2025-06-13 20:27:05.622  INFO 9988 --- [RMI TCP Connection(15)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-06-24 19:32:55.575  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Starting EComApplication using Java 17.0.12 on Wazeem with PID 47960 (D:\Codearson\e-comm\e_com_be\target\classes started by wazee in D:\Codearson\e-comm\e_com_be)
+2025-06-24 19:32:55.576  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : The following profiles are active: dev
+2025-06-24 19:32:55.639  INFO 47960 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-24 19:32:55.640  INFO 47960 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-24 19:32:56.637  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-24 19:32:56.687  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 0 JPA repository interfaces.
+2025-06-24 19:32:57.458  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-06-24 19:32:57.469  INFO 47960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-24 19:32:57.469  INFO 47960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-06-24 19:32:57.565  INFO 47960 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-24 19:32:57.566  INFO 47960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1926 ms
+2025-06-24 19:32:57.762  INFO 47960 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-24 19:32:57.840  INFO 47960 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2025-06-24 19:32:58.031  INFO 47960 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-06-24 19:32:58.133  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-24 19:32:58.308  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-24 19:32:58.327  INFO 47960 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2025-06-24 19:32:59.321  INFO 47960 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-06-24 19:32:59.330  INFO 47960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 19:33:00.131  INFO 47960 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7dd85968, org.springframework.security.web.context.SecurityContextPersistenceFilter@191a14a8, org.springframework.security.web.header.HeaderWriterFilter@a0f17d7, org.springframework.web.filter.CorsFilter@7c23d72d, org.springframework.security.web.authentication.logout.LogoutFilter@722eba40, com.e_com.Service.Utils.JwtCustomFilter@6b6d64ac, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b26e77f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@554ab26b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@41abeb30, org.springframework.security.web.session.SessionManagementFilter@79b75573, org.springframework.security.web.access.ExceptionTranslationFilter@4a7704cb, org.springframework.security.web.access.intercept.AuthorizationFilter@32c1fe9f]
+2025-06-24 19:33:00.340  INFO 47960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-24 19:33:00.413  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-24 19:33:00.426  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Started EComApplication in 5.559 seconds (JVM running for 7.841)
+2025-06-24 19:56:30.688  INFO 47960 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 19:56:30.805  INFO 47960 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-24 19:56:30.823  INFO 47960 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-24 19:56:31.469  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Starting EComApplication using Java 17.0.12 on Wazeem with PID 47960 (D:\Codearson\e-comm\e_com_be\target\classes started by wazee in D:\Codearson\e-comm\e_com_be)
+2025-06-24 19:56:31.471  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : The following profiles are active: dev
+2025-06-24 19:56:33.773  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-24 19:56:34.010  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 236 ms. Found 0 JPA repository interfaces.
+2025-06-24 19:56:34.543  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-06-24 19:56:34.544  INFO 47960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-24 19:56:34.545  INFO 47960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-06-24 19:56:34.589  INFO 47960 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-24 19:56:34.589  INFO 47960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3103 ms
+2025-06-24 19:56:34.741  INFO 47960 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-24 19:56:34.755  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-06-24 19:56:34.768  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-06-24 19:56:34.769  INFO 47960 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2025-06-24 19:56:35.850  INFO 47960 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-06-24 19:56:35.851  INFO 47960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 19:56:36.851  INFO 47960 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b5866d3, org.springframework.security.web.context.SecurityContextPersistenceFilter@7e3f86eb, org.springframework.security.web.header.HeaderWriterFilter@2fef78c, org.springframework.web.filter.CorsFilter@24141857, org.springframework.security.web.authentication.logout.LogoutFilter@5ac96d3e, com.e_com.Service.Utils.JwtCustomFilter@70a42522, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@317590ef, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@444243da, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@bbab416, org.springframework.security.web.session.SessionManagementFilter@7eec4e27, org.springframework.security.web.access.ExceptionTranslationFilter@5023e4df, org.springframework.security.web.access.intercept.AuthorizationFilter@602f7fff]
+2025-06-24 19:56:37.021  INFO 47960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-24 19:56:37.056  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-24 19:56:37.067  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Started EComApplication in 5.773 seconds (JVM running for 1424.482)
+2025-06-24 19:56:37.071  INFO 47960 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-06-24 19:57:45.093  INFO 47960 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-24 19:57:45.094  INFO 47960 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-24 19:57:45.096  INFO 47960 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-06-24 19:57:45.136  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-06-24 19:57:45.362  INFO 47960 --- [http-nio-8080-exec-2] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-06-24 19:57:45.363  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-06-24 19:57:45.371  WARN 47960 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 19:57:45.585  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.Controller.ProductController   : ProductController.updateProduct() invoked
+2025-06-24 19:57:45.585  INFO 47960 --- [http-nio-8080-exec-2] c.e_com.ServiceImpl.ProductServiceImpl   : ProductServiceImpl.updateProduct invoked
+2025-06-24 19:57:45.585  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.Service.BL.ProductServiceBL    : ProductServiceBL.updateProduct() invoked.
+2025-06-24 19:57:45.592  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.checkProductAvailability() invoked with productId: 10
+2025-06-24 19:57:45.592  WARN 47960 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 19:57:45.604  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProduct() invoked.
+2025-06-24 19:57:45.656  INFO 47960 --- [http-nio-8080-exec-2] c.e_com.ServiceImpl.ProductServiceImpl   : Product Details updated.
+2025-06-24 19:57:45.657  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProductIsActiveBasedOnQuantity() invoked for productId: 10
+2025-06-24 19:57:45.658  WARN 47960 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 19:58:29.876  INFO 47960 --- [http-nio-8080-exec-3] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-06-24 19:58:29.882  INFO 47960 --- [http-nio-8080-exec-3] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-06-24 19:58:29.882  INFO 47960 --- [http-nio-8080-exec-3] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-06-24 19:58:29.882  WARN 47960 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 19:58:29.904  INFO 47960 --- [http-nio-8080-exec-3] com.e_com.Controller.ProductController   : ProductController.updateProduct() invoked
+2025-06-24 19:58:29.904  INFO 47960 --- [http-nio-8080-exec-3] c.e_com.ServiceImpl.ProductServiceImpl   : ProductServiceImpl.updateProduct invoked
+2025-06-24 19:58:29.905  INFO 47960 --- [http-nio-8080-exec-3] com.e_com.Service.BL.ProductServiceBL    : ProductServiceBL.updateProduct() invoked.
+2025-06-24 19:58:29.905  INFO 47960 --- [http-nio-8080-exec-3] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.checkProductAvailability() invoked with productId: 10
+2025-06-24 19:58:29.905  WARN 47960 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 19:58:29.909  INFO 47960 --- [http-nio-8080-exec-3] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProduct() invoked.
+2025-06-24 19:58:29.919  INFO 47960 --- [http-nio-8080-exec-3] c.e_com.ServiceImpl.ProductServiceImpl   : Product Details updated.
+2025-06-24 19:58:29.920  INFO 47960 --- [http-nio-8080-exec-3] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProductIsActiveBasedOnQuantity() invoked for productId: 10
+2025-06-24 19:58:29.920  WARN 47960 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 19:58:29.924  INFO 47960 --- [http-nio-8080-exec-3] com.e_com.DaoImpl.ProductDaoImpl         : Product id 10 is now inactive due to zero quantity.
+2025-06-24 19:59:01.301  INFO 47960 --- [http-nio-8080-exec-4] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-06-24 19:59:01.304  INFO 47960 --- [http-nio-8080-exec-4] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-06-24 19:59:01.305  INFO 47960 --- [http-nio-8080-exec-4] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-06-24 19:59:01.305  WARN 47960 --- [http-nio-8080-exec-4] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 19:59:01.327  INFO 47960 --- [http-nio-8080-exec-4] com.e_com.Controller.ProductController   : ProductController.updateProduct() invoked
+2025-06-24 19:59:01.327  INFO 47960 --- [http-nio-8080-exec-4] c.e_com.ServiceImpl.ProductServiceImpl   : ProductServiceImpl.updateProduct invoked
+2025-06-24 19:59:01.327  INFO 47960 --- [http-nio-8080-exec-4] com.e_com.Service.BL.ProductServiceBL    : ProductServiceBL.updateProduct() invoked.
+2025-06-24 19:59:01.328  INFO 47960 --- [http-nio-8080-exec-4] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.checkProductAvailability() invoked with productId: 10
+2025-06-24 19:59:01.328  WARN 47960 --- [http-nio-8080-exec-4] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 19:59:01.337  INFO 47960 --- [http-nio-8080-exec-4] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProduct() invoked.
+2025-06-24 19:59:01.345  INFO 47960 --- [http-nio-8080-exec-4] c.e_com.ServiceImpl.ProductServiceImpl   : Product Details updated.
+2025-06-24 19:59:01.346  INFO 47960 --- [http-nio-8080-exec-4] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProductIsActiveBasedOnQuantity() invoked for productId: 10
+2025-06-24 19:59:01.346  WARN 47960 --- [http-nio-8080-exec-4] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 20:18:15.040  WARN 47960 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=18m44s34ms692µs500ns).
+2025-06-24 20:19:09.901  INFO 47960 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:19:09.917  INFO 47960 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-06-24 20:19:09.925  INFO 47960 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-06-24 20:19:10.352  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Starting EComApplication using Java 17.0.12 on Wazeem with PID 47960 (D:\Codearson\e-comm\e_com_be\target\classes started by wazee in D:\Codearson\e-comm\e_com_be)
+2025-06-24 20:19:10.352  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : The following profiles are active: dev
+2025-06-24 20:19:11.942  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-24 20:19:11.996  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 0 JPA repository interfaces.
+2025-06-24 20:19:12.177  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-06-24 20:19:12.178  INFO 47960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-24 20:19:12.179  INFO 47960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-06-24 20:19:12.203  INFO 47960 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-24 20:19:12.204  INFO 47960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1839 ms
+2025-06-24 20:19:12.273  INFO 47960 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-24 20:19:12.278  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-06-24 20:19:12.293  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-06-24 20:19:12.294  INFO 47960 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2025-06-24 20:19:12.807  INFO 47960 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-06-24 20:19:12.807  INFO 47960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:19:13.248  INFO 47960 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@47b31760, org.springframework.security.web.context.SecurityContextPersistenceFilter@22af0fe1, org.springframework.security.web.header.HeaderWriterFilter@61a366e6, org.springframework.web.filter.CorsFilter@4ee8959b, org.springframework.security.web.authentication.logout.LogoutFilter@10a123cf, com.e_com.Service.Utils.JwtCustomFilter@5fecbde7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4cf39bb0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@361d409e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@743b6eff, org.springframework.security.web.session.SessionManagementFilter@5bc4f1c0, org.springframework.security.web.access.ExceptionTranslationFilter@76231226, org.springframework.security.web.access.intercept.AuthorizationFilter@6fb82b0b]
+2025-06-24 20:19:13.354  INFO 47960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-24 20:19:13.373  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-24 20:19:13.377  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Started EComApplication in 3.072 seconds (JVM running for 2784.722)
+2025-06-24 20:19:13.380  INFO 47960 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-06-24 20:19:14.946  INFO 47960 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:19:14.948  INFO 47960 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-06-24 20:19:14.951  INFO 47960 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-06-24 20:19:15.038  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Starting EComApplication using Java 17.0.12 on Wazeem with PID 47960 (D:\Codearson\e-comm\e_com_be\target\classes started by wazee in D:\Codearson\e-comm\e_com_be)
+2025-06-24 20:19:15.038  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : The following profiles are active: dev
+2025-06-24 20:19:15.329  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-24 20:19:15.361  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 0 JPA repository interfaces.
+2025-06-24 20:19:15.458  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-06-24 20:19:15.459  INFO 47960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-24 20:19:15.459  INFO 47960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-06-24 20:19:15.479  INFO 47960 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-24 20:19:15.479  INFO 47960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 440 ms
+2025-06-24 20:19:15.534  INFO 47960 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-24 20:19:15.538  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-06-24 20:19:15.544  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-06-24 20:19:15.544  INFO 47960 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2025-06-24 20:19:15.888  INFO 47960 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-06-24 20:19:15.889  INFO 47960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:19:16.243  INFO 47960 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5b580fd5, org.springframework.security.web.context.SecurityContextPersistenceFilter@732c7c81, org.springframework.security.web.header.HeaderWriterFilter@682f0972, org.springframework.web.filter.CorsFilter@2a64d5f3, org.springframework.security.web.authentication.logout.LogoutFilter@32859c82, com.e_com.Service.Utils.JwtCustomFilter@6d9bb222, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6bfa288c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7b0ec818, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c363692, org.springframework.security.web.session.SessionManagementFilter@45c3893c, org.springframework.security.web.access.ExceptionTranslationFilter@57e9e4ec, org.springframework.security.web.access.intercept.AuthorizationFilter@3de34edf]
+2025-06-24 20:19:16.325  INFO 47960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-24 20:19:16.338  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-24 20:19:16.344  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Started EComApplication in 1.332 seconds (JVM running for 2787.689)
+2025-06-24 20:19:16.346  INFO 47960 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-06-24 20:19:49.963  INFO 47960 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-24 20:19:49.963  INFO 47960 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-24 20:19:49.965  INFO 47960 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-06-24 20:19:49.966  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-06-24 20:19:49.977  INFO 47960 --- [http-nio-8080-exec-2] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-06-24 20:19:49.977  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-06-24 20:19:49.980  WARN 47960 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 20:19:49.998  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.Controller.ProductController   : ProductController.updateProduct() invoked
+2025-06-24 20:19:49.999  INFO 47960 --- [http-nio-8080-exec-2] c.e_com.ServiceImpl.ProductServiceImpl   : ProductServiceImpl.updateProduct invoked
+2025-06-24 20:19:49.999  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.Service.BL.ProductServiceBL    : ProductServiceBL.updateProduct() invoked.
+2025-06-24 20:19:50.003  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.checkProductAvailability() invoked with productId: 10
+2025-06-24 20:19:50.003  WARN 47960 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 20:19:50.009  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProduct() invoked.
+2025-06-24 20:19:50.029  INFO 47960 --- [http-nio-8080-exec-2] c.e_com.ServiceImpl.ProductServiceImpl   : Product Details updated.
+2025-06-24 20:21:51.141  INFO 47960 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:21:51.142  INFO 47960 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-06-24 20:21:51.143  INFO 47960 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-06-24 20:21:51.240  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Starting EComApplication using Java 17.0.12 on Wazeem with PID 47960 (D:\Codearson\e-comm\e_com_be\target\classes started by wazee in D:\Codearson\e-comm\e_com_be)
+2025-06-24 20:21:51.240  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : The following profiles are active: dev
+2025-06-24 20:21:51.540  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-24 20:21:51.572  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 0 JPA repository interfaces.
+2025-06-24 20:21:51.712  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-06-24 20:21:51.712  INFO 47960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-24 20:21:51.712  INFO 47960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-06-24 20:21:51.729  INFO 47960 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-24 20:21:51.729  INFO 47960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 486 ms
+2025-06-24 20:21:51.791  INFO 47960 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-24 20:21:51.795  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2025-06-24 20:21:51.800  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2025-06-24 20:21:51.801  INFO 47960 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2025-06-24 20:21:52.059  INFO 47960 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-06-24 20:21:52.059  INFO 47960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:21:52.435  INFO 47960 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@60b6bfb7, org.springframework.security.web.context.SecurityContextPersistenceFilter@ffd5309, org.springframework.security.web.header.HeaderWriterFilter@42ab332a, org.springframework.web.filter.CorsFilter@3e04bb12, org.springframework.security.web.authentication.logout.LogoutFilter@2785ec1e, com.e_com.Service.Utils.JwtCustomFilter@4272373, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@19f8123f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d14049, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@775b52cd, org.springframework.security.web.session.SessionManagementFilter@6624d611, org.springframework.security.web.access.ExceptionTranslationFilter@4a0b930a, org.springframework.security.web.access.intercept.AuthorizationFilter@4f9133f4]
+2025-06-24 20:21:52.517  INFO 47960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-24 20:21:52.532  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-24 20:21:52.538  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Started EComApplication in 1.338 seconds (JVM running for 2943.883)
+2025-06-24 20:21:52.541  INFO 47960 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-06-24 20:21:54.027  INFO 47960 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:21:54.028  INFO 47960 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2025-06-24 20:21:54.029  INFO 47960 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2025-06-24 20:21:54.098  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Starting EComApplication using Java 17.0.12 on Wazeem with PID 47960 (D:\Codearson\e-comm\e_com_be\target\classes started by wazee in D:\Codearson\e-comm\e_com_be)
+2025-06-24 20:21:54.098  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : The following profiles are active: dev
+2025-06-24 20:21:54.381  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-24 20:21:54.406  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 0 JPA repository interfaces.
+2025-06-24 20:21:54.507  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-06-24 20:21:54.508  INFO 47960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-24 20:21:54.508  INFO 47960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-06-24 20:21:54.526  INFO 47960 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-24 20:21:54.526  INFO 47960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 427 ms
+2025-06-24 20:21:54.575  INFO 47960 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-24 20:21:54.579  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2025-06-24 20:21:54.583  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2025-06-24 20:21:54.584  INFO 47960 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2025-06-24 20:21:54.842  INFO 47960 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-06-24 20:21:54.842  INFO 47960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:21:55.186  INFO 47960 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@8c9abec, org.springframework.security.web.context.SecurityContextPersistenceFilter@42b1fe68, org.springframework.security.web.header.HeaderWriterFilter@37250331, org.springframework.web.filter.CorsFilter@1267cca3, org.springframework.security.web.authentication.logout.LogoutFilter@4839a9f8, com.e_com.Service.Utils.JwtCustomFilter@3799d043, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@30b3270a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f9086a6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@345f8533, org.springframework.security.web.session.SessionManagementFilter@495c6a16, org.springframework.security.web.access.ExceptionTranslationFilter@36b88915, org.springframework.security.web.access.intercept.AuthorizationFilter@1f52d19e]
+2025-06-24 20:21:55.257  INFO 47960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-24 20:21:55.269  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-24 20:21:55.276  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Started EComApplication in 1.2 seconds (JVM running for 2946.621)
+2025-06-24 20:21:55.278  INFO 47960 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-06-24 20:22:16.662  INFO 47960 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-24 20:22:16.662  INFO 47960 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-24 20:22:16.663  INFO 47960 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-24 20:22:16.664  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-06-24 20:22:16.673  INFO 47960 --- [http-nio-8080-exec-2] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-06-24 20:22:16.673  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-06-24 20:22:16.677  WARN 47960 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 20:22:16.702  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.Controller.ProductController   : ProductController.updateProduct() invoked
+2025-06-24 20:22:16.702  INFO 47960 --- [http-nio-8080-exec-2] c.e_com.ServiceImpl.ProductServiceImpl   : ProductServiceImpl.updateProduct invoked
+2025-06-24 20:22:16.702  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.Service.BL.ProductServiceBL    : ProductServiceBL.updateProduct() invoked.
+2025-06-24 20:22:16.707  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.checkProductAvailability() invoked with productId: 10
+2025-06-24 20:22:16.707  WARN 47960 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 20:22:16.713  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProduct() invoked.
+2025-06-24 20:22:16.720  INFO 47960 --- [http-nio-8080-exec-2] c.e_com.ServiceImpl.ProductServiceImpl   : Product Details updated.
+2025-06-24 20:22:16.721  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProductIsActiveBasedOnQuantity() invoked for productId: 10
+2025-06-24 20:22:16.721  WARN 47960 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 20:22:34.121  INFO 47960 --- [http-nio-8080-exec-3] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-06-24 20:22:34.124  INFO 47960 --- [http-nio-8080-exec-3] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-06-24 20:22:34.125  INFO 47960 --- [http-nio-8080-exec-3] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-06-24 20:22:34.125  WARN 47960 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 20:22:34.132  INFO 47960 --- [http-nio-8080-exec-3] com.e_com.Controller.ProductController   : ProductController.updateProduct() invoked
+2025-06-24 20:22:34.132  INFO 47960 --- [http-nio-8080-exec-3] c.e_com.ServiceImpl.ProductServiceImpl   : ProductServiceImpl.updateProduct invoked
+2025-06-24 20:22:34.132  INFO 47960 --- [http-nio-8080-exec-3] com.e_com.Service.BL.ProductServiceBL    : ProductServiceBL.updateProduct() invoked.
+2025-06-24 20:22:34.133  INFO 47960 --- [http-nio-8080-exec-3] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.checkProductAvailability() invoked with productId: 10
+2025-06-24 20:22:34.133  WARN 47960 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 20:22:34.137  INFO 47960 --- [http-nio-8080-exec-3] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProduct() invoked.
+2025-06-24 20:22:34.145  INFO 47960 --- [http-nio-8080-exec-3] c.e_com.ServiceImpl.ProductServiceImpl   : Product Details updated.
+2025-06-24 20:22:34.146  INFO 47960 --- [http-nio-8080-exec-3] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProductIsActiveBasedOnQuantity() invoked for productId: 10
+2025-06-24 20:22:34.146  WARN 47960 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 20:22:34.149  INFO 47960 --- [http-nio-8080-exec-3] com.e_com.DaoImpl.ProductDaoImpl         : Product id 10 is now inactive due to zero quantity.
+2025-06-24 20:48:14.012  INFO 47960 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:48:14.063  INFO 47960 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2025-06-24 20:48:14.068  INFO 47960 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2025-06-24 20:48:14.656  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Starting EComApplication using Java 17.0.12 on Wazeem with PID 47960 (D:\Codearson\e-comm\e_com_be\target\classes started by wazee in D:\Codearson\e-comm\e_com_be)
+2025-06-24 20:48:14.657  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : The following profiles are active: dev
+2025-06-24 20:48:15.164  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-24 20:48:15.188  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 0 JPA repository interfaces.
+2025-06-24 20:48:15.346  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-06-24 20:48:15.347  INFO 47960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-24 20:48:15.347  INFO 47960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-06-24 20:48:15.364  INFO 47960 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-24 20:48:15.364  INFO 47960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 700 ms
+2025-06-24 20:48:15.421  INFO 47960 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-24 20:48:15.426  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2025-06-24 20:48:15.436  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2025-06-24 20:48:15.436  INFO 47960 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2025-06-24 20:48:15.848  INFO 47960 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-06-24 20:48:15.848  INFO 47960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:48:16.207  WARN 47960 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController': Unsatisfied dependency expressed through field 'productService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productServiceImpl': Unsatisfied dependency expressed through field 'productServiceBL'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productServiceBL' defined in file [D:\Codearson\e-comm\e_com_be\target\classes\com\e_com\Service\BL\ProductServiceBL.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.e_com.Service.BL.ProductServiceBL]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	param cannot be resolved to a type
+	Syntax error on token "productId", protected expected
+
+2025-06-24 20:48:16.209  INFO 47960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:48:16.210  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2025-06-24 20:48:16.211  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2025-06-24 20:48:16.212  INFO 47960 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-06-24 20:48:16.226  INFO 47960 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-06-24 20:48:16.270 ERROR 47960 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController': Unsatisfied dependency expressed through field 'productService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productServiceImpl': Unsatisfied dependency expressed through field 'productServiceBL'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productServiceBL' defined in file [D:\Codearson\e-comm\e_com_be\target\classes\com\e_com\Service\BL\ProductServiceBL.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.e_com.Service.BL.ProductServiceBL]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	param cannot be resolved to a type
+	Syntax error on token "productId", protected expected
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659) ~[spring-beans-5.3.13.jar:5.3.13]
 2025-06-24 19:57:49.468  INFO 13580 --- [restartedMain] com.e_com.EComApplication                : Starting EComApplication using Java 21.0.6 on Rfs-Marsh with PID 13580 (D:\codearson\E_Com_Soruces\e_com_be\target\classes started by Rifas in D:\codearson\E_Com_Soruces\e_com_be)
 2025-06-24 19:57:49.469  INFO 13580 --- [restartedMain] com.e_com.EComApplication                : The following profiles are active: dev
 2025-06-24 19:57:49.516  INFO 13580 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
@@ -17199,6 +17461,9 @@ java.sql.SQLException: Access denied for user 'admin'@'localhost' (using passwor
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.13.jar:5.3.13]
@@ -17272,6 +17537,16 @@ java.sql.SQLException: Access denied for user 'admin'@'localhost' (using passwor
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.1.jar:2.6.1]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290) ~[spring-boot-2.6.1.jar:2.6.1]
 	at com.e_com.EComApplication.main(EComApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.1.jar:2.6.1]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productServiceImpl': Unsatisfied dependency expressed through field 'productServiceBL'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productServiceBL' defined in file [D:\Codearson\e-comm\e_com_be\target\classes\com\e_com\Service\BL\ProductServiceBL.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.e_com.Service.BL.ProductServiceBL]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	param cannot be resolved to a type
+	Syntax error on token "productId", protected expected
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659) ~[spring-beans-5.3.13.jar:5.3.13]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.1.jar:2.6.1]
@@ -17356,6 +17631,78 @@ java.sql.SQLException: Access denied for user 'admin'@'localhost' (using passwor
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656) ~[spring-beans-5.3.13.jar:5.3.13]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productServiceBL' defined in file [D:\Codearson\e-comm\e_com_be\target\classes\com\e_com\Service\BL\ProductServiceBL.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.e_com.Service.BL.ProductServiceBL]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	param cannot be resolved to a type
+	Syntax error on token "productId", protected expected
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656) ~[spring-beans-5.3.13.jar:5.3.13]
+	... 39 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.e_com.Service.BL.ProductServiceBL]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	param cannot be resolved to a type
+	Syntax error on token "productId", protected expected
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326) ~[spring-beans-5.3.13.jar:5.3.13]
+	... 50 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	param cannot be resolved to a type
+	Syntax error on token "productId", protected expected
+
+	at com.e_com.Service.BL.ProductServiceBL.<init>(ProductServiceBL.java:103) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211) ~[spring-beans-5.3.13.jar:5.3.13]
+	... 52 common frames omitted
+
+2025-06-24 20:48:17.799  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Starting EComApplication using Java 17.0.12 on Wazeem with PID 47960 (D:\Codearson\e-comm\e_com_be\target\classes started by wazee in D:\Codearson\e-comm\e_com_be)
+2025-06-24 20:48:17.800  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : The following profiles are active: dev
+2025-06-24 20:48:18.140  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-24 20:48:18.164  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 0 JPA repository interfaces.
+2025-06-24 20:48:18.269  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-06-24 20:48:18.269  INFO 47960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-24 20:48:18.269  INFO 47960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-06-24 20:48:18.286  INFO 47960 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-06-24 20:48:18.286  INFO 47960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 484 ms
+2025-06-24 20:48:18.338  INFO 47960 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-24 20:48:18.342  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2025-06-24 20:48:18.351  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2025-06-24 20:48:18.351  INFO 47960 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2025-06-24 20:48:18.604  INFO 47960 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-06-24 20:48:18.604  INFO 47960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:48:18.801  WARN 47960 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController': Unsatisfied dependency expressed through field 'productService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productServiceImpl': Unsatisfied dependency expressed through field 'productServiceBL'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productServiceBL' defined in file [D:\Codearson\e-comm\e_com_be\target\classes\com\e_com\Service\BL\ProductServiceBL.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.e_com.Service.BL.ProductServiceBL]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	param cannot be resolved to a type
+	Syntax error on token "productId", protected expected
+
+2025-06-24 20:48:18.801  INFO 47960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:48:18.801  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2025-06-24 20:48:18.802  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2025-06-24 20:48:18.802  INFO 47960 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-06-24 20:48:18.807  INFO 47960 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-06-24 20:48:18.810 ERROR 47960 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController': Unsatisfied dependency expressed through field 'productService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productServiceImpl': Unsatisfied dependency expressed through field 'productServiceBL'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productServiceBL' defined in file [D:\Codearson\e-comm\e_com_be\target\classes\com\e_com\Service\BL\ProductServiceBL.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.e_com.Service.BL.ProductServiceBL]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	param cannot be resolved to a type
+	Syntax error on token "productId", protected expected
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.13.jar:5.3.13]
@@ -17366,6 +17713,9 @@ java.sql.SQLException: Access denied for user 'admin'@'localhost' (using passwor
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.13.jar:5.3.13]
@@ -17425,6 +17775,16 @@ java.sql.SQLException: Access denied for user 'admin'@'localhost' (using passwor
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.1.jar:2.6.1]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290) ~[spring-boot-2.6.1.jar:2.6.1]
 	at com.e_com.EComApplication.main(EComApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.1.jar:2.6.1]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productServiceImpl': Unsatisfied dependency expressed through field 'productServiceBL'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productServiceBL' defined in file [D:\Codearson\e-comm\e_com_be\target\classes\com\e_com\Service\BL\ProductServiceBL.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.e_com.Service.BL.ProductServiceBL]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	param cannot be resolved to a type
+	Syntax error on token "productId", protected expected
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659) ~[spring-beans-5.3.13.jar:5.3.13]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.1.jar:2.6.1]
@@ -17511,6 +17871,78 @@ java.sql.SQLException: Access denied for user 'admin'@'localhost' (using passwor
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656) ~[spring-beans-5.3.13.jar:5.3.13]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productServiceBL' defined in file [D:\Codearson\e-comm\e_com_be\target\classes\com\e_com\Service\BL\ProductServiceBL.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.e_com.Service.BL.ProductServiceBL]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	param cannot be resolved to a type
+	Syntax error on token "productId", protected expected
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656) ~[spring-beans-5.3.13.jar:5.3.13]
+	... 39 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.e_com.Service.BL.ProductServiceBL]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	param cannot be resolved to a type
+	Syntax error on token "productId", protected expected
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326) ~[spring-beans-5.3.13.jar:5.3.13]
+	... 50 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	param cannot be resolved to a type
+	Syntax error on token "productId", protected expected
+
+	at com.e_com.Service.BL.ProductServiceBL.<init>(ProductServiceBL.java:103) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211) ~[spring-beans-5.3.13.jar:5.3.13]
+	... 52 common frames omitted
+
+2025-06-24 20:48:53.882  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Starting EComApplication using Java 17.0.12 on Wazeem with PID 47960 (D:\Codearson\e-comm\e_com_be\target\classes started by wazee in D:\Codearson\e-comm\e_com_be)
+2025-06-24 20:48:53.882  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : The following profiles are active: dev
+2025-06-24 20:48:54.330  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-24 20:48:54.352  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 JPA repository interfaces.
+2025-06-24 20:48:54.450  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-06-24 20:48:54.450  INFO 47960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-24 20:48:54.451  INFO 47960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-06-24 20:48:54.472  INFO 47960 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-06-24 20:48:54.472  INFO 47960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 588 ms
+2025-06-24 20:48:54.526  INFO 47960 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-24 20:48:54.531  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2025-06-24 20:48:54.537  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2025-06-24 20:48:54.537  INFO 47960 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2025-06-24 20:48:54.787  INFO 47960 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-06-24 20:48:54.787  INFO 47960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:48:54.975  WARN 47960 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController': Unsatisfied dependency expressed through field 'productService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productServiceImpl': Unsatisfied dependency expressed through field 'productServiceBL'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productServiceBL' defined in file [D:\Codearson\e-comm\e_com_be\target\classes\com\e_com\Service\BL\ProductServiceBL.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.e_com.Service.BL.ProductServiceBL]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	param cannot be resolved to a type
+	Syntax error on token "productId", protected expected
+
+2025-06-24 20:48:54.976  INFO 47960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:48:54.976  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2025-06-24 20:48:54.978  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2025-06-24 20:48:54.978  INFO 47960 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-06-24 20:48:54.982  INFO 47960 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-06-24 20:48:54.985 ERROR 47960 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController': Unsatisfied dependency expressed through field 'productService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productServiceImpl': Unsatisfied dependency expressed through field 'productServiceBL'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productServiceBL' defined in file [D:\Codearson\e-comm\e_com_be\target\classes\com\e_com\Service\BL\ProductServiceBL.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.e_com.Service.BL.ProductServiceBL]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	param cannot be resolved to a type
+	Syntax error on token "productId", protected expected
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.13.jar:5.3.13]
@@ -17521,6 +17953,9 @@ java.sql.SQLException: Access denied for user 'admin'@'localhost' (using passwor
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.13.jar:5.3.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.13.jar:5.3.13]
@@ -17580,6 +18015,15 @@ java.sql.SQLException: Access denied for user 'admin'@'localhost' (using passwor
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.1.jar:2.6.1]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290) ~[spring-boot-2.6.1.jar:2.6.1]
 	at com.e_com.EComApplication.main(EComApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.1.jar:2.6.1]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productServiceImpl': Unsatisfied dependency expressed through field 'productServiceBL'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productServiceBL' defined in file [D:\Codearson\e-comm\e_com_be\target\classes\com\e_com\Service\BL\ProductServiceBL.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.e_com.Service.BL.ProductServiceBL]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	param cannot be resolved to a type
+	Syntax error on token "productId", protected expected
+
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.1.jar:2.6.1]
@@ -17677,6 +18121,14 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656) ~[spring-beans-5.3.13.jar:5.3.13]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productServiceBL' defined in file [D:\Codearson\e-comm\e_com_be\target\classes\com\e_com\Service\BL\ProductServiceBL.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.e_com.Service.BL.ProductServiceBL]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	param cannot be resolved to a type
+	Syntax error on token "productId", protected expected
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.13.jar:5.3.13]
 	... 58 common frames omitted
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceBL': Unsatisfied dependency expressed through field 'userDao'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDaoImpl': Injection of persistence dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659) ~[spring-beans-5.3.13.jar:5.3.13]
@@ -17694,6 +18146,274 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.13.jar:5.3.13]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656) ~[spring-beans-5.3.13.jar:5.3.13]
+	... 39 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.e_com.Service.BL.ProductServiceBL]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	param cannot be resolved to a type
+	Syntax error on token "productId", protected expected
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.3.13.jar:5.3.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326) ~[spring-beans-5.3.13.jar:5.3.13]
+	... 50 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	param cannot be resolved to a type
+	Syntax error on token "productId", protected expected
+
+	at com.e_com.Service.BL.ProductServiceBL.<init>(ProductServiceBL.java:103) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211) ~[spring-beans-5.3.13.jar:5.3.13]
+	... 52 common frames omitted
+
+2025-06-24 20:49:25.723  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Starting EComApplication using Java 17.0.12 on Wazeem with PID 47960 (D:\Codearson\e-comm\e_com_be\target\classes started by wazee in D:\Codearson\e-comm\e_com_be)
+2025-06-24 20:49:25.723  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : The following profiles are active: dev
+2025-06-24 20:49:26.031  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-24 20:49:26.051  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
+2025-06-24 20:49:26.146  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-06-24 20:49:26.146  INFO 47960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-24 20:49:26.146  INFO 47960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-06-24 20:49:26.163  INFO 47960 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-06-24 20:49:26.164  INFO 47960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 440 ms
+2025-06-24 20:49:26.213  INFO 47960 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-24 20:49:26.217  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2025-06-24 20:49:26.223  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2025-06-24 20:49:26.223  INFO 47960 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2025-06-24 20:49:26.472  INFO 47960 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-06-24 20:49:26.472  INFO 47960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:49:26.842  INFO 47960 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c6e12df, org.springframework.security.web.context.SecurityContextPersistenceFilter@56bbd93f, org.springframework.security.web.header.HeaderWriterFilter@21eaa62a, org.springframework.web.filter.CorsFilter@27aaeed7, org.springframework.security.web.authentication.logout.LogoutFilter@5bee4670, com.e_com.Service.Utils.JwtCustomFilter@7cb32b28, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@396a1931, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4dc533c0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3017d108, org.springframework.security.web.session.SessionManagementFilter@469b0a9e, org.springframework.security.web.access.ExceptionTranslationFilter@175f0c3d, org.springframework.security.web.access.intercept.AuthorizationFilter@1cbb93c1]
+2025-06-24 20:49:26.923  INFO 47960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-24 20:49:26.936  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-24 20:49:26.940  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Started EComApplication in 1.245 seconds (JVM running for 4598.285)
+2025-06-24 20:49:26.942  INFO 47960 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-06-24 20:49:48.245  INFO 47960 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-24 20:49:48.245  INFO 47960 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-24 20:49:48.248  INFO 47960 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-06-24 20:49:48.249  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-06-24 20:49:48.257  INFO 47960 --- [http-nio-8080-exec-2] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-06-24 20:49:48.257  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-06-24 20:49:48.261  WARN 47960 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 20:49:48.281  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.Controller.ProductController   : ProductController.updateProduct() invoked
+2025-06-24 20:49:48.281  INFO 47960 --- [http-nio-8080-exec-2] c.e_com.ServiceImpl.ProductServiceImpl   : ProductServiceImpl.updateProduct invoked
+2025-06-24 20:49:48.281  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.Service.BL.ProductServiceBL    : ProductServiceBL.updateProduct() invoked.
+2025-06-24 20:49:48.284  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.checkProductAvailability() invoked with productId: 10
+2025-06-24 20:49:48.285  WARN 47960 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 20:49:48.290  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProduct() invoked.
+2025-06-24 20:49:48.330  INFO 47960 --- [http-nio-8080-exec-2] c.e_com.ServiceImpl.ProductServiceImpl   : Product Details updated.
+2025-06-24 20:49:48.331  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProductIsActiveBasedOnQuantity() invoked for productId: 10
+2025-06-24 20:49:48.331  WARN 47960 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 20:50:08.070  INFO 47960 --- [http-nio-8080-exec-3] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-06-24 20:50:08.073  INFO 47960 --- [http-nio-8080-exec-3] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-06-24 20:50:08.073  INFO 47960 --- [http-nio-8080-exec-3] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-06-24 20:50:08.073  WARN 47960 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 20:50:08.081  INFO 47960 --- [http-nio-8080-exec-3] com.e_com.Controller.ProductController   : ProductController.updateProduct() invoked
+2025-06-24 20:50:08.082  INFO 47960 --- [http-nio-8080-exec-3] c.e_com.ServiceImpl.ProductServiceImpl   : ProductServiceImpl.updateProduct invoked
+2025-06-24 20:50:08.082  INFO 47960 --- [http-nio-8080-exec-3] com.e_com.Service.BL.ProductServiceBL    : ProductServiceBL.updateProduct() invoked.
+2025-06-24 20:50:08.082  INFO 47960 --- [http-nio-8080-exec-3] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.checkProductAvailability() invoked with productId: 10
+2025-06-24 20:50:08.082  WARN 47960 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 20:50:08.086  INFO 47960 --- [http-nio-8080-exec-3] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProduct() invoked.
+2025-06-24 20:50:08.092  INFO 47960 --- [http-nio-8080-exec-3] c.e_com.ServiceImpl.ProductServiceImpl   : Product Details updated.
+2025-06-24 20:50:08.092  INFO 47960 --- [http-nio-8080-exec-3] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProductIsActiveBasedOnQuantity() invoked for productId: 10
+2025-06-24 20:50:08.092  WARN 47960 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 20:50:30.253  INFO 47960 --- [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:50:30.253  INFO 47960 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2025-06-24 20:50:30.255  INFO 47960 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2025-06-24 20:50:30.360  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Starting EComApplication using Java 17.0.12 on Wazeem with PID 47960 (D:\Codearson\e-comm\e_com_be\target\classes started by wazee in D:\Codearson\e-comm\e_com_be)
+2025-06-24 20:50:30.360  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : The following profiles are active: dev
+2025-06-24 20:50:30.696  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-24 20:50:30.718  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 JPA repository interfaces.
+2025-06-24 20:50:30.809  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-06-24 20:50:30.810  INFO 47960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-24 20:50:30.810  INFO 47960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-06-24 20:50:30.827  INFO 47960 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-06-24 20:50:30.827  INFO 47960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 465 ms
+2025-06-24 20:50:30.876  INFO 47960 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-24 20:50:30.880  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2025-06-24 20:50:30.895  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2025-06-24 20:50:30.895  INFO 47960 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2025-06-24 20:50:31.163  INFO 47960 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-06-24 20:50:31.163  INFO 47960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:50:31.532  INFO 47960 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e5e53a, org.springframework.security.web.context.SecurityContextPersistenceFilter@488e24e7, org.springframework.security.web.header.HeaderWriterFilter@acf1d0, org.springframework.web.filter.CorsFilter@5b577e22, org.springframework.security.web.authentication.logout.LogoutFilter@68c5781d, com.e_com.Service.Utils.JwtCustomFilter@b280f4c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2979eda9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ebcbb27, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d1e0378, org.springframework.security.web.session.SessionManagementFilter@642f6b2f, org.springframework.security.web.access.ExceptionTranslationFilter@51661e09, org.springframework.security.web.access.intercept.AuthorizationFilter@aeb0d44]
+2025-06-24 20:50:31.604  INFO 47960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-24 20:50:31.618  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-24 20:50:31.623  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Started EComApplication in 1.294 seconds (JVM running for 4662.969)
+2025-06-24 20:50:31.626  INFO 47960 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-06-24 20:50:39.403  INFO 47960 --- [Thread-40] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:50:39.403  INFO 47960 --- [Thread-40] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2025-06-24 20:50:39.405  INFO 47960 --- [Thread-40] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2025-06-24 20:50:39.489  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Starting EComApplication using Java 17.0.12 on Wazeem with PID 47960 (D:\Codearson\e-comm\e_com_be\target\classes started by wazee in D:\Codearson\e-comm\e_com_be)
+2025-06-24 20:50:39.489  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : The following profiles are active: dev
+2025-06-24 20:50:39.784  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-24 20:50:39.806  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 JPA repository interfaces.
+2025-06-24 20:50:39.914  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-06-24 20:50:39.914  INFO 47960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-24 20:50:39.914  INFO 47960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-06-24 20:50:39.932  INFO 47960 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-06-24 20:50:39.932  INFO 47960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 441 ms
+2025-06-24 20:50:39.980  INFO 47960 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-24 20:50:39.990  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2025-06-24 20:50:39.994  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2025-06-24 20:50:39.994  INFO 47960 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2025-06-24 20:50:40.236  INFO 47960 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-06-24 20:50:40.236  INFO 47960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:50:40.592  INFO 47960 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7f422313, org.springframework.security.web.context.SecurityContextPersistenceFilter@d0c4bf5, org.springframework.security.web.header.HeaderWriterFilter@37255db8, org.springframework.web.filter.CorsFilter@dd435f9, org.springframework.security.web.authentication.logout.LogoutFilter@899b733, com.e_com.Service.Utils.JwtCustomFilter@730d055b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3fd023dc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@22856103, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14616708, org.springframework.security.web.session.SessionManagementFilter@f794389, org.springframework.security.web.access.ExceptionTranslationFilter@21927f8f, org.springframework.security.web.access.intercept.AuthorizationFilter@19e0761f]
+2025-06-24 20:50:40.704  INFO 47960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-24 20:50:40.727  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-24 20:50:40.734  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Started EComApplication in 1.266 seconds (JVM running for 4672.08)
+2025-06-24 20:50:40.737  INFO 47960 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-06-24 20:51:37.512  INFO 47960 --- [Thread-44] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:51:37.513  INFO 47960 --- [Thread-44] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2025-06-24 20:51:37.514  INFO 47960 --- [Thread-44] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+2025-06-24 20:51:39.177  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Starting EComApplication using Java 17.0.12 on Wazeem with PID 47960 (D:\Codearson\e-comm\e_com_be\target\classes started by wazee in D:\Codearson\e-comm\e_com_be)
+2025-06-24 20:51:39.177  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : The following profiles are active: dev
+2025-06-24 20:51:39.462  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-24 20:51:39.485  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 JPA repository interfaces.
+2025-06-24 20:51:39.583  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-06-24 20:51:39.583  INFO 47960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-24 20:51:39.583  INFO 47960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-06-24 20:51:39.602  INFO 47960 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-06-24 20:51:39.602  INFO 47960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 422 ms
+2025-06-24 20:51:39.657  INFO 47960 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-24 20:51:39.663  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2025-06-24 20:51:39.669  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2025-06-24 20:51:39.669  INFO 47960 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2025-06-24 20:51:39.932  INFO 47960 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-06-24 20:51:39.933  INFO 47960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:51:40.321  INFO 47960 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2a23da91, org.springframework.security.web.context.SecurityContextPersistenceFilter@44b163a4, org.springframework.security.web.header.HeaderWriterFilter@4c8440fd, org.springframework.web.filter.CorsFilter@d7f8c6, org.springframework.security.web.authentication.logout.LogoutFilter@9c98039, com.e_com.Service.Utils.JwtCustomFilter@54fc521a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@62b162d2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@cdc45d1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@10548bfe, org.springframework.security.web.session.SessionManagementFilter@5dc2efce, org.springframework.security.web.access.ExceptionTranslationFilter@449c475f, org.springframework.security.web.access.intercept.AuthorizationFilter@7c03cb19]
+2025-06-24 20:51:40.397  INFO 47960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-24 20:51:40.409  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-24 20:51:40.413  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Started EComApplication in 2.842 seconds (JVM running for 4731.758)
+2025-06-24 20:51:40.416  INFO 47960 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-06-24 20:52:03.887  INFO 47960 --- [Thread-48] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:52:03.887  INFO 47960 --- [Thread-48] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
+2025-06-24 20:52:03.888  INFO 47960 --- [Thread-48] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
+2025-06-24 20:52:03.972  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Starting EComApplication using Java 17.0.12 on Wazeem with PID 47960 (D:\Codearson\e-comm\e_com_be\target\classes started by wazee in D:\Codearson\e-comm\e_com_be)
+2025-06-24 20:52:03.972  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : The following profiles are active: dev
+2025-06-24 20:52:04.258  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-24 20:52:04.279  INFO 47960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 JPA repository interfaces.
+2025-06-24 20:52:04.372  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-06-24 20:52:04.372  INFO 47960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-24 20:52:04.373  INFO 47960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-06-24 20:52:04.389  INFO 47960 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-06-24 20:52:04.390  INFO 47960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 417 ms
+2025-06-24 20:52:04.436  INFO 47960 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-24 20:52:04.440  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2025-06-24 20:52:04.444  INFO 47960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2025-06-24 20:52:04.444  INFO 47960 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2025-06-24 20:52:04.664  INFO 47960 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-06-24 20:52:04.664  INFO 47960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 20:52:04.991  INFO 47960 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@21cf9605, org.springframework.security.web.context.SecurityContextPersistenceFilter@22fe28df, org.springframework.security.web.header.HeaderWriterFilter@f0683ec, org.springframework.web.filter.CorsFilter@7eec38c, org.springframework.security.web.authentication.logout.LogoutFilter@7acc149e, com.e_com.Service.Utils.JwtCustomFilter@747f3e57, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7ded6352, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@464f96e0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@60c89716, org.springframework.security.web.session.SessionManagementFilter@6f0010ec, org.springframework.security.web.access.ExceptionTranslationFilter@6b169b41, org.springframework.security.web.access.intercept.AuthorizationFilter@5897e702]
+2025-06-24 20:52:05.056  INFO 47960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-24 20:52:05.071  INFO 47960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-24 20:52:05.077  INFO 47960 --- [restartedMain] com.e_com.EComApplication                : Started EComApplication in 1.133 seconds (JVM running for 4756.421)
+2025-06-24 20:52:05.079  INFO 47960 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-06-24 20:57:46.903  INFO 47960 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-24 20:57:46.904  INFO 47960 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-24 20:57:46.906  INFO 47960 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-06-24 20:57:46.907  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-06-24 20:57:46.917  INFO 47960 --- [http-nio-8080-exec-2] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-06-24 20:57:46.917  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-06-24 20:57:46.920  WARN 47960 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 20:57:46.946  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.Controller.ProductController   : ProductController.updateProduct() invoked
+2025-06-24 20:57:46.946  INFO 47960 --- [http-nio-8080-exec-2] c.e_com.ServiceImpl.ProductServiceImpl   : ProductServiceImpl.updateProduct invoked
+2025-06-24 20:57:46.946  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.Service.BL.ProductServiceBL    : ProductServiceBL.updateProduct() invoked.
+2025-06-24 20:57:46.951  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.checkProductAvailability() invoked with productId: 10
+2025-06-24 20:57:46.951  WARN 47960 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 20:57:46.957  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProduct() invoked.
+2025-06-24 20:57:46.967  INFO 47960 --- [http-nio-8080-exec-2] c.e_com.ServiceImpl.ProductServiceImpl   : Product Details updated.
+2025-06-24 20:57:46.968  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProductIsActiveBasedOnQuantity() invoked for productId: 10
+2025-06-24 20:57:46.968  WARN 47960 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 20:57:46.970  INFO 47960 --- [http-nio-8080-exec-2] com.e_com.DaoImpl.ProductDaoImpl         : Product id 10 is now inactive due to zero quantity.
+2025-06-24 21:02:39.772  INFO 47960 --- [RMI TCP Connection(105)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-24 21:02:39.807  INFO 47960 --- [RMI TCP Connection(105)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 21:02:39.809  INFO 47960 --- [RMI TCP Connection(105)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
+2025-06-24 21:02:39.811  INFO 47960 --- [RMI TCP Connection(105)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
+2025-06-24 21:02:43.737  INFO 45224 --- [restartedMain] com.e_com.EComApplication                : Starting EComApplication using Java 17.0.12 on Wazeem with PID 45224 (D:\Codearson\e-comm\e_com_be\target\classes started by wazee in D:\Codearson\e-comm\e_com_be)
+2025-06-24 21:02:43.738  INFO 45224 --- [restartedMain] com.e_com.EComApplication                : The following profiles are active: dev
+2025-06-24 21:02:43.787  INFO 45224 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-06-24 21:02:43.788  INFO 45224 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-06-24 21:02:44.585  INFO 45224 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-24 21:02:44.621  INFO 45224 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 0 JPA repository interfaces.
+2025-06-24 21:02:45.181  INFO 45224 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-06-24 21:02:45.189  INFO 45224 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-24 21:02:45.190  INFO 45224 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-06-24 21:02:45.260  INFO 45224 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-24 21:02:45.261  INFO 45224 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1473 ms
+2025-06-24 21:02:45.446  INFO 45224 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-24 21:02:45.488  INFO 45224 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2025-06-24 21:02:45.620  INFO 45224 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-06-24 21:02:45.701  INFO 45224 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-24 21:02:45.842  INFO 45224 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-24 21:02:45.855  INFO 45224 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2025-06-24 21:02:46.722  INFO 45224 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-06-24 21:02:46.730  INFO 45224 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 21:02:47.465  INFO 45224 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74cdcef9, org.springframework.security.web.context.SecurityContextPersistenceFilter@23f1619e, org.springframework.security.web.header.HeaderWriterFilter@b4623f2, org.springframework.web.filter.CorsFilter@400c302c, org.springframework.security.web.authentication.logout.LogoutFilter@57f442fb, com.e_com.Service.Utils.JwtCustomFilter@1aa5f853, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26f98535, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71980c49, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e0db157, org.springframework.security.web.session.SessionManagementFilter@296fbe33, org.springframework.security.web.access.ExceptionTranslationFilter@4efd548e, org.springframework.security.web.access.intercept.AuthorizationFilter@165f160c]
+2025-06-24 21:02:47.663  INFO 45224 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-06-24 21:02:47.733  INFO 45224 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-06-24 21:02:47.743  INFO 45224 --- [restartedMain] com.e_com.EComApplication                : Started EComApplication in 4.404 seconds (JVM running for 5.131)
+2025-06-24 21:03:09.281  INFO 45224 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-24 21:03:09.282  INFO 45224 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-24 21:03:09.285  INFO 45224 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-06-24 21:03:09.311  INFO 45224 --- [http-nio-8080-exec-2] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-06-24 21:03:09.490  INFO 45224 --- [http-nio-8080-exec-2] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-06-24 21:03:09.490  INFO 45224 --- [http-nio-8080-exec-2] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-06-24 21:03:09.499  WARN 45224 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 21:03:09.699  INFO 45224 --- [http-nio-8080-exec-2] com.e_com.Controller.ProductController   : ProductController.updateProduct() invoked
+2025-06-24 21:03:09.699  INFO 45224 --- [http-nio-8080-exec-2] c.e_com.ServiceImpl.ProductServiceImpl   : ProductServiceImpl.updateProduct invoked
+2025-06-24 21:03:09.699  INFO 45224 --- [http-nio-8080-exec-2] com.e_com.Service.BL.ProductServiceBL    : ProductServiceBL.updateProduct() invoked.
+2025-06-24 21:03:09.707  INFO 45224 --- [http-nio-8080-exec-2] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.checkProductAvailability() invoked with productId: 10
+2025-06-24 21:03:09.707  WARN 45224 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 21:03:09.716  INFO 45224 --- [http-nio-8080-exec-2] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProduct() invoked.
+2025-06-24 21:03:09.746  INFO 45224 --- [http-nio-8080-exec-2] c.e_com.ServiceImpl.ProductServiceImpl   : Product Details updated.
+2025-06-24 21:03:09.747  INFO 45224 --- [http-nio-8080-exec-2] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProductIsActiveBasedOnQuantity() invoked for productId: 10
+2025-06-24 21:03:09.747  WARN 45224 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 21:03:42.580  INFO 45224 --- [http-nio-8080-exec-3] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-06-24 21:03:42.583  INFO 45224 --- [http-nio-8080-exec-3] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-06-24 21:03:42.583  INFO 45224 --- [http-nio-8080-exec-3] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-06-24 21:03:42.584  WARN 45224 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 21:03:42.596  INFO 45224 --- [http-nio-8080-exec-3] com.e_com.Controller.ProductController   : ProductController.updateProduct() invoked
+2025-06-24 21:03:42.596  INFO 45224 --- [http-nio-8080-exec-3] c.e_com.ServiceImpl.ProductServiceImpl   : ProductServiceImpl.updateProduct invoked
+2025-06-24 21:03:42.596  INFO 45224 --- [http-nio-8080-exec-3] com.e_com.Service.BL.ProductServiceBL    : ProductServiceBL.updateProduct() invoked.
+2025-06-24 21:03:42.597  INFO 45224 --- [http-nio-8080-exec-3] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.checkProductAvailability() invoked with productId: 10
+2025-06-24 21:03:42.597  WARN 45224 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 21:03:42.604  INFO 45224 --- [http-nio-8080-exec-3] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProduct() invoked.
+2025-06-24 21:03:42.611  INFO 45224 --- [http-nio-8080-exec-3] c.e_com.ServiceImpl.ProductServiceImpl   : Product Details updated.
+2025-06-24 21:03:42.612  INFO 45224 --- [http-nio-8080-exec-3] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProductIsActiveBasedOnQuantity() invoked for productId: 10
+2025-06-24 21:03:42.612  WARN 45224 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 21:03:42.616  INFO 45224 --- [http-nio-8080-exec-3] com.e_com.DaoImpl.ProductDaoImpl         : Product id 10 is now inactive due to zero quantity.
+2025-06-24 21:03:53.414  INFO 45224 --- [http-nio-8080-exec-4] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-06-24 21:03:53.419  INFO 45224 --- [http-nio-8080-exec-4] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-06-24 21:03:53.419  INFO 45224 --- [http-nio-8080-exec-4] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-06-24 21:03:53.419  WARN 45224 --- [http-nio-8080-exec-4] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 21:03:53.429  INFO 45224 --- [http-nio-8080-exec-4] com.e_com.Controller.ProductController   : ProductController.updateProduct() invoked
+2025-06-24 21:03:53.429  INFO 45224 --- [http-nio-8080-exec-4] c.e_com.ServiceImpl.ProductServiceImpl   : ProductServiceImpl.updateProduct invoked
+2025-06-24 21:03:53.429  INFO 45224 --- [http-nio-8080-exec-4] com.e_com.Service.BL.ProductServiceBL    : ProductServiceBL.updateProduct() invoked.
+2025-06-24 21:03:53.430  INFO 45224 --- [http-nio-8080-exec-4] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.checkProductAvailability() invoked with productId: 10
+2025-06-24 21:03:53.430  WARN 45224 --- [http-nio-8080-exec-4] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 21:03:53.435  INFO 45224 --- [http-nio-8080-exec-4] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProduct() invoked.
+2025-06-24 21:03:53.449  INFO 45224 --- [http-nio-8080-exec-4] c.e_com.ServiceImpl.ProductServiceImpl   : Product Details updated.
+2025-06-24 21:03:53.450  INFO 45224 --- [http-nio-8080-exec-4] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProductIsActiveBasedOnQuantity() invoked for productId: 10
+2025-06-24 21:03:53.451  WARN 45224 --- [http-nio-8080-exec-4] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 21:03:53.454  INFO 45224 --- [http-nio-8080-exec-4] com.e_com.DaoImpl.ProductDaoImpl         : Product id 10 is now inactive due to zero quantity.
+2025-06-24 21:04:16.269  INFO 45224 --- [http-nio-8080-exec-5] com.e_com.Service.Utils.JwtCustomFilter  : request enter the custom filter
+2025-06-24 21:04:16.272  INFO 45224 --- [http-nio-8080-exec-5] c.e.ServiceImpl.UserDetailsServiceImpl   : UserDetailsImpl.loadUserByUsername() invoked with username :lathusanthurairajah@codearson.com
+2025-06-24 21:04:16.272  INFO 45224 --- [http-nio-8080-exec-5] com.e_com.Service.BL.UserServiceBL       : UserServiceBL.getUserByUserName() invoked
+2025-06-24 21:04:16.273  WARN 45224 --- [http-nio-8080-exec-5] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 21:04:16.284  INFO 45224 --- [http-nio-8080-exec-5] com.e_com.Controller.ProductController   : ProductController.updateProduct() invoked
+2025-06-24 21:04:16.284  INFO 45224 --- [http-nio-8080-exec-5] c.e_com.ServiceImpl.ProductServiceImpl   : ProductServiceImpl.updateProduct invoked
+2025-06-24 21:04:16.284  INFO 45224 --- [http-nio-8080-exec-5] com.e_com.Service.BL.ProductServiceBL    : ProductServiceBL.updateProduct() invoked.
+2025-06-24 21:04:16.285  INFO 45224 --- [http-nio-8080-exec-5] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.checkProductAvailability() invoked with productId: 10
+2025-06-24 21:04:16.285  WARN 45224 --- [http-nio-8080-exec-5] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 21:04:16.291  INFO 45224 --- [http-nio-8080-exec-5] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProduct() invoked.
+2025-06-24 21:04:16.297  INFO 45224 --- [http-nio-8080-exec-5] c.e_com.ServiceImpl.ProductServiceImpl   : Product Details updated.
+2025-06-24 21:04:16.297  INFO 45224 --- [http-nio-8080-exec-5] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.updateProductIsActiveBasedOnQuantity() invoked for productId: 10
+2025-06-24 21:04:16.297  WARN 45224 --- [http-nio-8080-exec-5] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-06-24 21:04:41.481  INFO 45224 --- [RMI TCP Connection(10)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-24 21:04:41.511  INFO 45224 --- [RMI TCP Connection(10)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-24 21:04:41.515  INFO 45224 --- [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-24 21:04:41.524  INFO 45224 --- [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 	... 72 common frames omitted
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDaoImpl': Injection of persistence dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
 	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.postProcessProperties(PersistenceAnnotationBeanPostProcessor.java:351) ~[spring-orm-5.3.13.jar:5.3.13]

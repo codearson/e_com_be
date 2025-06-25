@@ -9,7 +9,7 @@ import org.hibernate.criterion.Order;
 
 import javax.transaction.Transactional;
 
-import org.hibernate.Criteria;
+import org.hibernate. Criteria;
 import org.hibernate.criterion.Restrictions;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Order;
@@ -415,6 +415,20 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao {
 
 
         return paginatedResponseDto;
+    }
+
+    @Override
+    @Transactional
+    public void updateProductIsActiveBasedOnQuantity(Integer productId) {
+        log.info("ProductDaoImpl.updateProductIsActiveBasedOnQuantity() invoked for productId: {}", productId);
+        Criteria criteria = getCurrentSession().createCriteria(Product.class, "product");
+        criteria.add(Restrictions.eq("id", productId));
+        Product product = (Product) criteria.uniqueResult();
+        if (product != null && product.getQuentity() != null && product.getQuentity() == 0 && Boolean.TRUE.equals(product.getIsActive())) {
+            product.setIsActive(false);
+            saveOrUpdate(product);
+            log.info("Product id {} is now inactive due to zero quantity.", productId);
+        }
     }
 
 }
