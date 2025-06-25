@@ -260,6 +260,75 @@ CREATE TABLE `product_category` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `product_category_level1`
+--
+
+DROP TABLE IF EXISTS `product_category_level1`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `product_category_level1` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `is_active` bit(1) DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `product_category_level2`
+--
+
+DROP TABLE IF EXISTS `product_category_level2`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `product_category_level2` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `is_active` bit(1) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `parent_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK5l2qe1fw6sio5vxwx59ty5xh7` (`parent_id`),
+  CONSTRAINT `FK5l2qe1fw6sio5vxwx59ty5xh7` FOREIGN KEY (`parent_id`) REFERENCES `product_category_level1` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=295 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `product_category_level3`
+--
+
+DROP TABLE IF EXISTS `product_category_level3`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `product_category_level3` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `is_active` bit(1) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `parent_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKll6a9oh5q33wiirrngf7lorbr` (`parent_id`),
+  CONSTRAINT `FKll6a9oh5q33wiirrngf7lorbr` FOREIGN KEY (`parent_id`) REFERENCES `product_category_level2` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=294 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `product_category_level4`
+--
+
+DROP TABLE IF EXISTS `product_category_level4`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `product_category_level4` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `is_active` bit(1) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `parent_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKf6knum2u4fwgxjyry6qiw7f7b` (`parent_id`),
+  CONSTRAINT `FKf6knum2u4fwgxjyry6qiw7f7b` FOREIGN KEY (`parent_id`) REFERENCES `product_category_level3` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=227 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `product_image`
 --
 
@@ -275,24 +344,6 @@ CREATE TABLE `product_image` (
   KEY `FK6oo0cvcdtb6qmwsga468uuukk` (`product_id`),
   CONSTRAINT `FK6oo0cvcdtb6qmwsga468uuukk` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `product_sub_category`
---
-
-DROP TABLE IF EXISTS `product_sub_category`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `product_sub_category` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `is_active` bit(1) DEFAULT NULL,
-  `product_sub_category_name` varchar(255) DEFAULT NULL,
-  `product_category` int NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FK9marnfn0alt7ttr1dmm9dgmsk` (`product_category`),
-  CONSTRAINT `FK9marnfn0alt7ttr1dmm9dgmsk` FOREIGN KEY (`product_category`) REFERENCES `product_category` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -377,6 +428,7 @@ CREATE TABLE `user` (
   `date_of_birth` date DEFAULT NULL,
   `gender` varchar(255) DEFAULT NULL,
   `user_url` varchar(255) DEFAULT NULL,
+  `two_step_verification` bit(1) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FKh2wc2dtfdo8maylne7mgubowq` (`user_role_id`),
   CONSTRAINT `FKh2wc2dtfdo8maylne7mgubowq` FOREIGN KEY (`user_role_id`) REFERENCES `user_role` (`id`)
@@ -453,4 +505,4 @@ CREATE TABLE `user_role` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-06-12 19:44:06
+-- Dump completed on 2025-06-25 21:36:02

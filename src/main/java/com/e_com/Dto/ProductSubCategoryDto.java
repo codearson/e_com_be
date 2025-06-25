@@ -19,7 +19,7 @@ public class ProductSubCategoryDto {
 
 	private Integer id;
 	
-	private String productSubCategoryName;
+	private String name;
 	
 	private ProductCategoryDto productCategoryDto;
 	

@@ -16,7 +16,7 @@ import lombok.*;
 
 @Data
 @Entity
-@Table(name = "productCategory")
+@Table(name = "productCategoryLevel1")
 public class ProductCategory implements Serializable {
     
     private static final long serialVersionUID = 1L;
@@ -28,10 +28,6 @@ public class ProductCategory implements Serializable {
     private Integer id;
     @Column(name = "name", nullable = false)
     private String name;
-    @Column(name = "parentId")
-    private Integer parentId;
-    @Column(name = "level")
-    private Integer level;
     @Column(name = "isActive")
     private Boolean isActive;
     
