@@ -87,10 +87,10 @@ public class ProductServiceBL {
     }
 
 
-    public List<ProductDto> getAllBySearchProduct(String productCategoryName, String brandName, String conditionType, String type, String title) {
-        log.info("ProductServiceBL.getAllBySearchProduct() invoked with productCategoryName: {}, brandName: {}, conditionType: {}, type: {}, title: {}", 
-                 productCategoryName, brandName, conditionType, type, title);
-        return productDao.getAllBySearchProduct(productCategoryName, brandName, conditionType, type, title);
+    public List<ProductDto> getAllBySearchProduct(String productCategoryLevel1Name, String brandName, String conditionType, String type, String title) {
+        log.info("ProductServiceBL.getAllBySearchProduct() invoked with productCategoryLevel1Name: {}, brandName: {}, conditionType: {}, type: {}, title: {}", 
+                 productCategoryLevel1Name, brandName, conditionType, type, title);
+        return productDao.getAllBySearchProduct(productCategoryLevel1Name, brandName, conditionType, type, title);
     }
     
     public PaginatedResponseDto getAllPageSortByPrice(int pageNumber, int pageSize, Boolean status,Boolean asc) {

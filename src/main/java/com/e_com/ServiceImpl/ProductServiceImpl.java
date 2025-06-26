@@ -53,10 +53,10 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public ResponseDto saveProduct(ProductDto productDto) {
-        log.info("ProductServiceImpl.saveProduct invoked");
+        log.info("ProductServiceLevel1Impl.saveProduct invoked");
         ResponseDto responseDto = null;
         try {
-            if (productDto == null || productDto.getProductCategoryDto() == null || 
+            if (productDto == null || productDto.getProductCategoryLevel1Dto() == null || 
                 productDto.getBrandDto() == null || productDto.getConditionsDto() == null || 
                 productDto.getStatusDto() == null) {
                 log.info("Invalid Product data provided.");
@@ -85,7 +85,7 @@ public class ProductServiceImpl implements ProductService {
         ResponseDto responseDto = null;
         try {
             if (productDto == null || productDto.getId() == null || 
-                productDto.getProductCategoryDto() == null || 
+                productDto.getProductCategoryLevel1Dto() == null || 
                 productDto.getBrandDto() == null || productDto.getConditionsDto() == null || 
                 productDto.getStatusDto() == null) {
                 log.info("Invalid Product data provided for update.");
@@ -223,12 +223,12 @@ public class ProductServiceImpl implements ProductService {
 
 
     @Override
-    public ResponseDto getAllBySearchProduct(String productCategoryName, String brandName, String conditionType, String type, String title) {
-        log.info("ProductServiceImpl.getAllBySearchProduct() invoked with productCategoryName: {}, brandName: {}, conditionType: {}, type: {}, title: {}", 
-                 productCategoryName, brandName, conditionType, type, title);
+    public ResponseDto getAllBySearchProduct(String productCategoryLevel1Name, String brandName, String conditionType, String type, String title) {
+        log.info("ProductServiceImpl.getAllBySearchProduct() invoked with productCategoryLevel1Name: {}, brandName: {}, conditionType: {}, type: {}, title: {}", 
+                 productCategoryLevel1Name, brandName, conditionType, type, title);
         ResponseDto responseDto = null;
         try {
-            List<ProductDto> productList = productServiceBL.getAllBySearchProduct(productCategoryName, brandName, conditionType, type, title);
+            List<ProductDto> productList = productServiceBL.getAllBySearchProduct(productCategoryLevel1Name, brandName, conditionType, type, title);
             log.info("Retrieved Product details by search.");
             responseDto = serviceUtil.getServiceResponse(productList);
         } catch (Exception e) {

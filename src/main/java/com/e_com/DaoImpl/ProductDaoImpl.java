@@ -245,7 +245,7 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao {
             
             // Create necessary aliases based on filters
             if (category != null && !category.trim().isEmpty()) {
-                criteria.createAlias("p.productCategory", "pc", JoinType.LEFT_OUTER_JOIN);
+                criteria.createAlias("p.productCategoryLevel1", "pc", JoinType.LEFT_OUTER_JOIN);
                 log.debug("Created alias for product category with value: {}", category);
             }
             if (brandName != null && !brandName.trim().isEmpty()) {
@@ -326,14 +326,14 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao {
         Criteria criteria = getCurrentSession().createCriteria(Product.class, "product");
 
         // Join related entities
-        criteria.createAlias("productCategory", "productCategory", JoinType.INNER_JOIN);
+        criteria.createAlias("productCategoryLevel1", "productCategoryLevel1", JoinType.INNER_JOIN);
         criteria.createAlias("brand", "brand", JoinType.INNER_JOIN);
         criteria.createAlias("conditions", "conditions", JoinType.INNER_JOIN);
         criteria.createAlias("status", "status", JoinType.INNER_JOIN);
 
         // Add search filters if provided
         if (productCategoryName != null && !productCategoryName.trim().isEmpty()) {
-            criteria.add(Restrictions.ilike("productCategory.name", "%" + productCategoryName.trim() + "%"));
+            criteria.add(Restrictions.ilike("productCategoryLevel1.name", "%" + productCategoryName.trim() + "%"));
         }
         if (brandName != null && !brandName.trim().isEmpty()) {
             criteria.add(Restrictions.ilike("brand.brandName", "%" + brandName.trim() + "%"));

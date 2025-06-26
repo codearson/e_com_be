@@ -21,7 +21,7 @@ import com.e_com.Dto.ProductCategoryLevel2Dto;
 public class ProductCategoryLevel2Transformer implements BaseTransformer<ProductCategoryLevel2, ProductCategoryLevel2Dto> {
 
 	@Autowired
-	private ProductCategoryTransformer productCategoryTransformer;
+	private ProductCategoryLevel1Transformer productCategoryLevel1Transformer;
 	
 	 @Override
 	    public ProductCategoryLevel2Dto transform(ProductCategoryLevel2 productCategoryLevel2) {
@@ -30,8 +30,8 @@ public class ProductCategoryLevel2Transformer implements BaseTransformer<Product
 	        	productCategoryLevel2Dto = new ProductCategoryLevel2Dto();
 	        	productCategoryLevel2Dto.setId(productCategoryLevel2.getId());
 	        	productCategoryLevel2Dto.setName(productCategoryLevel2.getName());
-	            if (productCategoryLevel2.getProductCategory() != null) {
-	            	productCategoryLevel2Dto.setProductCategoryDto(productCategoryTransformer.transform(productCategoryLevel2.getProductCategory()));
+	            if (productCategoryLevel2.getProductCategoryLevel1() != null) {
+	            	productCategoryLevel2Dto.setProductCategoryLevel1Dto(productCategoryLevel1Transformer.transform(productCategoryLevel2.getProductCategoryLevel1()));
 				}
 	            productCategoryLevel2Dto.setIsActive(productCategoryLevel2.getIsActive());
 	        }
@@ -45,8 +45,8 @@ public class ProductCategoryLevel2Transformer implements BaseTransformer<Product
 	        	productCategoryLevel2 = new ProductCategoryLevel2();
 	        	productCategoryLevel2.setId(productCategoryLevel2Dto.getId());
 	        	productCategoryLevel2.setName(productCategoryLevel2Dto.getName());
-	            if (productCategoryLevel2Dto.getProductCategoryDto() != null) {
-	            	productCategoryLevel2.setProductCategory(productCategoryTransformer.reverseTransform(productCategoryLevel2Dto.getProductCategoryDto()));
+	            if (productCategoryLevel2Dto.getProductCategoryLevel1Dto() != null) {
+	            	productCategoryLevel2.setProductCategoryLevel1(productCategoryLevel1Transformer.reverseTransform(productCategoryLevel2Dto.getProductCategoryLevel1Dto()));
 				}
 	            productCategoryLevel2.setIsActive(productCategoryLevel2Dto.getIsActive());
 	        }
