@@ -15,7 +15,7 @@ import lombok.Data;
  **/
 
 @Data
-public class ProductSubCategoryDto {
+public class ProductCategoryLevel2Dto {
 
 	private Integer id;
 	

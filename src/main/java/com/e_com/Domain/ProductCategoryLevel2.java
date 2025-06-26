@@ -26,7 +26,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name ="productCategoryLevel2")
-public class ProductSubCategory implements  Serializable {
+public class ProductCategoryLevel2 implements  Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
