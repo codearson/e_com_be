@@ -1,8 +1,5 @@
 package com.e_com.Dto;
 
-import com.e_com.Domain.ProductCategory;
-import com.e_com.Dto.ProductCategoryDto;
-
 import lombok.Data;
 
 /**
@@ -21,7 +18,7 @@ public class ProductCategoryLevel2Dto {
 	
 	private String name;
 	
-	private ProductCategoryDto productCategoryDto;
+	private ProductCategoryLevel1Dto productCategoryLevel1Dto;
 	
 	private Boolean isActive;
 	
