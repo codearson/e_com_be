@@ -136,22 +136,52 @@ INSERT INTO `product_category` VALUES (1,_binary '','Clothing',1,NULL),(2,_bina
 UNLOCK TABLES;
 
 --
+-- Dumping data for table `product_category_level1`
+--
+
+LOCK TABLES `product_category_level1` WRITE;
+/*!40000 ALTER TABLE `product_category_level1` DISABLE KEYS */;
+INSERT INTO `product_category_level1` VALUES (1,_binary '','Clothing'),(2,_binary '','Jewels'),(3,_binary '','Kids'),(4,_binary '','Electronics'),(5,_binary '','Home'),(6,_binary '','Entertainment'),(7,_binary '','Sports'),(8,_binary '','Beauty Items'),(9,_binary '','Books & Stationery'),(10,_binary '','Others');
+/*!40000 ALTER TABLE `product_category_level1` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `product_category_level2`
+--
+
+LOCK TABLES `product_category_level2` WRITE;
+/*!40000 ALTER TABLE `product_category_level2` DISABLE KEYS */;
+INSERT INTO `product_category_level2` VALUES (11,_binary '','Women',1),(12,_binary '','Men',1),(13,_binary '','Unisex',1),(14,_binary '','Others',1),(80,_binary '','Gold Jewelry',2),(85,_binary '','Silver Jewelry',2),(89,_binary '','Costume Jewelry',2),(93,_binary '','Others',2),(94,_binary '','Baby (0–3 years)',3),(107,_binary '','Kids (3–12 years)',3),(124,_binary '','Accessories',3),(128,_binary '','Others',3),(129,_binary '','Mobile',4),(140,_binary '','Computers',4),(149,_binary '','TVs & Appliances',4),(155,_binary '','Others',4),(156,_binary '','Furniture',5),(161,_binary '','Kitchen',5),(173,_binary '','Decor',5),(178,_binary '','Tools',5),(183,_binary '','Others',5),(184,_binary '','Books',6),(195,_binary '','Music',6),(202,_binary '','Movies',6),(206,_binary '','Games',6),(212,_binary '','Others',6),(213,_binary '','Equipment',7),(227,_binary '','Clothing',7),(231,_binary '','Footwear',7),(235,_binary '','Outdoor Gear',7),(239,_binary '','Others',7),(240,_binary '','Skincare',8),(245,_binary '','Makeup',8),(250,_binary '','Haircare',8),(255,_binary '','Grooming Tools',8),(259,_binary '','Fragrance',8),(263,_binary '','Others',8),(264,_binary '','Academic',9),(268,_binary '','Reading',9),(272,_binary '','Stationery',9),(277,_binary '','Office Supplies',9),(281,_binary '','Others',9),(282,_binary '','Festival & Gift Items',10),(286,_binary '','Collectibles',10),(290,_binary '','Handmade Items',10),(294,_binary '','Others',10);
+/*!40000 ALTER TABLE `product_category_level2` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `product_category_level3`
+--
+
+LOCK TABLES `product_category_level3` WRITE;
+/*!40000 ALTER TABLE `product_category_level3` DISABLE KEYS */;
+INSERT INTO `product_category_level3` VALUES (15,_binary '','Tops',11),(20,_binary '','Bottoms',11),(25,_binary '','Dresses',11),(29,_binary '','Ethnic Wear',11),(34,_binary '','Outerwear',11),(38,_binary '','Lingerie & Sleepwear',11),(42,_binary '','Shoes',11),(47,_binary '','Accessories',11),(51,_binary '','Tops',12),(55,_binary '','Bottoms',12),(60,_binary '','Outerwear',12),(64,_binary '','Traditional Wear',12),(69,_binary '','Shoes',12),(73,_binary '','Innerwear & Sleepwear',12),(77,_binary '','School Uniforms',13),(78,_binary '','Religious Wear',13),(79,_binary '','Sportswear',13),(81,_binary '','Rings',80),(82,_binary '','Necklaces',80),(83,_binary '','Bangles',80),(84,_binary '','Earrings',80),(86,_binary '','Necklaces',85),(87,_binary '','Anklets',85),(88,_binary '','Toe Rings',85),(90,_binary '','Artificial Sets',89),(91,_binary '','Imitation',89),(92,_binary '','Clip-ons',89),(95,_binary '','Clothing',94),(99,_binary '','Essentials',94),(103,_binary '','Gear',94),(108,_binary '','Boys',107),(112,_binary '','Girls',107),(116,_binary '','School',107),(120,_binary '','Toys',107),(125,_binary '','Hair Bands',124),(126,_binary '','Socks',124),(127,_binary '','Caps',124),(130,_binary '','Smartphones',129),(136,_binary '','Accessories',129),(141,_binary '','Laptops',140),(142,_binary '','Monitors',140),(143,_binary '','Keyboards',140),(144,_binary '','Mice',140),(145,_binary '','Parts',140),(150,_binary '','TVs',149),(151,_binary '','Radios',149),(152,_binary '','Fridges',149),(153,_binary '','Washing Machines',149),(154,_binary '','Fans',149),(157,_binary '','Beds',156),(158,_binary '','Sofas',156),(159,_binary '','Cupboards',156),(160,_binary '','Tables',156),(162,_binary '','Cookware',161),(166,_binary '','Utensils',161),(170,_binary '','Storage',161),(174,_binary '','Curtains',173),(175,_binary '','Rugs',173),(176,_binary '','Wall Art',173),(177,_binary '','Lamps',173),(179,_binary '','Brooms',178),(180,_binary '','Buckets',178),(181,_binary '','Mops',178),(182,_binary '','Cleaning Kits',178),(185,_binary '','Novels',184),(189,_binary '','Religious Books',184),(193,_binary '','Comics',184),(194,_binary '','Magazines',184),(196,_binary '','Audio CDs',195),(197,_binary '','Cassette Tapes',195),(198,_binary '','Instruments',195),(203,_binary '','DVDs',202),(204,_binary '','Blu-rays',202),(205,_binary '','USB Collections',202),(207,_binary '','Console Games',206),(210,_binary '','PC Games',206),(211,_binary '','Board Games',206),(214,_binary '','Cricket',213),(218,_binary '','Badminton',213),(221,_binary '','Football',213),(224,_binary '','Fitness',213),(228,_binary '','Jerseys',227),(229,_binary '','Shorts',227),(230,_binary '','Tracksuits',227),(232,_binary '','Studs',231),(233,_binary '','Trainers',231),(234,_binary '','Spikes',231),(236,_binary '','Tents',235),(237,_binary '','Water Bottles',235),(238,_binary '','Camping Bags',235),(241,_binary '','Face Wash',240),(242,_binary '','Moisturizers',240),(243,_binary '','Serums',240),(244,_binary '','Scrubs',240),(246,_binary '','Foundation',245),(247,_binary '','Lipstick',245),(248,_binary '','Eyeliner',245),(249,_binary '','Compact Powder',245),(251,_binary '','Shampoo',250),(252,_binary '','Conditioner',250),(253,_binary '','Hair Oil',250),(254,_binary '','Serum',250),(256,_binary '','Trimmers',255),(257,_binary '','Straighteners',255),(258,_binary '','Hair Dryers',255),(260,_binary '','Perfume',259),(261,_binary '','Deodorants',259),(262,_binary '','Body Mists',259),(265,_binary '','School Books',264),(266,_binary '','University Books',264),(267,_binary '','Past Papers',264),(269,_binary '','Novels',268),(270,_binary '','Magazines',268),(271,_binary '','Religious Texts',268),(273,_binary '','Notebooks',272),(274,_binary '','Pens',272),(275,_binary '','Files',272),(276,_binary '','Art Supplies',272),(278,_binary '','Calculators',277),(279,_binary '','Folders',277),(280,_binary '','Whiteboards',277),(283,_binary '','Diyas',282),(284,_binary '','Party Decorations',282),(285,_binary '','Gift Packs',282),(287,_binary '','Coins',286),(288,_binary '','Stamps',286),(289,_binary '','Vintage Items',286),(291,_binary '','Crafts',290),(292,_binary '','Handwoven Items',290),(293,_binary '','Homemade Decor',290);
+/*!40000 ALTER TABLE `product_category_level3` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `product_category_level4`
+--
+
+LOCK TABLES `product_category_level4` WRITE;
+/*!40000 ALTER TABLE `product_category_level4` DISABLE KEYS */;
+INSERT INTO `product_category_level4` VALUES (16,_binary '','T-Shirts',15),(17,_binary '','Blouses',15),(18,_binary '','Crop Tops',15),(19,_binary '','Kurtis',15),(21,_binary '','Jeans',20),(22,_binary '','Skirts',20),(23,_binary '','Leggings',20),(24,_binary '','Saree Petticoats',20),(26,_binary '','Maxi Dresses',25),(27,_binary '','Midi Dresses',25),(28,_binary '','Frocks',25),(30,_binary '','Sarees',29),(31,_binary '','Salwars',29),(32,_binary '','Lehenga',29),(33,_binary '','Churidars',29),(35,_binary '','Sweaters',34),(36,_binary '','Jackets',34),(37,_binary '','Hoodies',34),(39,_binary '','Bras',38),(40,_binary '','Nightwear',38),(41,_binary '','Innerwear',38),(43,_binary '','Sandals',42),(44,_binary '','Heels',42),(45,_binary '','Flats',42),(46,_binary '','Sneakers',42),(48,_binary '','Scarves',47),(49,_binary '','Handbags',47),(50,_binary '','Belts',47),(52,_binary '','T-Shirts',51),(53,_binary '','Shirts',51),(54,_binary '','Polos',51),(56,_binary '','Jeans',55),(57,_binary '','Trousers',55),(58,_binary '','Shorts',55),(59,_binary '','Sarongs',55),(61,_binary '','Jackets',60),(62,_binary '','Blazers',60),(63,_binary '','Hoodies',60),(65,_binary '','Sarongs',64),(66,_binary '','Kurtas',64),(67,_binary '','Vettis',64),(68,_binary '','Thalappa',64),(70,_binary '','Formal',69),(71,_binary '','Casual',69),(72,_binary '','Sports',69),(74,_binary '','Vests',73),(75,_binary '','Boxers',73),(76,_binary '','Pyjamas',73),(96,_binary '','Onesies',95),(97,_binary '','Rompers',95),(98,_binary '','Dresses',95),(100,_binary '','Diapers',99),(101,_binary '','Feeding Bottles',99),(102,_binary '','Bibs',99),(104,_binary '','Cribs',103),(105,_binary '','Walkers',103),(106,_binary '','Car Seats',103),(109,_binary '','T-Shirts',108),(110,_binary '','Shorts',108),(111,_binary '','Jeans',108),(113,_binary '','Frocks',112),(114,_binary '','Tops',112),(115,_binary '','Skirts',112),(117,_binary '','Uniforms',116),(118,_binary '','Bags',116),(119,_binary '','Shoes',116),(121,_binary '','Educational Toys',120),(122,_binary '','Soft Toys',120),(123,_binary '','Action Figures',120),(131,_binary '','Samsung',130),(132,_binary '','iPhone',130),(133,_binary '','Oppo',130),(134,_binary '','Xiaomi',130),(135,_binary '','Huawei',130),(137,_binary '','Chargers',136),(138,_binary '','Covers',136),(139,_binary '','Earphones',136),(146,_binary '','RAM',145),(147,_binary '','SSD',145),(148,_binary '','Graphics Cards',145),(163,_binary '','Pots',162),(164,_binary '','Pans',162),(165,_binary '','Pressure Cookers',162),(167,_binary '','Plates',166),(168,_binary '','Spoons',166),(169,_binary '','Serving Bowls',166),(171,_binary '','Tupperware',170),(172,_binary '','Jars',170),(186,_binary '','Sinhala Novels',185),(187,_binary '','Tamil Novels',185),(188,_binary '','English Novels',185),(190,_binary '','Bible',189),(191,_binary '','Quran',189),(192,_binary '','Bhagavad Gita',189),(199,_binary '','Guitar',198),(200,_binary '','Keyboard',198),(201,_binary '','Tabla',198),(208,_binary '','PS4',207),(209,_binary '','Xbox',207),(215,_binary '','Bats',214),(216,_binary '','Pads',214),(217,_binary '','Balls',214),(219,_binary '','Rackets',218),(220,_binary '','Shuttlecocks',218),(222,_binary '','Balls',221),(223,_binary '','Goal Nets',221),(225,_binary '','Dumbbells',224),(226,_binary '','Resistance Bands',224);
+/*!40000 ALTER TABLE `product_category_level4` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping data for table `product_image`
 --
 
 LOCK TABLES `product_image` WRITE;
 /*!40000 ALTER TABLE `product_image` DISABLE KEYS */;
 /*!40000 ALTER TABLE `product_image` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Dumping data for table `product_sub_category`
---
-
-LOCK TABLES `product_sub_category` WRITE;
-/*!40000 ALTER TABLE `product_sub_category` DISABLE KEYS */;
-INSERT INTO `product_sub_category` VALUES (1,_binary '','Clothing',1),(2,_binary '','Electronics',1),(3,_binary '\0','Footwear',1),(4,_binary '','Lights',4),(5,_binary '','Shoes',3),(6,_binary '','Boys',4),(7,_binary '','Skin Care',8),(8,_binary '','Sport Shoes',7),(9,_binary '','Shorts',6),(10,_binary '','Casual Short',5);
-/*!40000 ALTER TABLE `product_sub_category` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -190,7 +220,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Jaffna','2025-05-09 18:05:19','skbavi61@gmail.com','Bavithragithan',_binary '','Kuganesan','0756089312',NULL,'$2a$10$lQ4C/Vuj5UNRUZTLU9TrIuNqrq/S1TBKmRJpvMB.c9BqDYpjadf.W',1,'0756089312',NULL,NULL,NULL,NULL),(2,'Jaffna','2025-05-09 18:06:37','lathusanthurairajah@codearson.com','Lathusan',_binary '','Thurairajah','+447440641608',NULL,'$2a$10$vGkEHcuxK49rIaDk9SUHWu74OlevG8JBv0Vz9RQaomFJ7xmLIUVk6',1,'+447440641608',NULL,NULL,NULL,NULL),(4,'polonnaruwa','2025-06-10 19:31:03','rifasmhd3333@gmail.com','rifas',_binary '','mhd','+94755158190',NULL,'$2a$10$IUiiLLoeGy6gq8NLMFzMcuV.5WFzUh5QipJrrmK/tddc1Z/sX/Q/.',1,'+94755158190',NULL,NULL,NULL,NULL),(5,'','2025-06-12 14:18:05','rfsmarsh12@gmail.com','rifas',_binary '','mhd','07561782009',NULL,'$2a$10$0Cg60.rVC2aSexZQI01Rqu4WF2xXhW1uL1dDkCp/D9UgzL/DtsSEK',3,'07561782009',NULL,NULL,NULL,NULL);
+INSERT INTO `user` VALUES (1,'Jaffna','2025-05-09 18:05:19','skbavi61@gmail.com','Bavithragithan',_binary '','Kuganesan','0756089312',NULL,'$2a$10$lQ4C/Vuj5UNRUZTLU9TrIuNqrq/S1TBKmRJpvMB.c9BqDYpjadf.W',1,'0756089312',NULL,NULL,NULL,NULL,NULL),(2,'Jaffna','2025-05-09 18:06:37','lathusanthurairajah@codearson.com','Lathusan',_binary '','Thurairajah','+447440641608',NULL,'$2a$10$vGkEHcuxK49rIaDk9SUHWu74OlevG8JBv0Vz9RQaomFJ7xmLIUVk6',1,'+447440641608',NULL,NULL,NULL,NULL,NULL),(4,'polonnaruwa','2025-06-10 19:31:03','rifasmhd3333@gmail.com','rifas',_binary '','mhd','+94755158190',NULL,'$2a$10$IUiiLLoeGy6gq8NLMFzMcuV.5WFzUh5QipJrrmK/tddc1Z/sX/Q/.',1,'+94755158190',NULL,NULL,NULL,NULL,NULL),(5,'','2025-06-12 14:18:05','rfsmarsh12@gmail.com','rifas',_binary '','mhd','07561782009',NULL,'$2a$10$0Cg60.rVC2aSexZQI01Rqu4WF2xXhW1uL1dDkCp/D9UgzL/DtsSEK',3,'07561782009',NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -233,4 +263,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-06-12 19:42:35
+-- Dump completed on 2025-06-25 21:36:23

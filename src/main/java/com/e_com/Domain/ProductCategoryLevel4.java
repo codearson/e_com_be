@@ -15,18 +15,18 @@ import javax.persistence.Table;
 import lombok.Data;
 
 /**
- * Title: ProductSubCategory.java. Company: www.codearson.com Copyright: Copyright (c) 2025.
+ * Title: ProductCategoryLevel4.java. Company: www.codearson.com Copyright: Copyright (c) 2025.
  *
- * @author Muhila Vijayakumar
- * @date May 15, 2025
- * @time 7:54:11 AM
+ * @author Mohomed Wazeem
+ * @date Jun 25, 2025
+ * @time 8:10:24 PM
  * @version 1.0
  **/
 
 @Data
 @Entity
-@Table(name ="productCategoryLevel2")
-public class ProductSubCategory implements  Serializable {
+@Table(name ="ProductCategoryLevel4")
+public class ProductCategoryLevel4 implements  Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
@@ -39,7 +39,7 @@ public class ProductSubCategory implements  Serializable {
 	private String name;
 	@JoinColumn(name = "parentId", referencedColumnName = "id")
 	@ManyToOne(optional = false)
-	private ProductCategory productCategory;
+	private ProductCategoryLevel3 productCategoryLevel3;
 	@Column(name = "isActive")
     private Boolean isActive;
 }

@@ -30,7 +30,7 @@ public class ProductSubCategoryTransformer implements BaseTransformer<ProductSub
 	        if (productSubCategory != null) {
 	            productSubCategoryDto = new ProductSubCategoryDto();
 	            productSubCategoryDto.setId(productSubCategory.getId());
-	            productSubCategoryDto.setProductSubCategoryName(productSubCategory.getProductSubCategoryName());
+	            productSubCategoryDto.setName(productSubCategory.getName());
 	            if (productSubCategory.getProductCategory() != null) {
 					productSubCategoryDto.setProductCategoryDto(productCategoryTransformer.transform(productSubCategory.getProductCategory()));
 				}
@@ -45,7 +45,7 @@ public class ProductSubCategoryTransformer implements BaseTransformer<ProductSub
 	        if (productSubCategoryDto != null) {
 	            productSubCategory = new ProductSubCategory();
 	            productSubCategory.setId(productSubCategoryDto.getId());
-	            productSubCategory.setProductSubCategoryName(productSubCategoryDto.getProductSubCategoryName());
+	            productSubCategory.setName(productSubCategoryDto.getName());
 	            if (productSubCategoryDto.getProductCategoryDto() != null) {
 					productSubCategory.setProductCategory(productCategoryTransformer.reverseTransform(productSubCategoryDto.getProductCategoryDto()));
 				}
