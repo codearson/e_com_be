@@ -31,7 +31,7 @@ public interface ProductService {
     
     ResponseDto getAllPageFilter(int pageNumber, int pageSize, Boolean status, String category, String size, String brandName, String conditionType, String color, Map<String, String> searchParameters);
     
-    ResponseDto getAllBySearchProduct(String productCategoryName, String brandName, String conditionType, String type, String title);
+    ResponseDto getAllBySearchProduct(String productCategoryLevel1Name, String brandName, String conditionType, String type, String title);
   
     ResponseDto getAllPageSortByPrice(int pageNumber, int pageSize, Boolean status, Boolean asc);
 }
