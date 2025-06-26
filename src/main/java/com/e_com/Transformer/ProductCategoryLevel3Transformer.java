@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.e_com.Domain.ProductCategoryLevel3;
-import com.e_com.Domain.ProductSubCategory;
 import com.e_com.Dto.ProductCategoryLevel3Dto;
 
 /**
@@ -20,7 +19,7 @@ import com.e_com.Dto.ProductCategoryLevel3Dto;
 public class ProductCategoryLevel3Transformer implements BaseTransformer<ProductCategoryLevel3, ProductCategoryLevel3Dto> {
 
     @Autowired
-    private ProductSubCategoryTransformer productSubCategoryTransformer;
+    private ProductCategoryLevel2Transformer productCategoryLevel2Transformer;
 
     @Override
     public ProductCategoryLevel3Dto transform(ProductCategoryLevel3 productCategoryLevel3) {
@@ -30,9 +29,9 @@ public class ProductCategoryLevel3Transformer implements BaseTransformer<Product
             productCategoryLevel3Dto.setId(productCategoryLevel3.getId());
             productCategoryLevel3Dto.setName(productCategoryLevel3.getName());
 
-            if (productCategoryLevel3.getProductSubCategory() != null) {
-                productCategoryLevel3Dto.setProductSubCategoryDto(
-                    productSubCategoryTransformer.transform(productCategoryLevel3.getProductSubCategory()));
+            if (productCategoryLevel3.getProductCategoryLevel2() != null) {
+                productCategoryLevel3Dto.setProductCategoryLevel2Dto(
+                		productCategoryLevel2Transformer.transform(productCategoryLevel3.getProductCategoryLevel2()));
             }
 
             productCategoryLevel3Dto.setIsActive(productCategoryLevel3.getIsActive());
@@ -48,9 +47,9 @@ public class ProductCategoryLevel3Transformer implements BaseTransformer<Product
             productCategoryLevel3.setId(productCategoryLevel3Dto.getId());
             productCategoryLevel3.setName(productCategoryLevel3Dto.getName());
 
-            if (productCategoryLevel3Dto.getProductSubCategoryDto() != null) {
-                productCategoryLevel3.setProductSubCategory(
-                    productSubCategoryTransformer.reverseTransform(productCategoryLevel3Dto.getProductSubCategoryDto()));
+            if (productCategoryLevel3Dto.getProductCategoryLevel2Dto() != null) {
+                productCategoryLevel3.setProductCategoryLevel2(
+                	productCategoryLevel2Transformer.reverseTransform(productCategoryLevel3Dto.getProductCategoryLevel2Dto()));
             }
 
             productCategoryLevel3.setIsActive(productCategoryLevel3Dto.getIsActive());

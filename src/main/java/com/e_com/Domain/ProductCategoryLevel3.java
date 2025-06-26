@@ -39,7 +39,7 @@ public class ProductCategoryLevel3 implements  Serializable {
 	private String name;
 	@JoinColumn(name = "parentId", referencedColumnName = "id")
 	@ManyToOne(optional = false)
-	private ProductSubCategory productSubCategory;
+	private ProductCategoryLevel2 productCategoryLevel2;
 	@Column(name = "isActive")
     private Boolean isActive;
 }
