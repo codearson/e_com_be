@@ -18,7 +18,7 @@ public class ProductCategoryLevel3Dto {
 	
 	private String name;
 	
-	private ProductSubCategoryDto productSubCategoryDto;
+	private ProductCategoryLevel2Dto productCategoryLevel2Dto;
 	
 	private Boolean isActive;
 	
