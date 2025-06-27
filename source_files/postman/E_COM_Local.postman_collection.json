@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "21aa7168-eace-48d7-954e-51dcdf2831ef",
+		"_postman_id": "eb722f13-32df-42f0-80ea-7b2d37b1e432",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "40430627"
@@ -2243,7 +2243,7 @@
 			]
 		},
 		{
-			"name": "Product Category",
+			"name": "ProductCategoryLevel1",
 			"item": [
 				{
 					"name": "save",
@@ -2480,7 +2480,7 @@
 			]
 		},
 		{
-			"name": "Product Sub Category",
+			"name": "ProductCategoryLevel2",
 			"item": [
 				{
 					"name": "save",
@@ -2538,7 +2538,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\":7,\r\n    \"isActive\": true,\r\n    \"productSubCategoryName\":\"Skin Care\",\r\n\r\n    \"productCategoryDto\": {\r\n        \"id\": 8\r\n    }\r\n    \r\n}",
+							"raw": "{\r\n    \"id\":7,\r\n    \"isActive\": true,\r\n    \"name\":\"Skin \",\r\n\r\n    \"productCategoryLevel1Dto\": {\r\n        \"id\": 8\r\n    }\r\n    \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2546,14 +2546,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/productSubCategory/update",
+							"raw": "http://localhost:8080/ProductCategoryLevel2/update",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"productSubCategory",
+								"ProductCategoryLevel2",
 								"update"
 							]
 						}
@@ -2575,25 +2575,34 @@
 						},
 						"method": "PUT",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://localhost:8080/productSubCategory/updateStatus?productSubCategoryId=3&status=0",
+							"raw": "http://localhost:8080/ProductCategoryLevel2/updateStatus?productCategoryLevel2Id=11&status=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"productSubCategory",
+								"ProductCategoryLevel2",
 								"updateStatus"
 							],
 							"query": [
 								{
-									"key": "productSubCategoryId",
-									"value": "3"
+									"key": "productCategoryLevel2Id",
+									"value": "11"
 								},
 								{
 									"key": "status",
-									"value": "0"
+									"value": "1"
 								}
 							]
 						}
@@ -2645,7 +2654,7 @@
 					"response": []
 				},
 				{
-					"name": "getAllSearch",
+					"name": "getAllBySearch",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -2696,7 +2705,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productCategoryDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"brandDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"conditionsDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"statusDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"title\": \"DDR4 RAM\",\r\n    \"description\": \"8GB DDR4 RAM\",\r\n    \"size\": null,\r\n    \"color\": null,\r\n    \"price\": 12999.00,\r\n    \"quentity\": 2,\r\n    \"imageUrl\":\"Ram Image\",\r\n    \"isActive\": 1\r\n}",
+							"raw": "{\r\n    \"productCategoryLevel1Dto\": {\r\n        \"id\": 1\r\n    },\r\n    \"brandDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"conditionsDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"statusDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"title\": \"DDR4 RAM\",\r\n    \"description\": \"8GB DDR4 RAM\",\r\n    \"size\": null,\r\n    \"color\": null,\r\n    \"price\": 12999.00,\r\n    \"quentity\": 2,\r\n    \"imageUrl\":\"Ram Image\",\r\n    \"isActive\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4221,6 +4230,145 @@
 								"twoFaVerification"
 							]
 						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProductCategoryLevel3",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzUxMDM2OTk5fQ.LIlusvgoUNompP7R34xGNQ5Pl3oOkM9WN7JWuFoZZrIT4fCXABmpcQWbQTeZ0L9j",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Name\",\r\n  \"isActive\": true,\r\n  \"productCategoryLevel1Dto\": {\r\n    \"id\": 5\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ProductCategoryLevel3/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ProductCategoryLevel3",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzUxMDM2OTk5fQ.LIlusvgoUNompP7R34xGNQ5Pl3oOkM9WN7JWuFoZZrIT4fCXABmpcQWbQTeZ0L9j",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":15,\r\n    \"isActive\": true,\r\n    \"name\":\"ggg\",\r\n\r\n    \"productCategoryLevel1Dto\": {\r\n        \"id\": 8\r\n    }\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ProductCategoryLevel3/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ProductCategoryLevel3",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzUxMDM2OTk5fQ.LIlusvgoUNompP7R34xGNQ5Pl3oOkM9WN7JWuFoZZrIT4fCXABmpcQWbQTeZ0L9j",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ProductCategoryLevel3/updateStatus?productCategoryLevel3Id=11&status=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ProductCategoryLevel3",
+								"updateStatus"
+							],
+							"query": [
+								{
+									"key": "productCategoryLevel3Id",
+									"value": "11"
+								},
+								{
+									"key": "status",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPage",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getAllBySearch",
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
