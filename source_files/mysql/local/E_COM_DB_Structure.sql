@@ -229,34 +229,15 @@ CREATE TABLE `product` (
   `brand` int NOT NULL,
   `conditions` int NOT NULL,
   `status` int NOT NULL,
-  `product_category_id` int NOT NULL,
+  `product_category_level1id` int NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FKti0lsgnnoerhclcve20iho3un` (`brand`),
   KEY `FKfo3i1hrgnqpradhyj3c39um61` (`conditions`),
   KEY `FKrjx2c79b1cc0jykhf57lfqx0t` (`status`),
-  KEY `FKcwclrqu392y86y0pmyrsi649r` (`product_category_id`),
-  CONSTRAINT `FKcwclrqu392y86y0pmyrsi649r` FOREIGN KEY (`product_category_id`) REFERENCES `product_category` (`id`),
   CONSTRAINT `FKfo3i1hrgnqpradhyj3c39um61` FOREIGN KEY (`conditions`) REFERENCES `conditions` (`id`),
   CONSTRAINT `FKrjx2c79b1cc0jykhf57lfqx0t` FOREIGN KEY (`status`) REFERENCES `status` (`id`),
   CONSTRAINT `FKti0lsgnnoerhclcve20iho3un` FOREIGN KEY (`brand`) REFERENCES `brand` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `product_category`
---
-
-DROP TABLE IF EXISTS `product_category`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `product_category` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `is_active` bit(1) DEFAULT NULL,
-  `name` varchar(255) NOT NULL,
-  `level` int DEFAULT NULL,
-  `parent_id` int DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=295 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -325,7 +306,7 @@ CREATE TABLE `product_category_level4` (
   PRIMARY KEY (`id`),
   KEY `FKf6knum2u4fwgxjyry6qiw7f7b` (`parent_id`),
   CONSTRAINT `FKf6knum2u4fwgxjyry6qiw7f7b` FOREIGN KEY (`parent_id`) REFERENCES `product_category_level3` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=227 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=229 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -505,4 +486,4 @@ CREATE TABLE `user_role` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-06-25 21:36:02
+-- Dump completed on 2025-06-27 20:04:31

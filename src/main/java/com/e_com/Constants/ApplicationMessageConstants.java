@@ -187,5 +187,13 @@ public interface ApplicationMessageConstants {
 		String EX_UPLOAD_AND_SAVE_PRODUCT_IMAGE = "ex.upload.and.save.product.image";
 		String ERR_PRODUCT_IMAGE_PRODUCT_ID_REQUIRED = "err.product.image.product.id.required";
 		String EX_PRODUCT_IMAGE_PRODUCT_ID_REQUIRED = "ex.product.image.product.id.required";
+		String ERR_SAVE_PRODUCT_CATEGORY_LEVEL4_DETAILS = "err.save.product.category.level4.details";
+        String EX_SAVE_PRODUCT_CATEGORY_LEVEL4_DETAILS = "ex.save.product.category.level4.details";
+        String ERR_UPDATE_PRODUCT_CATEGORY_LEVEL4_DETAILS = "err.update.product.category.level4.details";
+        String EX_UPDATE_PRODUCT_CATEGORY_LEVEL4_DETAILS = "ex.update.product.category.level4.details";
+        String ERR_UPDATE_PRODUCT_CATEGORY_LEVEL4_STATUS = "err.update.product.category.level4.status";
+        String EX_UPDATE_PRODUCT_CATEGORY_LEVEL4_STATUS = "ex.update.product.category.level4.status";
+        String ERR_RETRIEVE_ALL_PRODUCT_CATEGORY_LEVEL4_DETAILS = "err.retrieve.all.product.category.level4.details";
+        String EX_RETRIEVE_ALL_PRODUCT_CATEGORY_LEVEL4_DETAILS = "ex.retrieve.all.product.category.level4.details";
 	}
 }
