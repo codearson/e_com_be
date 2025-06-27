@@ -201,7 +201,13 @@ public interface ApplicationMessageConstants {
 		String EX_RETRIEVE_PRODUCTCATEGORY_LEVEL3_BY_ID="ex.get.by.product.category.level3.id";
 		String ERR_RETRIEVE_ALL_PRODUCTCATEGORY_LEVEL3_DETAILS = "err.get.all.product.category.level3.details";
 		String EX_RETRIEVE_ALL_PRODUCTCATEGORY_LEVEL3_DETAILS = "ex.get.all.product.category.level3.details";
-
-
+		String ERR_SAVE_PRODUCT_CATEGORY_LEVEL4_DETAILS = "err.save.product.category.level4.details";
+        String EX_SAVE_PRODUCT_CATEGORY_LEVEL4_DETAILS = "ex.save.product.category.level4.details";
+        String ERR_UPDATE_PRODUCT_CATEGORY_LEVEL4_DETAILS = "err.update.product.category.level4.details";
+        String EX_UPDATE_PRODUCT_CATEGORY_LEVEL4_DETAILS = "ex.update.product.category.level4.details";
+        String ERR_UPDATE_PRODUCT_CATEGORY_LEVEL4_STATUS = "err.update.product.category.level4.status";
+        String EX_UPDATE_PRODUCT_CATEGORY_LEVEL4_STATUS = "ex.update.product.category.level4.status";
+        String ERR_RETRIEVE_ALL_PRODUCT_CATEGORY_LEVEL4_DETAILS = "err.retrieve.all.product.category.level4.details";
+        String EX_RETRIEVE_ALL_PRODUCT_CATEGORY_LEVEL4_DETAILS = "ex.retrieve.all.product.category.level4.details";
 	}
 }

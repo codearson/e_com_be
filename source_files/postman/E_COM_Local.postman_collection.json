@@ -3,7 +3,7 @@
 		"_postman_id": "eb722f13-32df-42f0-80ea-7b2d37b1e432",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "40430627"
+		"_exporter_id": "44754112"
 	},
 	"item": [
 		{
@@ -1154,7 +1154,7 @@
 					"response": []
 				},
 				{
-					"name": "getAllBySearch",
+					"name": "getAllSearch",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -2383,7 +2383,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NDIyOTczfQ.beBr7vIddLczpX40qVG8JNXWwVXgKQs1VaV4eellKqRN7RKULMf-JlsDFzQvbC3U",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzUxMDI5MTY0fQ.z1C-HKpjzM4G_laMO08RPt_ciyGAO-qf6tQa4kAyd6uxSApv3WfZZJ8pmfvn70-s",
 									"type": "string"
 								}
 							]
@@ -2392,7 +2392,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\":4,\r\n    \"name\": \"Eletric\",\r\n    \"isActive\": 1\r\n}\r\n",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3459,7 +3459,7 @@
 					"response": []
 				},
 				{
-					"name": "getAllBySearch",
+					"name": "getAllSearch",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -4431,6 +4431,247 @@
 					"response": []
 				}
 			]
-		}
+		},
+		{
+            "name": "ProductCategoryLevel4",
+            "item": [
+                {
+                    "name": "save",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzUxMDI5MTY0fQ.z1C-HKpjzM4G_laMO08RPt_ciyGAO-qf6tQa4kAyd6uxSApv3WfZZJ8pmfvn70-s",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"name\": \"hockyball\",\r\n  \"productCategoryLevel3Dto\": {\r\n    \"id\": 214,\r\n    \"name\": \"Cricket\"\r\n  },\r\n  \"isActive\": true\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/productCategoryLevel4/save",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "productCategoryLevel4",
+                                "save"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "update",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NDIyOTczfQ.beBr7vIddLczpX40qVG8JNXWwVXgKQs1VaV4eellKqRN7RKULMf-JlsDFzQvbC3U",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"id\": 16,\r\n  \"name\": \"T-Shirts\",\r\n  \"productCategoryLevel3Dto\": {\r\n    \"id\": 15,\r\n    \"name\": \"Tops\"\r\n  },\r\n  \"isActive\": true\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/productCategoryLevel4/update",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "productCategoryLevel4",
+                                "update"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "updateStatus",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NDIyOTczfQ.beBr7vIddLczpX40qVG8JNXWwVXgKQs1VaV4eellKqRN7RKULMf-JlsDFzQvbC3U",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \r\n  \"name\": \"hockyball\",\r\n  \"productCategoryLevel3Dto\": {\r\n    \"id\": 214,\r\n    \"name\": \"Cricket\"\r\n  },\r\n  \"isActive\": true\r\n}\r\n",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/productCategoryLevel4/updateStatus?productCategoryLevel4Id=16&status=1",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "productCategoryLevel4",
+                                "updateStatus"
+                            ],
+                            "query": [
+                                {
+                                    "key": "productCategoryLevel4Id",
+                                    "value": "16"
+                                },
+                                {
+                                    "key": "status",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "getAllPage",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NDIyOTczfQ.beBr7vIddLczpX40qVG8JNXWwVXgKQs1VaV4eellKqRN7RKULMf-JlsDFzQvbC3U",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/productCategoryLevel4/getAllPage?pageNumber=1&pageSize=10&status=1",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "productCategoryLevel4",
+                                "getAllPage"
+                            ],
+                            "query": [
+                                {
+                                    "key": "pageNumber",
+                                    "value": "1"
+                                },
+                                {
+                                    "key": "pageSize",
+                                    "value": "10"
+                                },
+                                {
+                                    "key": "status",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "getAllBySearch",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ3NDIyOTczfQ.beBr7vIddLczpX40qVG8JNXWwVXgKQs1VaV4eellKqRN7RKULMf-JlsDFzQvbC3U",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "\r\n",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8080/productCategoryLevel4/getAllBySearch?name=shirt",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "productCategoryLevel4",
+                                "getAllBySearch"
+                            ],
+                            "query": [
+                                {
+                                    "key": "name",
+                                    "value": "Electronics",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "name",
+                                    "value": "shirt"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
 	]
 }
