@@ -245,7 +245,7 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao {
             
             // Create necessary aliases based on filters
             if (category != null && !category.trim().isEmpty()) {
-                criteria.createAlias("p.productCategoryLevel1", "pc", JoinType.LEFT_OUTER_JOIN);
+                criteria.createAlias("p.productCategory", "pc", JoinType.LEFT_OUTER_JOIN);
                 log.debug("Created alias for product category with value: {}", category);
             }
             if (brandName != null && !brandName.trim().isEmpty()) {
@@ -320,38 +320,30 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao {
 
     @Override
     @Transactional
-    public List<ProductDto> getAllBySearchProduct(String productCategoryName, String brandName, String conditionType, String type, String title) {
-        log.info("ProductDaoImpl.getAllBySearchProduct() invoked with productCategoryName: {}, brandName: {}, conditionType: {}, type: {}, title: {}", 
-                 productCategoryName, brandName, conditionType, type, title);
-        Criteria criteria = getCurrentSession().createCriteria(Product.class, "product");
-
-        // Join related entities
-        criteria.createAlias("productCategoryLevel1", "productCategoryLevel1", JoinType.INNER_JOIN);
-        criteria.createAlias("brand", "brand", JoinType.INNER_JOIN);
-        criteria.createAlias("conditions", "conditions", JoinType.INNER_JOIN);
-        criteria.createAlias("status", "status", JoinType.INNER_JOIN);
-
-        // Add search filters if provided
-        if (productCategoryName != null && !productCategoryName.trim().isEmpty()) {
-            criteria.add(Restrictions.ilike("productCategoryLevel1.name", "%" + productCategoryName.trim() + "%"));
+    public List<ProductDto> getAllBySearchProduct(String categoryName, String brandName, String conditionType, String type, String title) {
+        log.info("ProductDaoImpl.getAllBySearchProduct() invoked with categoryName: {}, brandName: {}, conditionType: {}, type: {}, title: {}",
+                 categoryName, brandName, conditionType, type, title);
+        Criteria criteria = getCurrentSession().createCriteria(Product.class);
+        if (categoryName != null && !categoryName.trim().isEmpty()) {
+            criteria.createAlias("productCategory", "productCategory", JoinType.INNER_JOIN);
+            criteria.add(Restrictions.ilike("productCategory.name", "%" + categoryName.trim() + "%"));
         }
         if (brandName != null && !brandName.trim().isEmpty()) {
-            criteria.add(Restrictions.ilike("brand.brandName", "%" + brandName.trim() + "%"));
+            criteria.createAlias("brand", "brand", JoinType.INNER_JOIN);
+            criteria.add(Restrictions.ilike("brand.name", "%" + brandName.trim() + "%"));
         }
         if (conditionType != null && !conditionType.trim().isEmpty()) {
-            criteria.add(Restrictions.ilike("conditions.conditionType", "%" + conditionType.trim() + "%"));
+            criteria.createAlias("conditions", "conditions", JoinType.INNER_JOIN);
+            criteria.add(Restrictions.ilike("conditions.type", "%" + conditionType.trim() + "%"));
         }
         if (type != null && !type.trim().isEmpty()) {
-            criteria.add(Restrictions.ilike("status.type", "%" + type.trim() + "%"));
+            criteria.add(Restrictions.ilike("title", "%" + type.trim() + "%"));
         }
         if (title != null && !title.trim().isEmpty()) {
             criteria.add(Restrictions.ilike("title", "%" + title.trim() + "%"));
         }
-
         List<Product> productList = criteria.list();
-        return productList.stream()
-                         .map(productTransformer::transform)
-                         .collect(Collectors.toList());
+        return productList.stream().map(productTransformer::transform).collect(Collectors.toList());
     }
     
     @Override
@@ -429,6 +421,34 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao {
             saveOrUpdate(product);
             log.info("Product id {} is now inactive due to zero quantity.", productId);
         }
+    }
+
+    @Override
+    @Transactional
+    public List<ProductDto> getProductsByCategoryAndDescendants(Long categoryId) {
+        // 1. Find all descendant category IDs (including the given one)
+        List<Long> allCategoryIds = new ArrayList<>();
+        org.hibernate.Session session = getCurrentSession();
+        // Fetch all categories
+        List<com.e_com.Domain.ProductCategory> allCategories = session.createQuery("FROM ProductCategory", com.e_com.Domain.ProductCategory.class).getResultList();
+        // Helper to collect descendants
+        java.util.function.Consumer<Long> collectDescendants = new java.util.function.Consumer<Long>() {
+            @Override
+            public void accept(Long id) {
+                allCategoryIds.add(id);
+                for (com.e_com.Domain.ProductCategory cat : allCategories) {
+                    if (cat.getParent() != null && id.equals(cat.getParent().getId())) {
+                        this.accept(cat.getId());
+                    }
+                }
+            }
+        };
+        collectDescendants.accept(categoryId);
+        // 2. Fetch all products with category in this set
+        List<Product> products = session.createQuery("FROM Product p WHERE p.productCategory.id IN :ids", Product.class)
+            .setParameter("ids", allCategoryIds)
+            .getResultList();
+        return products.stream().map(productTransformer::transform).collect(Collectors.toList());
     }
 
 }

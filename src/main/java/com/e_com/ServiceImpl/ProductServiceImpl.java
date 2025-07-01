@@ -56,7 +56,7 @@ public class ProductServiceImpl implements ProductService {
         log.info("ProductServiceLevel1Impl.saveProduct invoked");
         ResponseDto responseDto = null;
         try {
-            if (productDto == null || productDto.getProductCategoryLevel1Dto() == null || 
+            if (productDto == null || productDto.getProductCategoryDto() == null || 
                 productDto.getBrandDto() == null || productDto.getConditionsDto() == null || 
                 productDto.getStatusDto() == null) {
                 log.info("Invalid Product data provided.");
@@ -85,7 +85,7 @@ public class ProductServiceImpl implements ProductService {
         ResponseDto responseDto = null;
         try {
             if (productDto == null || productDto.getId() == null || 
-                productDto.getProductCategoryLevel1Dto() == null || 
+                productDto.getProductCategoryDto() == null || 
                 productDto.getBrandDto() == null || productDto.getConditionsDto() == null || 
                 productDto.getStatusDto() == null) {
                 log.info("Invalid Product data provided for update.");
@@ -223,12 +223,12 @@ public class ProductServiceImpl implements ProductService {
 
 
     @Override
-    public ResponseDto getAllBySearchProduct(String productCategoryLevel1Name, String brandName, String conditionType, String type, String title) {
-        log.info("ProductServiceImpl.getAllBySearchProduct() invoked with productCategoryLevel1Name: {}, brandName: {}, conditionType: {}, type: {}, title: {}", 
-                 productCategoryLevel1Name, brandName, conditionType, type, title);
+    public ResponseDto getAllBySearchProduct(String categoryName, String brandName, String conditionType, String type, String title) {
+        log.info("ProductServiceImpl.getAllBySearchProduct() invoked with categoryName: {}, brandName: {}, conditionType: {}, type: {}, title: {}", 
+                 categoryName, brandName, conditionType, type, title);
         ResponseDto responseDto = null;
         try {
-            List<ProductDto> productList = productServiceBL.getAllBySearchProduct(productCategoryLevel1Name, brandName, conditionType, type, title);
+            List<ProductDto> productList = productServiceBL.getAllBySearchProduct(categoryName, brandName, conditionType, type, title);
             log.info("Retrieved Product details by search.");
             responseDto = serviceUtil.getServiceResponse(productList);
         } catch (Exception e) {
@@ -267,5 +267,16 @@ public class ProductServiceImpl implements ProductService {
         return responseDto;
     }
 
+    @Override
+    public ResponseDto getProductsByCategoryAndDescendants(Long categoryId) {
+        log.info("ProductServiceImpl.getProductsByCategoryAndDescendants invoked with categoryId: {}", categoryId);
+        try {
+            List<ProductDto> products = productDao.getProductsByCategoryAndDescendants(categoryId);
+            return serviceUtil.getServiceResponse(products);
+        } catch (Exception e) {
+            log.error("Exception occurs while fetching products by category and descendants.", e);
+            return serviceUtil.getExceptionServiceResponseByProperties("ex.get.products.by.category.descendants");
+        }
+    }
 
 }

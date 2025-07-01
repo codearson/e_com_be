@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.context.request.WebRequest;
 
 import com.e_com.Domain.Product;
@@ -93,14 +94,14 @@ public class ProductController {
     }
 
     @GetMapping("/getAllBySearch")
-    public ResponseDto getAllBySearchProduct(@RequestParam(value = "productCategoryLevel1Name", required = false) String productCategoryLevel1Name,
+    public ResponseDto getAllBySearchProduct(@RequestParam(value = "categoryName", required = false) String categoryName,
                                             @RequestParam(value = "brandName", required = false) String brandName,
                                             @RequestParam(value = "conditionType", required = false) String conditionType,
                                             @RequestParam(value = "type", required = false) String type,
                                             @RequestParam(value = "title", required = false) String title) {
-        log.info("ProductController.getAllBySearchProduct() invoked with productCategoryLevel1Name: {}, brandName: {}, conditionType: {}, type: {}, title: {}", 
-                 productCategoryLevel1Name, brandName, conditionType, type, title);
-        return productService.getAllBySearchProduct(productCategoryLevel1Name, brandName, conditionType, type, title);
+        log.info("ProductController.getAllBySearchProduct() invoked with categoryName: {}, brandName: {}, conditionType: {}, type: {}, title: {}", 
+                 categoryName, brandName, conditionType, type, title);
+        return productService.getAllBySearchProduct(categoryName, brandName, conditionType, type, title);
     }
     
     
@@ -115,5 +116,10 @@ public class ProductController {
         return productService.getAllPageSortByPrice(pageNumber, pageSize, status, asc); 
     }
 
+    @GetMapping("/by-category/{categoryId}")
+    public ResponseDto getProductsByCategoryAndDescendants(@PathVariable Long categoryId) {
+        log.info("ProductController.getProductsByCategoryAndDescendants() invoked with categoryId: {}", categoryId);
+        return productService.getProductsByCategoryAndDescendants(categoryId);
+    }
 
 }
