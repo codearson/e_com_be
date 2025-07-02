@@ -18,7 +18,7 @@ public class ProductDto {
 	
 	private Integer id;
 	
-	private ProductCategoryLevel1Dto productCategoryLevel1Dto;
+	private ProductCategoryDto productCategoryDto;
 	
 	private BrandDto brandDto;
 	
@@ -45,5 +45,7 @@ public class ProductDto {
 	private String imageUrl;
 	
 	private Boolean isActive;
+
+	private java.util.List<ProductCategoryDto> categoryChain;
 
 }

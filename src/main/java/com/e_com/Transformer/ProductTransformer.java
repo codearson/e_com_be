@@ -21,8 +21,6 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 public class ProductTransformer implements BaseTransformer<Product, ProductDto> {
 
-    @Autowired
-    private ProductCategoryLevel1Transformer productCategoryLevel1Transformer;
 
     @Autowired
     private BrandTransformer brandTransformer;
@@ -33,6 +31,9 @@ public class ProductTransformer implements BaseTransformer<Product, ProductDto> 
     @Autowired
     private StatusTransformer statusTransformer;
 
+    @Autowired
+    private ProductCategoryTransformer productCategoryTransformer;
+
     @Override
     public ProductDto transform(Product product) {
         log.debug("Transforming Product to ProductDto for id: {}", product != null ? product.getId() : null);
@@ -40,8 +41,16 @@ public class ProductTransformer implements BaseTransformer<Product, ProductDto> 
         if (product != null) {
             productDto = new ProductDto();
             productDto.setId(product.getId());
-            if (product.getProductCategoryLevel1() != null) {
-                productDto.setProductCategoryLevel1Dto(productCategoryLevel1Transformer.transform(product.getProductCategoryLevel1()));
+            if (product.getProductCategory() != null) {
+                productDto.setProductCategoryDto(productCategoryTransformer.transform(product.getProductCategory()));
+                // Build category chain
+                java.util.LinkedList<com.e_com.Dto.ProductCategoryDto> chain = new java.util.LinkedList<>();
+                com.e_com.Domain.ProductCategory cat = product.getProductCategory();
+                while (cat != null) {
+                    chain.addFirst(productCategoryTransformer.transform(cat, false));
+                    cat = cat.getParent();
+                }
+                productDto.setCategoryChain(chain);
             }
             if (product.getBrand() != null) {
                 productDto.setBrandDto(brandTransformer.transform(product.getBrand()));
@@ -51,6 +60,9 @@ public class ProductTransformer implements BaseTransformer<Product, ProductDto> 
             }
             if (product.getStatus() != null) {
                 productDto.setStatusDto(statusTransformer.transform(product.getStatus()));
+            }
+            if (product.getProductCategory() != null) {
+                productDto.setProductCategoryDto(productCategoryTransformer.transform(product.getProductCategory()));
             }
             productDto.setTitle(product.getTitle());
             productDto.setDescription(product.getDescription());
@@ -73,8 +85,8 @@ public class ProductTransformer implements BaseTransformer<Product, ProductDto> 
         if (productDto != null) {
             product = new Product();
             product.setId(productDto.getId());
-            if (productDto.getProductCategoryLevel1Dto() != null) {
-                product.setProductCategoryLevel1(productCategoryLevel1Transformer.reverseTransform(productDto.getProductCategoryLevel1Dto()));
+            if (productDto.getProductCategoryDto() != null) {
+                product.setProductCategory(productCategoryTransformer.reverseTransform(productDto.getProductCategoryDto()));
             }
             if (productDto.getBrandDto() != null) {
                 product.setBrand(brandTransformer.reverseTransform(productDto.getBrandDto()));
@@ -84,6 +96,9 @@ public class ProductTransformer implements BaseTransformer<Product, ProductDto> 
             }
             if (productDto.getStatusDto() != null) {
                 product.setStatus(statusTransformer.reverseTransform(productDto.getStatusDto()));
+            }
+            if (productDto.getProductCategoryDto() != null) {
+                product.setProductCategory(productCategoryTransformer.reverseTransform(productDto.getProductCategoryDto()));
             }
             product.setTitle(productDto.getTitle());
             product.setDescription(productDto.getDescription());
