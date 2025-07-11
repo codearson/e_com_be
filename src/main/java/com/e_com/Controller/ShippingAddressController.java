@@ -43,8 +43,7 @@ public class ShippingAddressController {
         return shippingAddressService.saveShippingAddress(shippingAddressDto);
     }
 	
-	@PostMapping("/update")
-    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
+	@PutMapping("/update")
     public ResponseDto updateShippingAddress(@RequestBody ShippingAddressDto shippingAddressDto) {
         log.info("ShippingAddressController.updateShippingAddress() invoked");
         return shippingAddressService.updateShippingAddress(shippingAddressDto);
@@ -67,7 +66,6 @@ public class ShippingAddressController {
     }
     
     @GetMapping("/getAllBySearch")
-    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
     public ResponseDto getAllShippingAddress(@RequestParam(value = "address", required = false) String address) {
         log.info("ShippingAddressController.getAllShippingAddress() invoked with address: {}", address);
         return shippingAddressService.getAllShippingAddress(address);
