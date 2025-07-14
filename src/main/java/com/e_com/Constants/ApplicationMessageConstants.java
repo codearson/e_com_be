@@ -181,5 +181,11 @@ public interface ApplicationMessageConstants {
 		String EX_UPDATE_PRODUCT_CATEGORY_STATUS = "ex.update.product.category.status";
 		String ERR_GET_ALL_PRODUCT_CATEGORY_PAGE_SEARCH = "err.get.all.product.category.page.search";
 		String EX_GET_ALL_PRODUCT_CATEGORY_PAGE_SEARCH = "ex.get.all.product.category.page.search";
+        String ERR_SAVE_FAVOURITE_DETAILS = "err.save.favourite.details";
+        String EX_SAVE_FAVOURITE_DETAILS = "ex.save.favourite.details";
+        String ERR_UPDATE_FAVOURITE_DETAILS = "err.update.favourite.details";
+        String EX_UPDATE_FAVOURITE_DETAILS = "ex.update.favourite.details";
+        String ERR_RETRIEVE_ALL_FAVOURITE_DETAILS = "err.retrieve.all.favourite.details";
+        String EX_RETRIEVE_ALL_FAVOURITE_DETAILS = "ex.retrieve.all.favourite.details";
 	}
 }

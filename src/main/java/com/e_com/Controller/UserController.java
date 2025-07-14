@@ -96,7 +96,6 @@ public class UserController {
 	}
 	
 	@PostMapping("/update")
-	@PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
 	public ResponseDto updateUserDetails(@RequestBody UserDto userDto) {
 		log.info("UserController.updateUserDetails() invoked");
 		return userService.updateUserDetails(userDto);

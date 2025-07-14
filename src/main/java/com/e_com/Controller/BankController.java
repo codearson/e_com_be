@@ -69,7 +69,6 @@ public class BankController {
     }
 
     @GetMapping("/getAllBySearch")
-    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
     public ResponseDto getAllBank(@RequestParam(value = "bankName", required = false) String bankName) {
         log.info("BankController.getAllBank() invoked with bankName: {}", bankName);
         return bankService.getAllBank(bankName);
