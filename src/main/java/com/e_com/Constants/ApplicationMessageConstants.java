@@ -187,5 +187,9 @@ public interface ApplicationMessageConstants {
         String EX_UPDATE_FAVOURITE_DETAILS = "ex.update.favourite.details";
         String ERR_RETRIEVE_ALL_FAVOURITE_DETAILS = "err.retrieve.all.favourite.details";
         String EX_RETRIEVE_ALL_FAVOURITE_DETAILS = "ex.retrieve.all.favourite.details";
+        String ERR_CHANGE_PASSWORD = "err.change.password";
+        String EX_CHANGE_PASSWORD = "ex.change.password";
+        String ERR_CHANGE_SAME_PASSWORD = "err.change.same.password";
+        String EX_CHANGE_SAME_PASSWORD = "ex.change.same.password"; 
 	}
 }

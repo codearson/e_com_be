@@ -4,6 +4,7 @@ import com.e_com.Constants.ApplicationMessageConstants;
 import com.e_com.Dto.JwtResponseDto;
 import com.e_com.Dto.LoginRequestDto;
 import com.e_com.Dto.PaginatedResponseDto;
+import com.e_com.Dto.ChangePasswordDto;
 import com.e_com.Exception.EmailDuplicationException;
 
 import java.util.List;
@@ -227,6 +228,27 @@ public class UserServiceImpl implements UserService {
 	    }
 	    return responseDto;
 	}
+	
+	@Override
+	public ResponseDto changePassword(String username, ChangePasswordDto changePasswordDto) {
+        try {
+            int result = userServiceBL.changePassword(username, changePasswordDto);
+            if (result == 1) {
+                return serviceUtil.getServiceResponse("Password changed successfully.");
+            } else if (result == -1) {
+                return serviceUtil.getErrorServiceResponse(ApplicationMessageConstants.ServiceErrorMessages.ERR_CHANGE_PASSWORD);
+            } else if (result == -2) {
+                return serviceUtil.getErrorServiceResponse(ApplicationMessageConstants.ServiceErrorMessages.ERR_CHANGE_PASSWORD);
+            } else if (result == -3) {
+                return serviceUtil.getErrorServiceResponse(ApplicationMessageConstants.ServiceErrorMessages.ERR_CHANGE_SAME_PASSWORD);
+            } else {
+                return serviceUtil.getErrorServiceResponse(ApplicationMessageConstants.ServiceErrorMessages.ERR_CHANGE_PASSWORD);
+            }
+        } catch (Exception e) {
+            log.error("Exception occurs while changing password.", e);
+            return serviceUtil.getExceptionServiceResponseByProperties(ApplicationMessageConstants.ServiceErrorMessages.EX_CHANGE_PASSWORD);
+        }
+    }
 	
 	@Transactional
 	@Override
