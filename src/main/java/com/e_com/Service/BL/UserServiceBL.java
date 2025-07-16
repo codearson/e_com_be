@@ -22,6 +22,7 @@ import org.springframework.stereotype.Service;
 
 import com.e_com.Dao.UserDao;
 import com.e_com.Dto.UserDto;
+import com.e_com.Dto.ChangePasswordDto;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -149,6 +150,24 @@ public class UserServiceBL {
 	    }
 	    return null;
 	}
+
+    public int changePassword(String username, ChangePasswordDto changePasswordDto) {
+        User user = userDao.loadByUsername(username);
+        if (user == null) {
+            return -1; // user not found
+        }
+        if (!passwordEncoder.matches(changePasswordDto.getCurrentPassword(), user.getPassword())) {
+            return -2; // current password incorrect
+        }
+        // Prevent setting the same password
+        if (passwordEncoder.matches(changePasswordDto.getNewPassword(), user.getPassword())) {
+            return -3; // new password same as current
+        }
+        user.setPassword(passwordEncoder.encode(changePasswordDto.getNewPassword()));
+        user.setModifiedDate(LocalDateTime.now());
+        userDao.update(user);
+        return 1; // success
+    }
 	
 	public List<UserDto> getUserByEmailAddress(String emailAddress) {
 		log.info("UserServiceBL.getUserByEmailAddress()invoked");

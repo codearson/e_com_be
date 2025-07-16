@@ -5,6 +5,7 @@ import java.util.Map;
 import com.e_com.Dto.LoginRequestDto;
 import com.e_com.Dto.ResponseDto;
 import com.e_com.Dto.UserDto;
+import com.e_com.Dto.ChangePasswordDto;
 
 /**
  * Feb 5, 2024 
@@ -33,5 +34,7 @@ public interface UserService {
 	public ResponseDto updatePassword(Integer userId, String password, Integer changedByUserId);
 	
 	public ResponseDto getUserByEmailAddress(String emailAddress);
+
+	public ResponseDto changePassword(String username, ChangePasswordDto changePasswordDto);
 
 }

@@ -4,6 +4,7 @@ import com.e_com.Dto.EmailVerificationDto;
 import com.e_com.Dto.LoginRequestDto;
 import com.e_com.Dto.PasswordResetRequestDto;
 import com.e_com.Dto.ResetPasswordDto;
+import com.e_com.Dto.ChangePasswordDto;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -114,6 +115,11 @@ public class UserController {
 	    log.info("UserController.updatePassword() invoked.");
 	    return userService.updatePassword(userId, password, changedByUserId);
 	}
+	
+	@PutMapping("/changePassword")
+    public ResponseDto changePassword(@RequestBody ChangePasswordDto changePasswordDto, java.security.Principal principal) {
+        return userService.changePassword(principal.getName(), changePasswordDto);
+    }
 	
 	@GetMapping("/getByEmailAddress")
 	public ResponseDto getUserByEmailAddress(@RequestParam("emailAddress") String emailAddress) {

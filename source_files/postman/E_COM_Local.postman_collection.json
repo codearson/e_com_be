@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "a5a299a7-0af0-45c2-9c94-516f7441bdc7",
+		"_postman_id": "786ca835-3a08-495d-8e8d-b42f8d5c322c",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "40430627"
+		"_exporter_id": "44754112"
 	},
 	"item": [
 		{
@@ -472,6 +472,45 @@
 									"value": null,
 									"disabled": true
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changePassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJyZnNtYXJzaDEyQGdtYWlsLmNvbSIsImlhdCI6MTc1MjY4Mjc4OX0.CzM3c1JUSGytXfD9rsXY7NealT_FT0r1kT2VC571TKoTBFmyUV_zxzNrXpT3gLBo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"currentPassword\": \"Rifas1234\",\r\n    \"newPassword\": \"Rifas123\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/changePassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"changePassword"
 							]
 						}
 					},
