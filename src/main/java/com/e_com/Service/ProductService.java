@@ -36,4 +36,8 @@ public interface ProductService {
     ResponseDto getAllPageSortByPrice(int pageNumber, int pageSize, Boolean status, Boolean asc);
     
     ResponseDto getProductsByCategoryAndDescendants(Long categoryId);
+
+	ResponseDto getProductById(Integer id);
+
+    ResponseDto getAllProducts();
 }

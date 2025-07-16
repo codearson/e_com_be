@@ -7,6 +7,7 @@ import java.util.Map;
 import org.springframework.data.domain.Page;
 
 import com.e_com.Domain.Product;
+import com.e_com.Domain.ProductImage;
 import com.e_com.Dto.PaginatedResponseDto;
 import com.e_com.Dto.ProductDto;
 
@@ -40,5 +41,9 @@ public interface ProductDao extends BaseDao<Product> {
     void updateProductIsActiveBasedOnQuantity(Integer productId);
 
     List<ProductDto> getProductsByCategoryAndDescendants(Long categoryId);
+
+    List<ProductDto> getAllProducts();
+    
+    ProductImage findFirstByProductIdAndIsActive(Integer productId, Boolean isActive);
 
 }

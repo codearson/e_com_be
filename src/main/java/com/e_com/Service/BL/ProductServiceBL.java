@@ -99,6 +99,10 @@ public class ProductServiceBL {
         return productDao.getAllPageSortByPrice(pageNumber, pageSize, status, asc);
     }
 
+    public List<ProductDto> getAllProducts() {
+        log.info("ProductServiceBL.getAllProducts() invoked.");
+        return productDao.getAllProducts();
+    }
     
     public void updateProductIsActiveBasedOnQuantity(Integer productId) {
         productDao.updateProductIsActiveBasedOnQuantity(productId);

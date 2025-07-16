@@ -268,6 +268,28 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    public ResponseDto getAllProducts() {
+        log.info("ProductServiceImpl.getAllProducts invoked");
+        ResponseDto responseDto = null;
+        try {
+            List<ProductDto> productList = productServiceBL.getAllProducts();
+            if (productList != null && !productList.isEmpty()) {
+                log.info("All products retrieved.");
+                responseDto = serviceUtil.getServiceResponse(productList);
+            } else {
+                log.info("No products found.");
+                responseDto = serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_PRODUCT_DETAILS);
+            }
+        } catch (Exception e) {
+            log.error("Exception occurs while retrieving all products.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_PRODUCT_DETAILS);
+        }
+        return responseDto;
+    }
+
+    @Override
     public ResponseDto getProductsByCategoryAndDescendants(Long categoryId) {
         log.info("ProductServiceImpl.getProductsByCategoryAndDescendants invoked with categoryId: {}", categoryId);
         try {
@@ -277,6 +299,33 @@ public class ProductServiceImpl implements ProductService {
             log.error("Exception occurs while fetching products by category and descendants.", e);
             return serviceUtil.getExceptionServiceResponseByProperties("ex.get.products.by.category.descendants");
         }
+    }
+
+    @Override
+    public ResponseDto getProductById(Integer id) {
+        log.info("ProductServiceImpl.getProductById invoked with id: {}", id);
+        ResponseDto responseDto = null;
+        try {
+            if (id == null) {
+                log.info("Invalid product id provided.");
+                return serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_PRODUCT_DETAILS);
+            }
+            ProductDto productDto = productDao.checkProductAvailability(id);
+            if (productDto != null) {
+                log.info("Product details retrieved.");
+                responseDto = serviceUtil.getServiceResponse(productDto);
+            } else {
+                log.info("Unable to retrieve product details.");
+                responseDto = serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_PRODUCT_DETAILS);
+            }
+        } catch (Exception e) {
+            log.error("Exception occurs while retrieving product details.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_PRODUCT_DETAILS);
+        }
+        return responseDto;
     }
 
 }
