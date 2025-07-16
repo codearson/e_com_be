@@ -21,6 +21,7 @@ import org.springframework.stereotype.Repository;
 
 import com.e_com.Dao.ProductDao;
 import com.e_com.Domain.Product;
+import com.e_com.Domain.ProductImage;
 import com.e_com.Dto.PaginatedResponseDto;
 import com.e_com.Dto.ProductDto;
 import com.e_com.Service.Utils.HttpReqRespUtils;
@@ -450,5 +451,27 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao {
             .getResultList();
         return products.stream().map(productTransformer::transform).collect(Collectors.toList());
     }
+
+    @Override
+    @Transactional
+    public List<ProductDto> getAllProducts() {
+        log.info("ProductDaoImpl.getAllProducts() invoked.");
+        List<Product> products = readAll();
+        if (products == null || products.isEmpty()) {
+            return Collections.emptyList();
+        }
+        return products.stream().map(productTransformer::transform).collect(Collectors.toList());
+    }
+    
+	@Override
+	public ProductImage findFirstByProductIdAndIsActive(Integer productId, Boolean isActive) {
+        log.info("ProductDaoImpl.findFirstByProductIdAndIsActive() invoked with productId: {}, isActive: {}", productId, isActive);
+        Criteria criteria = getCurrentSession().createCriteria(ProductImage.class, "productImage");
+        criteria.add(Restrictions.eq("product.id", productId));
+        criteria.add(Restrictions.eq("isActive", isActive));
+        criteria.setMaxResults(1);
+        return (ProductImage) criteria.uniqueResult();
+	}
+
 
 }

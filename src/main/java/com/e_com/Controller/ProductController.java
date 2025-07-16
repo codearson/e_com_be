@@ -116,10 +116,22 @@ public class ProductController {
         return productService.getAllPageSortByPrice(pageNumber, pageSize, status, asc); 
     }
 
+    @GetMapping("/getAll")
+    public ResponseDto getAllProducts() {
+        log.info("ProductController.getAllProducts() invoked");
+        return productService.getAllProducts();
+    }
+
     @GetMapping("/by-category/{categoryId}")
     public ResponseDto getProductsByCategoryAndDescendants(@PathVariable Long categoryId) {
         log.info("ProductController.getProductsByCategoryAndDescendants() invoked with categoryId: {}", categoryId);
         return productService.getProductsByCategoryAndDescendants(categoryId);
+    }
+    
+    @GetMapping("/getById/{id}")
+    public ResponseDto getProductById(@PathVariable Integer id) {
+        log.info("ProductController.getProductById() invoked with id: {}", id);
+        return productService.getProductById(id);
     }
 
 }
