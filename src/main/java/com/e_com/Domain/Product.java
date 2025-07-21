@@ -48,6 +48,9 @@ public class Product implements Serializable {
     @JoinColumn(name = "status", referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Status status;
+    @ManyToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private User user;
     @Column(name = "title")
     private String title;
     @Column(name = "description")

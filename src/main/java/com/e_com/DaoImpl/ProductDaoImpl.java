@@ -463,6 +463,16 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao {
         return products.stream().map(productTransformer::transform).collect(Collectors.toList());
     }
     
+    @Override
+    @Transactional
+    public List<Product> findByUserId(Integer userId) {
+        log.info("ProductDaoImpl.findByUserId() invoked with userId: {}", userId);
+        Criteria criteria = getCurrentSession().createCriteria(Product.class, "product");
+        criteria.createAlias("user", "u");
+        criteria.add(Restrictions.eq("u.id", userId));
+        return criteria.list();
+    }
+    
 	@Override
 	public ProductImage findFirstByProductIdAndIsActive(Integer productId, Boolean isActive) {
         log.info("ProductDaoImpl.findFirstByProductIdAndIsActive() invoked with productId: {}, isActive: {}", productId, isActive);

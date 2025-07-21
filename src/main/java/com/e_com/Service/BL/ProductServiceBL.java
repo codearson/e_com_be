@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import com.e_com.Dao.ProductDao;
 import com.e_com.Dto.PaginatedResponseDto;
 import com.e_com.Dto.ProductDto;
+import com.e_com.Transformer.ProductTransformer;
+import com.e_com.Domain.Product;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -31,6 +33,9 @@ public class ProductServiceBL {
     
     @Autowired
     private ProductServiceBL productServiceBL;
+
+    @Autowired
+    private ProductTransformer productTransformer;
 
     public ProductDto saveProduct(ProductDto productDto) {
         log.info("ProductServiceBL.saveProduct() invoked.");
@@ -106,5 +111,10 @@ public class ProductServiceBL {
     
     public void updateProductIsActiveBasedOnQuantity(Integer productId) {
         productDao.updateProductIsActiveBasedOnQuantity(productId);
+    }
+
+    public List<ProductDto> getProductsByUserId(Integer userId) {
+        List<Product> products = productDao.findByUserId(userId);
+        return products.stream().map(productTransformer::transform).collect(java.util.stream.Collectors.toList());
     }
 }

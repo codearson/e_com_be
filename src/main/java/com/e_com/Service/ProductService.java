@@ -1,5 +1,6 @@
 package com.e_com.Service;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.data.domain.Page;
@@ -40,4 +41,6 @@ public interface ProductService {
 	ResponseDto getProductById(Integer id);
 
     ResponseDto getAllProducts();
+
+    List<ProductDto> getProductsByUserId(Integer userId);
 }

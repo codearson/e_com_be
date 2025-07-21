@@ -22,6 +22,8 @@ import com.e_com.Service.Utils.HttpReqRespUtils;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.List;
+
 /**
  * Title: ProductController.java. Company: www.codearson.com Copyright: Copyright (c) 2025.
  *
@@ -134,4 +136,13 @@ public class ProductController {
         return productService.getProductById(id);
     }
 
+    @GetMapping("/byUser/{userId}")
+    public ResponseDto getProductsByUserId(@PathVariable Integer userId) {
+        log.info("ProductController.getProductsByUserId() invoked with userId: {}", userId);
+        List<ProductDto> products = productService.getProductsByUserId(userId);
+        ResponseDto response = new ResponseDto();
+        response.setStatus(true);
+        response.setResponseDto(products);
+        return response; 
+    }
 }
