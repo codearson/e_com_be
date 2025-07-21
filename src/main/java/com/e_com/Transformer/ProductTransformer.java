@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.e_com.Domain.Product;
+import com.e_com.Domain.User;
 import com.e_com.Dto.ProductDto;
 
 import lombok.extern.slf4j.Slf4j;
@@ -33,6 +34,9 @@ public class ProductTransformer implements BaseTransformer<Product, ProductDto> 
 
     @Autowired
     private ProductCategoryTransformer productCategoryTransformer;
+
+    @Autowired
+    private UserTransfomer userTransfomer;
 
     @Override
     public ProductDto transform(Product product) {
@@ -74,6 +78,10 @@ public class ProductTransformer implements BaseTransformer<Product, ProductDto> 
             productDto.setUpdatedAt(product.getUpdatedAt());
             productDto.setImageUrl(product.getImageUrl());
             productDto.setIsActive(product.getIsActive());
+            if (product.getUser() != null) {
+                productDto.setUserId(product.getUser().getId());
+                // Do NOT set userDto in the output
+            }
         }
         return productDto;
     }
@@ -110,6 +118,11 @@ public class ProductTransformer implements BaseTransformer<Product, ProductDto> 
             product.setUpdatedAt(productDto.getUpdatedAt());
             product.setImageUrl(productDto.getImageUrl());
             product.setIsActive(productDto.getIsActive());
+            if (productDto.getUserDto() != null && productDto.getUserDto().getId() != null) {
+                User user = new User();
+                user.setId(productDto.getUserDto().getId());
+                product.setUser(user);
+            }
         }
         return product;
     }

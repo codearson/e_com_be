@@ -46,4 +46,5 @@ public interface ProductDao extends BaseDao<Product> {
     
     ProductImage findFirstByProductIdAndIsActive(Integer productId, Boolean isActive);
 
+    List<Product> findByUserId(Integer userId);
 }

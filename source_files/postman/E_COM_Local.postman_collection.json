@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "786ca835-3a08-495d-8e8d-b42f8d5c322c",
+		"_postman_id": "86d2e171-b06d-499e-8287-956042fd2c32",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "44754112"
@@ -3032,6 +3032,37 @@
 								"product",
 								"by-category",
 								"145"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductByUserId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJyZnNtYXJzaDEyQGdtYWlsLmNvbSIsImlhdCI6MTc1Mjg2Mjk2MX0.GMFIMrC7CkhsESH4B9D4uyMo81YEY_2sJXAHAfwjRkYXFfmH7OHsY8zuaomOwJyL",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/byUser/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"byUser",
+								"2"
 							]
 						}
 					},

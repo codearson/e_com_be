@@ -38,6 +38,10 @@ public class ProductDto {
 	
 	private Integer quentity;
 	
+	private UserDto userDto;
+	
+	private Integer userId;
+	
 	private LocalDateTime createdAt;
 	
 	private LocalDateTime updatedAt;
