@@ -1434,3 +1434,8 @@
 2025-07-23 00:57:18.717  INFO 19300 --- [http-nio-8080-exec-3] com.e_com.Service.BL.ProductServiceBL    : ProductServiceBL.getAllPageProduct() invoked with pageNumber: 1, pageSize: 5, status: true
 2025-07-23 00:57:18.959  INFO 19300 --- [http-nio-8080-exec-3] com.e_com.DaoImpl.ProductDaoImpl         : ProductDaoImpl.getAllPageSortByPrice() invoked with pageNumber: 1, pageSize: 5, status: true, asc: true
 2025-07-23 00:57:19.215  WARN 19300 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+2025-07-23 00:57:21.865  INFO 19300 --- [http-nio-8080-exec-3] c.e_com.ServiceImpl.ProductServiceImpl   : Retrieved paginated Product details.
+2025-07-23 01:00:04.758  INFO 19300 --- [RMI TCP Connection(13)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-07-23 01:00:04.780  INFO 19300 --- [RMI TCP Connection(13)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-23 01:00:04.780  INFO 19300 --- [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-23 01:00:04.780  INFO 19300 --- [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
