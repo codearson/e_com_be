@@ -26,4 +26,5 @@ public interface OrdersService {
     
     ResponseDto getAllBySearchOrders(String title, String firstName, String partnerName, String type);
     
+    ResponseDto getOrderById(Integer ordersId);
 }

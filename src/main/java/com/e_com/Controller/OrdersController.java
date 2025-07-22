@@ -78,4 +78,10 @@ public class OrdersController {
                  title, firstName, partnerName, type);
         return ordersService.getAllBySearchOrders(title, firstName, partnerName, type);
     }
+
+    @GetMapping("/getById")
+    public ResponseDto getOrderById(@RequestParam("ordersId") Integer ordersId) {
+        log.info("OrdersController.getOrderById() invoked with ordersId: {}", ordersId);
+        return ordersService.getOrderById(ordersId);
+    }
 }

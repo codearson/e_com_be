@@ -165,4 +165,31 @@ public class OrdersServiceImpl implements OrdersService {
         }
         return responseDto;
     }
+
+    @Override
+    public ResponseDto getOrderById(Integer ordersId) {
+        log.info("OrdersServiceImpl.getOrderById invoked with ordersId: {}", ordersId);
+        ResponseDto responseDto = null;
+        try {
+            if (ordersId == null) {
+                log.info("Invalid ordersId provided.");
+                return serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_ORDERS_DETAILS);
+            }
+            OrdersDto ordersDto = ordersServiceBL.getOrderById(ordersId);
+            if (ordersDto != null) {
+                log.info("Order details retrieved.");
+                responseDto = serviceUtil.getServiceResponse(ordersDto);
+            } else {
+                log.info("Order not found.");
+                responseDto = serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_ORDERS_DETAILS);
+            }
+        } catch (Exception e) {
+            log.error("Exception occurs while retrieving order details.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_ORDERS_DETAILS);
+        }
+        return responseDto;
+    }
 }
