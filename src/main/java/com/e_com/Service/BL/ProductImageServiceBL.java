@@ -53,5 +53,10 @@ public class ProductImageServiceBL {
         log.info("BrandServiceBL.getAllBrand() invoked with brandName: {}", productImageUrl);
         return productImageDao.getAllProductImage(productImageUrl);
     }
+    
+    public List<ProductImageDto> getProductImagesByProductId(Integer productId) {
+        return productImageDao.getProductImagesByProductId(productId);
+    }
+
 
 }

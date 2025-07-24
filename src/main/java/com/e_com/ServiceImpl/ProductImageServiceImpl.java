@@ -229,6 +229,28 @@ public class ProductImageServiceImpl implements ProductImageService {
             );
         }
     }
+    
+    @Override
+    public ResponseDto getProductImagesByProductId(Integer productId) {
+        log.info("ProductImageServiceImpl.getProductImagesByProductId invoked with productId: {}", productId);
+        ResponseDto responseDto;
+        try {
+            List<ProductImageDto> images = productImageServiceBL.getProductImagesByProductId(productId);
+            if (images != null && !images.isEmpty()) {
+                responseDto = serviceUtil.getServiceResponse(images);
+            } else {
+                responseDto = serviceUtil.getErrorServiceResponse(
+                    ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_PRODUCT_IMAGE_DETAILS);
+                													
+            }
+        } catch (Exception e) {
+            log.error("Exception while retrieving images by productId", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_PRODUCT_IMAGE_DETAILS);
+        }
+        return responseDto;
+    }
+
 
         
 

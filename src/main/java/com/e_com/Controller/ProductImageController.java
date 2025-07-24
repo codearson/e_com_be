@@ -80,4 +80,13 @@ public class ProductImageController {
         log.info("ProductImageController.uploadImageToLocal() invoked");
         return productImageService.uploadImageToLocalAndSave(files, productId);
     }
+    
+    @GetMapping("/getByProductId")
+   // @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
+    public ResponseDto getImagesByProductId(@RequestParam("productId") Integer productId) {
+        log.info("ProductImageController.getProductImagesByProductId() invoked with productId: {}", productId);
+        return productImageService.getProductImagesByProductId(productId);
+    }
+
+
 }
