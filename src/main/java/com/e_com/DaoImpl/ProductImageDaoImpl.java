@@ -126,6 +126,22 @@ public class ProductImageDaoImpl extends BaseDaoImpl<ProductImage> implements Pr
                        .map(productImage -> productImageTransformer.transform(productImage))
                        .collect(Collectors.toList());
     }
+    
+    @Override
+    @Transactional
+    public List<ProductImageDto> getProductImagesByProductId(Integer productId) {
+        log.info("ProductImageDaoImpl.getProductImagesByProductId() invoked with productId: {}", productId);
+        Criteria criteria = getCurrentSession().createCriteria(ProductImage.class, "productImage");
+        criteria.createAlias("productImage.product", "product");
+        criteria.add(Restrictions.eq("product.id", productId));
+        criteria.add(Restrictions.eq("isActive", true)); // Optional: fetch only active images
+
+        List<ProductImage> imageList = criteria.list();
+        return imageList.stream()
+                        .map(productImageTransformer::transform)
+                        .collect(Collectors.toList());
+    }
+
 
 
 }

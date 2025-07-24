@@ -190,6 +190,6 @@ public interface ApplicationMessageConstants {
         String ERR_CHANGE_PASSWORD = "err.change.password";
         String EX_CHANGE_PASSWORD = "ex.change.password";
         String ERR_CHANGE_SAME_PASSWORD = "err.change.same.password";
-        String EX_CHANGE_SAME_PASSWORD = "ex.change.same.password"; 
+        String EX_CHANGE_SAME_PASSWORD = "ex.change.same.password";
 	}
 }
