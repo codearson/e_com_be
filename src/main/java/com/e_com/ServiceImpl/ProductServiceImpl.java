@@ -328,9 +328,4 @@ public class ProductServiceImpl implements ProductService {
         }
         return responseDto;
     }
-
-    @Override
-    public List<ProductDto> getProductsByUserId(Integer userId) {
-        return productServiceBL.getProductsByUserId(userId);
-    }
 }

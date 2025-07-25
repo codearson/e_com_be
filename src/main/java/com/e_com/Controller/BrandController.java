@@ -68,7 +68,7 @@ public class BrandController {
     }
     
     @GetMapping("/getAllBySearch")
-    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
+    //@PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
     public ResponseDto getAllBrand(@RequestParam(value = "brandName", required = false) String brandName) {
         log.info("BrandController.getAllBrand() invoked with brandName: {}", brandName);
         return brandService.getAllBrand(brandName);

@@ -61,14 +61,14 @@ public class ConditionsController {
 	    }
 	 
 	 @GetMapping("/getAll")
-		@PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
+		//@PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
 		public ResponseDto getAllConditions() {
 			log.info("ConditionsController.getAll() invoked.");
 			return conditionsService.getAllConditions();
 		}
 	 
 	 @GetMapping("/getAllPage")
-	    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
+	  @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
 	    public ResponseDto getAllPageConditions(@RequestParam("pageNumber") int pageNumber, @RequestParam("pageSize") int pageSize,
 	                                      @RequestParam("status") Boolean status, WebRequest webRequest) {
 	        log.info("ConditionsController.getAllPageConditions() invoked with pageNumber: {}, pageSize: {}, status: {}", 
