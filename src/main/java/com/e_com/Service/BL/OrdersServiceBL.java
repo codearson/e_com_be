@@ -79,4 +79,9 @@ public class OrdersServiceBL {
                  title, firstName, partnerName, type);
         return ordersDao.getAllBySearchOrders(title, firstName, partnerName, type);
     }
+
+    public OrdersDto getOrderById(Integer ordersId) {
+        log.info("OrdersServiceBL.getOrderById() invoked with ordersId: {}", ordersId);
+        return ordersDao.checkOrdersAvailability(ordersId);
+    }
 }
