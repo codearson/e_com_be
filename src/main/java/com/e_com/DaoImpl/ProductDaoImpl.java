@@ -10,6 +10,7 @@ import org.hibernate.criterion.Order;
 import javax.transaction.Transactional;
 
 import org.hibernate. Criteria;
+import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Order;
@@ -465,14 +466,25 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao {
     
     @Override
     @Transactional
-    public List<Product> findByUserId(Integer userId) {
+    public List<ProductDto> findByUserId(Integer userId) {
         log.info("ProductDaoImpl.findByUserId() invoked with userId: {}", userId);
-        Criteria criteria = getCurrentSession().createCriteria(Product.class, "product");
-        criteria.createAlias("user", "u");
-        criteria.add(Restrictions.eq("u.id", userId));
-        return criteria.list();
+        Session session = getCurrentSession();
+
+        Criteria criteria = session.createCriteria(Product.class, "product");
+        criteria.createAlias("product.user", "userAlias"); // Join with user table
+        criteria.add(Restrictions.eq("userAlias.id", userId));
+        criteria.add(Restrictions.eq("product.isActive", true)); // Optional: only active products
+
+        List<Product> productList = criteria.list();
+
+        List<ProductDto> productDtoList = new ArrayList<>();
+        for (Product product : productList) {
+            productDtoList.add(productTransformer.transform(product));
+        }
+
+        return productDtoList;
     }
-    
+
 	@Override
 	public ProductImage findFirstByProductIdAndIsActive(Integer productId, Boolean isActive) {
         log.info("ProductDaoImpl.findFirstByProductIdAndIsActive() invoked with productId: {}, isActive: {}", productId, isActive);

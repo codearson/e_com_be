@@ -2,6 +2,8 @@ package com.e_com.Dto;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import lombok.Data;
 
 /**
@@ -39,8 +41,6 @@ public class ProductDto {
 	private Integer quentity;
 	
 	private UserDto userDto;
-	
-	private Integer userId;
 	
 	private LocalDateTime createdAt;
 	

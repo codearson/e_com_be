@@ -114,7 +114,7 @@ public class ProductServiceBL {
     }
 
     public List<ProductDto> getProductsByUserId(Integer userId) {
-        List<Product> products = productDao.findByUserId(userId);
-        return products.stream().map(productTransformer::transform).collect(java.util.stream.Collectors.toList());
+        return productDao.findByUserId(userId);
     }
+
 }

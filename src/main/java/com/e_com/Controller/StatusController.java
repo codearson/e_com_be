@@ -68,7 +68,7 @@ public class StatusController {
     }
 
     @GetMapping("/getAllBySearch")
-    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
+    //@PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
     public ResponseDto getAllStatus(@RequestParam(value = "statusName", required = false) String statusName) {
         log.info("StatusController.getAllStatus() invoked with statusName: {}", statusName);
         return statusService.getAllStatus(statusName);
