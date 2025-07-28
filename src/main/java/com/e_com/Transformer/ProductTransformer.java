@@ -79,9 +79,8 @@ public class ProductTransformer implements BaseTransformer<Product, ProductDto> 
             productDto.setImageUrl(product.getImageUrl());
             productDto.setIsActive(product.getIsActive());
             if (product.getUser() != null) {
-                productDto.setUserId(product.getUser().getId());
-                // Do NOT set userDto in the output
-            }
+				productDto.setUserDto(userTransfomer.transform(product.getUser()));
+			}
         }
         return productDto;
     }
@@ -105,9 +104,6 @@ public class ProductTransformer implements BaseTransformer<Product, ProductDto> 
             if (productDto.getStatusDto() != null) {
                 product.setStatus(statusTransformer.reverseTransform(productDto.getStatusDto()));
             }
-            if (productDto.getProductCategoryDto() != null) {
-                product.setProductCategory(productCategoryTransformer.reverseTransform(productDto.getProductCategoryDto()));
-            }
             product.setTitle(productDto.getTitle());
             product.setDescription(productDto.getDescription());
             product.setSize(productDto.getSize());
@@ -118,11 +114,9 @@ public class ProductTransformer implements BaseTransformer<Product, ProductDto> 
             product.setUpdatedAt(productDto.getUpdatedAt());
             product.setImageUrl(productDto.getImageUrl());
             product.setIsActive(productDto.getIsActive());
-            if (productDto.getUserDto() != null && productDto.getUserDto().getId() != null) {
-                User user = new User();
-                user.setId(productDto.getUserDto().getId());
-                product.setUser(user);
-            }
+            if (productDto.getUserDto() != null) {
+				product.setUser(userTransfomer.reverseTransform(productDto.getUserDto()));
+			}
         }
         return product;
     }

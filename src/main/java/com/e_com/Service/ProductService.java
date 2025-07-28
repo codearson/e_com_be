@@ -41,6 +41,4 @@ public interface ProductService {
 	ResponseDto getProductById(Integer id);
 
     ResponseDto getAllProducts();
-
-    List<ProductDto> getProductsByUserId(Integer userId);
 }

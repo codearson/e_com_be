@@ -18,6 +18,7 @@ import com.e_com.Domain.Product;
 import com.e_com.Dto.ProductDto;
 import com.e_com.Dto.ResponseDto;
 import com.e_com.Service.ProductService;
+import com.e_com.Service.BL.ProductServiceBL;
 import com.e_com.Service.Utils.HttpReqRespUtils;
 
 import lombok.extern.slf4j.Slf4j;
@@ -40,6 +41,9 @@ public class ProductController {
 
     @Autowired
     ProductService productService;
+    
+    @Autowired
+    ProductServiceBL productServiceBL;
 
     @PostMapping("/save")
     public ResponseDto saveProduct(@RequestBody ProductDto productDto) {
@@ -139,7 +143,7 @@ public class ProductController {
     @GetMapping("/byUser/{userId}")
     public ResponseDto getProductsByUserId(@PathVariable Integer userId) {
         log.info("ProductController.getProductsByUserId() invoked with userId: {}", userId);
-        List<ProductDto> products = productService.getProductsByUserId(userId);
+        List<ProductDto> products = productServiceBL.getProductsByUserId(userId);
         ResponseDto response = new ResponseDto();
         response.setStatus(true);
         response.setResponseDto(products);
