@@ -29,4 +29,7 @@ public interface ProductImageDao extends BaseDao<ProductImage> {
 
     List<ProductImageDto> getAllProductImage(String ProductImageUrl);
     
+    List<ProductImageDto> getProductImagesByProductId(Integer productId);
+
+    
 }

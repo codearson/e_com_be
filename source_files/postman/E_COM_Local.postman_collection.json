@@ -1,5 +1,9 @@
 {
 	"info": {
+		"_postman_id": "a5a299a7-0af0-45c2-9c94-516f7441bdc7",
+		"name": "E_COM_Local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40430627"
 		"_postman_id": "ff87fe91-51df-4a5b-bdea-f1ca588bed3f",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
@@ -473,45 +477,6 @@
 									"value": null,
 									"disabled": true
 								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "changePassword",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJyZnNtYXJzaDEyQGdtYWlsLmNvbSIsImlhdCI6MTc1MjY4Mjc4OX0.CzM3c1JUSGytXfD9rsXY7NealT_FT0r1kT2VC571TKoTBFmyUV_zxzNrXpT3gLBo",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "  {\r\n    \"currentPassword\": \"Rifas1234\",\r\n    \"newPassword\": \"Rifas123\"\r\n  }",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/user/changePassword",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"user",
-								"changePassword"
 							]
 						}
 					},
@@ -4197,7 +4162,7 @@
 								{
 									"key": "files",
 									"type": "file",
-									"src": "postman-cloud:///1f04c4db-b960-4810-80cb-ab7b9cdcbc14"
+									"src": "/C:/Users/wazee/Desktop/sample/without_mask_806.jpg"
 								},
 								{
 									"key": "productId",
@@ -4216,6 +4181,42 @@
 							"path": [
 								"productImage",
 								"uploadToLocal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzUzMjk0NDE0fQ.aCUIBgKbeAv41nNnxwFy0mfSxUaG8Hh7phwZong7mcU5i9dQlC6GOJ8JC34S4kbG",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/productImage/getByProductId?productId=13\n",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"productImage",
+								"getByProductId"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "13\n"
+								}
 							]
 						}
 					},

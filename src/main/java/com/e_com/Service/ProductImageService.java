@@ -27,5 +27,9 @@ public interface ProductImageService {
     ResponseDto getAllProductImage(String ProductImageUrl);
 
     ResponseDto uploadImageToLocalAndSave(MultipartFile[] files, Integer productId);
+    
+    ResponseDto getProductImagesByProductId(Integer productId);
+
+
 
 }
