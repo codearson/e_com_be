@@ -4,6 +4,11 @@
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "40430627"
+		"_postman_id": "ff87fe91-51df-4a5b-bdea-f1ca588bed3f",
+		"name": "E_COM_Local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44724346",
+		"_collection_link": "https://asjathmusharrif.postman.co/workspace/Asjath-Musharrif's-Workspace~cbce72dc-85a4-4122-8da1-bf347f32ab8d/collection/44724346-ff87fe91-51df-4a5b-bdea-f1ca588bed3f?action=share&source=collection_link&creator=44724346"
 	},
 	"item": [
 		{
@@ -2997,6 +3002,85 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "getProductByUserId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJzdWIiOiJyZnNtYXJzaDEyQGdtYWlsLmNvbSIsImlhdCI6MTc1Mjg2Mjk2MX0.GMFIMrC7CkhsESH4B9D4uyMo81YEY_2sJXAHAfwjRkYXFfmH7OHsY8zuaomOwJyL",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/byUser/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"byUser",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPageSortByPrice",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzUzMjEyNDE1fQ.0ab0TR0AHudBFeDHhZmYHChCNh2Nv7j7e2EdPvKb0FuCKyv9pvw-DmxkjfeDX-7H",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/getAllPageSortByPrice?pageNumber=1&pageSize=5&status=true&asc=true\n",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"getAllPageSortByPrice"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "5"
+								},
+								{
+									"key": "status",
+									"value": "true"
+								},
+								{
+									"key": "asc",
+									"value": "true\n"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -3210,6 +3294,42 @@
 								{
 									"key": "type",
 									"value": "Available"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOrderById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzUzMjEwNjM2fQ.gooAM-bfPoPxXk67OiM8Vjc6U0Xcgymv7itOVKhBai9qpeL67Qcc7PQ2dF3PXvcg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/orders/getById?ordersId=20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"getById"
+							],
+							"query": [
+								{
+									"key": "ordersId",
+									"value": "20"
 								}
 							]
 						}
