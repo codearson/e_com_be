@@ -150,4 +150,28 @@ public class OrdersDaoImpl extends BaseDaoImpl<Orders> implements OrdersDao {
                         .map(ordersTransformer::transform)
                         .collect(Collectors.toList());
     }
+
+    @Override
+    @Transactional
+    public List<OrdersDto> getOrdersByUserId(Integer userId) {
+        log.info("OrdersDaoImpl.getOrdersByUserId() invoked with userId: {}", userId);
+        Criteria criteria = getCurrentSession().createCriteria(Orders.class, "orders");
+        
+        // Join with user entity
+        criteria.createAlias("user", "user", JoinType.INNER_JOIN);
+        
+        // Add user filter
+        criteria.add(Restrictions.eq("user.id", userId));
+        
+        // Add active orders filter (optional - you can remove this if you want to show all orders)
+        criteria.add(Restrictions.eq("isActive", true));
+        
+        // Order by creation date (newest first)
+        criteria.addOrder(org.hibernate.criterion.Order.desc("createdAt"));
+        
+        List<Orders> ordersList = criteria.list();
+        return ordersList.stream()
+                        .map(ordersTransformer::transform)
+                        .collect(Collectors.toList());
+    }
 }
