@@ -84,4 +84,10 @@ public class OrdersController {
         log.info("OrdersController.getOrderById() invoked with ordersId: {}", ordersId);
         return ordersService.getOrderById(ordersId);
     }
+
+    @GetMapping("/getByUserId")
+    public ResponseDto getOrdersByUserId(@RequestParam("userId") Integer userId) {
+        log.info("OrdersController.getOrdersByUserId() invoked with userId: {}", userId);
+        return ordersService.getOrdersByUserId(userId);
+    }
 }

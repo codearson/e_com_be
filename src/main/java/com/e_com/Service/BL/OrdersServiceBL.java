@@ -84,4 +84,9 @@ public class OrdersServiceBL {
         log.info("OrdersServiceBL.getOrderById() invoked with ordersId: {}", ordersId);
         return ordersDao.checkOrdersAvailability(ordersId);
     }
+
+    public List<OrdersDto> getOrdersByUserId(Integer userId) {
+        log.info("OrdersServiceBL.getOrdersByUserId() invoked with userId: {}", userId);
+        return ordersDao.getOrdersByUserId(userId);
+    }
 }
