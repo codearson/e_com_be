@@ -28,4 +28,6 @@ public interface OrdersDao extends BaseDao<Orders> {
     
     List<OrdersDto> getAllBySearchOrders(String title, String firstName, String partnerName, String type);
     
+    List<OrdersDto> getOrdersByUserId(Integer userId);
+    
 }

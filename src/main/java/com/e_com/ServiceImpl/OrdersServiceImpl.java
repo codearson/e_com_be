@@ -192,4 +192,30 @@ public class OrdersServiceImpl implements OrdersService {
         }
         return responseDto;
     }
+
+    @Override
+    public ResponseDto getOrdersByUserId(Integer userId) {
+        log.info("OrdersServiceImpl.getOrdersByUserId invoked with userId: {}", userId);
+        ResponseDto responseDto = null;
+        try {
+            if (userId == null) {
+                log.info("Invalid userId provided.");
+                return serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_ORDERS_DETAILS);
+            }
+            List<OrdersDto> ordersList = ordersServiceBL.getOrdersByUserId(userId);
+            if (ordersList != null && !ordersList.isEmpty()) {
+                log.info("User orders retrieved successfully. Count: {}", ordersList.size());
+                responseDto = serviceUtil.getServiceResponse(ordersList);
+            } else {
+                log.info("No orders found for user with id: {}", userId);
+                responseDto = serviceUtil.getServiceResponse(ordersList); // Return empty list instead of error
+            }
+        } catch (Exception e) {
+            log.error("Exception occurs while retrieving user orders.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_ORDERS_DETAILS);
+        }
+        return responseDto;
+    }
 }
