@@ -142,6 +142,20 @@ public class ProductImageDaoImpl extends BaseDaoImpl<ProductImage> implements Pr
                         .collect(Collectors.toList());
     }
 
+    @Override
+    @Transactional
+    public boolean updateProductImageStatus(Integer productImageId, Boolean status) {
+        log.info("ProductImageDaoImpl.updateProductImageStatus() invoked with productImageId: {}, status: {}", productImageId, status);
+        Criteria criteria = getCurrentSession().createCriteria(ProductImage.class, "productImage");
+        criteria.add(Restrictions.eq("productImage.id", productImageId));
+        ProductImage productImage = (ProductImage) criteria.uniqueResult();
+        if (productImage != null) {
+            productImage.setIsActive(status);
+            getCurrentSession().update(productImage);
+            return true;
+        }
+        return false;
+    }
 
 
 }

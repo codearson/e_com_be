@@ -43,17 +43,17 @@ public class ProductImageController {
     }
 
     @PostMapping("/update")
-    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
+   //@PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
     public ResponseDto updateProductImage(@RequestBody ProductImageDto productImageDto) {
         log.info("ProductImageController.updateProductImage() invoked");
         return productImageService.updateProductImage(productImageDto);
     }
 
     @PutMapping("/updateStatus")
-    @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
-    public ResponseDto checkProductImageAvailability(@RequestParam("productImageId") Integer productImageId) {
-        log.info("ProductImageController.checkProductImageAvailability() invoked with ID: {}", productImageId);
-        return productImageService.checkProductImageAvailability(productImageId);
+    //@PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
+    public ResponseDto updateProductImageStatus(@RequestParam("productImageId") Integer productImageId, @RequestParam("status") Boolean status) {
+        log.info("ProductImageController.updateProductImageStatus() invoked with ID: {}, status: {}", productImageId, status);
+        return productImageService.updateProductImageStatus(productImageId, status);
     }
 
     @GetMapping("/getAllPage")

@@ -38,6 +38,11 @@ public class ProductImageServiceBL {
         return productImageDao.updateProductImage(productImageDto);
     }
 
+    public boolean updateProductImageStatus(Integer productImageId, Boolean status) {
+        log.info("ProductImageServiceBL.updateProductImageStatus() invoked with productImageId: {}, status: {}", productImageId, status);
+        return productImageDao.updateProductImageStatus(productImageId, status);
+    }
+
     public ProductImageDto checkProductImageAvailability(Integer productImageId) {
         log.info("ProductImageServiceBL.checkProductImageAvailability() invoked with productImageId: {}", productImageId);
         return productImageDao.checkProductImageAvailability(productImageId);

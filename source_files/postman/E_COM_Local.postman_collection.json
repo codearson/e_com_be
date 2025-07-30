@@ -1,14 +1,9 @@
 {
 	"info": {
-		"_postman_id": "a5a299a7-0af0-45c2-9c94-516f7441bdc7",
+		"_postman_id": "e466fdfa-5faf-4631-91b4-a2f25d631b33",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "40430627"
-		"_postman_id": "ff87fe91-51df-4a5b-bdea-f1ca588bed3f",
-		"name": "E_COM_Local",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "44724346",
-		"_collection_link": "https://asjathmusharrif.postman.co/workspace/Asjath-Musharrif's-Workspace~cbce72dc-85a4-4122-8da1-bf347f32ab8d/collection/44724346-ff87fe91-51df-4a5b-bdea-f1ca588bed3f?action=share&source=collection_link&creator=44724346"
 	},
 	"item": [
 		{
@@ -3335,6 +3330,42 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "getOrdersByUseId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzUzODg4MDAyfQ.8i57yoBAq-vy7dyyBsezkW-XVBbVEuzBIgXe1gC3SnQpZUylJOwxxDORfqCUIoph",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/orders/getByUserId?userId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"getByUserId"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -4026,7 +4057,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ4NTI3MTc2fQ.MnG-dzwvgNIWdaF2ojSo1YfGEmrweg1lL5-Y4A6LTMbtpsoXtNJ9DwxZMbVForOn",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzUzODg4MDAyfQ.8i57yoBAq-vy7dyyBsezkW-XVBbVEuzBIgXe1gC3SnQpZUylJOwxxDORfqCUIoph",
 									"type": "string"
 								}
 							]
@@ -4034,7 +4065,7 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/productImage/updateStatus?productImageId=1&status=1",
+							"raw": "http://localhost:8080/productImage/updateStatus?productImageId=48&status=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -4047,7 +4078,7 @@
 							"query": [
 								{
 									"key": "productImageId",
-									"value": "1"
+									"value": "48"
 								},
 								{
 									"key": "status",
