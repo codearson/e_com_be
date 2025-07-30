@@ -251,7 +251,25 @@ public class ProductImageServiceImpl implements ProductImageService {
         return responseDto;
     }
 
+    @Override
+    public ResponseDto updateProductImageStatus(Integer productImageId, Boolean status) {
+        log.info("ProductImageServiceImpl.updateProductImageStatus invoked with productImageId: {}, status: {}", productImageId, status);
+        ResponseDto responseDto = null;
+        try {
+            boolean updated = productImageServiceBL.updateProductImageStatus(productImageId, status);
+            if (updated) {
+                responseDto = serviceUtil.getServiceResponse("ProductImage status updated successfully.");
+            } else {
+                responseDto = serviceUtil.getErrorServiceResponse(
+                    ApplicationMessageConstants.ServiceErrorMessages.ERR_PRODUCT_IMAGE_STATUS);
+            }
+        } catch (Exception e) {
+            log.error("Exception occurs while updating ProductImage status.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                ApplicationMessageConstants.ServiceErrorMessages.EX_PRODUCT_IMAGE_STATUS);
+        }
+        return responseDto;
+    }
 
-        
 
 }

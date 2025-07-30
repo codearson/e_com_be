@@ -31,5 +31,5 @@ public interface ProductImageDao extends BaseDao<ProductImage> {
     
     List<ProductImageDto> getProductImagesByProductId(Integer productId);
 
-    
+    boolean updateProductImageStatus(Integer productImageId, Boolean status);
 }

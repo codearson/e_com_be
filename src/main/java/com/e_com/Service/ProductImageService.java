@@ -30,6 +30,7 @@ public interface ProductImageService {
     
     ResponseDto getProductImagesByProductId(Integer productId);
 
+    ResponseDto updateProductImageStatus(Integer productImageId, Boolean status);
 
 
 }
