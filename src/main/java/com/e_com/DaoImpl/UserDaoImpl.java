@@ -277,5 +277,15 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao{
         return userDtoList;
     }
 
+    @Override
+    @Transactional
+    public User findUserById(Integer userId) {
+        log.info("UserDaoImpl.findUserById() invoked with userId: {}", userId);
+        Criteria criteria = getCurrentSession().createCriteria(User.class, "user");
+        criteria.add(Restrictions.eq("user.id", userId));
+        criteria.add(Restrictions.eq("isActive", true));
+        return (User) criteria.uniqueResult();
+    }
+
 
 }

@@ -191,5 +191,18 @@ public interface ApplicationMessageConstants {
         String EX_CHANGE_PASSWORD = "ex.change.password";
         String ERR_CHANGE_SAME_PASSWORD = "err.change.same.password";
         String EX_CHANGE_SAME_PASSWORD = "ex.change.same.password";
+        String ERR_SAVE_PROFILE_DETAILS = "err.save.profile.details";
+        String EX_SAVE_PROFILE_DETAILS = "ex.save.profile.details";
+        String ERR_UPDATE_PROFILE_DETAILS = "err.update.profile.details";
+        String EX_UPDATE_PROFILE_DETAILS = "ex.update.profile.details";
+        String ERR_PROFILE_NOT_FOUND = "err.profile.not.found";
+        String EX_FIND_PROFILE_BY_USER_ID = "ex.find.profile.by.user.id";
+        String ERR_NO_FILE_PROVIDED = "err.no.file.provided";
+        String ERR_USER_ID_REQUIRED = "err.user.id.required";
+        String ERR_USER_NOT_FOUND = "err.user.not.found";
+        String ERR_FILE_SAVE_FAILED = "err.file.save.failed";
+        String ERR_PROFILE_SAVE_FAILED = "err.profile.save.failed";
+        String EX_UPLOAD_PROFILE_IMAGE = "ex.upload.profile.image";
+        String EX_UPDATE_PROFILE_STATUS = "ex.update.profile.status";
 	}
 }
