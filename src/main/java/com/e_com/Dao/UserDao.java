@@ -37,4 +37,5 @@ public interface UserDao extends BaseDao<User>{
 	
 	List<UserDto> getUserByEmailAddress(String emailAddress);
 
+	User findUserById(Integer userId);
 }
