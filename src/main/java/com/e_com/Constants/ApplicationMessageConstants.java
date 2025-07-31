@@ -145,8 +145,8 @@ public interface ApplicationMessageConstants {
 		String EX_SAVE_PRODUCT_IMAGE_DETAILS = "ex_save_productImage_details";
 		String ERR_UPDATE_PRODUCT_IMAGE_DETAILS = "err_update_productImage_details";
 		String EX_UPDATE_PRODUCT_IMAGE_DETAILS = "ex_update_productImage_details";
-		String ERR_PRODUCT_IMAGE_STATUS = "err_update_productImage_status";
-		String EX_PRODUCT_IMAGE_STATUS = "ex_update_productImage_status";
+		String ERR_PRODUCT_IMAGE_STATUS = "err.update.productImage.status";
+		String EX_PRODUCT_IMAGE_STATUS = "ex.update.productImage.status";
 		String ERR_RETRIEVE_ALL_PRODUCT_IMAGE_DETAILS = "ex_retrive_all_productImage_details";
 		String EX_RETRIEVE_ALL_PRODUCT_IMAGE_DETAILS = "ex_retrive_all_productImage_details";
         String ERR_RETRIEVE_ALL_PRODUCT_DETAILS_BY_SEARCH = "err.retrieve.all.product.details.by.search";
