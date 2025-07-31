@@ -191,5 +191,13 @@ public interface ApplicationMessageConstants {
         String EX_CHANGE_PASSWORD = "ex.change.password";
         String ERR_CHANGE_SAME_PASSWORD = "err.change.same.password";
         String EX_CHANGE_SAME_PASSWORD = "ex.change.same.password";
+        
+        // Cart related messages
+        String ERR_ADD_PRODUCT_TO_CART = "err.add.product.to.cart";
+        String EX_ADD_PRODUCT_TO_CART = "ex.add.product.to.cart";
+        String ERR_REMOVE_PRODUCT_FROM_CART = "err.remove.product.from.cart";
+        String EX_REMOVE_PRODUCT_FROM_CART = "ex.remove.product.from.cart";
+        String ERR_GET_PRODUCTS_IN_CART = "err.get.products.in.cart";
+        String EX_GET_PRODUCTS_IN_CART = "ex.get.products.in.cart";
 	}
 }

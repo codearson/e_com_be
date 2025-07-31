@@ -78,6 +78,7 @@ public class ProductTransformer implements BaseTransformer<Product, ProductDto> 
             productDto.setUpdatedAt(product.getUpdatedAt());
             productDto.setImageUrl(product.getImageUrl());
             productDto.setIsActive(product.getIsActive());
+            productDto.setAddToCart(product.getAddToCart());
             if (product.getUser() != null) {
 				productDto.setUserDto(userTransfomer.transform(product.getUser()));
 			}
@@ -114,6 +115,7 @@ public class ProductTransformer implements BaseTransformer<Product, ProductDto> 
             product.setUpdatedAt(productDto.getUpdatedAt());
             product.setImageUrl(productDto.getImageUrl());
             product.setIsActive(productDto.getIsActive());
+            product.setAddToCart(productDto.getAddToCart());
             if (productDto.getUserDto() != null) {
 				product.setUser(userTransfomer.reverseTransform(productDto.getUserDto()));
 			}

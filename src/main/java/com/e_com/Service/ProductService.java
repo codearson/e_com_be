@@ -41,4 +41,10 @@ public interface ProductService {
 	ResponseDto getProductById(Integer id);
 
     ResponseDto getAllProducts();
+
+	ResponseDto addProductToCart(Integer productId, Integer userId);
+	
+	ResponseDto removeProductFromCart(Integer productId, Integer userId);
+	
+	ResponseDto getProductsInCartByUserId(Integer userId);
 }
