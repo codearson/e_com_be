@@ -6,7 +6,6 @@ public interface ApplicationMessageConstants {
 		//jwt Security
 		String EX_JWT_INVALID = "ex.jwt.invalid";
 		String EX_JWT_EXPIRED = "ex.jwt.expired";
-
 		String ERR_SAVE_USER_DETAILS = "err.save.user.details";
 		String EX_SAVE_USER_DETAILS = "ex.save.user.details";
 		String ERR_SAVE_USER_ROLE_DETAILS = "err.save.user.role.details";
@@ -191,13 +190,24 @@ public interface ApplicationMessageConstants {
         String EX_CHANGE_PASSWORD = "ex.change.password";
         String ERR_CHANGE_SAME_PASSWORD = "err.change.same.password";
         String EX_CHANGE_SAME_PASSWORD = "ex.change.same.password";
-        
-        // Cart related messages
         String ERR_ADD_PRODUCT_TO_CART = "err.add.product.to.cart";
         String EX_ADD_PRODUCT_TO_CART = "ex.add.product.to.cart";
         String ERR_REMOVE_PRODUCT_FROM_CART = "err.remove.product.from.cart";
         String EX_REMOVE_PRODUCT_FROM_CART = "ex.remove.product.from.cart";
         String ERR_GET_PRODUCTS_IN_CART = "err.get.products.in.cart";
-        String EX_GET_PRODUCTS_IN_CART = "ex.get.products.in.cart";
+        String EX_GET_PRODUCTS_IN_CART = "ex.get.products.in.cart";        
+        String ERR_SAVE_PROFILE_DETAILS = "err.save.profile.details";
+        String EX_SAVE_PROFILE_DETAILS = "ex.save.profile.details";
+        String ERR_UPDATE_PROFILE_DETAILS = "err.update.profile.details";
+        String EX_UPDATE_PROFILE_DETAILS = "ex.update.profile.details";
+        String ERR_PROFILE_NOT_FOUND = "err.profile.not.found";
+        String EX_FIND_PROFILE_BY_USER_ID = "ex.find.profile.by.user.id";
+        String ERR_NO_FILE_PROVIDED = "err.no.file.provided";
+        String ERR_USER_ID_REQUIRED = "err.user.id.required";
+        String ERR_USER_NOT_FOUND = "err.user.not.found";
+        String ERR_FILE_SAVE_FAILED = "err.file.save.failed";
+        String ERR_PROFILE_SAVE_FAILED = "err.profile.save.failed";
+        String EX_UPLOAD_PROFILE_IMAGE = "ex.upload.profile.image";
+        String EX_UPDATE_PROFILE_STATUS = "ex.update.profile.status";
 	}
 }
