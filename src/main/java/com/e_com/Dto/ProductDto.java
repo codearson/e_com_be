@@ -51,5 +51,7 @@ public class ProductDto {
 	private Boolean isActive;
 
 	private java.util.List<ProductCategoryDto> categoryChain;
+	
+	private Boolean addToCart;
 
 }

@@ -72,4 +72,7 @@ public class Product implements Serializable {
     @Column(name = "isActive")
     private Boolean isActive;
     
+    @Column(name = "add_to_cart")
+    private Boolean addToCart;
+    
 }
