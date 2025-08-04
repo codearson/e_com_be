@@ -71,8 +71,5 @@ public class Product implements Serializable {
     private String imageUrl;
     @Column(name = "isActive")
     private Boolean isActive;
-    
-    @Column(name = "add_to_cart")
-    private Boolean addToCart;
-    
+        
 }

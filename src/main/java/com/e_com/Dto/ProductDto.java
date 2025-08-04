@@ -52,6 +52,6 @@ public class ProductDto {
 
 	private java.util.List<ProductCategoryDto> categoryChain;
 	
-	private Boolean addToCart;
+	// Removed addToCart field - now using separate cart table for proper e-commerce functionality
 
 }

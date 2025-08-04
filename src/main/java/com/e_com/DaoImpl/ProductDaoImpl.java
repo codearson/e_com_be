@@ -511,35 +511,5 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao {
 		return saveOrUpdate(product);
 	}
 
-	@Override
-	@Transactional
-	public List<Product> findByAddToCartTrue() {
-		log.info("ProductDaoImpl.findByAddToCartTrue() invoked");
-		Criteria criteria = getCurrentSession().createCriteria(Product.class, "product");
-		criteria.add(Restrictions.eq("addToCart", true));
-		return criteria.list();
-	}
-
-	@Override
-	@Transactional
-	public List<ProductDto> findByUserIdAndAddToCartTrue(Integer userId) {
-		log.info("ProductDaoImpl.findByUserIdAndAddToCartTrue() invoked with userId: {}", userId);
-		Session session = getCurrentSession();
-
-		Criteria criteria = session.createCriteria(Product.class, "product");
-		criteria.createAlias("product.user", "userAlias"); // Join with user table
-		criteria.add(Restrictions.eq("userAlias.id", userId));
-		criteria.add(Restrictions.eq("product.addToCart", true));
-		criteria.add(Restrictions.eq("product.isActive", true)); // Only active products
-
-		List<Product> productList = criteria.list();
-
-		List<ProductDto> productDtoList = new ArrayList<>();
-		for (Product product : productList) {
-			productDtoList.add(productTransformer.transform(product));
-		}
-
-		return productDtoList;
-	}
 
 }

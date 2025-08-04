@@ -195,7 +195,15 @@ public interface ApplicationMessageConstants {
         String ERR_REMOVE_PRODUCT_FROM_CART = "err.remove.product.from.cart";
         String EX_REMOVE_PRODUCT_FROM_CART = "ex.remove.product.from.cart";
         String ERR_GET_PRODUCTS_IN_CART = "err.get.products.in.cart";
-        String EX_GET_PRODUCTS_IN_CART = "ex.get.products.in.cart";        
+        String EX_GET_PRODUCTS_IN_CART = "ex.get.products.in.cart";
+        String ERR_GET_CART_ITEM_COUNT = "err.get.cart.item.count";
+        String EX_GET_CART_ITEM_COUNT = "ex.get.cart.item.count";
+        String ERR_GET_CART_TOTAL = "err.get.cart.total";
+        String EX_GET_CART_TOTAL = "ex.get.cart.total";
+        String ERR_PRODUCT_NOT_FOUND = "err.product.not.found";
+        String ERR_PRODUCT_NOT_ACTIVE = "err.product.not.active";
+        String ERR_PRODUCT_NOT_IN_CART = "err.product.not.in.cart";
+        String ERR_INVALID_QUANTITY = "err.invalid.quantity";        
         String ERR_SAVE_PROFILE_DETAILS = "err.save.profile.details";
         String EX_SAVE_PROFILE_DETAILS = "ex.save.profile.details";
         String ERR_UPDATE_PROFILE_DETAILS = "err.update.profile.details";
