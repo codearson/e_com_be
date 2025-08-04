@@ -42,9 +42,4 @@ public interface ProductService {
 
     ResponseDto getAllProducts();
 
-	ResponseDto addProductToCart(Integer productId, Integer userId);
-	
-	ResponseDto removeProductFromCart(Integer productId, Integer userId);
-	
-	ResponseDto getProductsInCartByUserId(Integer userId);
 }

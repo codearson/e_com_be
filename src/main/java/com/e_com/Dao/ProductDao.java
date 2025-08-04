@@ -52,7 +52,4 @@ public interface ProductDao extends BaseDao<Product> {
     
     Product save(Product product);
     
-    List<Product> findByAddToCartTrue();
-    
-    List<ProductDto> findByUserIdAndAddToCartTrue(Integer userId);
 }

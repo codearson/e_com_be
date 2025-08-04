@@ -150,23 +150,4 @@ public class ProductController {
         return response; 
     }
     
-    @PostMapping("/add-to-cart")
-    public ResponseDto addProductToCart(@RequestParam("productId") Integer productId, 
-                                       @RequestParam("userId") Integer userId) {
-        log.info("ProductController.addProductToCart() invoked with productId: {}, userId: {}", productId, userId);
-        return productService.addProductToCart(productId, userId);
-    }
-    
-    @PostMapping("/remove-from-cart")
-    public ResponseDto removeProductFromCart(@RequestParam("productId") Integer productId, 
-                                           @RequestParam("userId") Integer userId) {
-        log.info("ProductController.removeProductFromCart() invoked with productId: {}, userId: {}", productId, userId);
-        return productService.removeProductFromCart(productId, userId);
-    }
-    
-    @GetMapping("/cart")
-    public ResponseDto getProductsInCartByUserId(@RequestParam("userId") Integer userId) {
-        log.info("ProductController.getProductsInCartByUserId() invoked with userId: {}", userId);
-        return productService.getProductsInCartByUserId(userId);
-    }
 }
