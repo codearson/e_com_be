@@ -217,5 +217,17 @@ public interface ApplicationMessageConstants {
         String ERR_PROFILE_SAVE_FAILED = "err.profile.save.failed";
         String EX_UPLOAD_PROFILE_IMAGE = "ex.upload.profile.image";
         String EX_UPDATE_PROFILE_STATUS = "ex.update.profile.status";
+        String ERR_ADD_REVIEW = "err.add.review";
+        String EX_ADD_REVIEW = "ex.add.review";
+        String ERR_UPDATE_REVIEW = "err.update.review";
+        String EX_UPDATE_REVIEW = "ex.update.review";
+        String ERR_DELETE_REVIEW = "err.delete.review";
+        String EX_DELETE_REVIEW = "ex.delete.review";
+        String ERR_GET_REVIEWS_BY_PRODUCT_ID = "err.get.reviews.by.product.id";
+        String EX_GET_REVIEWS_BY_PRODUCT_ID = "ex.get.reviews.by.product.id";
+        String ERR_GET_REVIEWS_BY_USER_ID = "err.get.reviews.by.user.id";
+        String EX_GET_REVIEWS_BY_USER_ID = "ex.get.reviews.by.user.id";
+        String ERR_GET_AVERAGE_RATING = "err.get.average.rating";
+        String EX_GET_AVERAGE_RATING = "ex.get.average.rating";
 	}
 }

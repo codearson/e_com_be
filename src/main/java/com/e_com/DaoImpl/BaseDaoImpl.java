@@ -38,6 +38,11 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 		return (T) getCurrentSession().get(type, id);
 	}
 
+	@Transactional(propagation = Propagation.REQUIRED, readOnly = true)
+	public T read(Integer id) {
+		return (T) getCurrentSession().get(type, id);
+	}
+
 	@SuppressWarnings("unchecked")
 	@Transactional(propagation = Propagation.REQUIRED, readOnly = true)
 	public List<T> readAll() {
