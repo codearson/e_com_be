@@ -51,8 +51,11 @@ public class ProfileDaoImpl extends BaseDaoImpl<Profile> implements ProfileDao {
         Criteria criteria = getCurrentSession().createCriteria(Profile.class, "profile")
                 .createAlias("profile.user", "user")
                 .add(Restrictions.eq("user.id", userId))
-                .add(Restrictions.eq("profile.isActive", true));
-        Profile profile = (Profile) criteria.uniqueResult();
+                .add(Restrictions.eq("profile.isActive", true))
+                .addOrder(org.hibernate.criterion.Order.desc("profile.createdDate"));
+        
+        // Get the most recent active profile
+        Profile profile = (Profile) criteria.setMaxResults(1).uniqueResult();
         return profile != null ? profileTransformer.transform(profile) : null;
     }
 
