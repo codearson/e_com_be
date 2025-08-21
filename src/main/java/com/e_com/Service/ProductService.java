@@ -41,5 +41,7 @@ public interface ProductService {
 	ResponseDto getProductById(Integer id);
 
     ResponseDto getAllProducts();
+    
+    ResponseDto findByShippingPreferencesId(Integer findByShippingPreferencesId);
 
 }

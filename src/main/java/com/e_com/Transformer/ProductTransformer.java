@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.e_com.Domain.Product;
+import com.e_com.Domain.ShippingPreferences;
 import com.e_com.Domain.User;
 import com.e_com.Dto.ProductDto;
 
@@ -37,6 +38,9 @@ public class ProductTransformer implements BaseTransformer<Product, ProductDto> 
 
     @Autowired
     private UserTransfomer userTransfomer;
+    
+    @Autowired
+    private ShippingPreferencesTransformer shippingPreferencesTransformer;
 
     @Override
     public ProductDto transform(Product product) {
@@ -67,6 +71,9 @@ public class ProductTransformer implements BaseTransformer<Product, ProductDto> 
             }
             if (product.getProductCategory() != null) {
                 productDto.setProductCategoryDto(productCategoryTransformer.transform(product.getProductCategory()));
+            }
+            if (product.getShippingPreferences() != null) {
+                productDto.setShippingPreferencesDto(shippingPreferencesTransformer.transform(product.getShippingPreferences()));
             }
             productDto.setTitle(product.getTitle());
             productDto.setDescription(product.getDescription());
@@ -103,6 +110,9 @@ public class ProductTransformer implements BaseTransformer<Product, ProductDto> 
             }
             if (productDto.getStatusDto() != null) {
                 product.setStatus(statusTransformer.reverseTransform(productDto.getStatusDto()));
+            }
+            if (productDto.getShippingPreferencesDto() != null) {
+                product.setShippingPreferences(shippingPreferencesTransformer.reverseTransform(productDto.getShippingPreferencesDto()));
             }
             product.setTitle(productDto.getTitle());
             product.setDescription(productDto.getDescription());

@@ -511,5 +511,24 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao {
 		return saveOrUpdate(product);
 	}
 
+	 @Override
+	    @Transactional
+	    public List<ProductDto> findByShippingPreferencesId(Integer shippingPreferencesId) {
+	        log.info("ProductDaoImpl.findByShippingPreferencesId() invoked with ShippingPreferencesId: {}", shippingPreferencesId);
+	        Session session = getCurrentSession();
 
+	        Criteria criteria = session.createCriteria(Product.class, "product");
+	        criteria.createAlias("product.shippingPreferences", "ShippingPreferencesAlias"); // Join with user table
+	        criteria.add(Restrictions.eq("ShippingPreferencesAlias.id", shippingPreferencesId));
+	        criteria.add(Restrictions.eq("product.isActive", true)); // Optional: only active products
+
+	        List<Product> productList = criteria.list();
+
+	        List<ProductDto> productDtoList = new ArrayList<>();
+	        for (Product product : productList) {
+	            productDtoList.add(productTransformer.transform(product));
+	        }
+
+	        return productDtoList;
+	    }
 }

@@ -2,6 +2,7 @@ package com.e_com.Dto;
 
 import java.time.LocalDateTime;
 
+import com.e_com.Domain.ShippingPreferences;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.Data;
@@ -27,6 +28,8 @@ public class ProductDto {
 	private ConditionsDto conditionsDto;
 	
 	private StatusDto statusDto;
+	
+	private ShippingPreferencesDto shippingPreferencesDto;
 	
 	private String title;
 	
