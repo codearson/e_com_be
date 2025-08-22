@@ -52,4 +52,6 @@ public interface ProductDao extends BaseDao<Product> {
     
     Product save(Product product);
     
+    List<ProductDto> findByShippingPreferencesId(Integer shippingPreferencesId);
+    
 }

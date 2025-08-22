@@ -51,6 +51,9 @@ public class Product implements Serializable {
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
+    @ManyToOne
+    @JoinColumn(name = "shipping_preferences", referencedColumnName = "id")
+    private ShippingPreferences shippingPreferences;
     @Column(name = "title")
     private String title;
     @Column(name = "description")

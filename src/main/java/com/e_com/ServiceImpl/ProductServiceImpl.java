@@ -328,5 +328,31 @@ public class ProductServiceImpl implements ProductService {
         }
         return responseDto;
     }
+    @Override
+    public ResponseDto findByShippingPreferencesId(Integer findByShippingPreferencesId) {
+        log.info("ProductServiceImpl.getProductById invoked with id: {}", findByShippingPreferencesId);
+        ResponseDto responseDto = null;
+        try {
+            if (findByShippingPreferencesId == null) {
+                log.info("Invalid product id provided.");
+                return serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_PRODUCT_DETAILS);
+            }
+            ProductDto productDto = productDao.checkProductAvailability(findByShippingPreferencesId);
+            if (productDto != null) {
+                log.info("Product details retrieved.");
+                responseDto = serviceUtil.getServiceResponse(productDto);
+            } else {
+                log.info("Unable to retrieve product details.");
+                responseDto = serviceUtil.getErrorServiceResponse(
+                        ApplicationMessageConstants.ServiceErrorMessages.ERR_RETRIEVE_ALL_PRODUCT_DETAILS);
+            }
+        } catch (Exception e) {
+            log.error("Exception occurs while retrieving product details.", e);
+            responseDto = serviceUtil.getExceptionServiceResponseByProperties(
+                    ApplicationMessageConstants.ServiceErrorMessages.EX_RETRIEVE_ALL_PRODUCT_DETAILS);
+        }
+        return responseDto;
+    }
     
 }
