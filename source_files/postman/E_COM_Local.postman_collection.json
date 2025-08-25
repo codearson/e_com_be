@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "743160cd-e7d4-44ff-868c-3787c50748a0",
+		"_postman_id": "06948d19-c69c-4135-bd47-45a6d1190be2",
 		"name": "E_COM_Local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "40430627"
+		"_exporter_id": "44754112"
 	},
 	"item": [
 		{
@@ -2593,7 +2593,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productCategoryLevel1Dto\": {\r\n        \"id\": 1\r\n    },\r\n    \"brandDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"conditionsDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"statusDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"title\": \"DDR4 RAM\",\r\n    \"description\": \"8GB DDR4 RAM\",\r\n    \"size\": null,\r\n    \"color\": null,\r\n    \"price\": 12999.00,\r\n    \"quentity\": 2,\r\n    \"imageUrl\":\"Ram Image\",\r\n    \"isActive\": 1\r\n}",
+							"raw": "{\r\n    \"productCategoryDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"brandDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"conditionsDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"statusDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"title\": \"DDR4 RAM\",\r\n    \"description\": \"8GB DDR4 RAM\",\r\n    \"size\": null,\r\n    \"color\": null,\r\n    \"price\": 12999.00,\r\n    \"quentity\": 2,\r\n    \"imageUrl\":\"Ram Image\",\r\n    \"isActive\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3071,6 +3071,49 @@
 								{
 									"key": "asc",
 									"value": "true\n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findProductsByShippingPreferencesId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzU1Nzg4OTgwfQ.UrTJ4hXX7cWiHhxbFIBOhBjuAvWD2rjC4Uodys30lc1Gz65K3agWx0ye4-Pd4lpm",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productCategoryDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"brandDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"userDto\":{\r\n        \"id\":2\r\n    },\r\n    \"conditionsDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"statusDto\": {\r\n        \"id\": 1\r\n    },\r\n    \"shippingPreferencesDto\":{\r\n        \"id\":2\r\n    },\r\n    \"title\": \"DDR4 RAM\",\r\n    \"description\": \"8GB DDR4 RAM\",\r\n    \"size\": null,\r\n    \"color\": null,\r\n    \"price\": 12999.00,\r\n    \"quentity\": 2,\r\n    \"imageUrl\":\"Ram Image\",\r\n    \"isActive\": 1\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/findByShippingPreferencesId?shippingPreferencesId=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"findByShippingPreferencesId"
+							],
+							"query": [
+								{
+									"key": "shippingPreferencesId",
+									"value": "5"
 								}
 							]
 						}
@@ -5249,6 +5292,181 @@
 								"inquiries",
 								"deleteInquiry",
 								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "shipping preferences",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzQ2NjIzOTg5fQ.HOFOWkWhax8_aDQu64DT6FMmeJHrLr7LFq_GgRZ_9bc4NsDzEFDPntfesMczZY5D",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"shippingName\": \"shirts\",\r\n    \"courierService\": \"prompt xp\",\r\n    \"packageWeight\": 2.0,\r\n    \"price\": 2300.0,\r\n    \"userDto\": {\r\n        \"id\": 4\r\n    },\r\n    \"isActive\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/shippingPreferences/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shippingPreferences",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzU1NjI4MjU5fQ.7eWnFGvF51POGizD5f7jtUx4HXMT6o7BqtMucEXFJbKz8tleG4ecoptE8ny1ONUg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":5,\r\n    \"shippingName\": \"jeans\",\r\n    \"courierService\": \"prompt xp\",\r\n    \"packageWeight\": 2.0,\r\n    \"price\": 2300.0,\r\n    \"userDto\": {\r\n        \"id\": 5\r\n    },\r\n    \"isActive\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/shippingPreferences/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shippingPreferences",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzU1NjI4NzgyfQ.gvCaSxb1LcwlogWqUXW49apUDgmy79xQMlTpmGzWQrGH_Nmxp5d9jsh_XYff4gGO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/shippingPreferences/updateStatus?shippingPreferencesId=3&status=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shippingPreferences",
+								"updateStatus"
+							],
+							"query": [
+								{
+									"key": "shippingPreferencesId",
+									"value": "3"
+								},
+								{
+									"key": "status",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByUserId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoibGF0aHVzYW50aHVyYWlyYWphaEBjb2RlYXJzb24uY29tIiwiaWF0IjoxNzU1NzgwNTAzfQ.wW1HMQe6D0lWg5VD0D4QA0ltEfrnVFQqn2yP8CnmMDYBfcEa8OH82RiZ9i79FRKP",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/shippingPreferences/findByUserId?userId=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"shippingPreferences",
+								"findByUserId"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "2"
+								}
 							]
 						}
 					},

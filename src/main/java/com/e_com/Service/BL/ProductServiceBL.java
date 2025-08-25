@@ -116,5 +116,10 @@ public class ProductServiceBL {
     public List<ProductDto> getProductsByUserId(Integer userId) {
         return productDao.findByUserId(userId);
     }
+    
+    public List<ProductDto> findByShippingPreferencesId(Integer shippingPreferencesId) {
+        return productDao.findByShippingPreferencesId(shippingPreferencesId);
+    }
+    
 
 }

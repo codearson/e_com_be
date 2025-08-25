@@ -239,6 +239,11 @@ public interface ApplicationMessageConstants {
         String EX_UPDATE_INQUIRY = "ex.update.inquiry";
         String ERR_DELETE_INQUIRY = "err.delete.inquiry";
         String EX_DELETE_INQUIRY = "ex.delete.inquiry";
-	
+        String ERR_SAVE_SHIPPING_PREFERENCES_DETAILS = "err.save.shipping.preferences.details";
+        String EX_SAVE_SHIPPING_PREFERENCES_DETAILS = "ex.save.shipping.preferences.details";
+        String ERR_UPDATE_SHIPPING_PREFERENCES_DETAILS = "err.update.shipping.preferences.details";
+        String EX_UPDATE_SHIPPING_PREFERENCES_DETAILS = "ex.update.shipping.preferences.details";
+        String ERR_GET_SHIPPING_PREFERENCES_DETAILS = "err.get.shipping.preferences.details";
+        String EX_GET_SHIPPING_PREFERENCES_DETAILS = "ex.get.shipping.preferences.details";
 	}
 }

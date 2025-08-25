@@ -150,4 +150,16 @@ public class ProductController {
         return response; 
     }
     
+    @GetMapping("/findByShippingPreferencesId")
+    public ResponseDto findByShippingPreferencesId(@RequestParam("shippingPreferencesId") Integer shippingPreferencesId) {
+        log.info("ProductController.findByShippingPreferencesId() invoked with shippingPreferencesId: {}", shippingPreferencesId);
+        List<ProductDto> products = productServiceBL.findByShippingPreferencesId(shippingPreferencesId);
+        
+        ResponseDto response = new ResponseDto();
+        response.setStatus(true);
+        response.setResponseDto(products);
+        return response;
+    }
+
+    
 }
