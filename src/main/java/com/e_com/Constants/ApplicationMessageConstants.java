@@ -229,6 +229,16 @@ public interface ApplicationMessageConstants {
         String EX_GET_REVIEWS_BY_USER_ID = "ex.get.reviews.by.user.id";
         String ERR_GET_AVERAGE_RATING = "err.get.average.rating";
         String EX_GET_AVERAGE_RATING = "ex.get.average.rating";
+        String ERR_CREATE_INQUIRY = "err.create.inquiry";
+        String EX_CREATE_INQUIRY = "ex.create.inquiry";
+        String ERR_GET_ALL_INQUIRIES = "err.get.all.inquiries";
+        String EX_GET_ALL_INQUIRIES = "ex.get.all.inquiries";
+        String ERR_GET_INQUIRY_BY_ID = "err.get.inquiry.by.id";
+        String EX_GET_INQUIRY_BY_ID = "ex.get.inquiry.by.id";
+        String ERR_UPDATE_INQUIRY = "err.update.inquiry";
+        String EX_UPDATE_INQUIRY = "ex.update.inquiry";
+        String ERR_DELETE_INQUIRY = "err.delete.inquiry";
+        String EX_DELETE_INQUIRY = "ex.delete.inquiry";
         String ERR_SAVE_SHIPPING_PREFERENCES_DETAILS = "err.save.shipping.preferences.details";
         String EX_SAVE_SHIPPING_PREFERENCES_DETAILS = "ex.save.shipping.preferences.details";
         String ERR_UPDATE_SHIPPING_PREFERENCES_DETAILS = "err.update.shipping.preferences.details";
