@@ -11,6 +11,7 @@ public class InquiryTransformer implements BaseTransformer<Inquiry, InquiryDto> 
     public InquiryDto transform(Inquiry inquiry) {
         InquiryDto inquiryDto = new InquiryDto();
         inquiryDto.setId(inquiry.getId());
+        inquiryDto.setReferenceNumber(inquiry.getReferenceNumber());
         if (inquiry.getUser() != null) {
             inquiryDto.setUserId(inquiry.getUser().getId());
         }
@@ -32,6 +33,7 @@ public class InquiryTransformer implements BaseTransformer<Inquiry, InquiryDto> 
     public Inquiry reverseTransform(InquiryDto inquiryDto) {
         Inquiry inquiry = new Inquiry();
         inquiry.setId(inquiryDto.getId());
+        inquiry.setReferenceNumber(inquiryDto.getReferenceNumber());
         // Note: Setting the user from userId would require a database lookup, 
         // which is typically handled in the service layer.
         inquiry.setUserName(inquiryDto.getUserName());
@@ -45,5 +47,6 @@ public class InquiryTransformer implements BaseTransformer<Inquiry, InquiryDto> 
         inquiry.setCreatedAt(inquiryDto.getCreatedAt());
         inquiry.setUpdatedAt(inquiryDto.getUpdatedAt());
         inquiry.setIsActive(inquiryDto.getIsActive());
-        return inquiry;    }
+        return inquiry;
+    }
 }

@@ -14,11 +14,12 @@ import java.util.List;
 @Repository
 public class InquiryDaoImpl extends BaseDaoImpl<Inquiry> implements InquiryDao {
 
-    @Override
+        @Override
     public PaginatedResponseDto getAll(int page, int size) {
         Criteria criteria = getCurrentSession().createCriteria(Inquiry.class);
         criteria.add(Restrictions.eq("isActive", true));
         criteria.setFirstResult((page) * size);
+        criteria.addOrder(org.hibernate.criterion.Order.desc("createdAt"));
         criteria.setMaxResults(size);
         List<Inquiry> inquiries = criteria.list();
 
@@ -27,7 +28,12 @@ public class InquiryDaoImpl extends BaseDaoImpl<Inquiry> implements InquiryDao {
         countCriteria.setProjection(Projections.rowCount());
         Long count = (Long) countCriteria.uniqueResult();
 
-        return HttpReqRespUtils.paginatedResponseMapper(inquiries, page, size, count.intValue());
+        PaginatedResponseDto response = new PaginatedResponseDto();
+        response.setPageNumber(page);
+        response.setPageSize(size);
+        response.setTotalRecords(count.intValue());
+        response.setPayload(inquiries);
+        return response;
     }
 
     @Override

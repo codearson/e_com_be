@@ -14,4 +14,5 @@ public interface InquiryService {
     ResponseDto updateInquiry(int id, InquiryDto inquiryDto);
 
     ResponseDto deleteInquiry(int id);
+
 }
