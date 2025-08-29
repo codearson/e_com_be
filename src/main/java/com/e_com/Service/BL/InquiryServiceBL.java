@@ -34,7 +34,9 @@ public class InquiryServiceBL {
         User user = userDao.findUserById(inquiryDto.getUserId());
         inquiry.setUser(user);
         Inquiry savedInquiry = inquiryDao.saveOrUpdate(inquiry);
-        return inquiryTransformer.transform(savedInquiry);
+        savedInquiry.setReferenceNumber("INQ-" + savedInquiry.getId());
+        Inquiry updatedInquiry = inquiryDao.saveOrUpdate(savedInquiry);
+        return inquiryTransformer.transform(updatedInquiry);
     }
 
     @Transactional(readOnly = true)
@@ -48,16 +50,16 @@ public class InquiryServiceBL {
         return inquiry != null ? inquiryTransformer.transform(inquiry) : null;
     }
 
-    @Transactional
+        @Transactional
     public InquiryDto updateInquiry(int id, InquiryDto inquiryDto) {
         Inquiry existingInquiry = inquiryDao.getById(id);
-        if (existingInquiry != null) {
+        if (existingInquiry != null && existingInquiry.getIsActive()) {
             existingInquiry.setAdminReply(inquiryDto.getAdminReply());
             existingInquiry.setStatus(inquiryDto.getStatus());
             existingInquiry.setRepliedAt(LocalDateTime.now());
             existingInquiry.setUpdatedAt(LocalDateTime.now());
-            Inquiry updatedInquiry = inquiryDao.saveOrUpdate(existingInquiry);
-            return inquiryTransformer.transform(updatedInquiry);
+            inquiryDao.update(existingInquiry);
+            return inquiryTransformer.transform(existingInquiry);
         }
         return null;
     }
@@ -65,7 +67,7 @@ public class InquiryServiceBL {
     @Transactional
     public void deleteInquiry(int id) {
         Inquiry inquiry = inquiryDao.getById(id);
-        if (inquiry != null) {
+        if (inquiry != null && inquiry.getIsActive()) {
             inquiry.setIsActive(false);
             inquiryDao.saveOrUpdate(inquiry);
         }

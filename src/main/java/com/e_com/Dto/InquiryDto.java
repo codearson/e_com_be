@@ -8,6 +8,7 @@ import lombok.Data;
 public class InquiryDto {
 
     private Integer id;
+    private String referenceNumber;
     private Integer userId;
     private String userName;
     private String userEmail;

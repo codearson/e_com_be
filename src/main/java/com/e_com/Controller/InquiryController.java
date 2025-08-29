@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/inquiries")
 @Slf4j
 public class InquiryController {
@@ -44,4 +45,5 @@ public class InquiryController {
         log.info("Deleting inquiry with id: {}", id);
         return inquiryService.deleteInquiry(id);
     }
+
 }

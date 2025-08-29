@@ -28,6 +28,9 @@ public class Inquiry implements Serializable {
     @Column(name = "id")
     private Integer id;
 
+    @Column(name = "reference_number")
+    private String referenceNumber;
+
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
